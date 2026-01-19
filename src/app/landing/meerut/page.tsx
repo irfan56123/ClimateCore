@@ -8,6 +8,8 @@ import ProductSection from "@/components/ProductSection";
 import HearingaidType from "@/components/HearingaidType";
 import Whychoose from "@/components/whychoose";
 import Testomonial from "@/components/testomonial";
+import HearingAidGuide from "@/components/hearingaidsguide";
+import Location from "@/components/location";
 
 // ===============================================
 // ✅ SEO META TAGS (MEERUT)
@@ -82,8 +84,8 @@ export default function HearingAidMeerutPage() {
       {/* WHY CHOOSE */}
       <Whychoose />
 
-      {/* HEARING AID TYPES */}
-      <HearingaidType />
+      <HearingAidGuide />
+      <Location />
 
       {/* TESTIMONIAL */}
       <Testomonial />

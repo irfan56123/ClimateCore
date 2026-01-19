@@ -2,9 +2,8 @@
 import NavigationWrapper from "@/components/NavigationWrapper";
 import "./globals.css";
 import type { Metadata } from "next";
-import ChatWidgetLoader from "@/components/ChatWidgetLoader";
+// import ChatWidgetLoader from "@/components/ChatWidgetLoader";
 import Script from "next/script";
-
 
 export const metadata: Metadata = {
   title: {
@@ -67,7 +66,7 @@ export default function RootLayout({
           content="_w3rNIazk1WMe-urSCcrtpzyAcqTeopxMU1qqLd0p6k"
         />
 
-         <Script
+        <Script
           id="gtm-head"
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{
@@ -83,14 +82,10 @@ export default function RootLayout({
             `,
           }}
         />
-       
       </head>
 
       <body className="font-museo bg-white text-gray-900 antialiased bg-gradient-to-b from-[#eaf5ff] to-white">
-        
-
-
-        <NavigationWrapper>{children} <ChatWidgetLoader /></NavigationWrapper>
+        <NavigationWrapper>{children}</NavigationWrapper>
 
         {/* Optional: add analytics or other scripts here via next/script */}
         {/*

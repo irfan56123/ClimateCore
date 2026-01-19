@@ -12,6 +12,8 @@ import ProductSection from "@/components/ProductSection";
 import HearingaidType from "@/components/HearingaidType";
 import Whychoose from "@/components/whychoose";
 import Testomonial from "@/components/testomonial";
+import HearingAidGuide from "@/components/hearingaidsguide";
+import Location from "@/components/location";
 
 // ✅ SEO Meta Tags
 export const metadata: Metadata = {
@@ -73,7 +75,9 @@ export default function HearingAidDhanbadPage() {
 
       <ProductSection heading="Premium Digital Hearing Aids Available in Dhanbad" />
       <Whychoose />
-      <HearingaidType />
+      {/* <HearingaidType /> */}
+      <HearingAidGuide />
+      <Location />
       <Testomonial />
 
       {/* 🟧 FAQ */}
@@ -83,7 +87,6 @@ export default function HearingAidDhanbadPage() {
       <footer className="bg-gray-900 text-gray-300 pt-12 pb-6">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="border-gray-700 pt-6 flex flex-col md:flex-row items-center justify-between text-sm space-y-4 md:space-y-0">
-
             {/* Social Icons */}
             <div className="flex space-x-4">
               <a
@@ -172,7 +175,13 @@ export default function HearingAidDhanbadPage() {
 }
 
 // Utility Cards
-function ServiceCard({ icon, title }: { icon: React.ReactNode; title: string }) {
+function ServiceCard({
+  icon,
+  title,
+}: {
+  icon: React.ReactNode;
+  title: string;
+}) {
   return (
     <div className="flex flex-col items-center bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition">
       <div className="mb-3 bg-[#184A99]/10 p-3 rounded-full">{icon}</div>
