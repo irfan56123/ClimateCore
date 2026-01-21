@@ -2,7 +2,7 @@
 import NavigationWrapper from "@/components/NavigationWrapper";
 import "./globals.css";
 import type { Metadata } from "next";
-// import ChatWidgetLoader from "@/components/ChatWidgetLoader";
+import ChatWidgetLoader from "@/components/ChatWidgetLoader";
 import Script from "next/script";
 
 export const metadata: Metadata = {
