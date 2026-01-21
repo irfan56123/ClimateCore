@@ -1,8 +1,8 @@
 // app/layout.tsx
 import NavigationWrapper from "@/components/NavigationWrapper";
+import ChatWidgetLoader from "@/components/ChatWidgetLoader";
 import "./globals.css";
 import type { Metadata } from "next";
-import ChatWidgetLoader from "@/components/ChatWidgetLoader";
 import Script from "next/script";
 
 export const metadata: Metadata = {
@@ -60,7 +60,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* Google site verification (kept from incoming branch) */}
         <meta
           name="google-site-verification"
           content="_w3rNIazk1WMe-urSCcrtpzyAcqTeopxMU1qqLd0p6k"
@@ -87,18 +86,8 @@ export default function RootLayout({
       <body className="font-museo bg-white text-gray-900 antialiased bg-gradient-to-b from-[#eaf5ff] to-white">
         <NavigationWrapper>{children}</NavigationWrapper>
 
-        {/* Optional: add analytics or other scripts here via next/script */}
-        {/*
-        <Script src="https://www.googletagmanager.com/gtag/js?id=YOUR_ID" strategy="afterInteractive" />
-        <Script id="gtag-init" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'YOUR_ID');
-          `}
-        </Script>
-        */}
+        {/* ✅ Global chat widget – loads once, after hydration */}
+        <ChatWidgetLoader />
       </body>
     </html>
   );
