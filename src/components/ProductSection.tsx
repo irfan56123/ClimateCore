@@ -17,7 +17,6 @@ interface Product {
   createdAt?: string;
 }
 
-/** Minimal shape of the GraphQL product node (only fields we use) */
 interface ProductNode {
   id: string;
   title: string;
@@ -25,7 +24,9 @@ interface ProductNode {
   description?: string | null;
   featuredImage?: { node?: { sourceUrl?: string | null } } | null;
   date?: string | null;
-  categories?: { nodes?: Array<{ name?: string | null; slug?: string | null }> } | null;
+  categories?: {
+    nodes?: Array<{ name?: string | null; slug?: string | null }>;
+  } | null;
 }
 
 interface GraphQLResponse {
@@ -38,15 +39,7 @@ type ProductSectionProps = {
   heading?: string;
 };
 
-const categories = [
-  "All",
-  "Signia",
-  "Phonak",
-  "Widex",
-  "Oticon",
-  "Rechargeable",
-  "Bluetooth",
-];
+const categories = ["All", "Signia", "Phonak", "Widex", "Oticon", "Bluetooth"];
 
 const categoryKeywords: Record<string, string[]> = {
   All: [],
@@ -79,10 +72,7 @@ const titleOrCatsHave = (p: Product, keywords: string[]) => {
 const isHighlighted = (p: Product) =>
   titleOrCatsHave(p, ["highlighted", "featured"]);
 
-const ts = (p: Product) => {
-  const t = p.createdAt ? new Date(p.createdAt).getTime() : 0;
-  return Number.isFinite(t) ? t : 0;
-};
+const ts = (p: Product) => (p.createdAt ? new Date(p.createdAt).getTime() : 0);
 
 export default function ProductSection({ heading }: ProductSectionProps) {
   const [products, setProducts] = useState<Product[]>([]);
@@ -94,30 +84,27 @@ export default function ProductSection({ heading }: ProductSectionProps) {
       try {
         const data = await graphQLClient.request<GraphQLResponse>(GET_PRODUCTS);
 
-        const mappedProducts: Product[] = data.products.nodes.map(
-          (product: ProductNode, i: number) => {
-            const catNodes = product.categories?.nodes ?? [];
-            // collect both names and slugs if present; filter(Boolean) removes undefined/null
-            const catStrings: string[] = catNodes.flatMap((n) =>
-              [n?.name, n?.slug].filter(Boolean) as string[]
-            );
+        const mapped = data.products.nodes.map((p, i) => {
+          const cats = p.categories?.nodes ?? [];
+          const category = cats.flatMap(
+            (n) => [n?.name, n?.slug].filter(Boolean) as string[],
+          );
 
-            return {
-              id: product.id,
-              title: product.title,
-              slug: product.slug,
-              category: catStrings,
-              description: product.description || "",
-              price: "Contact for price",
-              featuredImage: product.featuredImage ?? undefined,
-              createdAt: product.date ?? String(i),
-            };
-          }
-        );
+          return {
+            id: p.id,
+            title: p.title,
+            slug: p.slug,
+            description: p.description || "",
+            price: "Contact for price",
+            category,
+            featuredImage: p.featuredImage ?? undefined,
+            createdAt: p.date ?? String(i),
+          };
+        });
 
-        setProducts(mappedProducts);
-      } catch (err) {
-        console.error("Error fetching products:", err);
+        setProducts(mapped);
+      } catch (e) {
+        console.error(e);
       } finally {
         setLoading(false);
       }
@@ -127,32 +114,33 @@ export default function ProductSection({ heading }: ProductSectionProps) {
   }, []);
 
   if (loading) return <p className="text-center py-10">Loading products...</p>;
+
   if (!products.length)
     return <p className="text-center py-10">No products found.</p>;
 
   const brands = ["signia", "phonak", "oticon", "widex"];
-
   let filteredProducts: Product[] = [];
 
   if (activeCategory === "All") {
     const picks: Product[] = [];
 
     brands.forEach((brand) => {
-      const brandKeywords = BRAND_KEYWORDS[brand];
-      const highlightedMatches = products
-        .filter((p) => isHighlighted(p) && titleOrCatsHave(p, brandKeywords))
+      const keys = BRAND_KEYWORDS[brand];
+
+      const highlighted = products
+        .filter((p) => isHighlighted(p) && titleOrCatsHave(p, keys))
         .sort((a, b) => ts(b) - ts(a));
 
-      if (highlightedMatches[0]) {
-        picks.push(highlightedMatches[0]);
+      if (highlighted[0]) {
+        picks.push(highlighted[0]);
         return;
       }
 
-      const brandLatest = products
-        .filter((p) => titleOrCatsHave(p, brandKeywords))
+      const latest = products
+        .filter((p) => titleOrCatsHave(p, keys))
         .sort((a, b) => ts(b) - ts(a));
 
-      if (brandLatest[0]) picks.push(brandLatest[0]);
+      if (latest[0]) picks.push(latest[0]);
     });
 
     filteredProducts =
@@ -162,62 +150,64 @@ export default function ProductSection({ heading }: ProductSectionProps) {
   } else {
     const keywords = categoryKeywords[activeCategory] || [activeCategory];
 
-    const highlightedFirst = products
+    const highlighted = products
       .filter((p) => isHighlighted(p) && titleOrCatsHave(p, keywords))
       .sort((a, b) => ts(b) - ts(a));
 
-    const fallbackMatches =
-      highlightedFirst.length > 0
+    const fallback =
+      highlighted.length > 0
         ? []
         : products
             .filter((p) => titleOrCatsHave(p, keywords))
             .sort((a, b) => ts(b) - ts(a));
 
-    filteredProducts = (
-      highlightedFirst.length > 0 ? highlightedFirst : fallbackMatches
-    ).slice(0, 4);
+    filteredProducts = (highlighted.length > 0 ? highlighted : fallback).slice(
+      0,
+      4,
+    );
   }
 
   return (
-    <section className="max-w-7xl mx-auto px-6 py-6 md:px-20 mt-6">
-      <div className="text-center mb-10">
-        <h2 className="text-xl sm:text-2xl md:text-3xl font-extrabold leading-snug mb-3">
+    <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-20 py-8">
+      {/* Heading */}
+      <div className="text-center mb-8">
+        <h2 className="text-lg sm:text-xl md:text-3xl font-extrabold mb-3">
           <span className="bg-gradient-to-r from-[#E83D6D] via-[#184A99] to-[#7C7C7C] bg-clip-text text-transparent">
             {heading || "Explore Our Range of Digital Hearing Aids"}
           </span>
         </h2>
-        <p className="text-sm sm:text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
+        <p className="text-sm sm:text-base text-gray-600 max-w-xl mx-auto">
           Discover the latest models — from powerful BTE to discreet CIC.
         </p>
       </div>
 
-      <div className="w-full flex justify-center mb-10 px-4">
-        <div className="flex bg-[#184A99] rounded-full p-1 overflow-x-auto no-scrollbar">
-          {categories.map((category) => (
+      {/* Categories */}
+      <div className="flex justify-center mb-8">
+        <div className="flex gap-2 bg-[#184A99] p-1 rounded-full overflow-x-auto no-scrollbar">
+          {categories.map((cat) => (
             <button
-              key={category}
-              onClick={() => setActiveCategory(category)}
-              className={`flex-shrink-0 px-4 py-2 mx-1 whitespace-nowrap text-sm sm:text-base rounded-full transition-all duration-200 ${
-                activeCategory === category
-                  ? "bg-[#0E1015] text-white shadow-md"
+              key={cat}
+              onClick={() => setActiveCategory(cat)}
+              className={`px-4 py-2 text-sm rounded-full transition whitespace-nowrap ${
+                activeCategory === cat
+                  ? "bg-[#0E1015] text-white"
                   : "text-[#C7BCE0] hover:text-white"
               }`}
             >
-              {category}
+              {cat}
             </button>
           ))}
         </div>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-2">
-        {filteredProducts.map((product) => (
+      {/* Products Grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+        {filteredProducts.map((p) => (
           <ProductCard
-            key={product.id}
-            title={product.title}
-            imageUrl={
-              product.featuredImage?.node?.sourceUrl || "/placeholder.png"
-            }
-            slug={product.slug}
+            key={p.id}
+            title={p.title}
+            slug={p.slug}
+            imageUrl={p.featuredImage?.node?.sourceUrl || "/placeholder.png"}
           />
         ))}
       </div>
