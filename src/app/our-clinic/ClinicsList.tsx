@@ -29,6 +29,16 @@ const clinics: Clinic[] = [
     placeId: "ChIJhYM9dWzlDDkRYd_B7lw9FNU",
   },
   {
+    id: "Dhanbad",
+    name: "Insono Hearing Solutions Pvt.Ltd. Dhanbad",
+    locationLine: "Dhanbad — Jharkhand",
+    address:
+      "Infront Of Zonal Office Bank Of India Roof 709 Building, SHOP NO:- FF4 Newtech Grand 3, Dhanbad, Saraidhella, Jharkhand 826007",
+    hours: "Open, Closes by 7 pm",
+    tag: "Clinic",
+    placeId: "iYeoMu89cnYY5MGw4",
+  },
+  {
     id: "banka",
     name: "Hearing Aid Clinic in Banka",
     locationLine: "Banka — Bihar",
@@ -301,7 +311,7 @@ export default function ClinicsList() {
                   <div className="flex items-center gap-4 mt-2">
                     <a
                       href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-                        c.address
+                        c.address,
                       )}`}
                       target="_blank"
                       rel="noopener noreferrer"
@@ -326,7 +336,7 @@ export default function ClinicsList() {
                 <div className="p-4 border-t bg-white">
                   <Link
                     href={`/appointment?cat=${encodeURIComponent(
-                      c.catSlug || c.id
+                      c.catSlug || c.id,
                     )}&slug=${encodeURIComponent(c.id)}`}
                     className="block text-center bg-[#023784] text-white py-2 rounded-md font-semibold"
                   >

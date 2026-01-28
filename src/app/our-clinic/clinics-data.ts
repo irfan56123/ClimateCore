@@ -89,6 +89,20 @@ export const clinics: Clinic[] = [
     ],
   },
   {
+    id: "Dhanbad",
+    name: "Insono Hearing Solutions Pvt.Ltd. Dhanbad",
+    locationLine: "Dhanbad — Jharkhand",
+    address: "Infront Of Zonal Office Bank Of India Roof 709 Building, SHOP NO:- FF4 Newtech Grand 3, Dhanbad, Saraidhella, Jharkhand 826007",
+    hours: "Open, Closes by 7 pm",
+    tag: "Clinic",
+    placeId: "iYeoMu89cnYY5MGw4",
+    images: [
+      "/clinics/Dhanbad1.webp",
+      "/clinics/Dhanbad2.webp",
+      "/clinics/Dhanbad3.webp",
+    ],
+  },
+  {
     id: "deoghar",
     name: "Hearing Aid Clinic in Deoghar",
     locationLine: "Deoghar — Jharkhand",
