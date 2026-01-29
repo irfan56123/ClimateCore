@@ -21,7 +21,7 @@
     "graphql-request": "^7.2.0",
     "gsap": "^3.13.0",
     "lucide-react": "^0.544.0",
-    "next": "^16.0.7",
+    "next": "16.0.10",
     "next-nprogress-bar": "^2.4.7",
     "next-seo": "^6.8.0",
     "nprogress": "^0.2.0",
