@@ -95,7 +95,7 @@ export const clinics: Clinic[] = [
     address: "Infront Of Zonal Office Bank Of India Roof 709 Building, SHOP NO:- FF4 Newtech Grand 3, Dhanbad, Saraidhella, Jharkhand 826007",
     hours: "Open, Closes by 7 pm",
     tag: "Clinic",
-    placeId: "iYeoMu89cnYY5MGw4",
+    placeId: "ChIJh6MeOPy99jkRACHi3aOsBiM",
     images: [
       "/clinics/Dhanbad1.webp",
       "/clinics/Dhanbad2.webp",
