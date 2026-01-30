@@ -72,7 +72,7 @@ export default async function ClinicDetailPage({ params }: ClinicPageParams) {
           <div className="flex gap-4 flex-wrap mb-8">
             <a
               href={`/appointment?cat=${encodeURIComponent(
-                clinic.catSlug || clinic.id
+                clinic.catSlug || clinic.id,
               )}&slug=${encodeURIComponent(clinic.id)}`}
               className="px-6 py-3 bg-[#023784] text-white rounded-md font-semibold hover:bg-[#012a5a]"
             >
@@ -80,9 +80,7 @@ export default async function ClinicDetailPage({ params }: ClinicPageParams) {
             </a>
 
             <a
-              href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-                clinic.address
-              )}`}
+              href={`https://www.google.com/maps/place/?q=place_id:${clinic.placeId}`}
               target="_blank"
               rel="noopener noreferrer"
               className="px-6 py-3 bg-gray-100 text-[#023784] border border-[#023784] rounded-md font-semibold hover:bg-gray-200"

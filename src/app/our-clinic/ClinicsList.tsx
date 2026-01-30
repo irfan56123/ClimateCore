@@ -310,9 +310,13 @@ export default function ClinicsList() {
                   {/* Google Maps directions */}
                   <div className="flex items-center gap-4 mt-2">
                     <a
-                      href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-                        c.address,
-                      )}`}
+                      href={
+                        c.placeId
+                          ? `https://www.google.com/maps/place/?q=place_id:${c.placeId}`
+                          : `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+                              c.address,
+                            )}`
+                      }
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-sm text-blue-600 hover:underline"
