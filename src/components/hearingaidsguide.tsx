@@ -11,19 +11,16 @@ export default function HearingAidGuideSection() {
         <div className="relative z-10 flex flex-col-reverse md:flex-row items-center gap-4 p-5 md:p-8">
           {/* LEFT CONTENT */}
           <div className="w-full md:w-[60%] text-center md:text-left">
-            <div className="inline-flex items-center gap-2 px-2 py-0.5 rounded-full bg-white/5 border border-white/10 text-emerald-400 text-[9px] md:text-xs mb-3">
+            <div className="inline-flex items-center gap-2 px-2 py-0.5 rounded-full bg-white/5 border border-white/10 text-[#E83D6D] text-[9px] md:text-xs mb-3">
               <span className="relative flex h-1.5 w-1.5">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-emerald-500"></span>
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#E83D6D] opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-[#E83D6D]"></span>
               </span>
               2026 EDITION
             </div>
 
-            <h2 className="text-xl md:text-3xl lg:text-5xl font-bold text-white leading-tight tracking-tight">
-              Get the{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">
-                Expert Guide
-              </span>
+            <h2 className="text-xl md:text-3xl lg:text-5xl font-bold bg-gradient-to-r from-[#E83D6D] via-[#ffffff] to-[#7C7C7C] bg-clip-text text-transparent leading-tight tracking-tight">
+              Get the Expert Guide
             </h2>
 
             <p className="mt-1.5 text-gray-400 text-xs md:text-lg max-w-sm mx-auto md:mx-0">
@@ -67,9 +64,9 @@ export default function HearingAidGuideSection() {
 
               <button
                 type="submit"
-                className="bg-[#25D366] hover:bg-[#20bd5b] text-black font-extrabold py-2.5 px-6 rounded-lg text-sm transition-all active:scale-95 whitespace-nowrap shadow-lg shadow-emerald-500/10"
+                className="bg-[#E83D6D] hover:bg-[#eb5a83] text-white font-extrabold py-2.5 px-6 rounded-lg text-sm transition-all active:scale-95 whitespace-nowrap shadow-lg shadow-emerald-500/10"
               >
-                Get Guide on WhatsApp
+                Get Price on WhatsApp
               </button>
             </form>
           </div>

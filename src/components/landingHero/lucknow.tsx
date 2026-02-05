@@ -28,12 +28,12 @@ export default function HeroSection() {
   ];
 
   return (
-    <section className="relative w-full bg-slate-50 overflow-hidden pt-4 md:pt-12">
+    <section className="relative w-full bg-slate-50 overflow-hidden pt-4 md:pt-12 lg:pt-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start">
           {/* --- LEFT CONTENT (Text & Stats) --- */}
           <div className="w-full lg:w-[45%] space-y-6 text-center lg:text-left order-2 lg:order-1">
-            <h1 className="text-3xl md:text-5xl lg:text-6xl font-extrabold leading-tight">
+            <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold leading-snug ">
               <span className="bg-gradient-to-r from-[#E83D6D] via-[#0D2240] to-[#7C7C7C] bg-clip-text text-transparent">
                 Best Hearing Aid in Lucknow – Now In Your City
               </span>
