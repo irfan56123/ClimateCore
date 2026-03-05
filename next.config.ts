@@ -7,6 +7,10 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "mediumslateblue-seahorse-306408.hostingersite.com",
       },
+      {
+        protocol: "https",
+        hostname: "an7bjwndlmaemx4x.public.blob.vercel-storage.com",
+      },
     ],
   },
 
@@ -28,10 +32,10 @@ const nextConfig: NextConfig = {
         destination: "/our-clinic/deoghar",
         permanent: true, // 301 redirect (SEO-friendly)
       },
-      
 
 
-       {
+
+      {
         source: "/blog/hearing-aid-prices-in-2025-latest-price-list-and-buying-guide",
         destination: "/hearing-aid-price",
         permanent: true, // 301 redirect (SEO-friendly)

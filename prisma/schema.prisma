@@ -1,0 +1,51 @@
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["driverAdapters"]
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+enum ProductCategory {
+  signia
+  phonak
+  widex
+  oticon
+  starkey
+}
+
+model AdminUser {
+  id                String    @id @default(cuid())
+  email             String    @unique
+  hashedPassword    String
+  resetToken        String?
+  resetTokenExpiry  DateTime?
+  createdAt         DateTime  @default(now())
+  updatedAt         DateTime  @updatedAt
+}
+
+model Product {
+  id          String          @id @default(cuid())
+  title       String
+  slug        String          @unique
+  category    ProductCategory
+  mrp         Float?
+  description String?         @db.Text
+  isFeatured  Boolean         @default(false)
+  suitableFor String[]        @default([])
+  technology  String[]        @default([])
+  shape       String[]        @default([])
+  images      String[]        @default([])
+  createdAt   DateTime        @default(now())
+  updatedAt   DateTime        @updatedAt
+}
+
+model AdminSetting {
+  id        String   @id @default(cuid())
+  group     String
+  value     String
+  createdAt DateTime @default(now())
+
+  @@unique([group, value])
+}
