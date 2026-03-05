@@ -10,7 +10,7 @@ export async function GET() {
 
         const settings = await prisma.adminSetting.findMany({ orderBy: { group: "asc" } });
         const grouped = settings.reduce(
-            (acc, s) => {
+            (acc: Record<string, { id: string; value: string }[]>, s) => {
                 if (!acc[s.group]) acc[s.group] = [];
                 acc[s.group].push({ id: s.id, value: s.value });
                 return acc;
