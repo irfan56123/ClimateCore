@@ -1,7 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 import { auth } from "@/lib/auth";
-import { AdminSetting } from "@prisma/client";
 
 // GET - all settings grouped
 export async function GET() {
@@ -11,7 +10,7 @@ export async function GET() {
 
         const settings = await prisma.adminSetting.findMany({ orderBy: { group: "asc" } });
         const grouped = settings.reduce(
-            (acc: Record<string, { id: string; value: string }[]>, s: AdminSetting) => {
+            (acc: Record<string, { id: string; value: string }[]>, s: { group: string; id: string; value: string }) => {
                 if (!acc[s.group]) acc[s.group] = [];
                 acc[s.group].push({ id: s.id, value: s.value });
                 return acc;
