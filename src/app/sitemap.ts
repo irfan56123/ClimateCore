@@ -24,7 +24,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
             select: { slug: true, updatedAt: true },
         });
 
-        products.forEach((product) => {
+        products.forEach((product: { slug: string; updatedAt: Date }) => {
             routes.push({
                 url: `${BASE_URL}/product/${product.slug}`,
                 lastModified: product.updatedAt,
