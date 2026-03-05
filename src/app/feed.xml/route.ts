@@ -9,7 +9,7 @@ export async function GET() {
         const products = await prisma.product.findMany();
 
         const items = products
-            .map((product) => {
+            .map((product: { id: string; title: string; description: string | null; category: string; mrp: number | null; slug: string; images: string[] }) => {
                 const cleanDesc = product.description
                     ? product.description.replace(/<[^>]*>?/gm, "").substring(0, 1000)
                     : `Buy ${product.title} from Insono Hearing`;
