@@ -1,11 +1,11 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { Star, Quote, Play, CheckCircle } from "lucide-react";
+import { Star, Quote, CheckCircle } from "lucide-react";
+import FAQ from "@/components/FAQ";
 
 // Updated HVAC-themed testimonial data
 const testi = [
@@ -14,43 +14,31 @@ const testi = [
         location: "Residential Customer",
         description:
             "Vently Air saved us during the peak of winter. Our furnace failed at 2 AM, and their emergency technician was at our door within 45 minutes. Professional, fast, and fair pricing.",
-        image: "/testi/review4.jpg",
     },
     {
         name: "Sarah Jenkins",
         location: "Home Owner",
         description:
             "We upgraded to a central AC system last summer. The energy savings have been incredible, and the indoor air quality test they performed opened our eyes to why our allergies were so bad. Highly recommend!",
-        image: "/testi/review5.jpg",
     },
     {
         name: "Robert Miller",
         location: "Commercial Property Manager",
         description:
             "Managing multiple properties requires reliable partners. Vently Air handles all our annual maintenance and duct cleaning. They are the most thorough HVAC team I've ever worked with.",
-        image: "/testi/Gurmeet.jpeg",
     },
     {
         name: "Amanda Chen",
         location: "New Homeowner",
         description:
             "The duct cleaning service was a game changer. You wouldn't believe what they pulled out of the vents! The air feels so much fresher now, and the team was very respectful of our home.",
-        image: "/testi/Balveer.jpeg",
     },
     {
         name: "David Wilson",
         location: "Family Home",
         description:
             "Excellent service from start to finish. They explained exactly why our heat pump was underperforming instead of just trying to sell us a new one. Honest and expert advice.",
-        image: "/testi/Yoginder.jpeg",
     },
-];
-
-const videoTestimonials = [
-    { name: "Family Home AC Install", url: "https://www.youtube.com/embed/Gn3dkFJtCg8" },
-    { name: "Emergency Furnace Repair", url: "https://www.youtube.com/embed/bkz3983stM4" },
-    { name: "Full Duct Cleaning Process", url: "https://www.youtube.com/embed/YO5Ef3OAY3c" },
-    { name: "Commercial Ventilation Project", url: "https://www.youtube.com/embed/1nG59lEla14" },
 ];
 
 export default function ReviewsPage() {
@@ -96,13 +84,8 @@ export default function ReviewsPage() {
                                     <Quote className="absolute top-6 right-8 text-blue-50 w-12 h-12 -z-10 group-hover:text-blue-100 transition-colors" />
 
                                     <div className="flex items-center gap-4 mb-6">
-                                        <div className="relative w-16 h-16 rounded-full overflow-hidden border-2 border-blue-100">
-                                            <Image
-                                                src={t.image}
-                                                fill
-                                                alt={t.name}
-                                                className="object-cover"
-                                            />
+                                        <div className="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center text-[#184A99] font-bold text-xl border-2 border-blue-100">
+                                            {t.name.charAt(0)}
                                         </div>
                                         <div>
                                             <h5 className="font-bold text-gray-900">{t.name}</h5>
@@ -129,37 +112,8 @@ export default function ReviewsPage() {
                 </div>
             </section>
 
-            {/* 🎥 Video Testimonials Grid */}
-            <section className="py-24 bg-gray-50">
-                <div className="max-w-7xl mx-auto px-4">
-                    <div className="flex flex-col md:flex-row items-end justify-between mb-16 gap-6">
-                        <div className="max-w-2xl">
-                            <h2 className="text-3xl md:text-5xl font-black text-gray-900 mb-4">See Our Work in Action</h2>
-                            <p className="text-gray-500 text-lg">Watch how our technicians transform comfort and air quality in homes and businesses just like yours.</p>
-                        </div>
-                        <div className="flex items-center gap-4 text-[#184A99] font-bold hover:underline cursor-pointer group">
-                            View Our YouTube Channel <Play size={20} className="fill-[#184A99] group-hover:scale-110 transition-transform" />
-                        </div>
-                    </div>
-
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                        {videoTestimonials.map((t, idx) => (
-                            <div key={idx} className="group flex flex-col h-full">
-                                <div className="relative aspect-video rounded-3xl overflow-hidden shadow-lg border-4 border-white group-hover:shadow-2xl transition-all">
-                                    <iframe
-                                        className="w-full h-full"
-                                        src={t.url}
-                                        allowFullScreen
-                                        title={t.name}
-                                    />
-                                    <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent pointer-events-none transition-colors"></div>
-                                </div>
-                                <h4 className="mt-4 font-bold text-gray-800 text-center group-hover:text-[#184A99] transition-colors">{t.name}</h4>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
+            {/* ❓ FAQ Section */}
+            <FAQ />
 
             {/* 🟦 Call to Action */}
             <section className="py-20">
