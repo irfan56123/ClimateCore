@@ -48,18 +48,13 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="/careers" className="hover:text-white">
-                  Careers
-                </a>
-              </li>
-              <li>
                 <a href="/certifications" className="hover:text-white">
                   Our Certifications
                 </a>
               </li>
               <li>
-                <a href="/testimonials" className="hover:text-white">
-                  Customer Testimonials
+                <a href="/reviews" className="hover:text-white">
+                  Customer Reviews
                 </a>
               </li>
 
