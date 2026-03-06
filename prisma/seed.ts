@@ -1,5 +1,5 @@
 import "dotenv/config";
-import { PrismaClient } from "@prisma/client";
+import { PrismaClient, ProductCategory } from "@prisma/client";
 import { PrismaNeon } from "@prisma/adapter-neon";
 import bcrypt from "bcryptjs";
 
@@ -45,7 +45,7 @@ async function main() {
     {
       title: "High-Efficiency Gas Furnace",
       slug: "high-efficiency-gas-furnace",
-      category: "heating" as const,
+      category: "heating" as ProductCategory,
       mrp: 4500,
       description: "Premium high-efficiency gas furnace with quiet operation and consistent heating.",
       isFeatured: true,
@@ -57,7 +57,7 @@ async function main() {
     {
       title: "Central Air Conditioning System",
       slug: "central-ac-system",
-      category: "cooling" as const,
+      category: "cooling" as ProductCategory,
       mrp: 5200,
       description: "Powerful central AC unit with high SEER rating for maximum energy savings.",
       isFeatured: true,
@@ -69,7 +69,7 @@ async function main() {
     {
       title: "Ductless Mini-Split Heat Pump",
       slug: "ductless-mini-split",
-      category: "mini_split" as const,
+      category: "mini_split" as ProductCategory,
       mrp: 3800,
       description: "Flexible heating and cooling solution for homes without ductwork.",
       isFeatured: false,

@@ -10,7 +10,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         { url: `${BASE_URL}/contact-us`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
         { url: `${BASE_URL}/faq`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
         { url: `${BASE_URL}/guide`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
-        { url: `${BASE_URL}/hearing-aid-price`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.9 },
         { url: `${BASE_URL}/our-clinic`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.9 },
         { url: `${BASE_URL}/product`, lastModified: new Date(), changeFrequency: "daily", priority: 0.9 },
 

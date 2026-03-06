@@ -1,3 +1,4 @@
+import { ProductCategory } from "@prisma/client";
 import Image from "next/image";
 import Link from "next/link";
 import Script from "next/script";
@@ -12,8 +13,7 @@ import { prisma } from "@/lib/prisma";
 export const revalidate = 60;
 export const dynamicParams = true;
 
-// Define the Prisma enum manually to avoid Vercel build issues where it isn't exported
-type ProductCategory = "signia" | "phonak" | "widex" | "oticon" | "starkey";
+// ProductCategory is imported from @prisma/client
 
 // Type definition for the product returned by Prisma
 type Product = {
@@ -66,8 +66,8 @@ function generateFAQs(product: Product): { question: string; answer: string }[] 
   const brandName = product.category.charAt(0).toUpperCase() + product.category.slice(1);
 
   faqs.push({
-    question: `What is a ${brandName} HVAC?`,
-    answer: `${brandName} is a world-leading HVAC brand known for its advanced technology, exceptional sound quality, and reliability. The ${product.title} is one of their premium models designed to help people with hearing loss experience clear, natural sound.`,
+    question: `What is this ${brandName} system?`,
+    answer: `Vently Air provides world-leading ${brandName} solutions known for advanced technology, exceptional efficiency, and reliability. The ${product.title} is one of our premium models designed to help homeowners experience balanced comfort and clean air.`,
   });
 
   if (product.technology.length > 0) {
@@ -93,31 +93,31 @@ function generateFAQs(product: Product): { question: string; answer: string }[] 
     });
   }
 
-  if (product.technology.some((t) => t.toLowerCase().includes("invisible")) || product.shape.some((s) => ["IIC", "CIC"].includes(s))) {
+  if (product.technology.some((t) => t.toLowerCase().includes("quiet")) || product.shape.some((s) => ["Compact", "Slim"].includes(s))) {
     faqs.push({
-      question: `Is the ${product.title} invisible or discreet?`,
-      answer: `Yes, the ${product.title} is designed for maximum discretion. Its compact form factor sits deep in the ear canal or close to it, making it nearly invisible to others.`,
+      question: `Is the ${product.title} quiet and discreet?`,
+      answer: `Yes, the ${product.title} is designed for maximum quietness. Its compact form factor and advanced noise reduction technology make it nearly silent during operation.`,
     });
   }
 
   if (product.suitableFor.length > 0) {
     const levels = product.suitableFor.join(", ");
     faqs.push({
-      question: `What level of hearing loss is the ${product.title} suitable for?`,
-      answer: `The ${product.title} is recommended for individuals with ${levels}. We advise getting a professional hearing assessment to confirm the best solution for your specific needs.`,
+      question: `What type of property is the ${product.title} suitable for?`,
+      answer: `The ${product.title} is recommended for ${levels}. We advise getting a professional assessment to confirm the best solution for your space.`,
     });
   }
 
   if (product.mrp) {
     faqs.push({
       question: `What is the price of the ${product.title}?`,
-      answer: `The ${product.title} is priced at ₹${product.mrp.toLocaleString()}. Vently Air Hearing offers flexible EMI options and financing. Contact us for the latest offers and to schedule a free trial.`,
+      answer: `The ${product.title} is priced at ₹${product.mrp.toLocaleString()}. Vently Air offers flexible financing options. Contact us for the latest offers and to schedule a free inspection.`,
     });
   }
 
   faqs.push({
-    question: `Where can I get a free trial of the ${product.title} in India?`,
-    answer: `Vently Air Hearing offers free trials for the ${product.title} at our clinics. Book an appointment online or call us to experience the device before making a decision.`,
+    question: `Where can I get a free estimate for the ${product.title}?`,
+    answer: `Vently Air offers free on-site estimates for the ${product.title}. Book an appointment online or call us to have our technicians evaluate your space.`,
   });
 
   return faqs;
@@ -133,7 +133,7 @@ export async function generateMetadata({
 
   if (!product) {
     return {
-      title: "Product Not Found | Vently Air Hearing",
+      title: "Product Not Found | Vently Air",
       description: "This product could not be found.",
     };
   }
@@ -141,7 +141,7 @@ export async function generateMetadata({
   const brandName = product.category.charAt(0).toUpperCase() + product.category.slice(1);
   const description =
     product.description?.replace(/<[^>]+>/g, "").slice(0, 155) ||
-    `Buy ${product.title} from ${brandName}. ${product.technology.slice(0, 2).join(", ")} HVAC${product.mrp ? ` at ₹${product.mrp.toLocaleString()}` : ""}. Expert fitting at Vently Air Hearing.`;
+    `Buy ${product.title} from Vently Air. ${product.technology.slice(0, 2).join(", ")} system${product.mrp ? ` at ₹${product.mrp.toLocaleString()}` : ""}. Expert installation at Vently Air.`;
 
   const image = product.images[0] || `${BASE_URL}/default-og.jpg`;
 
@@ -153,7 +153,7 @@ export async function generateMetadata({
       description,
       url: `${BASE_URL}/product/${product.slug}`,
       type: "website",
-      siteName: "Vently Air Hearing",
+      siteName: "Vently Air",
       images: [{ url: image }],
     },
     twitter: {
@@ -195,7 +195,7 @@ export default async function ProductPage({
         price: product.mrp,
         priceCurrency: "INR",
         availability: "https://schema.org/InStock",
-        seller: { "@type": "Organization", name: "Vently Air Hearing" },
+        seller: { "@type": "Organization", name: "Vently Air" },
       },
     }),
   };
@@ -402,10 +402,9 @@ export default async function ProductPage({
         </section>
       )}
 
-      {/* Brand Certifications */}
       <ImageShowcaseSection
-        title="Official Certifications from Widex, Signia & Phonak"
-        description="Vently Air Hearing Solutions is an authorized partner for leading global HVAC brands including Widex, Signia, Phonak, and Oticon. These certifications reflect our trusted expertise and commitment to world-class hearing care in India."
+        title="High Performance HVAC Systems"
+        description="Vently Air Solutions is an authorized partner for leading global HVAC brands. Our systems reflect our trusted expertise and commitment to world-class indoor air comfort."
         images={[
           { src: "/images/certifications/widex.png", alt: "Widex Certification" },
           { src: "/images/certifications/signia.jpg", alt: "Signia Certification" },

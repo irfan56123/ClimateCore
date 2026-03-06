@@ -21,16 +21,16 @@ export async function generateMetadata() {
       "best HVAC contractor",
     ],
     openGraph: {
-      title: `Best Digital HVAC Systems | Authorized Signia Phonak Widex Partner`,
-      description: `Compare and buy ${heroKeyword} at ${siteName}. Genuine Signia, Phonak, Widex Digital HVAC Systems`,
+      title: `Best HVAC Systems | Trusted Heating & Cooling Partner`,
+      description: `Compare and buy ${heroKeyword} at ${siteName}. Premium Furnaces, ACs, and Ventilation Systems`,
       url: `https://${process.env.NEXT_PUBLIC_DOMAIN || "ventlyair.com"}`,
       siteName,
       type: "website",
     },
     twitter: {
       card: "summary_large_image",
-      title: `Best Digital HVAC Systems in India | ${siteName}`,
-      description: `Discover ${heroKeyword} and choose the best fit for your hearing needs.`,
+      title: `Best HVAC Systems in India | ${siteName}`,
+      description: `Discover ${heroKeyword} and choose the best fit for your comfort needs.`,
     },
   };
 }
