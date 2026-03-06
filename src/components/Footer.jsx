@@ -71,28 +71,38 @@ export default function Footer() {
             <h4 className="text-white font-semibold mb-3">Our Services</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="/services/ac-repair" className="hover:text-white">
-                  AC Repair & Service
+                <a href="/services/duct-cleaning" className="hover:text-white">
+                  Air Duct Cleaning
                 </a>
               </li>
               <li>
-                <a href="/services/ac-installation" className="hover:text-white">
-                  AC Installation
+                <a href="/services/dryer-vent" className="hover:text-white">
+                  Dryer Vent Service
                 </a>
               </li>
               <li>
-                <a href="/services/ac-maintenance" className="hover:text-white">
-                  AC Maintenance
+                <a href="/services/furnace" className="hover:text-white">
+                  Furnace, Coil & Blower Fan
                 </a>
               </li>
               <li>
-                <a href="/services/heating-solutions" className="hover:text-white">
-                  Heating Solutions
+                <a href="/services/chimney-cleaning" className="hover:text-white">
+                  Chimney Cleaning
                 </a>
               </li>
               <li>
-                <a href="/services/ventilation-systems" className="hover:text-white">
-                  Ventilation Systems
+                <a href="/services/uv-light-installation" className="hover:text-white">
+                  UV Light Installation
+                </a>
+              </li>
+              <li>
+                <a href="/services/air-quality-test" className="hover:text-white">
+                  Air Quality Test
+                </a>
+              </li>
+              <li>
+                <a href="/services/sanitation" className="hover:text-white">
+                  Sanitation
                 </a>
               </li>
             </ul>
