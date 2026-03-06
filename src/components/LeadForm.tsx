@@ -15,6 +15,17 @@ export default function LeadForm() {
         const formData = new FormData(e.target);
         formData.append("service", service);
 
+        // Capture marketing params from URL
+        const params = new URLSearchParams(window.location.search);
+        formData.append("utmSource", params.get("utm_source") || "");
+        formData.append("utmMedium", params.get("utm_medium") || "");
+        formData.append("utmCampaign", params.get("utm_campaign") || "");
+        formData.append("utmTerm", params.get("utm_term") || "");
+        formData.append("utmContent", params.get("utm_content") || "");
+        formData.append("gclid", params.get("gclid") || "");
+        formData.append("pageUrl", window.location.href);
+        formData.append("referrer", document.referrer || "");
+
         await fetch("/api/leads", {
             method: "POST",
             body: formData

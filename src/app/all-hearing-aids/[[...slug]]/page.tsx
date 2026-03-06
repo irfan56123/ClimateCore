@@ -190,7 +190,7 @@ export default async function AllHearingAidsPage({
         name: pageTitle,
         description,
         numberOfItems: products.length,
-        itemListElement: products.slice(0, 20).map((p, i) => ({
+        itemListElement: products.slice(0, 20).map((p: any, i: number) => ({
           "@type": "ListItem",
           position: i + 1,
           url: `${BASE_URL}/product/${p.slug}`,

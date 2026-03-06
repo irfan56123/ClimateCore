@@ -70,6 +70,9 @@ export default function HVACStepForm() {
         e.preventDefault();
         setLoading(true);
 
+        // Capture marketing params from URL
+        const params = new URLSearchParams(window.location.search);
+
         // Simulate API call
         try {
             const response = await fetch("/api/leads", {
@@ -77,6 +80,14 @@ export default function HVACStepForm() {
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({
                     ...form,
+                    utmSource: params.get("utm_source") || "",
+                    utmMedium: params.get("utm_medium") || "",
+                    utmCampaign: params.get("utm_campaign") || "",
+                    utmTerm: params.get("utm_term") || "",
+                    utmContent: params.get("utm_content") || "",
+                    gclid: params.get("gclid") || "",
+                    pageUrl: window.location.href,
+                    referrer: document.referrer || "",
                     source: "Estimate Page Multi-Step"
                 })
             });
@@ -164,8 +175,8 @@ export default function HVACStepForm() {
                                                 nextStep();
                                             }}
                                             className={`flex flex-col items-center justify-center p-8 rounded-2xl border-2 transition-all group ${form.category === item.id
-                                                    ? "border-[#184A99] bg-white shadow-lg"
-                                                    : "border-gray-100 bg-white hover:border-gray-300 hover:shadow-md"
+                                                ? "border-[#184A99] bg-white shadow-lg"
+                                                : "border-gray-100 bg-white hover:border-gray-300 hover:shadow-md"
                                                 }`}
                                         >
                                             <div className={`p-4 rounded-xl mb-4 ${item.bg} group-hover:scale-110 transition-transform`}>
@@ -193,8 +204,8 @@ export default function HVACStepForm() {
                                                 nextStep();
                                             }}
                                             className={`flex items-center justify-between p-5 rounded-xl border-2 transition-all ${form.service === service
-                                                    ? "border-[#184A99] bg-[#f8fbff]"
-                                                    : "border-gray-100 bg-white hover:border-gray-200"
+                                                ? "border-[#184A99] bg-[#f8fbff]"
+                                                : "border-gray-100 bg-white hover:border-gray-200"
                                                 }`}
                                         >
                                             <span className="font-semibold text-gray-700">{service}</span>
@@ -229,8 +240,8 @@ export default function HVACStepForm() {
                                                 nextStep();
                                             }}
                                             className={`flex-1 flex flex-col items-center p-10 rounded-2xl border-2 transition-all ${form.propertyType === type.id
-                                                    ? "border-[#184A99] bg-[#f8fbff] shadow-inner"
-                                                    : "border-gray-100 bg-white hover:border-gray-200"
+                                                ? "border-[#184A99] bg-[#f8fbff] shadow-inner"
+                                                : "border-gray-100 bg-white hover:border-gray-200"
                                                 }`}
                                         >
                                             <type.icon className={`w-12 h-12 mb-4 ${form.propertyType === type.id ? "text-[#184A99]" : "text-gray-400"}`} />
@@ -262,8 +273,8 @@ export default function HVACStepForm() {
                                                 nextStep();
                                             }}
                                             className={`w-full flex items-center justify-between p-5 rounded-xl border-2 transition-all ${form.size === size
-                                                    ? "border-[#184A99] bg-[#f8fbff]"
-                                                    : "border-gray-100 bg-white hover:border-gray-200"
+                                                ? "border-[#184A99] bg-[#f8fbff]"
+                                                : "border-gray-100 bg-white hover:border-gray-200"
                                                 }`}
                                         >
                                             <div className="flex items-center gap-3">

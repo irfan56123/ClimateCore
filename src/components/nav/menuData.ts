@@ -85,16 +85,12 @@ export const headerMenu: NavItem[] = [
     ],
   },
 
-  // {
-  //   label: "Service Areas",
-  //   url: "/service-areas",
-  // },
-  // {
-  //   label: "About",
-  //   url: "/about",
-  // },
-  // {
-  //   label: "Contact",
-  //   url: "/contact",
-  // },
+  {
+    label: "About Us",
+    url: "/about-us",
+  },
+  {
+    label: "Contact",
+    url: "/contact",
+  },
 ];

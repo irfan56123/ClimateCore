@@ -26,7 +26,7 @@ export default function Footer() {
               Vently Air is your trusted partner for high-quality heating, cooling, and ventilation solutions. We are dedicated to providing expert service and reliable HVAC systems for your home and business.
             </p>
             <a
-              href="/contact-us"
+              href="/contact"
               className="inline-block border border-white text-white px-4 py-2 rounded-md hover:bg-white hover:text-gray-900 transition mt-4"
             >
               Contact us
@@ -113,7 +113,7 @@ export default function Footer() {
             <h4 className="text-white font-semibold mb-3">Help & Support</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="/contact-us" className="hover:text-white">
+                <a href="/contact" className="hover:text-white">
                   Schedule Service
                 </a>
               </li>
@@ -123,7 +123,7 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="/contact-us" className="hover:text-white">
+                <a href="/contact" className="hover:text-white">
                   Contact Us
                 </a>
               </li>
@@ -213,10 +213,10 @@ export default function Footer() {
 
           {/* Legal Links */}
           <div className="flex flex-wrap justify-center gap-4 text-gray-400">
-            <a href="/policy" className="hover:text-white">
+            <a href="/privacy-policy" className="hover:text-white">
               Privacy Policy
             </a>
-            <a href="/terms" className="hover:text-white">
+            <a href="/terms-of-use" className="hover:text-white">
               Terms
             </a>
             <a href="/sitemap.xml" className="hover:text-white">

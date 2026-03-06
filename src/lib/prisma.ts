@@ -17,6 +17,20 @@ function createPrismaClient() {
     });
 }
 
-export const prisma = globalForPrisma.prisma ?? createPrismaClient();
+export const prisma = (() => {
+    if (process.env.NODE_ENV !== "production") {
+        const existing = globalForPrisma.prisma;
+        // If we have an existing client but it's missing the new models, discard it
+        if (existing && (!(existing as any).leadNote || !(existing as any).setting || !(existing as any).webhookLog)) {
+            console.log("♻️ Stale Prisma client detected (missing new models). Refreshing...");
+            globalForPrisma.prisma = undefined;
+        }
+    }
+    const client = globalForPrisma.prisma ?? createPrismaClient();
+    if (process.env.NODE_ENV !== "production") globalForPrisma.prisma = client;
+    return client;
+})();
 
-if (process.env.NODE_ENV !== "production") globalForPrisma.prisma = prisma;
+if (process.env.NODE_ENV !== "production") {
+    console.log("💎 Prisma Models Available:", Object.keys(prisma).filter(k => !k.startsWith("_")));
+}

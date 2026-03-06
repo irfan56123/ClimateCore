@@ -1,156 +1,124 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Plus, Trash2, Loader2 } from "lucide-react";
+import { Save, Globe, Info, CheckCircle2, AlertCircle } from "lucide-react";
+import { AdminAuthGuard } from "@/components/admin/AdminSidebar";
 
-type Group = "technology" | "shape" | "suitableFor";
-interface Setting { id: string; value: string; }
-type SettingsMap = Record<Group, Setting[]>;
-
-const GROUP_LABELS: Record<Group, string> = {
-    technology: "Technology Options",
-    shape: "Shape / Style Options",
-    suitableFor: "Suitable For Options",
-};
-
-const GROUPS: Group[] = ["technology", "shape", "suitableFor"];
-
-export default function AdminSettingsPage() {
-    const [settings, setSettings] = useState<SettingsMap>({ technology: [], shape: [], suitableFor: [] });
+export default function SettingsPage() {
+    const [webhookUrl, setWebhookUrl] = useState("");
     const [loading, setLoading] = useState(true);
-    const [inputs, setInputs] = useState<Record<Group, string>>({ technology: "", shape: "", suitableFor: "" });
-    const [adding, setAdding] = useState<Group | null>(null);
-    const [deleting, setDeleting] = useState<string | null>(null);
-    const [errors, setErrors] = useState<Partial<Record<Group, string>>>({});
+    const [saving, setSaving] = useState(false);
+    const [message, setMessage] = useState({ type: "", text: "" });
 
-    const fetchSettings = async () => {
-        try {
-            const res = await fetch("/api/admin/settings");
-            const data = await res.json();
-            setSettings({
-                technology: data.technology ?? [],
-                shape: data.shape ?? [],
-                suitableFor: data.suitableFor ?? [],
-            });
-        } catch {
-            console.error("Failed to load settings");
-        } finally {
-            setLoading(false);
-        }
-    };
+    useEffect(() => {
+        fetch("/api/admin/settings/webhook")
+            .then(res => res.json())
+            .then(data => {
+                setWebhookUrl(data.url || "");
+                setLoading(false);
+            })
+            .catch(() => setLoading(false));
+    }, []);
 
-    useEffect(() => { fetchSettings(); }, []);
-
-    const handleAdd = async (group: Group) => {
-        const value = inputs[group].trim();
-        if (!value) return;
-        setAdding(group);
-        setErrors((prev) => ({ ...prev, [group]: "" }));
+    const handleSave = async (e: React.FormEvent) => {
+        e.preventDefault();
+        setSaving(true);
+        setMessage({ type: "", text: "" });
 
         try {
-            const res = await fetch("/api/admin/settings", {
+            const res = await fetch("/api/admin/settings/webhook", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ group, value }),
+                body: JSON.stringify({ url: webhookUrl }),
             });
-            const data = await res.json();
-            if (!res.ok) throw new Error(data.error || "Failed to add");
-            setSettings((prev) => ({
-                ...prev,
-                [group]: [...prev[group], { id: data.id, value: data.value }],
-            }));
-            setInputs((prev) => ({ ...prev, [group]: "" }));
-        } catch (err: unknown) {
-            setErrors((prev) => ({ ...prev, [group]: (err as Error).message }));
-        } finally {
-            setAdding(null);
-        }
-    };
 
-    const handleDelete = async (group: Group, id: string) => {
-        setDeleting(id);
-        try {
-            await fetch(`/api/admin/settings/${id}`, { method: "DELETE" });
-            setSettings((prev) => ({
-                ...prev,
-                [group]: prev[group].filter((s) => s.id !== id),
-            }));
-        } catch {
-            alert("Failed to delete setting");
+            if (res.ok) {
+                setMessage({ type: "success", text: "Settings saved successfully!" });
+            } else {
+                const data = await res.json();
+                throw new Error(data.error || "Failed to save settings");
+            }
+        } catch (error: any) {
+            setMessage({ type: "error", text: error.message });
         } finally {
-            setDeleting(null);
+            setSaving(false);
         }
     };
 
     return (
-        <div className="p-6 lg:p-8">
-            <div className="mb-8">
-                <h1 className="text-2xl font-bold text-gray-800">Settings</h1>
-                <p className="text-sm text-gray-500 mt-1">Manage dropdown options for product attributes</p>
-            </div>
+        <AdminAuthGuard>
+            <div className="p-6 lg:p-10 bg-gray-50 min-h-screen">
+                <div className="max-w-4xl mx-auto">
+                    <div className="mb-8">
+                        <h1 className="text-3xl font-bold text-gray-900 leading-tight">System Settings</h1>
+                        <p className="text-gray-500 mt-1">Configure integrations and global system parameters.</p>
+                    </div>
 
-            {loading ? (
-                <div className="flex justify-center py-16"><Loader2 size={32} className="animate-spin text-[#023784]" /></div>
-            ) : (
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                    {GROUPS.map((group) => (
-                        <div key={group} className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
-                            <div className="px-5 py-4 border-b border-gray-100 bg-gray-50">
-                                <h2 className="font-semibold text-gray-800 text-sm">{GROUP_LABELS[group]}</h2>
-                                <p className="text-xs text-gray-500 mt-0.5">{settings[group].length} options</p>
-                            </div>
-
-                            <div className="p-4">
-                                {/* Add input */}
-                                <div className="flex gap-2 mb-4">
-                                    <input
-                                        type="text"
-                                        value={inputs[group]}
-                                        onChange={(e) => setInputs((prev) => ({ ...prev, [group]: e.target.value }))}
-                                        onKeyDown={(e) => { if (e.key === "Enter") { e.preventDefault(); handleAdd(group); } }}
-                                        placeholder={`Add new ${group === "suitableFor" ? "hearing loss level" : group} ...`}
-                                        className="flex-1 px-3 py-2 rounded-lg border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#023784]/30 focus:border-[#023784] transition"
-                                    />
-                                    <button
-                                        onClick={() => handleAdd(group)}
-                                        disabled={adding === group || !inputs[group].trim()}
-                                        className="p-2 rounded-lg bg-[#023784] text-white hover:bg-[#012d66] transition disabled:opacity-50"
-                                    >
-                                        {adding === group ? <Loader2 size={16} className="animate-spin" /> : <Plus size={16} />}
-                                    </button>
+                    <div className="bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden">
+                        <div className="p-8 border-b border-gray-50 bg-gray-50/30">
+                            <div className="flex items-center gap-3">
+                                <div className="w-12 h-12 bg-[#023784]/10 text-[#023784] rounded-2xl flex items-center justify-center">
+                                    <Globe size={24} />
                                 </div>
-
-                                {errors[group] && (
-                                    <p className="text-red-500 text-xs mb-3">{errors[group]}</p>
-                                )}
-
-                                {/* Items */}
-                                <div className="space-y-1.5 max-h-80 overflow-y-auto">
-                                    {settings[group].length === 0 ? (
-                                        <p className="text-sm text-gray-400 text-center py-4">No options yet</p>
-                                    ) : (
-                                        settings[group].map((item) => (
-                                            <div
-                                                key={item.id}
-                                                className="flex items-center justify-between px-3 py-2 rounded-lg bg-gray-50 hover:bg-gray-100 transition group"
-                                            >
-                                                <span className="text-sm text-gray-700">{item.value}</span>
-                                                <button
-                                                    onClick={() => handleDelete(group, item.id)}
-                                                    disabled={deleting === item.id}
-                                                    className="text-gray-400 hover:text-red-500 transition opacity-0 group-hover:opacity-100"
-                                                >
-                                                    {deleting === item.id ? <Loader2 size={14} className="animate-spin" /> : <Trash2 size={14} />}
-                                                </button>
-                                            </div>
-                                        ))
-                                    )}
+                                <div>
+                                    <h2 className="text-xl font-bold text-gray-900">Webhook Integration</h2>
+                                    <p className="text-sm text-gray-500">Automatically notify external systems when a new lead arrives.</p>
                                 </div>
                             </div>
                         </div>
-                    ))}
+
+                        <form onSubmit={handleSave} className="p-8 space-y-6">
+                            {message.text && (
+                                <div className={`p-4 rounded-2xl flex items-center gap-3 animate-in fade-in slide-in-from-top-2 duration-300 ${message.type === "success" ? "bg-green-50 text-green-700 border border-green-100" : "bg-red-50 text-red-700 border border-red-100"
+                                    }`}>
+                                    {message.type === "success" ? <CheckCircle2 size={18} /> : <AlertCircle size={18} />}
+                                    <p className="text-sm font-semibold">{message.text}</p>
+                                </div>
+                            )}
+
+                            <div>
+                                <label className="block text-sm font-bold text-gray-700 mb-2 uppercase tracking-wider text-[10px]">
+                                    Webhook Destination URL
+                                </label>
+                                <div className="relative group">
+                                    <input
+                                        type="url"
+                                        placeholder="https://your-api-endpoint.com/webhook"
+                                        value={webhookUrl}
+                                        onChange={(e) => setWebhookUrl(e.target.value)}
+                                        className="w-full px-5 py-4 bg-gray-50 border border-transparent focus:border-[#023784] focus:bg-white rounded-2xl outline-none transition-all text-sm group-hover:bg-gray-100/50"
+                                        required
+                                    />
+                                </div>
+                                <div className="mt-4 p-4 bg-blue-50/50 rounded-2xl flex gap-3">
+                                    <Info className="text-blue-500 shrink-0" size={18} />
+                                    <p className="text-[13px] text-blue-800 leading-relaxed">
+                                        When a new lead is submitted, we will send a <strong>POST</strong> request to this URL with a JSON payload containing lead details, marketing UTM data, and timestamps.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div className="pt-4 border-t border-gray-50 flex items-center justify-between">
+                                <p className="text-xs text-gray-400 italic">
+                                    Status: {loading ? "Loading configuration..." : webhookUrl ? "Configured" : "Not Configured"}
+                                </p>
+                                <button
+                                    type="submit"
+                                    disabled={saving || loading}
+                                    className="inline-flex items-center gap-2 px-8 py-3.5 bg-[#023784] text-white rounded-2xl text-sm font-bold shadow-lg shadow-blue-100 hover:bg-[#012d66] disabled:opacity-50 disabled:hover:bg-[#023784] transition transform active:scale-95"
+                                >
+                                    {saving ? (
+                                        <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                                    ) : (
+                                        <Save size={18} />
+                                    )}
+                                    {saving ? "Saving Changes..." : "Save Settings"}
+                                </button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
-            )}
-        </div>
+            </div>
+        </AdminAuthGuard>
     );
 }

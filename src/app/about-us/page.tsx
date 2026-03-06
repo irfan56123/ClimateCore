@@ -1,180 +1,119 @@
 import Image from "next/image";
-import { Metadata } from "next";
-import { Target, Users, Shield, CheckCircle2 } from "lucide-react";
+import { CheckCircle, Award, Users, ShieldCheck } from "lucide-react";
 
-// ✅ Native Next.js SEO Metadata
-export const metadata: Metadata = {
-  title: "About Us | Vently Air Hearing Solutions",
-  description:
-    "Learn about Vently Air Hearing Solutions — trusted hearing care in India, led by Mr. Manoj Kumar with 10+ years of audiology experience.",
-  alternates: {
-    canonical: `https://${process.env.NEXT_PUBLIC_DOMAIN || "ventlyair.com"}/about`,
-  },
-  openGraph: {
-    title: "About Us | Vently Air Hearing Solutions",
-    description:
-      "Learn about Vently Air Hearing Solutions — trusted hearing care in India.",
-    url: `https://${process.env.NEXT_PUBLIC_DOMAIN || "ventlyair.com"}/about`,
-    siteName: "Vently Air Hearing Solutions",
-    images: [
-      {
-        url: `https://${process.env.NEXT_PUBLIC_DOMAIN || "ventlyair.com"}/image/about-hero-new.jpeg`,
-        width: 1200,
-        height: 630,
-        alt: "About Vently Air Hearing Solutions",
-      },
-    ],
-    locale: "en_IN",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "About Us | Vently Air Hearing Solutions",
-    description:
-      "Learn about Vently Air Hearing Solutions — trusted hearing care in India.",
-    images: [`https://${process.env.NEXT_PUBLIC_DOMAIN || "ventlyair.com"}/image/about-hero-new.jpeg`],
-  },
+export const metadata = {
+  title: "About Us | Vently Air — Your Comfort, Our Mission",
+  description: "Learn more about Vently Air, your trusted local HVAC experts. From 24/7 emergency repairs to energy-efficient installations, we've got you covered.",
 };
 
 export default function AboutPage() {
-  const values = [
-    {
-      icon: Target,
-      title: "Our Mission",
-      desc: "To provide top-quality hearing care with a personal touch and 100% patient satisfaction through trusted, customized solutions.",
-    },
-    {
-      icon: Users,
-      title: "Patient-First Approach",
-      desc: "Every individual receives dedicated attention and care to bring the joy of hearing back into their lives.",
-    },
-    {
-      icon: Shield,
-      title: "Unbiased Advice",
-      desc: "As an independent clinic, we are not owned by any HVAC manufacturer — ensuring free and transparent guidance.",
-    },
-    {
-      icon: CheckCircle2,
-      title: "Trusted Expertise",
-      desc: "With 10+ years of audiology experience, we combine technology and compassion to deliver measurable impact.",
-    },
-  ];
-
-  const doctors = [
-    {
-      id: 1,
-      title: "Mr. Manoj Kumar, Director",
-      description: `The founder of Vently Air Hearing Solutions Pvt. Ltd., is a B.Tech graduate with a Diploma in Hearing, Language, and Speech (DHLS). With over 10+ years of experience in the audiology sector, he has built a reputation for delivering compassionate and personalized hearing care. His deep understanding of the challenges faced by those with hearing loss inspired him to create Vently Air Hearing Solutions, a company committed to providing tailored solutions that improve the lives of its patients. Under his leadership, the company has grown across India, helping individuals reconnect with the world around them.
-
-Driven by a patient-first approach, Mr. Manoj Kumar ensures every individual receives the attention and care they deserve, aiming to bring the joy of hearing back into their lives and impact their well-being.`,
-      image: "/manoj-singh.jpg",
-    },
-  ];
-
   return (
-    <main className="max-w-7xl mx-auto pt-24">
-      {/* 🧭 About Section */}
-      <section className="py-12 px-6 lg:px-12 space-y-8">
-        <div className="flex flex-col lg:flex-row items-center gap-10">
-          <div className="lg:w-6/12 w-full relative h-64 sm:h-80 md:h-96 lg:h-[500px] rounded-lg overflow-hidden shadow">
+    <main className="pt-24 pb-16">
+      {/* 🟦 Hero Section */}
+      <section className="relative h-[400px] flex items-center justify-center text-white overflow-hidden">
+        <Image
+          src="/heroworker.jpg"
+          alt="HVAC Excellence"
+          fill
+          className="object-cover brightness-50"
+          priority
+        />
+        <div className="relative z-10 text-center px-4">
+          <h1 className="text-4xl md:text-6xl font-extrabold mb-4">Our Commitment to Comfort</h1>
+          <p className="text-lg md:text-xl max-w-2xl mx-auto text-blue-50">
+            Vently Air has been providing top-tier heating, cooling, and ventilation services for over a decade.
+          </p>
+        </div>
+      </section>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-20">
+        {/* ⬜ Story Section */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-24">
+          <div>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Who We Are</h2>
+            <p className="text-gray-600 mb-4 leading-relaxed">
+              At Vently Air, we believe that everyone deserves to breathe clean air and live in a perfectly tempered environment. What started as a small family-owned business has grown into one of the most trusted HVAC service providers in the region.
+            </p>
+            <p className="text-gray-600 mb-6 leading-relaxed">
+              Our team of certified technicians is dedicated to delivering excellence in every repair, installation, and maintenance check. We use cutting-edge technology and time-tested methods to ensure your home or office stays comfortable year-round.
+            </p>
+            <ul className="space-y-3">
+              {[
+                "Licensed & Fully Insured",
+                "24/7 Emergency Support",
+                "Certified Specialists",
+                "Energy Efficiency Experts",
+              ].map((item) => (
+                <li key={item} className="flex items-center gap-2 text-gray-800 font-medium">
+                  <CheckCircle className="w-5 h-5 text-[#184A99]" /> {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="relative h-[350px] rounded-2xl overflow-hidden shadow-2xl">
             <Image
-              src="/manoj_singh.jpg"
-              alt="About Vently Air Hearing Solutions"
+              src="/heroworker.png"
+              alt="About Vently Air"
               fill
               className="object-cover"
-              priority
             />
           </div>
-          <div className="lg:w-6/12">
-            <h1 className="text-3xl font-bold mb-4 text-gray-900">About Us</h1>
-            <p className="text-gray-700 leading-relaxed mb-6">
-              Hearing is an essential part of life, connecting us to the world
-              and each other. Yet, hearing loss often goes unnoticed, silently
-              affecting relationships and daily activities. At Vently Air Hearing
-              Solutions, we are dedicated to early detection, expert care, and
-              empowering people to rediscover the joy of sound.
-            </p>
-            <div className="grid sm:grid-cols-2 gap-4">
-              {values.map((val) => (
-                <div
-                  key={val.title}
-                  className="p-4 border rounded-lg shadow-sm hover:shadow-md transition bg-white"
-                >
-                  <val.icon className="text-[#023784] mb-2" size={24} />
-                  <h3 className="font-semibold text-gray-900 mb-1">
-                    {val.title}
-                  </h3>
-                  <p className="text-sm text-gray-600">{val.desc}</p>
-                </div>
-              ))}
-            </div>
+        </div>
+
+        {/* 🟦 Stats Section */}
+        <div className="bg-[#184A99] rounded-3xl p-10 md:p-16 text-white grid grid-cols-2 md:grid-cols-4 gap-8 text-center mb-24">
+          <div>
+            <div className="text-4xl font-bold mb-2">10+</div>
+            <div className="text-blue-100 text-sm uppercase tracking-wider">Years Experience</div>
+          </div>
+          <div>
+            <div className="text-4xl font-bold mb-2">5k+</div>
+            <div className="text-blue-100 text-sm uppercase tracking-wider">Happy Clients</div>
+          </div>
+          <div>
+            <div className="text-4xl font-bold mb-2">15+</div>
+            <div className="text-blue-100 text-sm uppercase tracking-wider">Expert Techs</div>
+          </div>
+          <div>
+            <div className="text-4xl font-bold mb-2">100%</div>
+            <div className="text-blue-100 text-sm uppercase tracking-wider">Satisfaction</div>
           </div>
         </div>
-      </section>
 
-      {/* 👤 Director Section */}
-      <section className="py-16 px-6 lg:px-12">
-        {doctors.map((doc) => (
-          <div
-            key={doc.id}
-            className="flex flex-col lg:flex-row items-center gap-10 rounded-lg bg-gray-50 p-8"
-          >
-            <div className="lg:w-4/12 w-full relative h-64 sm:h-80 md:h-96 rounded-lg overflow-hidden shadow">
-              <Image
-                src={doc.image}
-                alt={doc.title}
-                fill
-                className="object-cover"
-              />
-            </div>
-            <div className="lg:w-8/12">
-              <h2 className="text-3xl lg:text-4xl font-bold mb-4 text-gray-900">
-                {doc.title}
-              </h2>
-              <p className="text-gray-700 leading-relaxed whitespace-pre-line">
-                {doc.description}
-              </p>
-            </div>
+        {/* ⬜ Core Values */}
+        <section className="mb-24 text-center">
+          <h2 className="text-3xl font-bold text-gray-900 mb-12">Our Core Values</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <ValueCard
+              icon={<ShieldCheck className="w-8 h-8" />}
+              title="Integrity First"
+              desc="We believe in transparent pricing and honest assessments. No hidden fees, just reliable service."
+            />
+            <ValueCard
+              icon={<Award className="w-8 h-8" />}
+              title="Unmatched Quality"
+              desc="We never cut corners. Every job is completed to the highest industry standards with premium parts."
+            />
+            <ValueCard
+              icon={<Users className="w-8 h-8" />}
+              title="Customer Focused"
+              desc="Your comfort is our priority. We listen to your needs and provide tailored solutions that work."
+            />
           </div>
-        ))}
-      </section>
-
-      {/* 🏆 Awards & Recognition */}
-      <section className="bg-gray-50">
-        <div className="max-w-6xl mx-auto px-4 py-14">
-          <h2 className="text-2xl md:text-3xl font-bold text-center">
-            Awards & <span className="text-[#023784]">Recognitions</span>
-          </h2>
-          <p className="text-center text-gray-600 max-w-3xl mx-auto mt-3">
-            Vently Air Hearing Solutions has received multiple prestigious awards
-            and holds certifications from top global HVAC brands,
-            reflecting our commitment to excellence in hearing care.
-          </p>
-
-          <div className="mt-10 grid md:grid-cols-3 gap-6">
-            {[
-              "award_insono.jpg",
-              "lifeVently Air.jpg",
-              "insono_awarded.jpg",
-              "signia.jpg",
-              "phonak.jpeg",
-              "images/certifications/widex.png",
-            ].map((img) => (
-              <div
-                key={img}
-                className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow"
-              >
-                <Image
-                  src={`/${img}`}
-                  alt="Vently Air team and clinic moments"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </main>
+  );
+}
+
+function ValueCard({ icon, title, desc }: { icon: React.ReactNode; title: string; desc: string }) {
+  return (
+    <div className="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition">
+      <div className="w-16 h-16 bg-blue-50 text-[#184A99] rounded-2xl flex items-center justify-center mx-auto mb-6">
+        {icon}
+      </div>
+      <h3 className="text-xl font-bold text-gray-900 mb-3">{title}</h3>
+      <p className="text-gray-600">{desc}</p>
+    </div>
   );
 }

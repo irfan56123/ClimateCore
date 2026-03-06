@@ -18,7 +18,8 @@ import {
 
 const navLinks = [
     { href: "/admin", label: "Dashboard", icon: LayoutDashboard, exact: true },
-    { href: "/admin/products", label: "Products", icon: Package },
+    { href: "/admin/leads", label: "Leads", icon: FileText },
+    { href: "/admin/logs", label: "Payload Logs", icon: FileText },
     { href: "/admin/settings", label: "Settings", icon: Settings },
 ];
 
@@ -34,9 +35,6 @@ export function AdminSidebar() {
             {/* Mobile top bar */}
             <div className="lg:hidden flex items-center justify-between px-4 py-3 bg-white border-b border-gray-200 shadow-sm">
                 <div className="flex items-center gap-2">
-                    <div className="w-8 h-8 rounded-lg bg-[#023784] flex items-center justify-center text-white font-bold text-sm">
-                        I
-                    </div>
                     <span className="font-semibold text-gray-800">Vently Air Admin</span>
                 </div>
                 <button onClick={() => setOpen(!open)} className="p-2 rounded-md hover:bg-gray-100">
@@ -52,11 +50,8 @@ export function AdminSidebar() {
                 {/* Logo */}
                 <div className="p-6 border-b border-white/10">
                     <div className="flex items-center gap-3">
-                        <div className="w-10 h-10 rounded-xl bg-[#023784] flex items-center justify-center font-bold text-lg shadow-lg">
-                            I
-                        </div>
                         <div>
-                            <p className="font-bold text-white text-sm">Vently Air Hearing</p>
+                            <p className="font-bold text-white text-sm">Vently Air</p>
                             <p className="text-xs text-blue-300">Admin Panel</p>
                         </div>
                     </div>
@@ -88,7 +83,7 @@ export function AdminSidebar() {
                 {/* Quick Links */}
                 <div className="p-4 border-t border-white/10 space-y-1">
                     <p className="px-3 text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">SEO & Feeds</p>
-                    <Link
+                    {/* <Link
                         href="/sitemap.xml"
                         target="_blank"
                         className="flex items-center gap-3 px-3 py-2 rounded-lg text-sm font-medium text-gray-400 hover:text-white hover:bg-white/10 transition-all"
@@ -103,7 +98,7 @@ export function AdminSidebar() {
                     >
                         <Rss size={18} className="text-gray-500" />
                         Merchant Feed
-                    </Link>
+                    </Link> */}
                 </div>
 
                 {/* Logout */}
