@@ -5,7 +5,7 @@ import { Users, ShieldCheck, Wrench } from "lucide-react";
 export default function HeroSection() {
   return (
     <section className="w-full bg-gray-50 py-12 md:py-32 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-[2fr_1.5fr_1.2fr] gap-10 items-center">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-[1.5fr_1fr_1.5fr] gap-6 items-center">
 
         {/* TEXT CONTENT */}
         <div className="space-y-6 text-center lg:text-left">

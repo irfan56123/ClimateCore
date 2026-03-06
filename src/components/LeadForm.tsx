@@ -41,7 +41,7 @@ export default function LeadForm() {
     ];
 
     return (
-        <div className="relative bg-white p-6 sm:p-7 rounded-2xl shadow-xl border border-gray-100 w-full max-w-md mx-auto">
+        <div className="relative bg-white p-6 sm:p-7 rounded-2xl shadow-xl border border-gray-100 w-full max-w-lg mx-auto">
 
             {/* Glow effect */}
             <div className="absolute -top-8 -right-8 w-32 h-32 bg-blue-100 rounded-full blur-3xl opacity-50"></div>

@@ -70,13 +70,19 @@ export default function ContactPage() {
                 </div>
             </div>
 
-            {/* 🗺️ Simple Map Placeholder Section */}
+            {/* 🗺️ Interactive Map Section */}
             <section className="mt-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-                <div className="bg-gray-100 rounded-3xl h-[400px] flex items-center justify-center text-gray-400 font-medium border-2 border-dashed border-gray-200">
-                    <div className="text-center">
-                        <MapPin className="w-12 h-12 mx-auto mb-4 opacity-20" />
-                        Interactive Map Integration Ready
-                    </div>
+                <div className="overflow-hidden rounded-3xl shadow-lg border border-gray-100 h-[450px] w-full bg-gray-50">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d755477.3003732845!2d-71.20020299999999!3d42.298089999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e379fe8cc221cd%3A0x8fa1c7c775747a4!2sVently%20Air!5e0!3m2!1sen!2sin!4v1772825876918!5m2!1sen!2sin"
+                        width="100%"
+                        height="100%"
+                        style={{ border: 0 }}
+                        allowFullScreen={true}
+                        loading="lazy"
+                        referrerPolicy="no-referrer-when-downgrade"
+                        title="Vently Air Location"
+                    ></iframe>
                 </div>
             </section>
         </main>
