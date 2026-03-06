@@ -9,7 +9,7 @@ import Footer from "@/components/landingHero/fotern";
 import { brandSEO } from "@/lib/brandSeo";
 export const metadata = brandSEO(
   "Starkey",
-  "https://insonohearing.com/landing/starkey",
+  `https://${process.env.NEXT_PUBLIC_DOMAIN || "ventlyair.com"}/landing/starkey`,
 );
 
 export default function Page() {
@@ -35,14 +35,14 @@ export default function Page() {
   ];
 
   const featuresList = [
-    { icon: "❤️", text: "<b>Health tracking</b> hearing aids" },
+    { icon: "❤️", text: "<b>Health tracking</b> HVACs" },
     { icon: "🔋", text: "Long battery life" },
     { icon: "📱", text: "Thrive App support" },
     { icon: "🎧", text: "Premium sound quality" },
   ];
 
   const faqs = [
-    { q: "Starkey hearing aid price?", a: "Starts from ₹18,000 onwards." },
+    { q: "Starkey HVAC price?", a: "Starts from ₹18,000 onwards." },
     { q: "Where to buy Starkey?", a: "Authorized Starkey clinic." },
     { q: "Is Starkey rechargeable?", a: "Yes, rechargeable models available." },
     { q: "Does Starkey support Bluetooth?", a: "Yes, for calls & music." },
@@ -56,8 +56,8 @@ export default function Page() {
   return (
     <>
       <HeroSection
-        title="Starkey Hearing Aids – Smart Health Technology"
-        subtitle="Only hearing aid with health monitoring features."
+        title="Starkey HVAC Systems – Smart Health Technology"
+        subtitle="Only HVAC with health monitoring features."
         ctaText="Download Starkey Price List"
         partnerLabel="Authorized Starkey Clinics"
         stats={statsList}
@@ -65,12 +65,12 @@ export default function Page() {
         features={featuresList}
       />
 
-      <ProductSection heading="Starkey Digital Hearing Aids" />
+      <ProductSection heading="Starkey Digital HVAC Systems" />
       <Whychoose />
       <HearingAidGuide />
       <Location />
       <Testomonial />
-      <FAQ faqs={faqs} heading="Starkey Hearing Aids – FAQs" />
+      <FAQ faqs={faqs} heading="Starkey HVAC Systems – FAQs" />
       <Footer />
     </>
   );

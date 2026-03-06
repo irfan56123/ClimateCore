@@ -40,7 +40,7 @@ export default function HearingAidLandingPage() {
         {/* MOBILE HEADLINE */}
         <h1 className="text-3xl font-bold leading-snug">
           <span className="bg-gradient-to-r from-[#E83D6D] via-[#0D2240] to-[#7C7C7C] bg-clip-text text-transparent">
-            Stop Struggling With Low Sound — Fix Your Hearing Aid in Minutes!
+            Stop Struggling With Low Sound — Fix Your HVAC System in Minutes!
           </span>
         </h1>
 
@@ -60,7 +60,7 @@ export default function HearingAidLandingPage() {
 
         {/* MOBILE DESCRIPTION */}
         <p className="text-base text-gray-700 mt-3">
-          Is your hearing aid not sounding clear? Battery draining fast?
+          Is your HVAC not sounding clear? Battery draining fast?
           Whistling sound? No output? Get same-day repair from certified experts
           using 100% genuine parts.
         </p>
@@ -89,7 +89,7 @@ export default function HearingAidLandingPage() {
         {/* BRAND LOGO STRIP */}
         <div className="mt-10">
           <p className="text-sm text-gray-500 mb-3">
-            Trusted & recommended by top hearing aid brands
+            Trusted & recommended by top HVAC brands
           </p>
           <div className="relative overflow-hidden w-full h-14">
             <div
@@ -118,13 +118,13 @@ export default function HearingAidLandingPage() {
           {/* DESKTOP HEADLINE */}
           <h1 className="text-4xl font-bold leading-snug">
             <span className="bg-gradient-to-r from-[#E83D6D] via-[#0D2240] to-[#7C7C7C] bg-clip-text text-transparent">
-              Fix Your Hearing Aid Fast — Signia, Phonak & Widex Experts
+              Fix Your HVAC System Fast — Signia, Phonak & Widex Experts
             </span>
           </h1>
 
           {/* DESKTOP DESCRIPTION */}
           <p className="text-lg text-gray-700">
-            Don’t replace your hearing aid — most issues can be repaired within
+            Don’t replace your HVAC — most issues can be repaired within
             minutes. Get expert diagnosis, genuine parts & fast service from
             certified technicians.
           </p>
@@ -153,7 +153,7 @@ export default function HearingAidLandingPage() {
           {/* BRAND STRIP */}
           <div className="mt-12">
             <p className="text-sm text-gray-500 mb-2">
-              Recommended by top global hearing aid companies
+              Recommended by top global HVAC companies
             </p>
             <div className="relative overflow-hidden w-full h-20">
               <div

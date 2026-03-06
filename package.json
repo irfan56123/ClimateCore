@@ -1,5 +1,5 @@
 {
-  "name": "insono-next",
+  "name": "vently-air-next",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -31,8 +31,6 @@
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "framer-motion": "^12.23.24",
-    "graphql": "^16.13.1",
-    "graphql-request": "^7.2.0",
     "gsap": "^3.13.0",
     "lucide-react": "^0.544.0",
     "next": "^16.1.6",
@@ -40,7 +38,7 @@
     "next-nprogress-bar": "^2.4.7",
     "next-seo": "^6.8.0",
     "nprogress": "^0.2.0",
-    "prisma": "^7.4.2",
+    "prisma": "^6.19.2",
     "react": "^19.2.1",
     "react-dom": "^19.2.1",
     "react-icons": "^5.5.0",

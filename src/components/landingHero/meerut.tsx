@@ -47,7 +47,7 @@ export default function HeroSectionMeerut() {
       <div className="lg:hidden px-4 sm:px-6 md:px-8 py-12 flex flex-col gap-8 text-center">
         <h1 className="text-2xl md:text-4xl font-bold leading-snug">
           <span className="bg-gradient-to-r from-[#E83D6D] via-[#0D2240] to-[#7C7C7C] bg-clip-text text-transparent">
-            Best Hearing Aid in Meerut – Now in Your City
+            Best HVAC System in Meerut – Now in Your City
           </span>
         </h1>
 
@@ -127,7 +127,7 @@ export default function HeroSectionMeerut() {
             <span className="font-semibold text-gray-700">
               official partner
             </span>{" "}
-            of top global hearing aid brands.
+            of top global HVAC brands.
           </p>
           <div className="relative overflow-hidden w-full h-16 sm:h-20">
             <div
@@ -225,7 +225,7 @@ export default function HeroSectionMeerut() {
         <div className="flex-1 min-w-[350px] space-y-6 text-left">
           <h1 className="text-3xl font-bold leading-snug">
             <span className="bg-gradient-to-r from-[#E83D6D] via-[#0D2240] to-[#7C7C7C] bg-clip-text text-transparent">
-              Best Hearing Aid in Meerut – Now in Your City
+              Best HVAC System in Meerut – Now in Your City
             </span>
           </h1>
 
@@ -291,7 +291,7 @@ export default function HeroSectionMeerut() {
               <span className="font-semibold text-gray-700">
                 official partner
               </span>{" "}
-              of leading hearing aid brands.
+              of leading HVAC brands.
             </p>
 
             <div className="relative overflow-hidden w-full h-20">

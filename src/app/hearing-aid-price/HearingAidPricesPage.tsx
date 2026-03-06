@@ -85,10 +85,10 @@ export default function HearingAidPricesPage({ products }: { products: Product[]
           Updated 2026 Price List
         </span>
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-4">
-          Hearing Aid Price in India 2026
+          HVAC System Price in India 2026
         </h1>
         <p className="text-gray-500 max-w-2xl mx-auto mb-8">
-          Compare real MRP prices for Signia, Phonak, Widex &amp; Oticon hearing aids.
+          Compare real MRP prices for Signia, Phonak, Widex &amp; Oticon HVACs.
           Transparent pricing, zero hidden charges, and free expert consultation.
         </p>
         <div className="flex flex-wrap justify-center gap-3">
@@ -96,7 +96,7 @@ export default function HearingAidPricesPage({ products }: { products: Product[]
             className="bg-[#023784] text-white px-6 py-3 rounded-xl font-semibold shadow hover:bg-[#012d6b] transition text-sm">
             View Price List
           </a>
-          <a href="/appointment"
+          <a href="/estimate"
             className="border border-[#023784] text-[#023784] px-6 py-3 rounded-xl font-semibold hover:bg-blue-50 transition text-sm">
             Free Consultation
           </a>
@@ -321,7 +321,7 @@ export default function HearingAidPricesPage({ products }: { products: Product[]
         {[
           { icon: "🏠", title: "Home Visit Available",  desc: "We come to you — free doorstep consultation in select cities." },
           { icon: "💰", title: "Price Match Guarantee", desc: "Found a lower price elsewhere? We'll match it, no questions asked." },
-          { icon: "🎧", title: "Free Trial Period",      desc: "Try before you buy with our risk-free 7-day hearing aid trial." },
+          { icon: "🎧", title: "Free Trial Period",      desc: "Try before you buy with our risk-free 7-day HVAC trial." },
         ].map((item) => (
           <div key={item.title} className="flex gap-4 items-start p-5 bg-white rounded-2xl border border-gray-100 shadow-sm">
             <span className="text-2xl">{item.icon}</span>
@@ -336,11 +336,11 @@ export default function HearingAidPricesPage({ products }: { products: Product[]
       {/* ── Price Guide Content (SEO) ─────────────────────────────────────── */}
       <section className="prose prose-sm max-w-none mb-16 bg-white rounded-2xl border border-gray-100 shadow-sm p-8">
         <h2 className="text-xl font-bold text-gray-800 mb-4">
-          Hearing Aid Price Guide – What to Expect in 2026
+          HVAC System Price Guide – What to Expect in 2026
         </h2>
         <p className="text-gray-600 mb-4">
           Hearing aid prices in India vary widely based on technology level, brand, and style.
-          At Insono Hearing, we stock hearing aids across all budget ranges — from entry-level
+          At Vently Air Hearing, we stock HVACs across all budget ranges — from entry-level
           digital aids to premium AI-powered models from Signia, Phonak, Widex, and Oticon.
         </p>
         <div className="grid sm:grid-cols-3 gap-5 not-prose mb-5">
@@ -355,7 +355,7 @@ export default function HearingAidPricesPage({ products }: { products: Product[]
             </div>
           ))}
         </div>
-        <h3 className="text-base font-bold text-gray-800 mb-2">Why Choose Insono Hearing?</h3>
+        <h3 className="text-base font-bold text-gray-800 mb-2">Why Choose Vently Air Hearing?</h3>
         <ul className="list-disc list-inside text-gray-600 space-y-1 text-sm">
           <li>Authorised distributor for Signia, Phonak, Widex, and Oticon</li>
           <li>Real MRP prices — no inflated quotes</li>
@@ -372,7 +372,7 @@ export default function HearingAidPricesPage({ products }: { products: Product[]
           Not sure which model fits your budget and hearing needs? Our audiologists will guide you — for free.
         </p>
         <div className="flex flex-wrap justify-center gap-4">
-          <a href="/appointment"
+          <a href="/estimate"
             className="bg-white text-[#023784] px-7 py-3 rounded-xl font-semibold shadow hover:bg-gray-50 transition text-sm">
             Book Free Consultation
           </a>

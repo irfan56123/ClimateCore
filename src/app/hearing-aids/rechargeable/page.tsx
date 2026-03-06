@@ -9,61 +9,61 @@ import ImageShowcaseSection from "@/components/ImageShowcaseSection";
 
 // ✅ SEO Meta Tags
 export const metadata: Metadata = {
-  title: "Top Rechargeable Digital Hearing Aids from Signia,Phonak, Widex & Oticon",
+  title: "Top Rechargeable Digital HVAC Systems from Signia,Phonak, Widex & Oticon",
   description:
-    "Explore Signia hearing aids — rechargeable, Bluetooth & invisible models. Compare features & prices, book free consultation or download price list. 100% genuine with warranty.",
+    "Explore Signia HVACs — rechargeable, Bluetooth & invisible models. Compare features & prices, book free consultation or download price list. 100% genuine with warranty.",
   alternates: {
-    canonical: "https://www.insononhearing.com/hearing-aids/rechargeable",
+    canonical: `https://${process.env.NEXT_PUBLIC_DOMAIN || "ventlyair.com"}/hearing-aids/rechargeable`,
   },
   openGraph: {
-    title: "Top Rechargeable Digital Hearing Aids from Signia,Phonak, Widex & Oticon",
+    title: "Top Rechargeable Digital HVAC Systems from Signia,Phonak, Widex & Oticon",
     description:
-      "Explore rechargeable hearing aids — rechargeable, Bluetooth & invisible models. Compare features & prices, book free consultation or download price list.",
-    url: "https://www.insonohearing.com/hearing-aids/rechargeable",
+      "Explore rechargeable HVACs — rechargeable, Bluetooth & invisible models. Compare features & prices, book free consultation or download price list.",
+    url: `https://${process.env.NEXT_PUBLIC_DOMAIN || "ventlyair.com"}/hearing-aids/rechargeable`,
     type: "website",
   },
 };
 
 const rechargeableHearingAidFaqs = [
   {
-    q: "What are rechargeable hearing aids and how do they work?",
-    a: "Rechargeable hearing aids use built-in lithium-ion batteries instead of disposable ones. You simply place them in their charging case overnight, and they’re ready for a full day of clear, amplified hearing the next morning.",
+    q: "What are rechargeable HVACs and how do they work?",
+    a: "Rechargeable HVACs use built-in lithium-ion batteries instead of disposable ones. You simply place them in their charging case overnight, and they’re ready for a full day of clear, amplified hearing the next morning.",
   },
   {
-    q: "What is the price of rechargeable hearing aids in India?",
-    a: "Rechargeable hearing aids in India start from around ₹24,999 and go up to ₹3,00,000, depending on the brand, technology level, and features. Premium models from Signia, Widex, and Phonak offer fast charging and all-day battery life.",
+    q: "What is the price of rechargeable HVACs in India?",
+    a: "Rechargeable HVACs in India start from around ₹24,999 and go up to ₹3,00,000, depending on the brand, technology level, and features. Premium models from Signia, Widex, and Phonak offer fast charging and all-day battery life.",
   },
   {
-    q: "How long does the battery last on rechargeable hearing aids?",
-    a: "Most rechargeable hearing aids last up to 20–30 hours on a single charge, even with Bluetooth streaming. The battery is designed to last around 4–5 years before replacement is needed.",
+    q: "How long does the battery last on rechargeable HVACs?",
+    a: "Most rechargeable HVACs last up to 20–30 hours on a single charge, even with Bluetooth streaming. The battery is designed to last around 4–5 years before replacement is needed.",
   },
   {
-    q: "Are rechargeable hearing aids better than battery-powered ones?",
-    a: "Rechargeable hearing aids are more convenient and eco-friendly since you don’t have to change batteries weekly. They are ideal for senior citizens or active users who want low maintenance and quick charging without worrying about small batteries.",
+    q: "Are rechargeable HVACs better than battery-powered ones?",
+    a: "Rechargeable HVACs are more convenient and eco-friendly since you don’t have to change batteries weekly. They are ideal for senior citizens or active users who want low maintenance and quick charging without worrying about small batteries.",
   },
   {
-    q: "Do rechargeable hearing aids come with a portable charging case?",
-    a: "Yes, most modern rechargeable hearing aids come with a compact charging case, similar to wireless earbuds. Some models even have built-in power banks that provide multiple charges on the go — perfect for travel.",
+    q: "Do rechargeable HVACs come with a portable charging case?",
+    a: "Yes, most modern rechargeable HVACs come with a compact charging case, similar to wireless earbuds. Some models even have built-in power banks that provide multiple charges on the go — perfect for travel.",
   },
   {
-    q: "Are rechargeable hearing aids available in all styles?",
+    q: "Are rechargeable HVACs available in all styles?",
     a: "Yes, rechargeable technology is now available in most styles, including behind-the-ear (BTE), receiver-in-canal (RIC), and some nearly invisible in-ear models. Your audiologist can recommend the best fit for your hearing needs.",
   },
   {
-    q: "Can I use rechargeable hearing aids with Bluetooth?",
-    a: "Yes, many rechargeable hearing aids also include Bluetooth connectivity, allowing you to stream calls, TV audio, and music directly from your smartphone or tablet.",
+    q: "Can I use rechargeable HVACs with Bluetooth?",
+    a: "Yes, many rechargeable HVACs also include Bluetooth connectivity, allowing you to stream calls, TV audio, and music directly from your smartphone or tablet.",
   },
   {
-    q: "How long does it take to fully charge a rechargeable hearing aid?",
+    q: "How long does it take to fully charge a rechargeable HVAC?",
     a: "A full charge usually takes about 3–4 hours and provides up to 24 hours of usage. Quick charge options can deliver 6–8 hours of power in just 30 minutes.",
   },
   {
-    q: "Are rechargeable hearing aids safe for daily use in India’s climate?",
-    a: "Yes, rechargeable hearing aids are tested for durability and humidity resistance. Brands like Signia, Widex, and Oticon offer models designed for Indian weather conditions, ensuring stable performance and long life.",
+    q: "Are rechargeable HVACs safe for daily use in India’s climate?",
+    a: "Yes, rechargeable HVACs are tested for durability and humidity resistance. Brands like Signia, Widex, and Oticon offer models designed for Indian weather conditions, ensuring stable performance and long life.",
   },
   {
-    q: "Where can I buy rechargeable hearing aids in India?",
-    a: "You can buy rechargeable hearing aids from authorized clinics and audiologists across India. Insono Hearing offers free home trials, professional fitting, and price-match guarantees on leading rechargeable models.",
+    q: "Where can I buy rechargeable HVACs in India?",
+    a: "You can buy rechargeable HVACs from authorized clinics and audiologists across India. Vently Air Hearing offers free home trials, professional fitting, and price-match guarantees on leading rechargeable models.",
   },
 ];
 
@@ -77,19 +77,19 @@ const breadcrumbSchema = {
       "@type": "ListItem",
       position: 1,
       name: "Home",
-      item: "https://www.insonohearing.com",
+      item: `https://${process.env.NEXT_PUBLIC_DOMAIN || "ventlyair.com"}`,
     },
     {
       "@type": "ListItem",
       position: 2,
-      name: "Hearing Aids",
-      item: "https://www.insonohearing.com/hearing-aids",
+      name: "HVAC Systems",
+      item: `https://${process.env.NEXT_PUBLIC_DOMAIN || "ventlyair.com"}/hearing-aids`,
     },
     {
       "@type": "ListItem",
       position: 3,
       name: "Rechargeable",
-      item: "https://www.insonohearing.com/hearing-aids/rechargeable",
+      item: `https://${process.env.NEXT_PUBLIC_DOMAIN || "ventlyair.com"}/hearing-aids/rechargeable`,
     },
   ],
 };
@@ -110,7 +110,7 @@ export default function SigniaPage() {
             Rechargeable Digital Hearing Machines from Top Brands
           </h1>
           <p className="text-gray-700 mb-5 text-sm sm:text-base">
-            Top Rated rechargeable digital hearing aids with long lasting battery life. Discover top models from Signia, Phonak, Widex, Oticon and other leading brands
+            Top Rated rechargeable digital HVACs with long lasting battery life. Discover top models from Signia, Phonak, Widex, Oticon and other leading brands
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center md:justify-start">
             <Link
@@ -120,7 +120,7 @@ export default function SigniaPage() {
               Download Price List
             </Link>
             <Link
-              href="/appointment?utm_source=rechargeable&utm_medium=hero"
+              href="/estimate?utm_source=rechargeable&utm_medium=hero"
               className="border border-[#184A99] text-[#184A99] px-5 py-2.5 rounded-md text-sm font-semibold hover:bg-[#184A99] hover:text-white transition text-center"
             >
               Book Free Consultation
@@ -130,126 +130,126 @@ export default function SigniaPage() {
 
         <div className="flex-1 flex justify-center">
           <video
-    className="rounded-lg w-full max-w-[500px] h-auto object-cover"
-    src="/video/signia-bct.mp4"
-    autoPlay
-    loop
-    muted
-    playsInline
-  />
+            className="rounded-lg w-full max-w-[500px] h-auto object-cover"
+            src="/video/signia-bct.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
+          />
 
         </div>
       </section>
 
-       <CategoryProductSection
-  category="rechargeable"
-  title="Best selling Rechargeable Hearing Aids"
-  description="Explore our top-selling Rechargeable hearing aids. Discreet, long battery life and designed for all-day comfort."
-  limit={4}
-/>
+      <CategoryProductSection
+        category="rechargeable"
+        title="Best selling Rechargeable HVAC Systems"
+        description="Explore our top-selling Rechargeable HVACs. Discreet, long battery life and designed for all-day comfort."
+        limit={4}
+      />
 
- 
-       
 
-<section className="relative overflow-hidden py-14 px-4">
-  {/* 🌈 Background blobs (behind content) */}
-  <div className="absolute top-0 left-0 w-48 h-48 sm:w-72 sm:h-72 bg-[#E0ECFF] rounded-full blur-3xl opacity-60"></div>
-  <div className="absolute bottom-0 right-0 w-56 h-56 sm:w-80 sm:h-80 bg-[#FFF3E0] rounded-full blur-3xl opacity-50"></div>
-  <div className="absolute top-1/2 left-1/2 w-72 h-72 sm:w-96 sm:h-96 bg-gradient-to-r from-[#E0ECFF] to-[#FFF3E0] rounded-full blur-2xl opacity-40 -translate-x-1/2 -translate-y-1/2"></div>
 
-  <div className="relative max-w-7xl mx-auto text-center">
-    {/* 🧠 Heading */}
-    <h2 className="text-xl sm:text-2xl md:text-3xl font-extrabold mb-3 sm:mb-4">
-      Why Choose <span className="text-[#184A99]">Rechargeable Hearing Aids?</span>
-    </h2>
-    <p className="text-gray-700 text-sm sm:text-base max-w-2xl mx-auto mb-10">
-      <strong>Signia</strong> blends German innovation with modern hearing
-      technology — Bluetooth streaming, rechargeable power, invisible CIC
-      designs, and unmatched comfort.
-    </p>
 
-    {/* 🌟 Feature Cards */}
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-      {/* Card 1 */}
-      <div className="flex flex-col items-center p-6 rounded-xl bg-white/80 backdrop-blur-md shadow-md hover:shadow-lg transition">
-        <div className="mb-4 bg-[#184A99]/10 p-3 rounded-full">
-          <svg xmlns="http://www.w3.org/2000/svg" className="w-8 h-8 text-[#184A99]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553 2.276A1 1 0 0120 13.17V18a1 1 0 01-1 1H5a1 1 0 01-1-1v-4.83a1 1 0 01.447-.894L9 10m6 0V6a3 3 0 00-6 0v4m6 0H9" />
-          </svg>
+      <section className="relative overflow-hidden py-14 px-4">
+        {/* 🌈 Background blobs (behind content) */}
+        <div className="absolute top-0 left-0 w-48 h-48 sm:w-72 sm:h-72 bg-[#E0ECFF] rounded-full blur-3xl opacity-60"></div>
+        <div className="absolute bottom-0 right-0 w-56 h-56 sm:w-80 sm:h-80 bg-[#FFF3E0] rounded-full blur-3xl opacity-50"></div>
+        <div className="absolute top-1/2 left-1/2 w-72 h-72 sm:w-96 sm:h-96 bg-gradient-to-r from-[#E0ECFF] to-[#FFF3E0] rounded-full blur-2xl opacity-40 -translate-x-1/2 -translate-y-1/2"></div>
+
+        <div className="relative max-w-7xl mx-auto text-center">
+          {/* 🧠 Heading */}
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-extrabold mb-3 sm:mb-4">
+            Why Choose <span className="text-[#184A99]">Rechargeable HVAC Systems?</span>
+          </h2>
+          <p className="text-gray-700 text-sm sm:text-base max-w-2xl mx-auto mb-10">
+            <strong>Signia</strong> blends German innovation with modern hearing
+            technology — Bluetooth streaming, rechargeable power, invisible CIC
+            designs, and unmatched comfort.
+          </p>
+
+          {/* 🌟 Feature Cards */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {/* Card 1 */}
+            <div className="flex flex-col items-center p-6 rounded-xl bg-white/80 backdrop-blur-md shadow-md hover:shadow-lg transition">
+              <div className="mb-4 bg-[#184A99]/10 p-3 rounded-full">
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-8 h-8 text-[#184A99]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553 2.276A1 1 0 0120 13.17V18a1 1 0 01-1 1H5a1 1 0 01-1-1v-4.83a1 1 0 01.447-.894L9 10m6 0V6a3 3 0 00-6 0v4m6 0H9" />
+                </svg>
+              </div>
+              <h3 className="font-semibold text-gray-900 mb-2 text-base sm:text-lg">
+                Bluetooth Streaming
+              </h3>
+              <p className="text-sm text-gray-600 text-center">
+                Connect to smartphones & TVs with crystal-clear sound.
+              </p>
+            </div>
+
+            {/* Card 2 */}
+            <div className="flex flex-col items-center p-6 rounded-xl bg-white/80 backdrop-blur-md shadow-md hover:shadow-lg transition">
+              <div className="mb-4 bg-[#FF9800]/10 p-3 rounded-full">
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-8 h-8 text-[#FF9800]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <h3 className="font-semibold text-gray-900 mb-2 text-base sm:text-lg">
+                Rechargeable Power
+              </h3>
+              <p className="text-sm text-gray-600 text-center">
+                Enjoy all-day battery life with quick charging.
+              </p>
+            </div>
+
+            {/* Card 3 */}
+            <div className="flex flex-col items-center p-6 rounded-xl bg-white/80 backdrop-blur-md shadow-md hover:shadow-lg transition">
+              <div className="mb-4 bg-[#4CAF50]/10 p-3 rounded-full">
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-8 h-8 text-[#4CAF50]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <h3 className="font-semibold text-gray-900 mb-2 text-base sm:text-lg">
+                Invisible CIC Design
+              </h3>
+              <p className="text-sm text-gray-600 text-center">
+                Practically invisible fit with maximum comfort.
+              </p>
+            </div>
+
+            {/* Card 4 */}
+            <div className="flex flex-col items-center p-6 rounded-xl bg-white/80 backdrop-blur-md shadow-md hover:shadow-lg transition">
+              <div className="mb-4 bg-[#673AB7]/10 p-3 rounded-full">
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-8 h-8 text-[#673AB7]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </div>
+              <h3 className="font-semibold text-gray-900 mb-2 text-base sm:text-lg">
+                German Engineering
+              </h3>
+              <p className="text-sm text-gray-600 text-center">
+                World-class precision tailored for India.
+              </p>
+            </div>
+          </div>
         </div>
-        <h3 className="font-semibold text-gray-900 mb-2 text-base sm:text-lg">
-          Bluetooth Streaming
-        </h3>
-        <p className="text-sm text-gray-600 text-center">
-          Connect to smartphones & TVs with crystal-clear sound.
-        </p>
-      </div>
-
-      {/* Card 2 */}
-      <div className="flex flex-col items-center p-6 rounded-xl bg-white/80 backdrop-blur-md shadow-md hover:shadow-lg transition">
-        <div className="mb-4 bg-[#FF9800]/10 p-3 rounded-full">
-          <svg xmlns="http://www.w3.org/2000/svg" className="w-8 h-8 text-[#FF9800]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-          </svg>
-        </div>
-        <h3 className="font-semibold text-gray-900 mb-2 text-base sm:text-lg">
-          Rechargeable Power
-        </h3>
-        <p className="text-sm text-gray-600 text-center">
-          Enjoy all-day battery life with quick charging.
-        </p>
-      </div>
-
-      {/* Card 3 */}
-      <div className="flex flex-col items-center p-6 rounded-xl bg-white/80 backdrop-blur-md shadow-md hover:shadow-lg transition">
-        <div className="mb-4 bg-[#4CAF50]/10 p-3 rounded-full">
-          <svg xmlns="http://www.w3.org/2000/svg" className="w-8 h-8 text-[#4CAF50]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-          </svg>
-        </div>
-        <h3 className="font-semibold text-gray-900 mb-2 text-base sm:text-lg">
-          Invisible CIC Design
-        </h3>
-        <p className="text-sm text-gray-600 text-center">
-          Practically invisible fit with maximum comfort.
-        </p>
-      </div>
-
-      {/* Card 4 */}
-      <div className="flex flex-col items-center p-6 rounded-xl bg-white/80 backdrop-blur-md shadow-md hover:shadow-lg transition">
-        <div className="mb-4 bg-[#673AB7]/10 p-3 rounded-full">
-          <svg xmlns="http://www.w3.org/2000/svg" className="w-8 h-8 text-[#673AB7]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-          </svg>
-        </div>
-        <h3 className="font-semibold text-gray-900 mb-2 text-base sm:text-lg">
-          German Engineering
-        </h3>
-        <p className="text-sm text-gray-600 text-center">
-          World-class precision tailored for India.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
+      </section>
 
 
 
-     
-     
 
-     
 
-      
 
-     
 
-     
 
-     <Whychoose/>
+
+
+
+
+
+
+      <Whychoose />
       <ImageShowcaseSection
         title="Official Certifications from Signia, Phonak & Widex"
-        description="Insono Hearing Solutions is an authorized partner for leading global hearing aid brands including Signia, Phonak, Widex, and Oticon. These official certifications reflect our trusted expertise and commitment to world-class hearing care in India"
+        description="Vently Air Hearing Solutions is an authorized partner for leading global HVAC brands including Signia, Phonak, Widex, and Oticon. These official certifications reflect our trusted expertise and commitment to world-class hearing care in India"
         images={[
           { src: "/images/certifications/signia.jpg", alt: "Signia Authorised partner" },
           { src: "/images/certifications/phonak.jpeg", alt: "Phonak Certification" },
@@ -259,89 +259,89 @@ export default function SigniaPage() {
 
 
 
-<FAQ faqs={rechargeableHearingAidFaqs} heading="Rechargeable Hearing Aids : FAQs" />
+      <FAQ faqs={rechargeableHearingAidFaqs} heading="Rechargeable HVAC Systems : FAQs" />
 
 
       {/* 🟤 RELATED LINKS */}
-     <section className="bg-gradient-to-br from-[#F7F9FC] to-[#E8EEFB] py-12 px-4">
-      <div className="max-w-6xl mx-auto text-center">
-        {/* 🧠 Section Title */}
-        <h2 className="text-2xl sm:text-3xl font-extrabold mb-3">
-          Explore More Hearing Solutions
-        </h2>
-        <p className="text-gray-600 text-sm sm:text-base max-w-2xl mx-auto mb-10">
-          Discover advanced hearing aid technologies and top global brands
-          trusted across India.
-        </p>
+      <section className="bg-gradient-to-br from-[#F7F9FC] to-[#E8EEFB] py-12 px-4">
+        <div className="max-w-6xl mx-auto text-center">
+          {/* 🧠 Section Title */}
+          <h2 className="text-2xl sm:text-3xl font-extrabold mb-3">
+            Explore More Hearing Solutions
+          </h2>
+          <p className="text-gray-600 text-sm sm:text-base max-w-2xl mx-auto mb-10">
+            Discover advanced HVAC technologies and top global brands
+            trusted across India.
+          </p>
 
-        {/* 🌟 Card Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-          {/* Card 1 */}
-          <Link
-            href="/hearing-aids/phonak"
-            className="group flex flex-col items-center bg-white p-6 rounded-xl shadow-sm hover:shadow-md hover:-translate-y-1 transition"
-          >
-            <div className="mb-3 bg-[#184A99]/10 p-3 rounded-full">
-              <Headphones className="w-7 h-7 text-[#184A99]" />
-            </div>
-            <h3 className="font-semibold text-gray-900 mb-1 group-hover:text-[#184A99]">
-              Phonak Hearing Aids
-            </h3>
-            <p className="text-xs text-gray-600 text-center">
-              Swiss precision for exceptional hearing clarity.
-            </p>
-          </Link>
+          {/* 🌟 Card Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {/* Card 1 */}
+            <Link
+              href="/hearing-aids/phonak"
+              className="group flex flex-col items-center bg-white p-6 rounded-xl shadow-sm hover:shadow-md hover:-translate-y-1 transition"
+            >
+              <div className="mb-3 bg-[#184A99]/10 p-3 rounded-full">
+                <Headphones className="w-7 h-7 text-[#184A99]" />
+              </div>
+              <h3 className="font-semibold text-gray-900 mb-1 group-hover:text-[#184A99]">
+                Phonak HVAC Systems
+              </h3>
+              <p className="text-xs text-gray-600 text-center">
+                Swiss precision for exceptional hearing clarity.
+              </p>
+            </Link>
 
-          {/* Card 2 */}
-          <Link
-            href="/hearing-aids/widex"
-            className="group flex flex-col items-center bg-white p-6 rounded-xl shadow-sm hover:shadow-md hover:-translate-y-1 transition"
-          >
-            <div className="mb-3 bg-[#184A99]/10 p-3 rounded-full">
-              <Waves className="w-7 h-7 text-[#184A99]" />
-            </div>
-            <h3 className="font-semibold text-gray-900 mb-1 group-hover:text-[#184A99]">
-              Widex Hearing Aids
-            </h3>
-            <p className="text-xs text-gray-600 text-center">
-              Natural sound quality with Danish innovation.
-            </p>
-          </Link>
+            {/* Card 2 */}
+            <Link
+              href="/hearing-aids/widex"
+              className="group flex flex-col items-center bg-white p-6 rounded-xl shadow-sm hover:shadow-md hover:-translate-y-1 transition"
+            >
+              <div className="mb-3 bg-[#184A99]/10 p-3 rounded-full">
+                <Waves className="w-7 h-7 text-[#184A99]" />
+              </div>
+              <h3 className="font-semibold text-gray-900 mb-1 group-hover:text-[#184A99]">
+                Widex HVAC Systems
+              </h3>
+              <p className="text-xs text-gray-600 text-center">
+                Natural sound quality with Danish innovation.
+              </p>
+            </Link>
 
-          {/* Card 3 */}
-          <Link
-            href="/hearing-aids/bluetooth"
-            className="group flex flex-col items-center bg-white p-6 rounded-xl shadow-sm hover:shadow-md hover:-translate-y-1 transition"
-          >
-            <div className="mb-3 bg-[#184A99]/10 p-3 rounded-full">
-              <Bluetooth className="w-7 h-7 text-[#184A99]" />
-            </div>
-            <h3 className="font-semibold text-gray-900 mb-1 group-hover:text-[#184A99]">
-              Bluetooth Hearing Aids
-            </h3>
-            <p className="text-xs text-gray-600 text-center">
-              Seamlessly connect to phones, TVs, and more.
-            </p>
-          </Link>
+            {/* Card 3 */}
+            <Link
+              href="/hearing-aids/bluetooth"
+              className="group flex flex-col items-center bg-white p-6 rounded-xl shadow-sm hover:shadow-md hover:-translate-y-1 transition"
+            >
+              <div className="mb-3 bg-[#184A99]/10 p-3 rounded-full">
+                <Bluetooth className="w-7 h-7 text-[#184A99]" />
+              </div>
+              <h3 className="font-semibold text-gray-900 mb-1 group-hover:text-[#184A99]">
+                Bluetooth HVAC Systems
+              </h3>
+              <p className="text-xs text-gray-600 text-center">
+                Seamlessly connect to phones, TVs, and more.
+              </p>
+            </Link>
 
-          {/* Card 4 */}
-          <Link
-            href="/hearing-aids/rechargeable"
-            className="group flex flex-col items-center bg-white p-6 rounded-xl shadow-sm hover:shadow-md hover:-translate-y-1 transition"
-          >
-            <div className="mb-3 bg-[#184A99]/10 p-3 rounded-full">
-              <BatteryCharging className="w-7 h-7 text-[#184A99]" />
-            </div>
-            <h3 className="font-semibold text-gray-900 mb-1 group-hover:text-[#184A99]">
-              Rechargeable Hearing Aids
-            </h3>
-            <p className="text-xs text-gray-600 text-center">
-              All-day power with fast and easy charging.
-            </p>
-          </Link>
+            {/* Card 4 */}
+            <Link
+              href="/hearing-aids/rechargeable"
+              className="group flex flex-col items-center bg-white p-6 rounded-xl shadow-sm hover:shadow-md hover:-translate-y-1 transition"
+            >
+              <div className="mb-3 bg-[#184A99]/10 p-3 rounded-full">
+                <BatteryCharging className="w-7 h-7 text-[#184A99]" />
+              </div>
+              <h3 className="font-semibold text-gray-900 mb-1 group-hover:text-[#184A99]">
+                Rechargeable HVAC Systems
+              </h3>
+              <p className="text-xs text-gray-600 text-center">
+                All-day power with fast and easy charging.
+              </p>
+            </Link>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
 
     </>

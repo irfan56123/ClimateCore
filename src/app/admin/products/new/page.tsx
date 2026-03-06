@@ -41,7 +41,7 @@ export default function NewProductPage() {
                 </Link>
                 <div>
                     <h1 className="text-2xl font-bold text-gray-800">New Product</h1>
-                    <p className="text-sm text-gray-500">Add a hearing aid to your catalog</p>
+                    <p className="text-sm text-gray-500">Add a HVAC to your catalog</p>
                 </div>
             </div>
 

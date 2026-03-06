@@ -10,7 +10,7 @@ export default function PrivacyPage() {
 
       <section className="space-y-6">
         <p>
-          At <span className="font-semibold">Insono Hearing</span>, we value
+          At <span className="font-semibold">Vently Air</span>, we value
           your privacy and are committed to protecting your personal data. This
           Privacy Policy explains how we collect, use, and safeguard your
           information when you use our website and services.
@@ -69,10 +69,10 @@ export default function PrivacyPage() {
             You have the right to access, update, or delete your personal data.
             To exercise these rights, please contact us at{" "}
             <a
-              href="mailto:support@insonohearing.com"
+              href={`mailto:support@${process.env.NEXT_PUBLIC_DOMAIN || "ventlyair.com"}`}
               className="text-[#023784] font-medium hover:underline"
             >
-              support@insonohearing.com
+              support@{process.env.NEXT_PUBLIC_DOMAIN || "ventlyair.com"}
             </a>
             .
           </p>
@@ -94,10 +94,10 @@ export default function PrivacyPage() {
             If you have any questions about this Privacy Policy, please contact
             us at{" "}
             <a
-              href="mailto:support@insonohearing.com"
+              href={`mailto:support@${process.env.NEXT_PUBLIC_DOMAIN || "ventlyair.com"}`}
               className="text-[#023784] font-medium hover:underline"
             >
-              support@insonohearing.com
+              support@{process.env.NEXT_PUBLIC_DOMAIN || "ventlyair.com"}
             </a>
             .
           </p>

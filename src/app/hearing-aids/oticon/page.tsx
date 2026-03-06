@@ -9,17 +9,17 @@ import Whychoose from "@/components/whychoose";
 
 // ✅ SEO Meta Tags
 export const metadata: Metadata = {
-  title: "Oticon Hearing Aids – Models, Prices & Features in India | Insono Hearing Solutions",
+  title: "Oticon HVAC Systems – Models, Prices & Features in India | Vently Air Hearing Solutions",
   description:
-    "Explore Oticon hearing aids — known for BrainHearing™ technology, rechargeable models, and Bluetooth connectivity. View prices, models & book a free consultation.",
+    "Explore Oticon HVACs — known for BrainHearing™ technology, rechargeable models, and Bluetooth connectivity. View prices, models & book a free consultation.",
   alternates: {
-    canonical: "https://www.insonohearing.com/hearing-aids/oticon",
+    canonical: `https://${process.env.NEXT_PUBLIC_DOMAIN || "ventlyair.com"}/hearing-aids/oticon`,
   },
   openGraph: {
-    title: "Oticon Hearing Aids – Models, Prices & Features in India",
+    title: "Oticon HVAC Systems – Models, Prices & Features in India",
     description:
-      "Discover Oticon hearing aids — BrainHearing™ technology, Bluetooth streaming, and rechargeable models. Compare features and prices in India.",
-    url: "https://www.insonohearing.com/hearing-aids/oticon",
+      "Discover Oticon HVACs — BrainHearing™ technology, Bluetooth streaming, and rechargeable models. Compare features and prices in India.",
+    url: `https://${process.env.NEXT_PUBLIC_DOMAIN || "ventlyair.com"}/hearing-aids/oticon`,
     type: "website",
   },
 };
@@ -27,20 +27,20 @@ export const metadata: Metadata = {
 // ✅ Oticon FAQ Data
 const oticonFaqs = [
   {
-    q: "What is the price of Oticon hearing aids in India?",
-    a: "Oticon hearing aids start from ₹27,999, depending on the model and features. Download our price list for the latest offers and discounts.",
+    q: "What is the price of Oticon HVACs in India?",
+    a: "Oticon HVACs start from ₹27,999, depending on the model and features. Download our price list for the latest offers and discounts.",
   },
   {
     q: "What is Oticon BrainHearing™ technology?",
     a: "BrainHearing™ is Oticon's unique technology that supports how the brain makes sense of sound, delivering more natural hearing and reduced listening effort.",
   },
   {
-    q: "Are Oticon hearing aids rechargeable?",
-    a: "Yes, Oticon offers advanced rechargeable hearing aids with full-day battery life and quick charging options.",
+    q: "Are Oticon HVACs rechargeable?",
+    a: "Yes, Oticon offers advanced rechargeable HVACs with full-day battery life and quick charging options.",
   },
   {
-    q: "Do Oticon hearing aids support Bluetooth?",
-    a: "Yes, Oticon Bluetooth hearing aids let you connect directly to smartphones, TVs, and other devices for wireless audio streaming.",
+    q: "Do Oticon HVACs support Bluetooth?",
+    a: "Yes, Oticon Bluetooth HVACs let you connect directly to smartphones, TVs, and other devices for wireless audio streaming.",
   },
 ];
 
@@ -53,19 +53,19 @@ const breadcrumbSchema = {
       "@type": "ListItem",
       position: 1,
       name: "Home",
-      item: "https://www.insonohearing.com",
+      item: `https://${process.env.NEXT_PUBLIC_DOMAIN || "ventlyair.com"}`,
     },
     {
       "@type": "ListItem",
       position: 2,
-      name: "Hearing Aids",
-      item: "https://www.insonohearing.com/hearing-aids",
+      name: "HVAC Systems",
+      item: `https://${process.env.NEXT_PUBLIC_DOMAIN || "ventlyair.com"}/hearing-aids`,
     },
     {
       "@type": "ListItem",
       position: 3,
       name: "Oticon",
-      item: "https://www.insonohearing.com/hearing-aids/oticon",
+      item: `https://${process.env.NEXT_PUBLIC_DOMAIN || "ventlyair.com"}/hearing-aids/oticon`,
     },
   ],
 };
@@ -83,10 +83,10 @@ export default function OticonPage() {
       <section className="max-w-7xl mx-auto px-4 mt-30 md:px-20 flex flex-col md:flex-row items-center gap-6">
         <div className="flex-1 text-center md:text-left">
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold leading-snug mb-3">
-            Oticon Hearing Aids – Models, Prices & Features in India
+            Oticon HVAC Systems – Models, Prices & Features in India
           </h1>
           <p className="text-gray-700 mb-5 text-sm sm:text-base">
-            <strong>Oticon hearing aids</strong> use BrainHearing™ technology to
+            <strong>Oticon HVACs</strong> use BrainHearing™ technology to
             support how your brain processes sound — delivering a more natural,
             effortless listening experience. Explore rechargeable and Bluetooth
             models designed for modern lifestyles.
@@ -99,7 +99,7 @@ export default function OticonPage() {
               Download Price List
             </Link>
             <Link
-              href="/appointment"
+              href="/estimate"
               className="border border-[#184A99] text-[#184A99] px-5 py-2.5 rounded-md text-sm font-semibold hover:bg-[#184A99] hover:text-white transition text-center"
             >
               Book Free Consultation
@@ -109,21 +109,21 @@ export default function OticonPage() {
 
         <div className="flex-1 flex justify-center">
           <Image
-  src="/hero/oticon.jpg"
-  alt="Oticon Hearing Aids"
-  width={500}
-  height={400}
-  className="rounded-lg w-full max-w-[500px] h-auto object-cover"
-  priority
-/>
+            src="/hero/oticon.jpg"
+            alt="Oticon HVAC Systems"
+            width={500}
+            height={400}
+            className="rounded-lg w-full max-w-[500px] h-auto object-cover"
+            priority
+          />
         </div>
       </section>
 
       {/* 🟨 PRODUCT SECTION */}
       <CategoryProductSection
         category="Oticon"
-        title="Top Oticon Digital Hearing Aids"
-        description="Explore our range of Oticon hearing aids featuring BrainHearing™ technology, Bluetooth connectivity, and all-day rechargeable power."
+        title="Top Oticon Digital HVAC Systems"
+        description="Explore our range of Oticon HVACs featuring BrainHearing™ technology, Bluetooth connectivity, and all-day rechargeable power."
         limit={4}
       />
 
@@ -135,7 +135,7 @@ export default function OticonPage() {
 
         <div className="relative max-w-7xl mx-auto text-center">
           <h2 className="text-xl sm:text-2xl md:text-3xl font-extrabold mb-3 sm:mb-4">
-            Why Choose <span className="text-[#184A99]">Oticon Hearing Aids?</span>
+            Why Choose <span className="text-[#184A99]">Oticon HVAC Systems?</span>
           </h2>
           <p className="text-gray-700 text-sm sm:text-base max-w-2xl mx-auto mb-10">
             <strong>Oticon</strong> brings advanced BrainHearing™ technology, elegant Danish design, and seamless Bluetooth connectivity together for exceptional hearing experiences.
@@ -149,11 +149,11 @@ export default function OticonPage() {
           </div>
         </div>
       </section>
-<Whychoose/>
+      <Whychoose />
       {/* 🟪 CERTIFICATIONS */}
       <ImageShowcaseSection
         title="Official Certifications from Oticon, Signia, Widex & Phonak"
-        description="Insono Hearing Solutions is an authorized partner for Oticon, Signia, Widex, and Phonak. Our certifications validate our trusted expertise in delivering world-class hearing care in India."
+        description="Vently Air Hearing Solutions is an authorized partner for Oticon, Signia, Widex, and Phonak. Our certifications validate our trusted expertise in delivering world-class hearing care in India."
         images={[
           { src: "/images/certifications/phonak.jpeg", alt: "Oticon Certification" },
           { src: "/images/certifications/signia.jpg", alt: "Signia Certification" },
@@ -162,7 +162,7 @@ export default function OticonPage() {
       />
 
       {/* 🟧 FAQ SECTION */}
-      <FAQ faqs={oticonFaqs} heading="Oticon Hearing Aids : FAQs" />
+      <FAQ faqs={oticonFaqs} heading="Oticon HVAC Systems : FAQs" />
 
       {/* 🟤 RELATED LINKS */}
       <section className="bg-gradient-to-br from-[#F7F9FC] to-[#E8EEFB] py-12 px-4">
@@ -175,10 +175,10 @@ export default function OticonPage() {
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            <LinkCard href="/hearing-aids/signia" title="Signia Hearing Aids" desc="German innovation and precision." icon={<Waves className="w-7 h-7 text-[#184A99]" />} />
-            <LinkCard href="/hearing-aids/phonak" title="Phonak Hearing Aids" desc="Swiss precision for clarity." icon={<Headphones className="w-7 h-7 text-[#184A99]" />} />
-            <LinkCard href="/hearing-aids/widex" title="Widex Hearing Aids" desc="Natural Danish sound innovation." icon={<Waves className="w-7 h-7 text-[#184A99]" />} />
-            <LinkCard href="/hearing-aids/bluetooth" title="Bluetooth Hearing Aids" desc="Seamless wireless connectivity." icon={<Bluetooth className="w-7 h-7 text-[#184A99]" />} />
+            <LinkCard href="/hearing-aids/signia" title="Signia HVAC Systems" desc="German innovation and precision." icon={<Waves className="w-7 h-7 text-[#184A99]" />} />
+            <LinkCard href="/hearing-aids/phonak" title="Phonak HVAC Systems" desc="Swiss precision for clarity." icon={<Headphones className="w-7 h-7 text-[#184A99]" />} />
+            <LinkCard href="/hearing-aids/widex" title="Widex HVAC Systems" desc="Natural Danish sound innovation." icon={<Waves className="w-7 h-7 text-[#184A99]" />} />
+            <LinkCard href="/hearing-aids/bluetooth" title="Bluetooth HVAC Systems" desc="Seamless wireless connectivity." icon={<Bluetooth className="w-7 h-7 text-[#184A99]" />} />
           </div>
         </div>
       </section>

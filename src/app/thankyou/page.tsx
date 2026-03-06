@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { PhoneCall, MessageCircle, Download } from "lucide-react";
 
-const PDF_URL = "/Insono.pdf"; // 👉 place PDF in /public
+const PDF_URL = "/Vently Air.pdf"; // 👉 place PDF in /public
 
 export default function ThankYouPage() {
   return (
@@ -25,7 +25,7 @@ export default function ThankYouPage() {
         <iframe
           src={PDF_URL}
           className="w-full h-[450px] sm:h-[550px]"
-          title="Hearing Aid Price List"
+          title="HVAC System Price List"
         />
       </div>
 
@@ -48,7 +48,7 @@ export default function ThankYouPage() {
         <div className="flex gap-4 justify-center">
           {/* CALL */}
           <a
-            href="tel:+916204260510"
+            href={`tel:${process.env.NEXT_PUBLIC_PHONE || "+916204260510"}`}
             className="flex items-center gap-2 px-5 py-3 rounded-full bg-green-600 text-white shadow hover:bg-green-700 transition"
           >
             <PhoneCall size={18} />
@@ -57,7 +57,7 @@ export default function ThankYouPage() {
 
           {/* WHATSAPP */}
           <a
-            href="https://wa.me/916204260510"
+            href={`https://wa.me/${(process.env.NEXT_PUBLIC_PHONE || "916204260510").replace(/\+/g, "")}`}
             target="_blank"
             className="flex items-center gap-2 px-5 py-3 rounded-full bg-emerald-500 text-white shadow hover:bg-emerald-600 transition"
           >

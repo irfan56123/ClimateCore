@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { GET_PRODUCTS, graphQLClient } from "@/lib/graphql";
 import ProductCard from "./ProductCard";
 
 interface Product {
@@ -11,50 +10,44 @@ interface Product {
   description: string;
   price: string;
   category: string[];
-  featuredImage?: {
-    node?: { sourceUrl?: string | null };
-  };
+  imageUrl?: string;
   createdAt?: string;
 }
 
-interface ProductNode {
+interface PrismaProduct {
   id: string;
   title: string;
   slug: string;
-  description?: string | null;
-  featuredImage?: { node?: { sourceUrl?: string | null } } | null;
-  date?: string | null;
-  categories?: {
-    nodes?: Array<{ name?: string | null; slug?: string | null }>;
-  } | null;
-}
-
-interface GraphQLResponse {
-  products: {
-    nodes: ProductNode[];
-  };
+  category: string;
+  mrp: number | null;
+  isFeatured: boolean;
+  images: string[];
+  suitableFor: string[];
+  technology: string[];
+  shape: string[];
+  description: string | null;
+  createdAt: string;
 }
 
 type ProductSectionProps = {
   heading?: string;
 };
 
-const categories = ["All", "Signia", "Phonak", "Widex", "Oticon", "Bluetooth"];
+const categories = ["All", "Heating", "Cooling", "Mini-Split", "Ventilation"];
 
 const categoryKeywords: Record<string, string[]> = {
   All: [],
-  Signia: ["signia"],
-  Phonak: ["phonak"],
-  Widex: ["widex"],
-  Oticon: ["oticon"],
-  Bluetooth: ["bluetooth", "bt"],
+  Heating: ["heating", "furnace", "boiler"],
+  Cooling: ["cooling", "ac", "air conditioner"],
+  "Mini-Split": ["mini split", "ductless"],
+  Ventilation: ["ventilation", "hvac", "duct"],
 };
 
 const BRAND_KEYWORDS: Record<string, string[]> = {
-  signia: ["signia"],
-  phonak: ["phonak"],
-  oticon: ["oticon"],
-  widex: ["widex"],
+  heating: ["heating", "furnace"],
+  cooling: ["cooling", "ac"],
+  ventilation: ["ventilation"],
+  mini_split: ["mini split"],
 };
 
 const normalize = (text: string) =>
@@ -82,23 +75,20 @@ export default function ProductSection({ heading }: ProductSectionProps) {
   useEffect(() => {
     async function fetchProducts() {
       try {
-        const data = await graphQLClient.request<GraphQLResponse>(GET_PRODUCTS);
+        const response = await fetch("/api/products");
+        if (!response.ok) throw new Error("Failed to fetch products");
+        const data: PrismaProduct[] = await response.json();
 
-        const mapped = data.products.nodes.map((p, i) => {
-          const cats = p.categories?.nodes ?? [];
-          const category = cats.flatMap(
-            (n) => [n?.name, n?.slug].filter(Boolean) as string[],
-          );
-
+        const mapped = data.map((p) => {
           return {
             id: p.id,
             title: p.title,
             slug: p.slug,
             description: p.description || "",
-            price: "Contact for price",
-            category,
-            featuredImage: p.featuredImage ?? undefined,
-            createdAt: p.date ?? String(i),
+            price: p.mrp ? `₹${p.mrp}` : "Contact for price",
+            category: [p.category, ...p.suitableFor, ...p.technology, ...p.shape],
+            imageUrl: p.images[0] || "/placeholder.png",
+            createdAt: p.createdAt,
           };
         });
 
@@ -118,7 +108,7 @@ export default function ProductSection({ heading }: ProductSectionProps) {
   if (!products.length)
     return <p className="text-center py-10">No products found.</p>;
 
-  const brands = ["signia", "phonak", "oticon", "widex"];
+  const brands = ["heating", "cooling", "ventilation", "mini_split"];
   let filteredProducts: Product[] = [];
 
   if (activeCategory === "All") {
@@ -158,8 +148,8 @@ export default function ProductSection({ heading }: ProductSectionProps) {
       highlighted.length > 0
         ? []
         : products
-            .filter((p) => titleOrCatsHave(p, keywords))
-            .sort((a, b) => ts(b) - ts(a));
+          .filter((p) => titleOrCatsHave(p, keywords))
+          .sort((a, b) => ts(b) - ts(a));
 
     filteredProducts = (highlighted.length > 0 ? highlighted : fallback).slice(
       0,
@@ -173,11 +163,11 @@ export default function ProductSection({ heading }: ProductSectionProps) {
       <div className="text-center mb-8">
         <h2 className="text-lg sm:text-xl md:text-3xl font-extrabold mb-3">
           <span className="bg-gradient-to-r from-[#E83D6D] via-[#184A99] to-[#7C7C7C] bg-clip-text text-transparent">
-            {heading || "Explore Our Range of Digital Hearing Aids"}
+            {heading || "Explore Our Range of HVAC Solutions"}
           </span>
         </h2>
         <p className="text-sm sm:text-base text-gray-600 max-w-xl mx-auto">
-          Discover the latest models — from powerful BTE to discreet CIC.
+          Discover the latest models — from efficient furnaces to powerful air conditioners.
         </p>
       </div>
 
@@ -188,11 +178,10 @@ export default function ProductSection({ heading }: ProductSectionProps) {
             <button
               key={cat}
               onClick={() => setActiveCategory(cat)}
-              className={`px-4 py-2 text-sm rounded-full transition whitespace-nowrap ${
-                activeCategory === cat
-                  ? "bg-[#0E1015] text-white"
-                  : "text-[#C7BCE0] hover:text-white"
-              }`}
+              className={`px-4 py-2 text-sm rounded-full transition whitespace-nowrap ${activeCategory === cat
+                ? "bg-[#0E1015] text-white"
+                : "text-[#C7BCE0] hover:text-white"
+                }`}
             >
               {cat}
             </button>
@@ -207,7 +196,7 @@ export default function ProductSection({ heading }: ProductSectionProps) {
             key={p.id}
             title={p.title}
             slug={p.slug}
-            imageUrl={p.featuredImage?.node?.sourceUrl || "/placeholder.png"}
+            imageUrl={p.imageUrl || "/placeholder.png"}
           />
         ))}
       </div>

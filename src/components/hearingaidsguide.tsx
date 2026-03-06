@@ -40,7 +40,7 @@ export default function HearingAidGuideSection() {
               <input
                 type="hidden"
                 name="zf_redirect_url"
-                value="https://prices.insonohearing.com/landing/pd-thank-you"
+                value={`https://prices.${process.env.NEXT_PUBLIC_DOMAIN || "ventlyair.com"}/landing/pd-thank-you`}
               />
               <input type="hidden" id="zc_gad" name="zc_gad" value="" />
               <input type="hidden" name="utm_source" value="Google Organic" />
@@ -78,7 +78,7 @@ export default function HearingAidGuideSection() {
               <div className="absolute -inset-4 bg-blue-500/10 blur-2xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity" />
               <Image
                 src="/signia_bct2.png"
-                alt="Hearing Aid Guide"
+                alt="HVAC System Guide"
                 width={220}
                 height={280}
                 priority

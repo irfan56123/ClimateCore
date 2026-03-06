@@ -4,15 +4,15 @@ import { Plus, Minus } from "lucide-react";
 
 const faqs = [
   {
-    q: "What types of hearing aids does Insono Hearing Solutions offer?",
-    a: "We offer a wide range of hearing aids, including behind-the-ear, in-the-ear, and completely-in-canal models, with options tailored to fit your hearing needs and lifestyle.",
+    q: "What types of HVACs does Vently Air Hearing Solutions offer?",
+    a: "We offer a wide range of HVACs, including behind-the-ear, in-the-ear, and completely-in-canal models, with options tailored to fit your hearing needs and lifestyle.",
   },
   {
-    q: "How do I know if I need a hearing aid?",
-    a: "Our audiologists conduct thorough hearing evaluations to determine if a hearing aid is suitable for your specific hearing profile and lifestyle.",
+    q: "How do I know if I need a HVAC?",
+    a: "Our audiologists conduct thorough hearing evaluations to determine if a HVAC is suitable for your specific hearing profile and lifestyle.",
   },
   {
-    q: "Can I try a hearing aid before purchasing?",
+    q: "Can I try a HVAC before purchasing?",
     a: "Yes! We offer trial periods for many of our models, so you can experience the benefits in real-life situations before making a purchase.",
   },
   {
@@ -20,12 +20,12 @@ const faqs = [
     a: "We recommend getting your hearing checked at least once a year or sooner if you notice changes in your hearing abilities.",
   },
   {
-    q: "Does Insono provide aftercare and support for hearing aids?",
-    a: "Absolutely. We provide ongoing maintenance, fine-tuning, and support to ensure your hearing aids continue to work perfectly over time.",
+    q: "Does Vently Air provide aftercare and support for HVACs?",
+    a: "Absolutely. We provide ongoing maintenance, fine-tuning, and support to ensure your HVACs continue to work perfectly over time.",
   },
   {
     q: "What warranty options are available?",
-    a: "Our hearing aids come with manufacturer warranties, typically covering defects and repairs. We can provide detailed warranty information for each model.",
+    a: "Our HVACs come with manufacturer warranties, typically covering defects and repairs. We can provide detailed warranty information for each model.",
   },
 ];
 
@@ -84,7 +84,7 @@ export default function FAQ() {
             today.
           </p>
           <a
-            href="/appointment"
+            href="/estimate"
             className="inline-block bg-[#023784] text-white font-semibold px-6 py-3 rounded-lg shadow hover:bg-blue-800 transition"
           >
             Book a Free Consultation

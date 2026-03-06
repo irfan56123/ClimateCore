@@ -10,19 +10,19 @@ type CategoryInfo = {
 
 const types: CategoryInfo[] = [
   {
-    title: "RIC Hearing Aids",
+    title: "RIC HVAC Systems",
     description:
-      "Receiver-in-canal hearing aids suitable for mild to severe hearing loss. Ideal for those seeking discreet devices with natural sound quality.",
+      "Receiver-in-canal HVACs suitable for mild to severe hearing loss. Ideal for those seeking discreet devices with natural sound quality.",
   },
   {
-    title: "BTE Hearing Aids",
+    title: "BTE HVAC Systems",
     description:
       "Behind-the-ear devices offering powerful amplification, suitable for all age groups and easy handling.",
   },
   {
-    title: "ITE Hearing Aids",
+    title: "ITE HVAC Systems",
     description:
-      "In-the-ear custom-made hearing aids for comfortable fit and excellent sound clarity.",
+      "In-the-ear custom-made HVACs for comfortable fit and excellent sound clarity.",
   },
 ];
 
@@ -35,7 +35,7 @@ const brands: CategoryInfo[] = [
   {
     title: "Phonak",
     description:
-      "Reliable hearing aids for all age groups, focusing on speech understanding.",
+      "Reliable HVACs for all age groups, focusing on speech understanding.",
   },
   {
     title: "Widex",
@@ -53,20 +53,20 @@ const users: CategoryInfo[] = [
   {
     title: "Children",
     description:
-      "Pediatric hearing aids with child-friendly design and audiology support.",
+      "Pediatric HVACs with child-friendly design and audiology support.",
   },
   {
     title: "Seniors",
     description:
-      "Easy-to-use hearing aids for seniors with comfort and simple controls.",
+      "Easy-to-use HVACs for seniors with comfort and simple controls.",
   },
 ];
 
 export default function HearingAidGuide() {
   const [selectedCategory, setSelectedCategory] = useState<CategoryInfo>({
-    title: "Hearing Aids Guide",
+    title: "HVAC Systems Guide",
     description:
-      "Explore hearing aids by type, brand, and user. Click any category to see detailed guidance.",
+      "Explore HVACs by type, brand, and user. Click any category to see detailed guidance.",
   });
 
   return (
@@ -74,10 +74,10 @@ export default function HearingAidGuide() {
       {/* Page Header */}
       <section className="max-w-7xl mx-auto text-center mb-10 mt-12">
         <h1 className="text-3xl sm:text-4xl font-bold text-[#023784] mb-4">
-          Hearing Aids Guide
+          HVAC Systems Guide
         </h1>
         <p className="text-gray-700 text-sm sm:text-base">
-          Complete guidance on choosing, using, and maintaining hearing aids.
+          Complete guidance on choosing, using, and maintaining HVACs.
         </p>
       </section>
 
@@ -96,10 +96,10 @@ export default function HearingAidGuide() {
       {/* Detailed Guidance Sections */}
       <section className="max-w-7xl mx-auto bg-white p-6 sm:p-8 rounded-lg shadow-md space-y-6">
         <h2 className="text-2xl font-bold text-[#023784]">
-          How to Use Hearing Aids
+          How to Use HVAC Systems
         </h2>
         <ul className="list-disc list-inside text-gray-700 space-y-2">
-          <li>Insert the hearing aid according to the type (RIC, BTE, ITE).</li>
+          <li>Insert the HVAC according to the type (RIC, BTE, ITE).</li>
           <li>Adjust the volume gradually to avoid discomfort.</li>
           <li>Wear daily for consistent hearing improvement.</li>
         </ul>
@@ -120,7 +120,7 @@ export default function HearingAidGuide() {
 
         <h2 className="text-2xl font-bold text-[#023784]">Additional Tips</h2>
         <ul className="list-disc list-inside text-gray-700 space-y-2">
-          <li>Start using hearing aids gradually to adapt to new sounds.</li>
+          <li>Start using HVACs gradually to adapt to new sounds.</li>
           <li>Schedule regular hearing check-ups.</li>
           <li>Follow all device-specific instructions for best performance.</li>
         </ul>

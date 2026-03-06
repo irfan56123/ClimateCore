@@ -135,7 +135,7 @@
 //             text={
 //               step === 5
 //                 ? "Please enter some information to book an in-store trial"
-//                 : "Check if they qualify for an in-store hearing aid trial"
+//                 : "Check if they qualify for an in-store HVAC trial"
 //             }
 //           />
 
@@ -149,7 +149,7 @@
 //             {step === 1 && (
 //               <>
 //                 <h2 className="text-md sm:text-2xl font-bold mb-5">
-//                   Searching hearing aids for
+//                   Searching HVACs for
 //                 </h2>
 
 //                 <div className="grid grid-cols-2 gap-3 sm:gap-4">
@@ -480,7 +480,7 @@ export default function MultiStepForm() {
             text={
               step === 5
                 ? "Thank you! Your appointment is confirmed"
-                : "Check if they qualify for an in-store hearing aid trial"
+                : "Check if they qualify for an in-store HVAC trial"
             }
           />
 
@@ -494,7 +494,7 @@ export default function MultiStepForm() {
             {step === 1 && (
               <>
                 <h2 className="text-xl sm:text-2xl font-bold mb-5">
-                  Searching hearing aids for
+                  Searching HVACs for
                 </h2>
                 <div className="grid grid-cols-2 gap-3 sm:gap-4">
                   {options.map((opt) => (

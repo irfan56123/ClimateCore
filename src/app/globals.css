@@ -1,4 +1,7 @@
 @import "tailwindcss";
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
+@import "../components/estimate.css";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -7,6 +10,7 @@
   overflow: hidden;
   background: #e2e8f0;
 }
+
 .skeleton-shimmer::after {
   content: "";
   position: absolute;
@@ -14,14 +18,13 @@
   left: -150%;
   height: 100%;
   width: 150%;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(255, 255, 255, 0.4),
-    transparent
-  );
+  background: linear-gradient(90deg,
+      transparent,
+      rgba(255, 255, 255, 0.4),
+      transparent);
   animation: shimmer 1.5s infinite;
 }
+
 @keyframes shimmer {
   100% {
     left: 150%;
@@ -29,17 +32,19 @@
 }
 
 /* -------------------------------------------------
-   INSONO BLOG THEME
+   INSONO CONTENT THEME
    Clean | Readable | Senior-Friendly | High-Contrast
-   Applies to WordPress content rendered inside:
+   Applies to rich text content rendered inside:
    <div class="prose max-w-full" />
 -------------------------------------------------- */
 
 .prose {
   --tw-prose-body: #1c1c1c;
   --tw-prose-headings: #0a0a0a;
-  --tw-prose-links: #0056d2; /* vivid royal blue */
-  --tw-prose-links-hover: #003a91; /* deep navy */
+  --tw-prose-links: #0056d2;
+  /* vivid royal blue */
+  --tw-prose-links-hover: #003a91;
+  /* deep navy */
   --tw-prose-bold: #111;
   --tw-prose-counters: #0056d2;
   --tw-prose-bullets: #0056d2;
@@ -92,6 +97,47 @@
 .prose strong {
   font-weight: 700;
   color: #111;
+}
+
+@keyframes marquee-vertical {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes marquee-vertical-reverse {
+  from {
+    transform: translateY(-50%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+.animate-marquee-vertical {
+  animation: marquee-vertical 30s linear infinite;
+}
+
+.animate-marquee-vertical-reverse {
+  animation: marquee-vertical-reverse 30s linear infinite;
+}
+
+.pause-on-hover:hover .animate-marquee-vertical,
+.pause-on-hover:hover .animate-marquee-vertical-reverse {
+  animation-play-state: paused;
+}
+
+.mask-v {
+  mask-image: linear-gradient(to bottom,
+      transparent,
+      black 15%,
+      black 85%,
+      transparent);
 }
 
 .prose em {
@@ -211,107 +257,6 @@
   }
 }
 
-/* -------------------------------------------------
-   WORDPRESS IMAGE ALIGNMENTS
-   clean spacing | float handling | mobile safe
--------------------------------------------------- */
-
-.prose figure.wp-block-image {
-  display: block;
-  margin: 1.5rem auto;
-  text-align: center;
-  max-width: 100%;
-}
-
-.prose figure.wp-block-image img {
-  border-radius: 12px;
-  max-width: 100%;
-  height: auto;
-}
-
-/* ---------- Caption ---------- */
-.prose figure.wp-block-image figcaption {
-  font-size: 0.9rem;
-  color: #666;
-  text-align: center;
-  margin-top: 0.4rem;
-  line-height: 1.4;
-}
-
-/* ---------- Alignment: LEFT ---------- */
-.prose .alignleft {
-  float: left;
-  max-width: 50%;
-  margin: 0.4rem 1.5rem 1rem 0;
-  padding: 0.3rem; /* inner padding around image */
-  border-radius: 12px;
-  background-color: #f9f9f9; /* subtle visual separation */
-}
-
-/* ---------- Alignment: RIGHT ---------- */
-.prose .alignright {
-  float: right;
-  max-width: 50%;
-  margin: 0.4rem 0 1rem 1.5rem;
-  padding: 0.3rem;
-  border-radius: 12px;
-  background-color: #f9f9f9;
-}
-
-/* ---------- Alignment: CENTER ---------- */
-.prose .aligncenter {
-  display: block;
-  margin: 1.5rem auto;
-  text-align: center;
-  clear: both;
-  padding: 0.3rem;
-  border-radius: 12px;
-  background-color: #f9f9f9;
-}
-
-/* ---------- Wide & Full ---------- */
-.prose .alignwide,
-.prose .alignfull {
-  width: 100%;
-  margin: 1.5rem 0;
-  display: block;
-  text-align: center;
-  padding: 0.3rem;
-  border-radius: 12px;
-  background-color: #f9f9f9;
-}
-
-/* ---------- Handle Large/Resized Images ---------- */
-.prose .size-large img,
-.prose .is-resized img {
-  width: 100%;
-  height: auto;
-  border-radius: 12px;
-}
-
-/* ---------- Clear Floats After Paragraphs ---------- */
-.prose p::after,
-.prose ul::after,
-.prose ol::after {
-  content: "";
-  display: block;
-  clear: both;
-}
-
-/* ---------- Responsive Fixes ---------- */
-@media (max-width: 768px) {
-  .prose .alignleft,
-  .prose .alignright {
-    float: none;
-    display: block;
-    margin: 1rem auto;
-    max-width: 100%;
-    text-align: center;
-    background-color: transparent; /* remove grey background for simplicity */
-    padding: 0;
-  }
-}
-
 /* === Force NProgress Bar to Always Show on Top === */
 /* === YouTube-style Progress Bar === */
 #nprogress {
@@ -324,7 +269,8 @@
 }
 
 #nprogress .bar {
-  background: #023784 !important; /* Insono blue */
+  background: #023784 !important;
+  /* Vently Air blue */
   height: 3px !important;
   border-radius: 0 2px 2px 0;
   box-shadow: 0 0 10px #023784, 0 0 5px #023784;
@@ -343,140 +289,10 @@
 
 /* Custom class for slower ping with gaps */
 .animate-slow-ping {
-  animation: slow-ping 3s ease-out infinite; /* ⏱ 3s total, pulse happens in first 1.5s, then gap */
-}
-/* -------------------------------------------------
-   GLOBAL TABLE STYLING for WordPress (.wp-block-table)
-   Clean | Readable | Accessible | Minimal Healthcare Look
--------------------------------------------------- */
-
-.wp-block-table {
-  width: 100%;
-  overflow-x: auto;
-  margin: 0.5rem 0;
-  border-radius: 12px;
-  background: #ffffff;
-  border: 1px solid #e5e7eb; /* soft neutral border */
+  animation: slow-ping 3s ease-out infinite;
+  /* ⏱ 3s total, pulse happens in first 1.5s, then gap */
 }
 
-/* Actual <table> element */
-.wp-block-table table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 1rem;
-  line-height: 1.7;
-  background-color: transparent;
-}
-
-/* Headings */
-.wp-block-table thead th {
-  background: #f0f6ff; /* calm blue-tinted background */
-  color: #002a5c;
-  font-weight: 700;
-  padding: 14px 16px;
-  text-align: left;
-  border-bottom: 2px solid #e5e7eb;
-}
-
-/* Body Cells */
-.wp-block-table th,
-.wp-block-table td {
-  padding: 12px 16px;
-  text-align: left;
-  vertical-align: top;
-  border-bottom: 1px solid #e5e7eb;
-  color: #1e1e1e;
-}
-
-/* Alternate row shading for readability */
-.wp-block-table tbody tr:nth-child(even) {
-  background: #fafafa;
-}
-
-/* Hover state (soft highlight) */
-.wp-block-table tbody tr:hover {
-  background: #f5f9ff;
-}
-
-/* Strong emphasis cells */
-.wp-block-table th strong,
-.wp-block-table td strong {
-  color: #004aad;
-  font-weight: 700;
-}
-
-/* Optional badges (e.g. Availability, Status) */
-.wp-block-table .badge {
-  display: inline-block;
-  padding: 4px 10px;
-  background: #e0edff;
-  color: #004aad;
-  border-radius: 9999px;
-  font-size: 12px;
-  font-weight: 600;
-}
-
-/* Table responsiveness */
-@media (max-width: 768px) {
-  .wp-block-table {
-    border-radius: 8px;
-    margin: 1rem 0;
-  }
-
-  .wp-block-table th,
-  .wp-block-table td {
-    padding: 10px 12px;
-    font-size: 0.95rem;
-  }
-
-  .wp-block-table table {
-    min-width: 600px; /* keeps columns readable when scrolled */
-  }
-}
-
-/* Optional: subtle scroll hint for overflow tables */
-.wp-block-table::-webkit-scrollbar {
-  height: 8px;
-}
-.wp-block-table::-webkit-scrollbar-thumb {
-  background: #d1d5db;
-  border-radius: 4px;
-}
-.wp-block-table::-webkit-scrollbar-track {
-  background: #f9fafb;
-}
-
-/* Dark Mode Support */
-@media (prefers-color-scheme: dark) {
-  .wp-block-table {
-    background: #0f172a;
-    border-color: #1e293b;
-  }
-
-  .wp-block-table thead th {
-    background: #1e293b;
-    color: #e2e8f0;
-  }
-
-  .wp-block-table th,
-  .wp-block-table td {
-    color: #f1f5f9;
-    border-bottom: 1px solid #334155;
-  }
-
-  .wp-block-table tbody tr:nth-child(even) {
-    background: #1e293b;
-  }
-
-  .wp-block-table tbody tr:hover {
-    background: #334155;
-  }
-
-  .wp-block-table .badge {
-    background: #1e3a8a;
-    color: #bfdbfe;
-  }
-}
 
 @font-face {
   font-family: "Museo Sans";
@@ -490,13 +306,16 @@
 body {
   font-family: "Museo Sans", sans-serif;
 }
+
 button {
   cursor: pointer;
 }
+
 @keyframes marquee {
   0% {
     transform: translateX(0%);
   }
+
   100% {
     transform: translateX(-50%);
   }
@@ -507,14 +326,17 @@ button {
   width: max-content;
   animation: marquee 20s linear infinite;
 }
+
 /* Hide scrollbar but keep scroll functionality */
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
 
 .scrollbar-hide {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
 }
 
 @theme inline {
@@ -630,6 +452,7 @@ button {
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }

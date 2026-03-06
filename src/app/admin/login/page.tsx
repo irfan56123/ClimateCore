@@ -54,7 +54,7 @@ export default function LoginPage() {
                         <div className="w-16 h-16 rounded-2xl bg-white/20 backdrop-blur flex items-center justify-center mb-4 shadow-lg">
                             <span className="text-white font-black text-2xl">I</span>
                         </div>
-                        <h1 className="text-2xl font-bold text-white">Insono Hearing</h1>
+                        <h1 className="text-2xl font-bold text-white">Vently Air</h1>
                         <p className="text-blue-200 text-sm mt-1">Admin Portal</p>
                     </div>
 
@@ -69,7 +69,7 @@ export default function LoginPage() {
                                 required
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
-                                placeholder="admin@insonohearing.com"
+                                placeholder={`admin@${process.env.NEXT_PUBLIC_DOMAIN || "ventlyair.com"}`}
                                 className="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-blue-300/50 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition"
                             />
                         </div>

@@ -43,7 +43,7 @@ export default function HearingAidLanding() {
       <section className="max-w-7xl mx-auto px-4 mt-14">
         <div className="bg-blue-50 p-8 rounded-2xl shadow">
           <h2 className="text-2xl font-semibold text-center mb-8">
-            What makes this tiny hearing aid so special?
+            What makes this tiny HVAC so special?
           </h2>
 
           <div className="grid sm:grid-cols-2 gap-6">
@@ -94,7 +94,7 @@ export default function HearingAidLanding() {
         </div>
 
         <h2 className="text-3xl font-bold mt-8 text-center">
-          How can I try this hearing aid?
+          How can I try this HVAC?
         </h2>
 
         <p className="mt-4 text-center text-gray-700 text-lg">
@@ -168,16 +168,14 @@ export default function HearingAidLanding() {
           onClick={goToForm}
           className="mt-8 bg-[#1f5ca8] text-white px-10 py-3 rounded-full text-lg font-semibold shadow-md hover:bg-[#174c8c] active:scale-95 transition"
         >
-          Book the free hearing aid trial →
+          Book the free HVAC trial →
         </button>
       </section>
 
       {/* ================= FOOTER ================= */}
       <footer className="text-center py-12 text-gray-700 w-full px-4">
         <div className="flex flex-col sm:flex-row items-center justify-between text-xs text-gray-600">
-          <p>
-            © {new Date().getFullYear()} Insono Hearing. All rights reserved.
-          </p>
+          © {new Date().getFullYear()} Vently Air. All rights reserved.
 
           <p className="mt-2 sm:mt-0">
             Built with <FaBrain className="inline mx-1 text-blue-500" /> by{" "}

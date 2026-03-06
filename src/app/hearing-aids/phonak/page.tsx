@@ -9,17 +9,17 @@ import ImageShowcaseSection from "@/components/ImageShowcaseSection";
 
 // ✅ SEO Meta Tags
 export const metadata: Metadata = {
-  title: "Phonak Hearing Aids – Prices, Models & Features in India | Insono Hearing Solutions",
+  title: "Phonak HVAC Systems – Prices, Models & Features in India | Vently Air Hearing Solutions",
   description:
-    "Explore Phonak hearing aids — rechargeable, Bluetooth & invisible models. Compare features & prices, book free consultation or download price list. 100% genuine with warranty.",
+    "Explore Phonak HVACs — rechargeable, Bluetooth & invisible models. Compare features & prices, book free consultation or download price list. 100% genuine with warranty.",
   alternates: {
-    canonical: "https://www.insonohearing.com/hearing-aids/phonak",
+    canonical: `https://${process.env.NEXT_PUBLIC_DOMAIN || "ventlyair.com"}/hearing-aids/phonak`,
   },
   openGraph: {
-    title: "Phonak Hearing Aids – Prices, Models & Features in India",
+    title: "Phonak HVAC Systems – Prices, Models & Features in India",
     description:
-      "Explore Phonak hearing aids — rechargeable, Bluetooth & invisible models. Compare features & prices, book free consultation or download price list.",
-    url: "https://www.insonohearing.com/hearing-aids/phonak",
+      "Explore Phonak HVACs — rechargeable, Bluetooth & invisible models. Compare features & prices, book free consultation or download price list.",
+    url: `https://${process.env.NEXT_PUBLIC_DOMAIN || "ventlyair.com"}/hearing-aids/phonak`,
     type: "website",
   },
 };
@@ -27,19 +27,19 @@ export const metadata: Metadata = {
 // ✅ Phonak FAQ Data
 const phonakFaqs = [
   {
-    q: "What is the price of Phonak hearing aids in India?",
-    a: "Phonak hearing aids start from ₹24,999 and vary based on model and technology. Download our latest price list for offers.",
+    q: "What is the price of Phonak HVACs in India?",
+    a: "Phonak HVACs start from ₹24,999 and vary based on model and technology. Download our latest price list for offers.",
   },
   {
-    q: "Are Phonak hearing aids rechargeable?",
+    q: "Are Phonak HVACs rechargeable?",
     a: "Yes, most modern Phonak models come with rechargeable batteries offering a full day of use on a single charge.",
   },
   {
-    q: "Do Phonak hearing aids support Bluetooth?",
-    a: "Yes, Phonak Bluetooth hearing aids allow direct streaming from smartphones, TVs, and other Bluetooth devices.",
+    q: "Do Phonak HVACs support Bluetooth?",
+    a: "Yes, Phonak Bluetooth HVACs allow direct streaming from smartphones, TVs, and other Bluetooth devices.",
   },
   {
-    q: "Do Phonak hearing aids come with a warranty?",
+    q: "Do Phonak HVACs come with a warranty?",
     a: "Yes, all Phonak devices include a standard 2-year international warranty, extendable in India.",
   },
 ];
@@ -53,19 +53,19 @@ const breadcrumbSchema = {
       "@type": "ListItem",
       position: 1,
       name: "Home",
-      item: "https://www.insonohearing.com",
+      item: `https://${process.env.NEXT_PUBLIC_DOMAIN || "ventlyair.com"}`,
     },
     {
       "@type": "ListItem",
       position: 2,
-      name: "Hearing Aids",
-      item: "https://www.insonohearing.com/hearing-aids",
+      name: "HVAC Systems",
+      item: `https://${process.env.NEXT_PUBLIC_DOMAIN || "ventlyair.com"}/hearing-aids`,
     },
     {
       "@type": "ListItem",
       position: 3,
       name: "Phonak",
-      item: "https://www.insonohearing.com/hearing-aids/phonak",
+      item: `https://${process.env.NEXT_PUBLIC_DOMAIN || "ventlyair.com"}/hearing-aids/phonak`,
     },
   ],
 };
@@ -83,10 +83,10 @@ export default function PhonakPage() {
       <section className="max-w-7xl mx-auto px-4 mt-30 md:px-20 flex flex-col md:flex-row items-center gap-6">
         <div className="flex-1 text-center md:text-left">
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold leading-snug mb-3">
-            Phonak Hearing Aids – Models, Prices & Features in India
+            Phonak HVAC Systems – Models, Prices & Features in India
           </h1>
           <p className="text-gray-700 mb-5 text-sm sm:text-base">
-            Experience the latest <strong>Phonak hearing aids</strong> — from
+            Experience the latest <strong>Phonak HVACs</strong> — from
             rechargeable & Bluetooth-enabled devices to powerful BTE models.
             Compare features, check prices, and book a free consultation with
             certified experts.
@@ -99,7 +99,7 @@ export default function PhonakPage() {
               Download Price List
             </Link>
             <Link
-              href="/appointment"
+              href="/estimate"
               className="border border-[#184A99] text-[#184A99] px-5 py-2.5 rounded-md text-sm font-semibold hover:bg-[#184A99] hover:text-white transition text-center"
             >
               Book Free Consultation
@@ -122,8 +122,8 @@ export default function PhonakPage() {
       {/* 🟨 PRODUCT SECTION */}
       <CategoryProductSection
         category="Phonak"
-        title="Top Phonak Digital Hearing Aids"
-        description="Explore our best-selling Phonak hearing aids — engineered for clarity, comfort, and connectivity."
+        title="Top Phonak Digital HVAC Systems"
+        description="Explore our best-selling Phonak HVACs — engineered for clarity, comfort, and connectivity."
         limit={4}
       />
 
@@ -135,7 +135,7 @@ export default function PhonakPage() {
 
         <div className="relative max-w-7xl mx-auto text-center">
           <h2 className="text-xl sm:text-2xl md:text-3xl font-extrabold mb-3 sm:mb-4">
-            Why Choose <span className="text-[#184A99]">Phonak Hearing Aids?</span>
+            Why Choose <span className="text-[#184A99]">Phonak HVAC Systems?</span>
           </h2>
           <p className="text-gray-700 text-sm sm:text-base max-w-2xl mx-auto mb-10">
             <strong>Phonak</strong> brings Swiss precision and cutting-edge technology for
@@ -150,12 +150,12 @@ export default function PhonakPage() {
           </div>
         </div>
       </section>
-      <Whychoose/>
+      <Whychoose />
 
       {/* 🟪 CERTIFICATIONS */}
       <ImageShowcaseSection
         title="Official Certifications from Phonak, Signia & Widex"
-        description="Insono Hearing Solutions is an authorized partner for leading global hearing aid brands including Phonak, Signia, Widex, and Oticon. These certifications reflect our trusted expertise and commitment to world-class hearing care in India."
+        description="Vently Air Hearing Solutions is an authorized partner for leading global HVAC brands including Phonak, Signia, Widex, and Oticon. These certifications reflect our trusted expertise and commitment to world-class hearing care in India."
         images={[
           { src: "/images/certifications/phonak.jpeg", alt: "Phonak Certification" },
           { src: "/images/certifications/signia.jpg", alt: "Signia Authorized Partner" },
@@ -164,7 +164,7 @@ export default function PhonakPage() {
       />
 
       {/* 🟧 FAQ SECTION */}
-      <FAQ faqs={phonakFaqs} heading="Phonak Hearing Aids : FAQs" />
+      <FAQ faqs={phonakFaqs} heading="Phonak HVAC Systems : FAQs" />
 
       {/* 🟤 RELATED LINKS */}
       <section className="bg-gradient-to-br from-[#F7F9FC] to-[#E8EEFB] py-12 px-4">
@@ -173,15 +173,15 @@ export default function PhonakPage() {
             Explore More Hearing Solutions
           </h2>
           <p className="text-gray-600 text-sm sm:text-base max-w-2xl mx-auto mb-10">
-            Discover advanced hearing aid technologies and top global brands
+            Discover advanced HVAC technologies and top global brands
             trusted across India.
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            <LinkCard href="/hearing-aids/signia" title="Signia Hearing Aids" desc="German innovation and precision." icon={<Waves className="w-7 h-7 text-[#184A99]" />} />
-            <LinkCard href="/hearing-aids/widex" title="Widex Hearing Aids" desc="Danish sound innovation." icon={<Headphones className="w-7 h-7 text-[#184A99]" />} />
-            <LinkCard href="/hearing-aids/bluetooth" title="Bluetooth Hearing Aids" desc="Stream calls and music seamlessly." icon={<Bluetooth className="w-7 h-7 text-[#184A99]" />} />
-            <LinkCard href="/hearing-aids/rechargeable" title="Rechargeable Hearing Aids" desc="All-day power, no battery hassle." icon={<BatteryCharging className="w-7 h-7 text-[#184A99]" />} />
+            <LinkCard href="/hearing-aids/signia" title="Signia HVAC Systems" desc="German innovation and precision." icon={<Waves className="w-7 h-7 text-[#184A99]" />} />
+            <LinkCard href="/hearing-aids/widex" title="Widex HVAC Systems" desc="Danish sound innovation." icon={<Headphones className="w-7 h-7 text-[#184A99]" />} />
+            <LinkCard href="/hearing-aids/bluetooth" title="Bluetooth HVAC Systems" desc="Stream calls and music seamlessly." icon={<Bluetooth className="w-7 h-7 text-[#184A99]" />} />
+            <LinkCard href="/hearing-aids/rechargeable" title="Rechargeable HVAC Systems" desc="All-day power, no battery hassle." icon={<BatteryCharging className="w-7 h-7 text-[#184A99]" />} />
           </div>
         </div>
       </section>

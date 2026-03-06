@@ -20,7 +20,7 @@ interface Clinic {
 const clinics: Clinic[] = [
   {
     id: "vinod-nagar",
-    name: "Hearing Aid Clinic in Vinod Nagar",
+    name: "HVAC System Clinic in Vinod Nagar",
     locationLine: "Vinod Nagar — Delhi",
     address:
       "D-251, Ground Floor, D Block, West Vinod Nagar, New Delhi - 110092",
@@ -30,7 +30,7 @@ const clinics: Clinic[] = [
   },
   {
     id: "Dhanbad",
-    name: "Insono Hearing Solutions Pvt.Ltd. Dhanbad",
+    name: "Vently Air Hearing Solutions Pvt.Ltd. Dhanbad",
     locationLine: "Dhanbad — Jharkhand",
     address:
       "Infront Of Zonal Office Bank Of India Roof 709 Building, SHOP NO:- FF4 Newtech Grand 3, Dhanbad, Saraidhella, Jharkhand 826007",
@@ -40,7 +40,7 @@ const clinics: Clinic[] = [
   },
   {
     id: "banka",
-    name: "Hearing Aid Clinic in Banka",
+    name: "HVAC System Clinic in Banka",
     locationLine: "Banka — Bihar",
     address:
       "Enjoy Better Hearing In, Navjyoti Nursing Home, near Indian Petrol Pump, Jagatpur, Banka, Bihar - 813102, India",
@@ -50,7 +50,7 @@ const clinics: Clinic[] = [
   },
   {
     id: "deoghar",
-    name: "Hearing Aid Clinic in Deoghar",
+    name: "HVAC System Clinic in Deoghar",
     locationLine: "Deoghar — Jharkhand",
     address:
       "First Floor House No 349 A, Purnima Height, Ambedkar Chowk, near Krishna ENT, Barmasia, Deoghar, Jharkhand 814112, India",
@@ -60,7 +60,7 @@ const clinics: Clinic[] = [
   },
   {
     id: "bhagalpur",
-    name: "Hearing Aid Clinic in Bhagalpur",
+    name: "HVAC System Clinic in Bhagalpur",
     locationLine: "Bhagalpur — Bihar",
     address:
       "Kalpana Oro Dental & Implant Centre, near Hatiya Rd, Tilkamanjhi, Bhagalpur, Bihar 812001, India",
@@ -70,7 +70,7 @@ const clinics: Clinic[] = [
   },
   {
     id: "noida",
-    name: "Hearing Aid Clinic in Noida",
+    name: "HVAC System Clinic in Noida",
     locationLine: "Noida — Uttar Pradesh",
     address:
       "E-142, Ground Floor, Sector 20, Noida, Near Kerala Ayurveda, Uttar Pradesh - 201301",
@@ -80,7 +80,7 @@ const clinics: Clinic[] = [
   },
   {
     id: "asansol",
-    name: "Hearing Aid Clinic in Asansol",
+    name: "HVAC System Clinic in Asansol",
     locationLine: "Asansol — West Bengal",
     address: "GT Road, Asansol",
     hours: "Open, Closes by 7 pm",
@@ -89,7 +89,7 @@ const clinics: Clinic[] = [
   },
   {
     id: "dehradun",
-    name: "Hearing Aid Clinic in Dehradun",
+    name: "HVAC System Clinic in Dehradun",
     locationLine: "Dehradun — Uttarakhand",
     address: "Dehradun",
     hours: "Open, Closes by 7 pm",
@@ -98,7 +98,7 @@ const clinics: Clinic[] = [
   },
   {
     id: "gurgaon",
-    name: "Hearing Aid Clinic in Gurgaon",
+    name: "HVAC System Clinic in Gurgaon",
     locationLine: "Gurgaon — Haryana",
     address:
       "Shop No 232, First Floor, Central Arcade, Mehrauli Gurgaon Rd, Opposite Sahara Mall, A Block, DLF Phase 2, Sector 25, Gurugram, Haryana 122008",
@@ -108,7 +108,7 @@ const clinics: Clinic[] = [
   },
   {
     id: "giridih",
-    name: "Hearing Aid Clinic in Giridih",
+    name: "HVAC System Clinic in Giridih",
     locationLine: "Giridih — Jharkhand",
     address:
       "Basement, Under Bata Showroom, A & S Building, Court Rd, Opposite Old Telephone Exchange, Giridih, Jharkhand 815301, India",
@@ -118,7 +118,7 @@ const clinics: Clinic[] = [
   },
   {
     id: "lajpat-nagar",
-    name: "Hearing Aid Clinic in Lajpat Nagar",
+    name: "HVAC System Clinic in Lajpat Nagar",
     locationLine: "Lajpat Nagar — Delhi",
     address:
       "3/59, Old Story, Lajpat Nagar 4, Lajpat Nagar, New Delhi, Delhi 110024",
@@ -128,7 +128,7 @@ const clinics: Clinic[] = [
   },
   {
     id: "jamshedpur",
-    name: "Hearing Aid Clinic in Jamshedpur",
+    name: "HVAC System Clinic in Jamshedpur",
     locationLine: "Jamshedpur — Jharkhand",
     address: "Jamshedpur",
     hours: "Open, Closes by 7 pm",
@@ -137,7 +137,7 @@ const clinics: Clinic[] = [
   },
   {
     id: "lucknow",
-    name: "Hearing Aid Clinic in Lucknow",
+    name: "HVAC System Clinic in Lucknow",
     locationLine: "Lucknow — Uttar Pradesh",
     address:
       "10/36, Tedhi Pulia Ring Rd, near Narayan Automobile, behind Mahendra Agency, Shekhupura, Vikas Nagar, Lucknow, Uttar Pradesh 226022",
@@ -147,7 +147,7 @@ const clinics: Clinic[] = [
   },
   {
     id: "ranchi",
-    name: "Hearing Aid Clinic in Ranchi",
+    name: "HVAC System Clinic in Ranchi",
     locationLine: "Ranchi — Jharkhand",
     address: "Online Service Available",
     hours: "Open, Closes by 7 pm",
@@ -156,7 +156,7 @@ const clinics: Clinic[] = [
   },
   {
     id: "jalandhar",
-    name: "Hearing Aid Clinic in Jalandhar",
+    name: "HVAC System Clinic in Jalandhar",
     locationLine: "Jalandhar — Punjab",
     address: "Service Available",
     hours: "Open, Closes by 7 pm",
@@ -165,7 +165,7 @@ const clinics: Clinic[] = [
   },
   {
     id: "jammu",
-    name: "Hearing Aid Clinic in Jammu",
+    name: "HVAC System Clinic in Jammu",
     locationLine: "Jammu — Jammu & Kashmir",
     address: "Service Available",
     hours: "Open, Closes by 7 pm",
@@ -174,7 +174,7 @@ const clinics: Clinic[] = [
   },
   {
     id: "garia-kolkata",
-    name: "Hearing Aid Clinic in Garia Kolkata",
+    name: "HVAC System Clinic in Garia Kolkata",
     locationLine: "Garia — West Bengal",
     address:
       "ACOUSTIC HEARING SOLUTION, P-515, Raja S C Mullick Road, Garia Kolkata - 700084, Opp. Sreeleathers",
@@ -184,7 +184,7 @@ const clinics: Clinic[] = [
   },
   {
     id: "chandigarh",
-    name: "Hearing Aid Clinic in Chandigarh",
+    name: "HVAC System Clinic in Chandigarh",
     locationLine: "Chandigarh — Punjab",
     address: "Service Available",
     hours: "Open, Closes by 7 pm",
@@ -193,7 +193,7 @@ const clinics: Clinic[] = [
   },
   {
     id: "ambala",
-    name: "Hearing Aid Clinic in Ambala",
+    name: "HVAC System Clinic in Ambala",
     locationLine: "Ambala — Punjab",
     address: "Service Available",
     hours: "Open, Closes by 7 pm",
@@ -202,7 +202,7 @@ const clinics: Clinic[] = [
   },
   {
     id: "patna",
-    name: "Hearing Aid Clinic in Patna",
+    name: "HVAC System Clinic in Patna",
     locationLine: "Patna — Bihar",
     address: "Service Available",
     hours: "Open, Closes by 7 pm",
@@ -211,7 +211,7 @@ const clinics: Clinic[] = [
   },
   {
     id: "ludhiana",
-    name: "Hearing Aid Clinic in Ludhiana",
+    name: "HVAC System Clinic in Ludhiana",
     locationLine: "Ludhiana — Punjab",
     address: "Service Available",
     hours: "Open, Closes by 7 pm",
@@ -220,7 +220,7 @@ const clinics: Clinic[] = [
   },
   {
     id: "hyderabad",
-    name: "Hearing Aid Clinic in Hyderabad",
+    name: "HVAC System Clinic in Hyderabad",
     locationLine: "Hyderabad — Telangana",
     address: "Service Available",
     hours: "Open, Closes by 7 pm",
@@ -229,7 +229,7 @@ const clinics: Clinic[] = [
   },
   {
     id: "kolkata",
-    name: "Hearing Aid Clinic in Kolkata",
+    name: "HVAC System Clinic in Kolkata",
     locationLine: "Kolkata — West Bengal",
     address:
       "13 Ram Mohan Dutta Road, (Near Northern Park) Bhawanipur, Kolkata - 700020",
@@ -247,10 +247,10 @@ const comparisonItems: string[] = [
   "Visiting a hearing clinic is mandatory",
   "Home visits by the hearing experts",
   "Live interaction with hearing experts at any time",
-  "Many choices for hearing aids",
-  "Clinic visit for the purchase of hearing aid accessories is compulsory",
-  "Reminder for the service and warranty of the hearing aid",
-  "Transparency while selecting the hearing aid by using Latest Hii5 technology is available",
+  "Many choices for HVACs",
+  "Clinic visit for the purchase of HVAC accessories is compulsory",
+  "Reminder for the service and warranty of the HVAC",
+  "Transparency while selecting the HVAC by using Latest Hii5 technology is available",
   "Hassle-free hearing care experience at your fingertips",
 ];
 
@@ -262,10 +262,10 @@ export default function ClinicsList() {
       <section className="py-12 pt-24">
         <div className="max-w-6xl mx-auto px-4">
           <h1 className="text-3xl lg:text-4xl font-bold text-[#112f70]">
-            Find a Hearing Aid Clinic Near You
+            Find a HVAC System Clinic Near You
           </h1>
           <p className="mt-2 text-[#112f70]">
-            Best hearing experiences at Insono Hearing Clinics. Trusted by 1
+            Best hearing experiences at Vently Air Hearing Clinics. Trusted by 1
             Million+ satisfied customers.
           </p>
         </div>
@@ -314,8 +314,8 @@ export default function ClinicsList() {
                         c.placeId
                           ? `https://www.google.com/maps/place/?q=place_id:${c.placeId}`
                           : `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-                              c.address,
-                            )}`
+                            c.address,
+                          )}`
                       }
                       target="_blank"
                       rel="noopener noreferrer"
@@ -339,7 +339,7 @@ export default function ClinicsList() {
 
                 <div className="p-4 border-t bg-white">
                   <Link
-                    href={`/appointment?cat=${encodeURIComponent(
+                    href={`/estimate?cat=${encodeURIComponent(
                       c.catSlug || c.id,
                     )}&slug=${encodeURIComponent(c.id)}`}
                     className="block text-center bg-[#023784] text-white py-2 rounded-md font-semibold"
@@ -358,7 +358,7 @@ export default function ClinicsList() {
         <div className="max-w-6xl mx-auto px-4">
           <div className="mb-4">
             <h3 className="text-2xl font-bold text-white">
-              Insono Vs Other Providers
+              Vently Air Vs Other Providers
             </h3>
             <p className="text-white">
               How we excel compared to other providers
@@ -373,8 +373,8 @@ export default function ClinicsList() {
                   <td className="p-4 text-center bg-[#eaf2ff] w-1/4">
                     <div className="mx-auto w-36">
                       <Image
-                        src="/logo.webp"
-                        alt="Insono"
+                        src="/ventlylogo.png"
+                        alt="Vently Air"
                         width={200}
                         height={80}
                         className="mx-auto"
@@ -387,7 +387,7 @@ export default function ClinicsList() {
                 {comparisonItems.map((row, idx) => {
                   const othersTickExceptions = [
                     "Visiting a hearing clinic is mandatory",
-                    "Clinic visit for the purchase of hearing aid accessories is compulsory",
+                    "Clinic visit for the purchase of HVAC accessories is compulsory",
                   ];
                   const othersHasTick = othersTickExceptions.includes(row);
 

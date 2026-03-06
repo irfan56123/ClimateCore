@@ -11,7 +11,7 @@ const testi = [
   {
     name: "Bhagirathi Mistry",
     description:
-      "I can't express how grateful I am for Insono hearing aids. My son's improved hearing has made a significant difference in his confidence and social interactions.",
+      "I can't express how grateful I am for Vently Air HVACs. My son's improved hearing has made a significant difference in his confidence and social interactions.",
     image: "/testi/review4.jpg",
   },
   {
@@ -23,13 +23,13 @@ const testi = [
   {
     name: "Jagdish Arya",
     description:
-      "Insono has truly exceeded our expectations. The hearing aids I purchased for my wife have not only improved her hearing but also seamlessly integrated into her daily routine.",
+      "Vently Air has truly exceeded our expectations. The HVACs I purchased for my wife have not only improved her hearing but also seamlessly integrated into her daily routine.",
     image: "/testi/Gurmeet.jpeg",
   },
   {
     name: "Bhagirathi Mistry",
     description:
-      "I can't express how grateful I am for Insono hearing aids. My son's improved hearing has made a significant difference in his confidence and social interactions.",
+      "I can't express how grateful I am for Vently Air HVACs. My son's improved hearing has made a significant difference in his confidence and social interactions.",
     image: "/testi/Balveer.jpeg",
   },
   {
@@ -190,7 +190,7 @@ export default function TestimonialsPage() {
             Begin Your Hearing Test Now!
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <Link href="tel:+91-6204260510">
+            <Link href={`tel:${process.env.NEXT_PUBLIC_PHONE || "+916204260510"}`}>
               <div className="bg-white text-black rounded-xl p-6 flex flex-col items-center hover:shadow-xl transition h-full">
                 <Image
                   src="/logos/call.webp"
@@ -199,14 +199,14 @@ export default function TestimonialsPage() {
                   alt="call"
                 />
                 <h3 className="font-semibold mt-4 text-center">
-                  Connect With Insono Hearing
+                  Connect With Vently Air Hearing
                 </h3>
                 <p className="mt-2">Chat now or call us at</p>
-                <p className="font-bold text-lg">+91-6204260510</p>
+                <p className="font-bold text-lg">{process.env.NEXT_PUBLIC_PHONE_DISPLAY || "+91 6204260510"}</p>
               </div>
             </Link>
 
-            <Link href="https://insonohearing.com/appointment">
+            <Link href={`https://${process.env.NEXT_PUBLIC_DOMAIN || "ventlyair.com"}/estimate`}>
               <div className="bg-white text-black rounded-xl p-6 flex flex-col items-center hover:shadow-xl transition h-full">
                 <Image
                   src="/logos/schedul.jpg"
@@ -223,7 +223,7 @@ export default function TestimonialsPage() {
               </div>
             </Link>
 
-            <Link href="https://insonohearing.com/our-clinic">
+            <Link href={`https://${process.env.NEXT_PUBLIC_DOMAIN || "ventlyair.com"}/our-clinic`}>
               <div className="bg-white text-black rounded-xl p-6 flex flex-col items-center hover:shadow-xl transition h-full">
                 <Image
                   src="/logos/Experts.png"

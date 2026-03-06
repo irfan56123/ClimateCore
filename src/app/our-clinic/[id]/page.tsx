@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import { clinics, defaultFaqs } from "../clinics-data";
-import HearingAidTypes from "@/components/HearingaidType";
+import HVACSystemType from "@/components/HVACSystemType";
 import type { Metadata } from "next";
 import ClinicSlider from "@/components/slider/ClinicSlider";
 
@@ -16,7 +16,7 @@ export async function generateMetadata({
   if (!clinic) return {};
 
   return {
-    title: `${clinic.name} | Insono Hearing Solutions`,
+    title: `${clinic.name} | Vently Air Hearing Solutions`,
     description: `Visit ${clinic.name}. Address: ${clinic.address}. Open daily till 7 PM. Book your appointment today.`,
   };
 }
@@ -71,7 +71,7 @@ export default async function ClinicDetailPage({ params }: ClinicPageParams) {
           {/* ✅ Buttons */}
           <div className="flex gap-4 flex-wrap mb-8">
             <a
-              href={`/appointment?cat=${encodeURIComponent(
+              href={`/estimate?cat=${encodeURIComponent(
                 clinic.catSlug || clinic.id,
               )}&slug=${encodeURIComponent(clinic.id)}`}
               className="px-6 py-3 bg-[#023784] text-white rounded-md font-semibold hover:bg-[#012a5a]"
@@ -97,9 +97,9 @@ export default async function ClinicDetailPage({ params }: ClinicPageParams) {
         </div>
       </div>
 
-      {/* ✅ Hearing Aid Types */}
+      {/* ✅ HVAC System Types */}
       <section className="mt-8">
-        <HearingAidTypes />
+        <HVACSystemType />
       </section>
 
       {/* ✅ FAQs */}

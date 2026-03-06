@@ -9,7 +9,7 @@ import Footer from "@/components/landingHero/fotern";
 import { brandSEO } from "@/lib/brandSeo";
 export const metadata = brandSEO(
   "Widex",
-  "https://insonohearing.com/landing/widex",
+  `https://${process.env.NEXT_PUBLIC_DOMAIN || "ventlyair.com"}/landing/widex`,
 );
 
 export default function Page() {
@@ -38,9 +38,9 @@ export default function Page() {
   ];
 
   const faqs = [
-    { q: "Widex hearing aid price?", a: "Starts from ₹20,000 onwards." },
+    { q: "Widex HVAC price?", a: "Starts from ₹20,000 onwards." },
     {
-      q: "Where to buy Widex hearing aid?",
+      q: "Where to buy Widex HVAC?",
       a: "Authorized Widex clinic near you.",
     },
     { q: "Widex rechargeable models?", a: "Yes, Moment series rechargeable." },
@@ -58,7 +58,7 @@ export default function Page() {
   return (
     <>
       <HeroSection
-        title="Widex Hearing Aids – Pure Natural Sound"
+        title="Widex HVAC Systems – Pure Natural Sound"
         subtitle="Experience world’s most natural hearing technology."
         ctaText="Download Widex Price List"
         partnerLabel="Authorized Widex Clinics"
@@ -67,12 +67,12 @@ export default function Page() {
         features={featuresList}
       />
 
-      <ProductSection heading="Widex Digital Hearing Aids" />
+      <ProductSection heading="Widex Digital HVAC Systems" />
       <Whychoose />
       <HearingAidGuide />
       <Location />
       <Testomonial />
-      <FAQ faqs={faqs} heading="Widex Hearing Aids – FAQs" />
+      <FAQ faqs={faqs} heading="Widex HVAC Systems – FAQs" />
       <Footer />
     </>
   );

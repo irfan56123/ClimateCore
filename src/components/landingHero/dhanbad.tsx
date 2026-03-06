@@ -48,7 +48,7 @@ export default function HeroSection() {
       <div className="lg:hidden px-4 sm:px-6 md:px-8 py-12 flex flex-col gap-8 text-center">
         <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold leading-snug text-center">
           <span className="bg-gradient-to-r from-[#E83D6D] via-[#0D2240] to-[#7C7C7C] bg-clip-text text-transparent">
-            Best Hearing Aid in Dhanbad – Now In Your City
+            Best HVAC System in Dhanbad – Now In Your City
           </span>
         </h1>
 
@@ -110,7 +110,7 @@ export default function HeroSection() {
             <span className="font-semibold text-gray-700">
               official partner
             </span>{" "}
-            of leading hearing aid brands.
+            of leading HVAC brands.
           </p>
           <div className="relative overflow-hidden w-full h-16 sm:h-20">
             <div
@@ -164,7 +164,7 @@ export default function HeroSection() {
             <input
               type="hidden"
               name="zf_redirect_url"
-              value="https://prices.insonohearing.com/landing/apt-thank-you"
+              value={`https://prices.${process.env.NEXT_PUBLIC_DOMAIN || "ventlyair.com"}/landing/apt-thank-you`}
             />
             <input type="hidden" name="zc_gad" value="" />
             <input type="hidden" name="utm_source" value="Google Organic" />
@@ -222,7 +222,7 @@ export default function HeroSection() {
         <div className="flex-1 space-y-6 text-left">
           <h1 className="text-3xl font-bold leading-snug ">
             <span className="bg-gradient-to-r from-[#E83D6D] via-[#0D2240] to-[#7C7C7C] bg-clip-text text-transparent">
-              Best Hearing Aid in Dhanbad – Now In Your City
+              Best HVAC System in Dhanbad – Now In Your City
             </span>
           </h1>
           <p className="text-lg md:text-xl text-gray-700 mb-12">
@@ -271,7 +271,7 @@ export default function HeroSection() {
               <span className="font-semibold text-gray-700">
                 official partner
               </span>{" "}
-              of leading hearing aid brands.
+              of leading HVAC brands.
             </p>
             <div className="relative overflow-hidden w-full h-20">
               <div
@@ -341,7 +341,7 @@ export default function HeroSection() {
             <input
               type="hidden"
               name="zf_redirect_url"
-              value="https://prices.insonohearing.com/landing/apt-thank-you"
+              value={`https://prices.${process.env.NEXT_PUBLIC_DOMAIN || "ventlyair.com"}/landing/apt-thank-you`}
             />
             <input type="hidden" name="zc_gad" value="" />
             <input type="hidden" name="utm_source" value="Google Organic" />

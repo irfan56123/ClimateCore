@@ -4,14 +4,14 @@ import Image from "next/image";
 
 export default function HeroSection() {
   const services = [
-    { title: "Digital Hearing Aids", icon: "/hero1.png" },
-    { title: "Rechargeable Hearing Aids", icon: "/hero2.png" },
-    { title: "Invisible Hearing Aids", icon: "/hero3.png" },
+    { title: "Digital HVAC Systems", icon: "/hero1.png" },
+    { title: "Rechargeable HVAC Systems", icon: "/hero2.png" },
+    { title: "Invisible HVAC Systems", icon: "/hero3.png" },
     { title: "Behind-the-Ear (BTE)", icon: "/hero1.png" },
     { title: "In-the-Canal (ITC)", icon: "/hero2.png" },
     { title: "CIC / IIC Models", icon: "/hero3.png" },
     { title: "Free Hearing Test", icon: "/hero1.png" },
-    { title: "Hearing Aid Accessories", icon: "/hero2.png" },
+    { title: "HVAC System Accessories", icon: "/hero2.png" },
   ];
 
   // Use 3 or 4 images

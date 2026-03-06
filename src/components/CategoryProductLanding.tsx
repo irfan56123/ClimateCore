@@ -1,5 +1,4 @@
 import ProductCard from "./ProductCard";
-import { graphQLClient, GET_PRODUCTS } from "@/lib/graphql";
 
 // Types
 interface Product {
@@ -9,33 +8,20 @@ interface Product {
   description: string;
   price: string;
   category: string[];
-  featuredImage?: {
-    node?: {
-      sourceUrl: string;
-    };
-  };
+  imageUrl?: string;
 }
 
-interface GraphQLProductNode {
+interface PrismaProduct {
   id: string;
   title: string;
   slug: string;
-  description?: string;
-  price?: string;
-  categories?: {
-    nodes: { name: string }[];
-  };
-  featuredImage?: {
-    node?: {
-      sourceUrl: string;
-    };
-  };
-}
-
-interface GraphQLResponse {
-  products: {
-    nodes: GraphQLProductNode[];
-  };
+  category: string;
+  mrp: number | null;
+  images: string[];
+  suitableFor: string[];
+  technology: string[];
+  shape: string[];
+  description: string | null;
 }
 
 interface CategoryProductSectionProps {
@@ -51,17 +37,20 @@ export default async function CategoryProductSection({
   description,
   limit = 4,
 }: CategoryProductSectionProps) {
-  // ✅ Fetch products server-side (SEO friendly)
-  const data = await graphQLClient.request<GraphQLResponse>(GET_PRODUCTS);
+  // ✅ Fetch products
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+  const response = await fetch(`${baseUrl}/api/products`, { cache: "no-store" });
+  if (!response.ok) return null;
+  const data: PrismaProduct[] = await response.json();
 
-  const products: Product[] = data.products.nodes.map((product) => ({
+  const products: Product[] = data.map((product) => ({
     id: product.id,
     title: product.title,
     slug: product.slug,
-    category: product.categories?.nodes.map((c) => c.name) || [],
+    category: [product.category, ...product.suitableFor, ...product.technology, ...product.shape],
     description: product.description || "No description available",
-    price: product.price || "Contact for price",
-    featuredImage: product.featuredImage,
+    price: product.mrp ? `₹${product.mrp}` : "Contact for price",
+    imageUrl: product.images[0] || "/placeholder.png",
   }));
 
   // ✅ Multiple keyword support
@@ -92,7 +81,7 @@ export default async function CategoryProductSection({
       <div className="text-center mb-8">
         <h2 className="text-xl sm:text-2xl md:text-3xl font-extrabold leading-snug mb-3">
           <span className="bg-gradient-to-r from-[#E83D6D] via-[#184A99] to-[#7C7C7C] bg-clip-text text-transparent">
-            {title || `${category.split(",").join(" + ")} Hearing Aids`}
+            {title || `${category.split(",").join(" + ")} HVAC Systems`}
           </span>
         </h2>
         {description && (
@@ -108,9 +97,7 @@ export default async function CategoryProductSection({
           <ProductCard
             key={product.id}
             title={product.title}
-            imageUrl={
-              product.featuredImage?.node?.sourceUrl || "/placeholder.png"
-            }
+            imageUrl={product.imageUrl || "/placeholder.png"}
             slug={product.slug}
           />
         ))}

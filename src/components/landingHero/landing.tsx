@@ -119,7 +119,7 @@ export default function HeroSection({
                 >
                   <Image
                     src={img}
-                    alt="Hearing Aid"
+                    alt="HVAC System"
                     fill
                     priority={i === 0}
                     className="object-contain drop-shadow-xl px-4"
@@ -157,7 +157,7 @@ export default function HeroSection({
                 <input
                   type="hidden"
                   name="zf_redirect_url"
-                  value="https://prices.insonohearing.com/landing/apt-thank-you"
+                  value={`https://prices.${process.env.NEXT_PUBLIC_DOMAIN || "ventlyair.com"}/landing/apt-thank-you`}
                 />
 
                 <input

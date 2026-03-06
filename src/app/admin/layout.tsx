@@ -3,7 +3,7 @@ import { SessionProvider } from "next-auth/react";
 import { AdminSidebar } from "@/components/admin/AdminSidebar";
 
 export const metadata: Metadata = {
-    title: "Admin | Insono Hearing",
+    title: "Admin | Vently Air Hearing",
     robots: { index: false, follow: false },
 };
 

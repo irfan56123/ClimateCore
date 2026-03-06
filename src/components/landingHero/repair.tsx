@@ -48,7 +48,7 @@ export default function HeroSection() {
       <div className="lg:hidden px-4 sm:px-6 md:px-8 py-12 flex flex-col gap-8 text-center">
         <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold leading-snug text-center">
           <span className="bg-gradient-to-r from-[#E83D6D] via-[#0D2240] to-[#7C7C7C] bg-clip-text text-transparent">
-            Hearing Aid Repair in Lucknow – Signia & Phonak Experts
+            HVAC System Repair in Lucknow – Signia & Phonak Experts
           </span>
         </h1>
 
@@ -110,7 +110,7 @@ export default function HeroSection() {
             <span className="font-semibold text-gray-700">
               official partner
             </span>{" "}
-            of leading hearing aid brands.
+            of leading HVAC brands.
           </p>
           <div className="relative overflow-hidden w-full h-16 sm:h-20">
             <div
@@ -139,7 +139,7 @@ export default function HeroSection() {
         {/* Form */}
         <div className="w-full bg-white p-4 sm:p-6 rounded-lg shadow-md">
           <h2 className="text-lg md:text-xl font-bold mb-2 text-gray-800 text-center md:text-left">
-            Book Your Hearing Aid Repair Appointment
+            Book Your HVAC System Repair Appointment
           </h2>
 
           <div className="flex flex-wrap justify-center md:justify-start gap-x-4 gap-y-2 mb-4">
@@ -164,7 +164,7 @@ export default function HeroSection() {
             <input
               type="hidden"
               name="zf_redirect_url"
-              value="https://prices.insonohearing.com/landing/apt-thank-you"
+              value={`https://prices.${process.env.NEXT_PUBLIC_DOMAIN || "ventlyair.com"}/landing/apt-thank-you`}
             />
             <input type="hidden" name="zc_gad" value="" />
             <input type="hidden" name="utm_source" value="Google Organic" />
@@ -222,7 +222,7 @@ export default function HeroSection() {
         <div className="flex-1 space-y-6 text-left">
           <h1 className="text-3xl font-bold leading-snug ">
             <span className="bg-gradient-to-r from-[#E83D6D] via-[#0D2240] to-[#7C7C7C] bg-clip-text text-transparent">
-              Hearing Aid Repair in Lucknow – Signia & Phonak Experts
+              HVAC System Repair in Lucknow – Signia & Phonak Experts
             </span>
           </h1>
           <p className="text-lg md:text-xl text-gray-700 mb-12">
@@ -271,7 +271,7 @@ export default function HeroSection() {
               <span className="font-semibold text-gray-700">
                 official partner
               </span>{" "}
-              of leading hearing aid brands.
+              of leading HVAC brands.
             </p>
             <div className="relative overflow-hidden w-full h-20">
               <div
@@ -317,7 +317,7 @@ export default function HeroSection() {
         {/* Form */}
         <div className="flex-1 w-full max-w-sm bg-white p-6 rounded-lg shadow-md">
           <h2 className="text-xl font-bold mb-3 text-gray-800">
-            Book Your Hearing Aid Repair Appointment
+            Book Your HVAC System Repair Appointment
           </h2>
           <div className="flex flex-wrap justify-center md:justify-start gap-x-4 gap-y-2 mb-4">
             <p className="flex items-center gap-1 text-sm text-gray-600">
@@ -341,7 +341,7 @@ export default function HeroSection() {
             <input
               type="hidden"
               name="zf_redirect_url"
-              value="https://prices.insonohearing.com/landing/apt-thank-you"
+              value={`https://prices.${process.env.NEXT_PUBLIC_DOMAIN || "ventlyair.com"}/landing/apt-thank-you`}
             />
             <input type="hidden" name="zc_gad" value="" />
             <input type="hidden" name="utm_source" value="Google Organic" />

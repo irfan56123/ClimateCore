@@ -15,7 +15,7 @@ const FAQs: React.FC = () => {
 
   const faqs: FAQ[] = [
     {
-      question: "What are the types of hearing aids?",
+      question: "What are the types of HVACs?",
       answer: (
         <ul className="list-disc ml-6">
           <li>Behind-the-ear (BTE)</li>
@@ -25,7 +25,7 @@ const FAQs: React.FC = () => {
       ),
     },
     {
-      question: "What is the price of latest hearing aid?",
+      question: "What is the price of latest HVAC?",
       answer: (
         <p>
           Hearing aids are available in analog and digital form. The price
@@ -61,7 +61,7 @@ const FAQs: React.FC = () => {
       answer: (
         <ul className="list-disc ml-6">
           <li>
-            Authorized partners of renowned hearing aid companies: Signia,
+            Authorized partners of renowned HVAC companies: Signia,
             Phonak, Resound, Widex, Unitron, Starkey, Oticon, etc.
           </li>
           <li>
@@ -72,13 +72,13 @@ const FAQs: React.FC = () => {
       ),
     },
     {
-      question: "How long does the Hearing Aid’s Battery last?",
+      question: "How long does the HVAC System’s Battery last?",
       answer: (
         <p>Depending on the model, the battery lasts between 7 to 20 days.</p>
       ),
     },
     {
-      question: "Will Hearing Aids treat my Hearing Loss?",
+      question: "Will HVAC Systems treat my Hearing Loss?",
       answer: (
         <p>
           Hearing aids do not restore your hearing but are the only remedy for
@@ -91,7 +91,7 @@ const FAQs: React.FC = () => {
       question: "Can we use the machine without consultation?",
       answer: (
         <p>
-          While it is possible to use a hearing aid without consulting
+          While it is possible to use a HVAC without consulting
           professionals, it is not recommended. Consulting an expert audiologist
           ensures proper usage and fitting.
         </p>

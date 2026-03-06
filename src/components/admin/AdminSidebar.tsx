@@ -37,7 +37,7 @@ export function AdminSidebar() {
                     <div className="w-8 h-8 rounded-lg bg-[#023784] flex items-center justify-center text-white font-bold text-sm">
                         I
                     </div>
-                    <span className="font-semibold text-gray-800">Insono Admin</span>
+                    <span className="font-semibold text-gray-800">Vently Air Admin</span>
                 </div>
                 <button onClick={() => setOpen(!open)} className="p-2 rounded-md hover:bg-gray-100">
                     {open ? <X size={20} /> : <Menu size={20} />}
@@ -56,7 +56,7 @@ export function AdminSidebar() {
                             I
                         </div>
                         <div>
-                            <p className="font-bold text-white text-sm">Insono Hearing</p>
+                            <p className="font-bold text-white text-sm">Vently Air Hearing</p>
                             <p className="text-xs text-blue-300">Admin Panel</p>
                         </div>
                     </div>

@@ -14,20 +14,20 @@ interface FAQProps {
 
 const defaultFaqs: FAQItem[] = [
   {
-    q: "What types of hearing aids does Insono Hearing offer?",
-    a: "We provide BTE, RIC/RITE, ITE, CIC, and rechargeable models from leading brands, covering mild to profound hearing loss.",
+    q: "What HVAC services do you provide?",
+    a: "We offer professional installation, repair, and maintenance for furnaces, air conditioners, heat pumps, and ductless mini-split systems.",
   },
   {
-    q: "How do I know which hearing aid is right for me?",
-    a: "Our audiologists run a complete hearing evaluation and recommend the best device based on your hearing needs, lifestyle, and budget.",
+    q: "How often should I service my HVAC system?",
+    a: "We recommend a professional tune-up at least twice a year—once in the spring for your AC and once in the fall for your heating system.",
   },
   {
-    q: "Do new hearing aids come with a trial period?",
-    a: "Yes, we offer a trial period so you can test the device in real-life situations. Adjustments or model changes are possible if needed.",
+    q: "Can I get a free estimate for a new installation?",
+    a: "Yes! We offer free, no-obligation estimates for all new HVAC system installations and replacements.",
   },
   {
-    q: "What follow-up care is included?",
-    a: "We provide regular fine-tuning sessions, maintenance, and checkups to ensure your device works perfectly over time.",
+    q: "Do you offer emergency repair services?",
+    a: "Yes, our technicians are available for emergency repairs to ensure your home remains comfortable year-round.",
   },
 ];
 
@@ -62,9 +62,8 @@ export default function FAQ({ faqs = defaultFaqs, heading }: FAQProps) {
                 )}
               </button>
               <div
-                className={`ml-10 overflow-hidden transition-all duration-500 ease-in-out ${
-                  openIndex === idx ? "max-h-40 opacity-100" : "max-h-0 opacity-0"
-                }`}
+                className={`ml-10 overflow-hidden transition-all duration-500 ease-in-out ${openIndex === idx ? "max-h-40 opacity-100" : "max-h-0 opacity-0"
+                  }`}
               >
                 <p className="text-white/80 text-sm leading-relaxed pr-6 pb-4">
                   {faq.a}
@@ -75,18 +74,7 @@ export default function FAQ({ faqs = defaultFaqs, heading }: FAQProps) {
         </div>
 
         {/* ✅ CTA */}
-        <div className="text-center mt-16">
-          <h3 className="text-xl font-semibold mb-4">Still have questions?</h3>
-          <p className="text-white/80 mb-6">
-            Our audiologists are here to guide you. Book a free consultation today.
-          </p>
-          <a
-            href="/appointment"
-            className="inline-block bg-white text-[#023784] font-semibold px-6 py-3 rounded-lg shadow hover:bg-gray-100 transition"
-          >
-            Book a Free Consultation
-          </a>
-        </div>
+
       </div>
     </section>
   );

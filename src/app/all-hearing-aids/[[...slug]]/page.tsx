@@ -18,14 +18,14 @@ const TECH_DB: Record<string, string> = {
   bluetooth: "Bluetooth", rechargeable: "Rechargeable", ai: "AI",
 };
 const CATEGORY_COLORS: Record<string, string> = {
-  signia:  "bg-purple-50 text-purple-700",
-  phonak:  "bg-orange-50 text-orange-700",
-  widex:   "bg-blue-50 text-blue-700",
-  oticon:  "bg-red-50 text-red-600",
+  signia: "bg-purple-50 text-purple-700",
+  phonak: "bg-orange-50 text-orange-700",
+  widex: "bg-blue-50 text-blue-700",
+  oticon: "bg-red-50 text-red-600",
   starkey: "bg-green-50 text-green-700",
 };
 
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://insonohearing.com";
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || `https://${process.env.NEXT_PUBLIC_DOMAIN || "ventlyair.com"}`;
 
 interface Filters extends ActiveFilters {
   priceMax?: number;
@@ -38,8 +38,8 @@ function cap(s: string) {
 function parseSlug(parts?: string[]): Filters {
   const f: Filters = {};
   for (const part of parts ?? []) {
-    if ((BRANDS as readonly string[]).includes(part))       f.brand = part;
-    else if ((SHAPES as readonly string[]).includes(part))  f.shape = part;
+    if ((BRANDS as readonly string[]).includes(part)) f.brand = part;
+    else if ((SHAPES as readonly string[]).includes(part)) f.shape = part;
     else if ((TECHNOLOGIES as readonly string[]).includes(part)) f.technology = part;
     else {
       const pr = (PRICE_RANGES as readonly { slug: string; label: string; max: number }[])
@@ -54,26 +54,26 @@ function buildTitle(f: Filters): string {
   const pr = (PRICE_RANGES as readonly { slug: string; label: string; max: number }[])
     .find((p) => p.slug === f.priceSlug);
 
-  if (f.brand && f.shape && pr)        return `Best ${cap(f.brand)} ${f.shape.toUpperCase()} Hearing Aids ${pr.label}`;
-  if (f.brand && f.shape)              return `Best ${cap(f.brand)} Hearing Aids in ${f.shape.toUpperCase()} Shape`;
-  if (f.brand && f.technology && pr)   return `Best ${cap(f.brand)} ${cap(f.technology)} Hearing Aids ${pr.label}`;
-  if (f.brand && f.technology)         return `Best ${cap(f.brand)} ${cap(f.technology)} Hearing Aids in India`;
-  if (f.brand && pr)                   return `Best ${cap(f.brand)} Hearing Aids ${pr.label}`;
-  if (f.brand)                         return `Best ${cap(f.brand)} Hearing Aids in India`;
-  if (f.shape && f.technology && pr)   return `Best ${f.shape.toUpperCase()} ${cap(f.technology)} Hearing Aids ${pr.label}`;
-  if (f.shape && f.technology)         return `Best ${f.shape.toUpperCase()} ${cap(f.technology)} Hearing Aids in India`;
-  if (f.shape && pr)                   return `Best ${f.shape.toUpperCase()} Hearing Aids ${pr.label}`;
-  if (f.shape)                         return `Best ${f.shape.toUpperCase()} Hearing Aids in India`;
-  if (f.technology && pr)              return `Best ${cap(f.technology)} Hearing Aids ${pr.label}`;
-  if (f.technology)                    return `Best ${cap(f.technology)} Hearing Aids in India`;
-  if (pr)                              return `Best Hearing Aids ${pr.label} in India`;
-  return "All Hearing Aids – Best Brands & Prices in India";
+  if (f.brand && f.shape && pr) return `Best ${cap(f.brand)} ${f.shape.toUpperCase()} HVAC Systems ${pr.label}`;
+  if (f.brand && f.shape) return `Best ${cap(f.brand)} HVAC Systems in ${f.shape.toUpperCase()} Shape`;
+  if (f.brand && f.technology && pr) return `Best ${cap(f.brand)} ${cap(f.technology)} HVAC Systems ${pr.label}`;
+  if (f.brand && f.technology) return `Best ${cap(f.brand)} ${cap(f.technology)} HVAC Systems in India`;
+  if (f.brand && pr) return `Best ${cap(f.brand)} HVAC Systems ${pr.label}`;
+  if (f.brand) return `Best ${cap(f.brand)} HVAC Systems in India`;
+  if (f.shape && f.technology && pr) return `Best ${f.shape.toUpperCase()} ${cap(f.technology)} HVAC Systems ${pr.label}`;
+  if (f.shape && f.technology) return `Best ${f.shape.toUpperCase()} ${cap(f.technology)} HVAC Systems in India`;
+  if (f.shape && pr) return `Best ${f.shape.toUpperCase()} HVAC Systems ${pr.label}`;
+  if (f.shape) return `Best ${f.shape.toUpperCase()} HVAC Systems in India`;
+  if (f.technology && pr) return `Best ${cap(f.technology)} HVAC Systems ${pr.label}`;
+  if (f.technology) return `Best ${cap(f.technology)} HVAC Systems in India`;
+  if (pr) return `Best HVAC Systems ${pr.label} in India`;
+  return "All HVAC Systems – Best Brands & Prices in India";
 }
 
 function buildDescription(f: Filters): string {
   const title = buildTitle(f);
   const brand = f.brand ? cap(f.brand) : "top";
-  return `${title}. Compare ${brand} hearing aid models, prices & features. Get expert advice from Insono Hearing – India's trusted hearing care specialists.`;
+  return `${title}. Compare ${brand} HVAC models, prices & features. Get expert advice from Vently Air Hearing – India's trusted hearing care specialists.`;
 }
 
 // ─── Metadata ────────────────────────────────────────────────────────────────
@@ -98,8 +98,8 @@ export async function generateMetadata(
       description,
       url: canonical,
       type: "website",
-      siteName: "Insono Hearing",
-      images: [{ url: `${BASE_URL}/logo.webp`, width: 1200, height: 630 }],
+      siteName: "Vently Air Hearing",
+      images: [{ url: `${BASE_URL}/ventlylogo.png`, width: 1200, height: 630 }],
     },
     twitter: {
       card: "summary_large_image",
@@ -115,14 +115,14 @@ export async function generateStaticParams() {
   const params: { slug: string[] }[] = [];
 
   // Single filters
-  for (const b of BRANDS)      params.push({ slug: [b] });
-  for (const s of SHAPES)      params.push({ slug: [s] });
+  for (const b of BRANDS) params.push({ slug: [b] });
+  for (const s of SHAPES) params.push({ slug: [s] });
   for (const t of TECHNOLOGIES) params.push({ slug: [t] });
   for (const p of PRICE_RANGES) params.push({ slug: [p.slug] });
 
   // Two-filter combinations
   for (const b of BRANDS) {
-    for (const s of SHAPES)       params.push({ slug: [b, s] });
+    for (const s of SHAPES) params.push({ slug: [b, s] });
     for (const t of TECHNOLOGIES) params.push({ slug: [b, t] });
     for (const p of PRICE_RANGES) params.push({ slug: [b, p.slug] });
   }
@@ -148,10 +148,10 @@ export default async function AllHearingAidsPage({
 
   // Build Prisma where clause
   const where: Record<string, unknown> = {};
-  if (f.brand)     where.category = f.brand;
-  if (f.shape)     where.shape = { has: SHAPE_DB[f.shape] };
+  if (f.brand) where.category = f.brand;
+  if (f.shape) where.shape = { has: SHAPE_DB[f.shape] };
   if (f.technology) where.technology = { has: TECH_DB[f.technology] };
-  if (f.priceMax)  where.mrp = { lte: f.priceMax };
+  if (f.priceMax) where.mrp = { lte: f.priceMax };
 
   const products = await prisma.product.findMany({
     where,
@@ -169,7 +169,7 @@ export default async function AllHearingAidsPage({
   // Breadcrumbs
   const crumbs = [
     { name: "Home", url: BASE_URL },
-    { name: "All Hearing Aids", url: `${BASE_URL}/all-hearing-aids` },
+    { name: "All HVAC Systems", url: `${BASE_URL}/all-hearing-aids` },
   ];
   if (slug?.length) crumbs.push({ name: pageTitle, url: `${BASE_URL}/all-hearing-aids/${slug.join("/")}` });
 
@@ -230,7 +230,7 @@ export default async function AllHearingAidsPage({
         <p className="text-sm text-gray-400 mb-6">
           Showing{" "}
           <span className="font-semibold text-gray-600">{products.length}</span>{" "}
-          hearing aid{products.length !== 1 ? "s" : ""}
+          HVAC{products.length !== 1 ? "s" : ""}
           {Object.values(activeFilters).some(Boolean) && " matching your filters"}
         </p>
 
@@ -243,7 +243,7 @@ export default async function AllHearingAidsPage({
               href="/all-hearing-aids"
               className="text-[#023784] text-sm font-semibold hover:underline"
             >
-              View all hearing aids →
+              View all HVACs →
             </Link>
           </div>
         ) : (

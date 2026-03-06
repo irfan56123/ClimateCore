@@ -9,7 +9,7 @@ interface Feature {
 const features: Feature[] = [
   {
     title: "Transparent Pricing",
-    description: "Explore hearing aid price list",
+    description: "Explore HVAC price list",
   },
   {
     title: "1000+ certified clinics in 450+ cities",
@@ -34,7 +34,7 @@ const Whychoose: React.FC = () => {
     <section className="bg-gray-50 py-10">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8">
-          Why Insono Solution?
+          Why Vently Air Solution?
         </h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">

@@ -38,7 +38,7 @@ export default function TrialFormPage() {
             <div className="text-[#1f5ca8] text-4xl sm:text-5xl mb-3">✔</div>
             <p className="text-gray-700 font-medium text-base sm:text-lg leading-relaxed">
               Comprehensive consultation <br />
-              with hearing aid experts
+              with HVAC experts
             </p>
           </div>
 
@@ -56,9 +56,7 @@ export default function TrialFormPage() {
       {/* ------------------- FOOTER ------------------- */}
       <footer className="text-center py-10 text-gray-700 w-full px-4">
         <div className="mt-4 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-600">
-          <p className="mb-2 sm:mb-0">
-            © {new Date().getFullYear()} Insono Hearing. All rights reserved.
-          </p>
+          © {new Date().getFullYear()} Vently Air. All rights reserved.
 
           <p className="text-center sm:text-right">
             Built with <FaBrain className="inline mx-1 text-blue-500" /> by{" "}

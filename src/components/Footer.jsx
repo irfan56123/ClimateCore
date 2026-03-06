@@ -16,32 +16,18 @@ export default function Footer() {
           {/* Left Column - Logo + Contact */}
           <div>
             <Image
-              src="/logo.webp" // replace with Insono logo
-              alt="Insono Hearing"
+              src="/ventlylogo.png" // replace with Vently logo
+              alt="Vently Air"
               width={150}
               height={40}
               className="mb-4"
             />
-            <p className="text-sm mb-4">
-              To connect with a hearing expert today,{" "}
-              <a
-                href="mailto:insonohearing@gmail.com"
-                className="underline text-white"
-              >
-                email us
-              </a>{" "}
-              or call{" "}
-              <a href="tel:+916204260510" className="underline text-white">
-                +91 6204260510
-              </a>{" "}
-              or at{" "}
-              <a href="tel:+917742573686" className="underline text-white">
-                +91 7742573686
-              </a>
+            <p className="mt-4 text-sm leading-relaxed">
+              Vently Air is your trusted partner for high-quality heating, cooling, and ventilation solutions. We are dedicated to providing expert service and reliable HVAC systems for your home and business.
             </p>
             <a
               href="/contact-us"
-              className="inline-block border border-white text-white px-4 py-2 rounded-md hover:bg-white hover:text-gray-900 transition"
+              className="inline-block border border-white text-white px-4 py-2 rounded-md hover:bg-white hover:text-gray-900 transition mt-4"
             >
               Contact us
             </a>
@@ -57,60 +43,56 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="/our-clinic" className="hover:text-white">
-                  Our Clinics
+                <a href="/services" className="hover:text-white">
+                  Our Services
                 </a>
               </li>
               <li>
                 <a href="/careers" className="hover:text-white">
-                  Jobs at Insono
+                  Careers
                 </a>
               </li>
               <li>
-                <a href="/awards" className="hover:text-white">
-                  Awards & Certifications
+                <a href="/certifications" className="hover:text-white">
+                  Our Certifications
                 </a>
               </li>
               <li>
-                <a href="/testimonial" className="hover:text-white">
-                  Customer Reviews
+                <a href="/testimonials" className="hover:text-white">
+                  Customer Testimonials
                 </a>
               </li>
-              <li>
-                <a href="/blog" className="hover:text-white">
-                  Official Blog
-                </a>
-              </li>
+
             </ul>
           </div>
 
           {/* Services Links */}
           <div>
-            <h4 className="text-white font-semibold mb-3">Hearing Solutions</h4>
+            <h4 className="text-white font-semibold mb-3">Our Services</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="/hearing-aids/signia" className="hover:text-white">
-                  Signia Hearing Aids
+                <a href="/services/ac-repair" className="hover:text-white">
+                  AC Repair & Service
                 </a>
               </li>
               <li>
-                <a href="/hearing-aids/signia" className="hover:text-white">
-                  Invisible Hearing Aids
+                <a href="/services/ac-installation" className="hover:text-white">
+                  AC Installation
                 </a>
               </li>
               <li>
-                <a href="/hearing-aids/phonak" className="hover:text-white">
-                  Phonak Hearing Aids
+                <a href="/services/ac-maintenance" className="hover:text-white">
+                  AC Maintenance
                 </a>
               </li>
               <li>
-                <a href="/hearing-aids/widex" className="hover:text-white">
-                  Widex Hearing Aids
+                <a href="/services/heating-solutions" className="hover:text-white">
+                  Heating Solutions
                 </a>
               </li>
               <li>
-                <a href="/hearing-aids/oticon" className="hover:text-white">
-                  Oticon Hearing Aids
+                <a href="/services/ventilation-systems" className="hover:text-white">
+                  Ventilation Systems
                 </a>
               </li>
             </ul>
@@ -122,12 +104,12 @@ export default function Footer() {
             <ul className="space-y-2 text-sm">
               <li>
                 <a href="/contact-us" className="hover:text-white">
-                  Free Appointment
+                  Schedule Service
                 </a>
               </li>
               <li>
-                <a href="/guide" className="hover:text-white">
-                  Hearing Aid Guide
+                <a href="/service-areas" className="hover:text-white">
+                  Service Areas
                 </a>
               </li>
               <li>
@@ -136,8 +118,8 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="/faq" className="hover:text-white">
-                  Warranty & Repairs
+                <a href="/warranty" className="hover:text-white">
+                  Warranty Information
                 </a>
               </li>
               <li>
@@ -154,7 +136,7 @@ export default function Footer() {
           {/* Social Icons */}
           <div className="flex space-x-4">
             <a
-              href="https://youtube.com/@insonohearing"
+              href="https://youtube.com/@ventlyair"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-white"
@@ -162,7 +144,7 @@ export default function Footer() {
               <FaYoutube size={18} />
             </a>
             <a
-              href="https://www.instagram.com/insono_hearing_solutions"
+              href="https://www.instagram.com/ventlyair"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-white"
@@ -170,7 +152,7 @@ export default function Footer() {
               <FaInstagram size={18} />
             </a>
             <a
-              href="https://www.facebook.com/insonohearingsolution"
+              href="https://www.facebook.com/ventlyair"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-white"
@@ -178,7 +160,7 @@ export default function Footer() {
               <FaFacebook size={18} />
             </a>
             <a
-              href="https://www.linkedin.com/company/insonohearing"
+              href="https://www.linkedin.com/company/ventlyair"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-white"
@@ -190,7 +172,7 @@ export default function Footer() {
           {/* ✅ Google & Trustpilot Reviews Badges */}
           <div className="flex items-center gap-4">
             <a
-              href="https://maps.app.goo.gl/RvRyJE8vQqNQnhNF8"
+              href="https://maps.app.goo.gl/wmVXRuxddw7Bu9yx8"
               target="_blank"
               rel="noopener noreferrer"
               className="transition transform hover:scale-105"
@@ -204,7 +186,7 @@ export default function Footer() {
               />
             </a>
             <a
-              href="https://www.trustpilot.com/review/insonohearing.com"
+              href={`https://www.trustpilot.com/review/${process.env.NEXT_PUBLIC_DOMAIN || "ventlyair.com"}`}
               target="_blank"
               rel="noopener noreferrer"
               className="transition transform hover:scale-105"
@@ -235,8 +217,8 @@ export default function Footer() {
 
         {/* ⚖️ Copyright */}
         <div className="mt-4 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-500">
-          <p className="mb-2 sm:mb-0">
-            © {new Date().getFullYear()} Insono Hearing. All rights reserved.
+          <p className="mt-2 text-sm text-gray-400">
+            &copy; {new Date().getFullYear()} Vently Air. All rights reserved.
           </p>
           <p className="text-center sm:text-right">
             Built with <FaBrain className="inline mx-1 text-[#E7F3FF]" /> by{" "}

@@ -5,11 +5,11 @@ import Link from "next/link";
 import { Search } from "lucide-react";
 
 const products = [
-  { name: "Signia Hearing Aid", slug: "/hearing-aids/signia" },
-  { name: "Phonak Hearing Aid", slug: "/hearing-aids/phonak" },
-  { name: "Invisible Hearing Aid", slug: "/hearing-aids/invisible" },
-  { name: "Rechargeable Hearing Aid", slug: "/hearing-aids/rechargeable" },
-  { name: "Bluetooth Hearing Aid", slug: "/hearing-aids/bluetooth" },
+  { name: "Furnace Installation", slug: "/heating/furnace-installation" },
+  { name: "AC Repair", slug: "/air-conditioning/ac-repair" },
+  { name: "Heat Pump Systems", slug: "/heating/heat-pump-installation" },
+  { name: "Ductless Mini-Splits", slug: "/air-conditioning/mini-split-installation" },
+  { name: "Duct Cleaning", slug: "/air-quality/air-duct-cleaning" },
 ];
 
 export default function SearchBox() {
@@ -57,7 +57,7 @@ export default function SearchBox() {
           setActiveIndex(-1);
         }}
         onKeyDown={handleKeyDown}
-        placeholder="Search hearing aids..."
+        placeholder="Search HVAC services..."
         className="w-full pl-9 pr-4 py-2.5 border border-gray-300 rounded-full focus:ring-2 focus:ring-[#023784] focus:outline-none text-sm shadow-sm"
       />
 
@@ -68,11 +68,10 @@ export default function SearchBox() {
               <Link
                 key={i}
                 href={item.slug}
-                className={`block px-4 py-3 text-sm transition ${
-                  activeIndex === i
+                className={`block px-4 py-3 text-sm transition ${activeIndex === i
                     ? "bg-[#023784]/10 text-[#023784]"
                     : "hover:bg-gray-100"
-                }`}
+                  }`}
                 onMouseEnter={() => setActiveIndex(i)}
               >
                 {highlightText(item.name)}

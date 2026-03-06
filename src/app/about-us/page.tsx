@@ -4,24 +4,24 @@ import { Target, Users, Shield, CheckCircle2 } from "lucide-react";
 
 // ✅ Native Next.js SEO Metadata
 export const metadata: Metadata = {
-  title: "About Us | Insono Hearing Solutions",
+  title: "About Us | Vently Air Hearing Solutions",
   description:
-    "Learn about Insono Hearing Solutions — trusted hearing care in India, led by Mr. Manoj Kumar with 10+ years of audiology experience.",
+    "Learn about Vently Air Hearing Solutions — trusted hearing care in India, led by Mr. Manoj Kumar with 10+ years of audiology experience.",
   alternates: {
-    canonical: "https://www.insonohearing.com/about",
+    canonical: `https://${process.env.NEXT_PUBLIC_DOMAIN || "ventlyair.com"}/about`,
   },
   openGraph: {
-    title: "About Us | Insono Hearing Solutions",
+    title: "About Us | Vently Air Hearing Solutions",
     description:
-      "Learn about Insono Hearing Solutions — trusted hearing care in India.",
-    url: "https://www.insonohearing.com/about",
-    siteName: "Insono Hearing Solutions",
+      "Learn about Vently Air Hearing Solutions — trusted hearing care in India.",
+    url: `https://${process.env.NEXT_PUBLIC_DOMAIN || "ventlyair.com"}/about`,
+    siteName: "Vently Air Hearing Solutions",
     images: [
       {
-        url: "https://www.insonohearing.com/image/about-hero-new.jpeg",
+        url: `https://${process.env.NEXT_PUBLIC_DOMAIN || "ventlyair.com"}/image/about-hero-new.jpeg`,
         width: 1200,
         height: 630,
-        alt: "About Insono Hearing Solutions",
+        alt: "About Vently Air Hearing Solutions",
       },
     ],
     locale: "en_IN",
@@ -29,10 +29,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "About Us | Insono Hearing Solutions",
+    title: "About Us | Vently Air Hearing Solutions",
     description:
-      "Learn about Insono Hearing Solutions — trusted hearing care in India.",
-    images: ["https://www.insonohearing.com/image/about-hero-new.jpeg"],
+      "Learn about Vently Air Hearing Solutions — trusted hearing care in India.",
+    images: [`https://${process.env.NEXT_PUBLIC_DOMAIN || "ventlyair.com"}/image/about-hero-new.jpeg`],
   },
 };
 
@@ -51,7 +51,7 @@ export default function AboutPage() {
     {
       icon: Shield,
       title: "Unbiased Advice",
-      desc: "As an independent clinic, we are not owned by any hearing aid manufacturer — ensuring free and transparent guidance.",
+      desc: "As an independent clinic, we are not owned by any HVAC manufacturer — ensuring free and transparent guidance.",
     },
     {
       icon: CheckCircle2,
@@ -64,7 +64,7 @@ export default function AboutPage() {
     {
       id: 1,
       title: "Mr. Manoj Kumar, Director",
-      description: `The founder of Insono Hearing Solutions Pvt. Ltd., is a B.Tech graduate with a Diploma in Hearing, Language, and Speech (DHLS). With over 10+ years of experience in the audiology sector, he has built a reputation for delivering compassionate and personalized hearing care. His deep understanding of the challenges faced by those with hearing loss inspired him to create Insono Hearing Solutions, a company committed to providing tailored solutions that improve the lives of its patients. Under his leadership, the company has grown across India, helping individuals reconnect with the world around them.
+      description: `The founder of Vently Air Hearing Solutions Pvt. Ltd., is a B.Tech graduate with a Diploma in Hearing, Language, and Speech (DHLS). With over 10+ years of experience in the audiology sector, he has built a reputation for delivering compassionate and personalized hearing care. His deep understanding of the challenges faced by those with hearing loss inspired him to create Vently Air Hearing Solutions, a company committed to providing tailored solutions that improve the lives of its patients. Under his leadership, the company has grown across India, helping individuals reconnect with the world around them.
 
 Driven by a patient-first approach, Mr. Manoj Kumar ensures every individual receives the attention and care they deserve, aiming to bring the joy of hearing back into their lives and impact their well-being.`,
       image: "/manoj-singh.jpg",
@@ -79,7 +79,7 @@ Driven by a patient-first approach, Mr. Manoj Kumar ensures every individual rec
           <div className="lg:w-6/12 w-full relative h-64 sm:h-80 md:h-96 lg:h-[500px] rounded-lg overflow-hidden shadow">
             <Image
               src="/manoj_singh.jpg"
-              alt="About Insono Hearing Solutions"
+              alt="About Vently Air Hearing Solutions"
               fill
               className="object-cover"
               priority
@@ -90,7 +90,7 @@ Driven by a patient-first approach, Mr. Manoj Kumar ensures every individual rec
             <p className="text-gray-700 leading-relaxed mb-6">
               Hearing is an essential part of life, connecting us to the world
               and each other. Yet, hearing loss often goes unnoticed, silently
-              affecting relationships and daily activities. At Insono Hearing
+              affecting relationships and daily activities. At Vently Air Hearing
               Solutions, we are dedicated to early detection, expert care, and
               empowering people to rediscover the joy of sound.
             </p>
@@ -146,15 +146,15 @@ Driven by a patient-first approach, Mr. Manoj Kumar ensures every individual rec
             Awards & <span className="text-[#023784]">Recognitions</span>
           </h2>
           <p className="text-center text-gray-600 max-w-3xl mx-auto mt-3">
-            Insono Hearing Solutions has received multiple prestigious awards
-            and holds certifications from top global hearing aid brands,
+            Vently Air Hearing Solutions has received multiple prestigious awards
+            and holds certifications from top global HVAC brands,
             reflecting our commitment to excellence in hearing care.
           </p>
 
           <div className="mt-10 grid md:grid-cols-3 gap-6">
             {[
               "award_insono.jpg",
-              "lifeInsono.jpg",
+              "lifeVently Air.jpg",
               "insono_awarded.jpg",
               "signia.jpg",
               "phonak.jpeg",
@@ -166,7 +166,7 @@ Driven by a patient-first approach, Mr. Manoj Kumar ensures every individual rec
               >
                 <Image
                   src={`/${img}`}
-                  alt="Insono team and clinic moments"
+                  alt="Vently Air team and clinic moments"
                   fill
                   className="object-cover"
                 />

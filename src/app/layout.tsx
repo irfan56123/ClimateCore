@@ -3,35 +3,37 @@ import NavigationWrapper from "@/components/NavigationWrapper";
 import ChatWidgetLoader from "@/components/ChatWidgetLoader";
 import "./globals.css";
 import type { Metadata } from "next";
-import Script from "next/script";
+// import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: {
-    default: "Insono Hearing",
-    template: "%s | Insono Hearing",
-  },
-  description: "Affordable, reliable hearing aids with local support.",
+  metadataBase: new URL(`https://${process.env.NEXT_PUBLIC_DOMAIN || "ventlyair.com"}`),
+  title: "Vently Air — Expert HVAC Services & Solutions",
+  description:
+    "Reliable heating, cooling, and ventilation services. Expert furnace installation, AC repair, and air quality solutions for home and business.",
   keywords: [
-    "Hearing Aids",
-    "Affordable Hearing Solutions",
-    "Insono Hearing",
-    "Digital Hearing Aids",
-    "Hearing Care",
+    "HVAC",
+    "Heating Repair",
+    "Air Conditioning",
+    "Ventilation",
+    "Vently Air",
+    "Furnace Installation",
   ],
-  authors: [{ name: "Insono Hearing" }],
-  creator: "Insono Hearing",
-  metadataBase: new URL("https://insonohearing.com"),
+  authors: [{ name: "Vently Air" }],
+  creator: "Vently Air",
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
-    title: "Insono Hearing",
-    description: "Affordable, reliable hearing aids with local support.",
-    url: "https://insonohearing.com",
-    siteName: "Insono Hearing",
+    title: "Vently Air HVAC Solutions",
+    description: "Expert heating, cooling, and ventilation services with local support.",
+    url: `https://${process.env.NEXT_PUBLIC_DOMAIN || "ventlyair.com"}`,
+    siteName: "Vently Air",
     images: [
       {
-        url: "https://insonohearing.com/logo.webp",
+        url: `https://${process.env.NEXT_PUBLIC_DOMAIN || "ventlyair.com"}/ventlylogo.png`,
         width: 1200,
         height: 630,
-        alt: "Insono Hearing",
+        alt: "Vently Air",
       },
     ],
     locale: "en_US",
@@ -39,10 +41,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Insono Hearing",
-    description: "Affordable, reliable hearing aids with local support.",
-    images: ["https://insonohearing.com/logo.webp"],
-    creator: "@insonohearing",
+    title: "Vently Air",
+    description: "Affordable, reliable HVACs with local support.",
+    images: [`https://${process.env.NEXT_PUBLIC_DOMAIN || "ventlyair.com"}/ventlylogo.png`],
+    creator: "@ventlyair",
   },
   icons: {
     icon: "/favicon.ico",
@@ -65,7 +67,7 @@ export default function RootLayout({
           content="_w3rNIazk1WMe-urSCcrtpzyAcqTeopxMU1qqLd0p6k"
         />
 
-        <Script
+        {/* <Script
           id="gtm-head"
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{
@@ -80,14 +82,14 @@ export default function RootLayout({
               })(window,document,'script','dataLayer','GTM-T3FWLWC8');
             `,
           }}
-        />
+        /> */}
       </head>
 
       <body className="font-museo bg-white text-gray-900 antialiased bg-gradient-to-b from-[#eaf5ff] to-white">
         <NavigationWrapper>{children}</NavigationWrapper>
 
         {/* ✅ Global chat widget – loads once, after hydration */}
-        <ChatWidgetLoader />
+        {/* <ChatWidgetLoader /> */}
       </body>
     </html>
   );

@@ -4,20 +4,18 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Menu, X, ChevronDown, Phone } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
-import type { MenuLink, MenuSection } from "./menuData";
+import type { NavItem } from "./menuData";
 
 type Props = {
-  topLinks: MenuLink[];
-  sections: MenuSection[];
+  menu: NavItem[];
   phone?: string;
   logoSrc?: string;
 };
 
 export default function MobileMenu({
-  topLinks,
-  sections,
-  phone = "+916204260510",
-  logoSrc = "/logo.webp",
+  menu,
+  phone = process.env.NEXT_PUBLIC_PHONE || "+916204260510",
+  logoSrc = "/ventlylogo.png",
 }: Props) {
   const [open, setOpen] = useState(false);
   const [expanded, setExpanded] = useState<string | null>(null);
@@ -94,42 +92,25 @@ export default function MobileMenu({
               </div>
 
               {/* Content */}
-              <div className="flex-1 overflow-y-auto px-5 py-4 space-y-5">
-                {/* Top Links */}
-                {topLinks.map((l) => (
-                  <Link
-                    key={l.href}
-                    href={l.href}
-                    onClick={() => setOpen(false)}
-                    className="block text-[17px] font-semibold py-2 px-2 rounded hover:bg-gray-50 transition"
-                  >
-                    {l.label}
-                  </Link>
-                ))}
-
-                {/* Accordion Sections */}
-                <div className="space-y-4">
-                  {sections.map((section) => {
-                    const isOpen = expanded === section.label;
+              <div className="flex-1 overflow-y-auto px-5 py-4 space-y-3">
+                {menu.map((item) => {
+                  if (item.children) {
+                    const isOpen = expanded === item.label;
                     return (
                       <div
-                        key={section.label}
-                        className="border border-gray-200 rounded-lg overflow-hidden"
+                        key={item.label}
+                        className="border border-gray-100 rounded-xl overflow-hidden"
                       >
                         <button
-                          className="w-full flex justify-between items-center px-3 py-3 bg-gray-50 hover:bg-gray-100 transition"
-                          onClick={() =>
-                            setExpanded(isOpen ? null : section.label)
-                          }
+                          className="w-full flex justify-between items-center px-4 py-3.5 bg-gray-50/50 hover:bg-gray-100 transition-colors"
+                          onClick={() => setExpanded(isOpen ? null : item.label)}
                         >
-                          <span className="font-medium text-gray-800">
-                            {section.label}
+                          <span className="font-semibold text-gray-800">
+                            {item.label}
                           </span>
                           <ChevronDown
                             size={18}
-                            className={`transition-transform ${
-                              isOpen ? "rotate-180" : ""
-                            }`}
+                            className={`transition-transform text-gray-500 ${isOpen ? "rotate-180" : ""}`}
                           />
                         </button>
 
@@ -142,14 +123,14 @@ export default function MobileMenu({
                               exit={{ height: 0, opacity: 0 }}
                               className="overflow-hidden bg-white"
                             >
-                              {section.items.map((it) => (
-                                <li key={it.href}>
+                              {item.children.map((subItem) => (
+                                <li key={subItem.url} className="border-t border-gray-50">
                                   <Link
-                                    href={it.href}
+                                    href={subItem.url}
                                     onClick={() => setOpen(false)}
-                                    className="block px-5 py-2 text-gray-700 hover:bg-gray-50 text-[15px]"
+                                    className="block px-6 py-3 text-gray-600 hover:bg-gray-50 text-[15px]"
                                   >
-                                    {it.label}
+                                    {subItem.label}
                                   </Link>
                                 </li>
                               ))}
@@ -158,14 +139,25 @@ export default function MobileMenu({
                         </AnimatePresence>
                       </div>
                     );
-                  })}
-                </div>
+                  }
+
+                  return (
+                    <Link
+                      key={item.label}
+                      href={item.url}
+                      onClick={() => setOpen(false)}
+                      className="block text-[16px] font-semibold py-3 px-4 rounded-xl hover:bg-gray-50 transition-colors text-gray-800"
+                    >
+                      {item.label}
+                    </Link>
+                  );
+                })}
               </div>
 
-              {/* Bottom Bar (Optional for CTA) */}
-              <div className="px-5 py-4 border-t bg-gray-50 text-center">
-                <p className="text-sm text-gray-500">
-                  © {new Date().getFullYear()} Insono Hearing
+              {/* Bottom Bar */}
+              <div className="px-5 py-6 border-t bg-gray-50/50 text-center">
+                <p className="text-xs text-gray-500 font-medium">
+                  © {new Date().getFullYear()} Vently Air
                 </p>
               </div>
             </motion.div>

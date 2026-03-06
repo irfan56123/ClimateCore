@@ -37,7 +37,7 @@ const testimonials: Testimonial[] = [
     id: 3,
     stars: 5,
     quote:
-      "These hearing aids have not just transformed my mother's life; they've also deeply influenced our entire family.",
+      "These HVACs have not just transformed my mother's life; they've also deeply influenced our entire family.",
     name: "Piyush Jain",
     image: st3,
   },

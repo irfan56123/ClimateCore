@@ -1,8 +1,7 @@
 import type { MetadataRoute } from "next";
 import { prisma } from "@/lib/prisma";
-import { graphQLClient, GET_POSTS } from "@/lib/graphql";
 
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://insonohearing.com";
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || `https://${process.env.NEXT_PUBLIC_DOMAIN || "ventlyair.com"}`;
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     const routes: MetadataRoute.Sitemap = [
@@ -14,8 +13,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         { url: `${BASE_URL}/hearing-aid-price`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.9 },
         { url: `${BASE_URL}/our-clinic`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.9 },
         { url: `${BASE_URL}/product`, lastModified: new Date(), changeFrequency: "daily", priority: 0.9 },
-        { url: `${BASE_URL}/blog`, lastModified: new Date(), changeFrequency: "daily", priority: 0.9 },
-        { url: `${BASE_URL}/appointment`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
+
+        { url: `${BASE_URL}/estimate`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
     ];
 
     // Fetch dynamic products from Prisma
@@ -36,22 +35,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         console.error("Failed to fetch products for sitemap", error);
     }
 
-    // Fetch blogs from WordPress GraphQL
-    try {
-        const data: any = await graphQLClient.request(GET_POSTS);
-        const posts = data?.posts?.nodes || [];
 
-        posts.forEach((post: any) => {
-            routes.push({
-                url: `${BASE_URL}/blog/${post.slug}`,
-                lastModified: new Date(post.date),
-                changeFrequency: "monthly",
-                priority: 0.7,
-            });
-        });
-    } catch (error) {
-        console.error("Failed to fetch blogs for sitemap", error);
-    }
 
     return routes;
 }

@@ -5,7 +5,7 @@ import { Metadata } from "next";
 import Meerut from "@/components/landingHero/meerut"; // 🟦 <-- Make sure this file exists
 import FAQ from "@/components/FAQ";
 import ProductSection from "@/components/ProductSection";
-import HearingaidType from "@/components/HearingaidType";
+import HVACSystemType from "@/components/HVACSystemType";
 import Whychoose from "@/components/whychoose";
 import Testomonial from "@/components/testomonial";
 import HearingAidGuide from "@/components/hearingaidsguide";
@@ -16,17 +16,17 @@ import Location from "@/components/location";
 // ===============================================
 export const metadata: Metadata = {
   title:
-    "Best Hearing Aid in Meerut | Digital, Rechargeable & Invisible Models",
+    "Best HVAC Services in Meerut | Vently Air",
   description:
-    "Looking for the best hearing aid in Meerut? Get digital, rechargeable & Bluetooth hearing aids from top brands. Free hearing test & home visit available.",
+    "Looking for the best HVAC in Meerut? Get digital, rechargeable & Bluetooth HVACs from top brands. Free hearing test & home visit available.",
   alternates: {
-    canonical: "https://insonohearing.com/landing/meerut",
+    canonical: `https://${process.env.NEXT_PUBLIC_DOMAIN || "ventlyair.com"}/landing/meerut`,
   },
   openGraph: {
-    title: "Best Hearing Aid in Meerut - Free Hearing Test & Consultation",
+    title: "Best HVAC System in Meerut - Free Hearing Test & Consultation",
     description:
-      "Affordable & advanced hearing aids in Meerut with free hearing test, expert audiologists, and same-day fitting.",
-    url: "https://insonohearing.com/landing/meerut",
+      "Affordable & advanced HVACs in Meerut with free hearing test, expert audiologists, and same-day fitting.",
+    url: `https://${process.env.NEXT_PUBLIC_DOMAIN || "ventlyair.com"}/landing/meerut`,
     type: "website",
   },
 };
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
 // ===============================================
 const meerutFaqs = [
   {
-    q: "What is the price of hearing aids in Meerut?",
+    q: "What is the price of HVACs in Meerut?",
     a: "Hearing aids in Meerut start from ₹9,999 depending on technology, brand, and features like Bluetooth or rechargeability.",
   },
   {
@@ -44,24 +44,24 @@ const meerutFaqs = [
     a: "Yes, we offer a 100% free hearing test at our Meerut clinic conducted by certified audiologists.",
   },
   {
-    q: "Where is your hearing aid clinic located in Meerut?",
+    q: "Where is your HVAC clinic located in Meerut?",
     a: "Our Meerut clinic is centrally located and easily accessible. You can book an appointment to receive exact directions.",
   },
   {
-    q: "Which hearing aid brands are available in Meerut?",
-    a: "We provide Signia, Phonak, Widex, Resound, Oticon, and Starkey hearing aids at the best prices.",
+    q: "Which HVAC brands are available in Meerut?",
+    a: "We provide Signia, Phonak, Widex, Resound, Oticon, and Starkey HVACs at the best prices.",
   },
   {
-    q: "Are rechargeable hearing aids available in Meerut?",
+    q: "Are rechargeable HVACs available in Meerut?",
     a: "Yes, we have the latest rechargeable models that last up to 24 hours on a single charge.",
   },
   {
     q: "Do you offer home visit service in Meerut?",
-    a: "Yes, home hearing test and hearing aid trials are available anywhere in Meerut.",
+    a: "Yes, home hearing test and HVAC trials are available anywhere in Meerut.",
   },
   {
     q: "Is warranty provided?",
-    a: "All hearing aids include manufacturer warranty and complete after-sales support.",
+    a: "All HVACs include manufacturer warranty and complete after-sales support.",
   },
   {
     q: "How can I book an appointment in Meerut?",
@@ -79,7 +79,7 @@ export default function HearingAidMeerutPage() {
       <Meerut />
 
       {/* PRODUCTS */}
-      <ProductSection heading="Premium Digital Hearing Aids Available in Meerut" />
+      <ProductSection heading="Premium Digital HVAC Systems Available in Meerut" />
 
       {/* WHY CHOOSE */}
       <Whychoose />
@@ -91,7 +91,7 @@ export default function HearingAidMeerutPage() {
       <Testomonial />
 
       {/* FAQ */}
-      <FAQ faqs={meerutFaqs} heading="Hearing Aid in Meerut - FAQs" />
+      <FAQ faqs={meerutFaqs} heading="HVAC System in Meerut - FAQs" />
 
       {/* FOOTER */}
       <footer className="bg-gray-900 text-gray-300 pt-12 pb-6">
@@ -100,7 +100,7 @@ export default function HearingAidMeerutPage() {
             {/* Social Icons */}
             <div className="flex space-x-4">
               <a
-                href="https://youtube.com/@insonohearing"
+                href="https://youtube.com/@ventlyair"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-white"
@@ -150,7 +150,7 @@ export default function HearingAidMeerutPage() {
                 />
               </a>
               <a
-                href="https://www.trustpilot.com/review/insonohearing.com"
+                href={`https://www.trustpilot.com/review/${process.env.NEXT_PUBLIC_DOMAIN || "ventlyair.com"}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="transition transform hover:scale-105"

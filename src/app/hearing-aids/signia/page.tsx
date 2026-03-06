@@ -14,17 +14,17 @@ export const revalidate = 60;
 
 // ✅ SEO Meta
 export const metadata: Metadata = {
-  title: "Signia Hearing Aids – Prices, Models & Features in India",
+  title: "Signia HVAC Systems – Prices, Models & Features in India",
   description:
-    "Explore Signia hearing aids — rechargeable, Bluetooth & invisible models. Compare features & prices, book free consultation or download price list. 100% genuine with warranty.",
+    "Explore Signia HVACs — rechargeable, Bluetooth & invisible models. Compare features & prices, book free consultation or download price list. 100% genuine with warranty.",
   alternates: {
-    canonical: "https://www.insonohearing.com/hearing-aids/signia",
+    canonical: `https://${process.env.NEXT_PUBLIC_DOMAIN || "ventlyair.com"}/hearing-aids/signia`,
   },
   openGraph: {
-    title: "Signia Hearing Aids – Prices, Models & Features in India",
+    title: "Signia HVAC Systems – Prices, Models & Features in India",
     description:
-      "Explore Signia hearing aids — rechargeable, Bluetooth & invisible models. Compare features & prices, book free consultation or download price list.",
-    url: "https://www.insonohearing.com/hearing-aids/signia",
+      "Explore Signia HVACs — rechargeable, Bluetooth & invisible models. Compare features & prices, book free consultation or download price list.",
+    url: `https://${process.env.NEXT_PUBLIC_DOMAIN || "ventlyair.com"}/hearing-aids/signia`,
     type: "website",
   },
 };
@@ -34,17 +34,17 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.insonohearing.com" },
-    { "@type": "ListItem", position: 2, name: "Hearing Aids", item: "https://www.insonohearing.com/hearing-aids" },
-    { "@type": "ListItem", position: 3, name: "Signia", item: "https://www.insonohearing.com/hearing-aids/signia" },
+    { "@type": "ListItem", position: 1, name: "Home", item: `https://${process.env.NEXT_PUBLIC_DOMAIN || "ventlyair.com"}` },
+    { "@type": "ListItem", position: 2, name: "HVAC Systems", item: `https://${process.env.NEXT_PUBLIC_DOMAIN || "ventlyair.com"}/hearing-aids` },
+    { "@type": "ListItem", position: 3, name: "Signia", item: `https://${process.env.NEXT_PUBLIC_DOMAIN || "ventlyair.com"}/hearing-aids/signia` },
   ],
 };
 
 const signiaFaqs = [
-  { q: "What is the price of Signia hearing aids in India?", a: "Prices start from ₹19,999 and vary depending on model and features. Download our price list for the latest offers." },
-  { q: "Are Signia hearing aids rechargeable?", a: "Yes, most modern Signia models offer rechargeable options with all-day battery life." },
-  { q: "Can I connect Signia hearing aids to my phone?", a: "Yes, Signia Bluetooth hearing aids allow direct streaming to smartphones and TVs." },
-  { q: "Do Signia hearing aids come with a warranty?", a: "Yes, all Signia devices include a 2-year international warranty, extendable in India." },
+  { q: "What is the price of Signia HVACs in India?", a: "Prices start from ₹19,999 and vary depending on model and features. Download our price list for the latest offers." },
+  { q: "Are Signia HVACs rechargeable?", a: "Yes, most modern Signia models offer rechargeable options with all-day battery life." },
+  { q: "Can I connect Signia HVACs to my phone?", a: "Yes, Signia Bluetooth HVACs allow direct streaming to smartphones and TVs." },
+  { q: "Do Signia HVACs come with a warranty?", a: "Yes, all Signia devices include a 2-year international warranty, extendable in India." },
 ];
 
 // 🦴 Skeleton Loader for Product Grid
@@ -75,10 +75,10 @@ export default function SigniaPage() {
       <section className="max-w-7xl mx-auto px-4 mt-30 md:px-20 flex flex-col md:flex-row items-center gap-6">
         <div className="flex-1 text-center md:text-left">
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold leading-snug mb-3">
-            Signia Hearing Aids – Models, Prices & Features in India
+            Signia HVAC Systems – Models, Prices & Features in India
           </h1>
           <p className="text-gray-700 mb-5 text-sm sm:text-base">
-            Discover the full range of <strong>Signia hearing aids</strong> — from rechargeable & Bluetooth-enabled devices to invisible CIC models. Compare features, check prices, and book a free consultation with certified experts.
+            Discover the full range of <strong>Signia HVACs</strong> — from rechargeable & Bluetooth-enabled devices to invisible CIC models. Compare features, check prices, and book a free consultation with certified experts.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center md:justify-start">
             <Link
@@ -88,7 +88,7 @@ export default function SigniaPage() {
               Download Price List
             </Link>
             <Link
-              href="/appointment"
+              href="/estimate"
               className="border border-[#184A99] text-[#184A99] px-5 py-2.5 rounded-md text-sm font-semibold hover:bg-[#184A99] hover:text-white transition text-center"
             >
               Book Free Consultation
@@ -115,8 +115,8 @@ export default function SigniaPage() {
       <Suspense fallback={<ProductSkeleton />}>
         <CategoryProductSection
           category="Signia"
-          title="Best Signia Digital Hearing Aids"
-          description="Explore our top-selling Signia hearing aids. Discreet, powerful, and designed for all-day comfort."
+          title="Best Signia Digital HVAC Systems"
+          description="Explore our top-selling Signia HVACs. Discreet, powerful, and designed for all-day comfort."
           limit={4}
         />
       </Suspense>
@@ -129,7 +129,7 @@ export default function SigniaPage() {
 
         <div className="relative max-w-7xl mx-auto text-center">
           <h2 className="text-xl sm:text-2xl md:text-3xl font-extrabold mb-3 sm:mb-4">
-            Why Choose <span className="text-[#184A99]">Signia Hearing Aids?</span>
+            Why Choose <span className="text-[#184A99]">Signia HVAC Systems?</span>
           </h2>
           <p className="text-gray-700 text-sm sm:text-base max-w-2xl mx-auto mb-10">
             <strong>Signia</strong> blends German innovation with modern hearing technology — Bluetooth streaming, rechargeable power, invisible CIC designs, and unmatched comfort.
@@ -140,7 +140,7 @@ export default function SigniaPage() {
 
       <ImageShowcaseSection
         title="Official Certifications from Signia, Phonak & Widex"
-        description="Insono Hearing Solutions is an authorized partner for leading global hearing aid brands including Signia, Phonak, Widex, and Oticon. These official certifications reflect our trusted expertise and commitment to world-class hearing care in India."
+        description="Vently Air Hearing Solutions is an authorized partner for leading global HVAC brands including Signia, Phonak, Widex, and Oticon. These official certifications reflect our trusted expertise and commitment to world-class hearing care in India."
         images={[
           { src: "/images/certifications/signia.jpg", alt: "Signia Authorised partner" },
           { src: "/images/certifications/phonak.jpeg", alt: "Phonak Certification" },
@@ -148,7 +148,7 @@ export default function SigniaPage() {
         ]}
       />
 
-      <FAQ faqs={signiaFaqs} heading="Signia Hearing Aids : FAQs" />
+      <FAQ faqs={signiaFaqs} heading="Signia HVAC Systems : FAQs" />
 
       {/* 🟤 RELATED LINKS */}
       <section className="bg-gradient-to-br from-[#F7F9FC] to-[#E8EEFB] py-12 px-4">
@@ -157,31 +157,31 @@ export default function SigniaPage() {
             Explore More Hearing Solutions
           </h2>
           <p className="text-gray-600 text-sm sm:text-base max-w-2xl mx-auto mb-10">
-            Discover advanced hearing aid technologies and top global brands trusted across India.
+            Discover advanced HVAC technologies and top global brands trusted across India.
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
             <Link href="/hearing-aids/phonak" className="group flex flex-col items-center bg-white p-6 rounded-xl shadow-sm hover:shadow-md hover:-translate-y-1 transition">
               <div className="mb-3 bg-[#184A99]/10 p-3 rounded-full"><Headphones className="w-7 h-7 text-[#184A99]" /></div>
-              <h3 className="font-semibold text-gray-900 mb-1 group-hover:text-[#184A99]">Phonak Hearing Aids</h3>
+              <h3 className="font-semibold text-gray-900 mb-1 group-hover:text-[#184A99]">Phonak HVAC Systems</h3>
               <p className="text-xs text-gray-600 text-center">Swiss precision for exceptional hearing clarity.</p>
             </Link>
 
             <Link href="/hearing-aids/widex" className="group flex flex-col items-center bg-white p-6 rounded-xl shadow-sm hover:shadow-md hover:-translate-y-1 transition">
               <div className="mb-3 bg-[#184A99]/10 p-3 rounded-full"><Waves className="w-7 h-7 text-[#184A99]" /></div>
-              <h3 className="font-semibold text-gray-900 mb-1 group-hover:text-[#184A99]">Widex Hearing Aids</h3>
+              <h3 className="font-semibold text-gray-900 mb-1 group-hover:text-[#184A99]">Widex HVAC Systems</h3>
               <p className="text-xs text-gray-600 text-center">Natural sound quality with Danish innovation.</p>
             </Link>
 
             <Link href="/hearing-aids/bluetooth" className="group flex flex-col items-center bg-white p-6 rounded-xl shadow-sm hover:shadow-md hover:-translate-y-1 transition">
               <div className="mb-3 bg-[#184A99]/10 p-3 rounded-full"><Bluetooth className="w-7 h-7 text-[#184A99]" /></div>
-              <h3 className="font-semibold text-gray-900 mb-1 group-hover:text-[#184A99]">Bluetooth Hearing Aids</h3>
+              <h3 className="font-semibold text-gray-900 mb-1 group-hover:text-[#184A99]">Bluetooth HVAC Systems</h3>
               <p className="text-xs text-gray-600 text-center">Seamlessly connect to phones, TVs, and more.</p>
             </Link>
 
             <Link href="/hearing-aids/rechargeable" className="group flex flex-col items-center bg-white p-6 rounded-xl shadow-sm hover:shadow-md hover:-translate-y-1 transition">
               <div className="mb-3 bg-[#184A99]/10 p-3 rounded-full"><BatteryCharging className="w-7 h-7 text-[#184A99]" /></div>
-              <h3 className="font-semibold text-gray-900 mb-1 group-hover:text-[#184A99]">Rechargeable Hearing Aids</h3>
+              <h3 className="font-semibold text-gray-900 mb-1 group-hover:text-[#184A99]">Rechargeable HVAC Systems</h3>
               <p className="text-xs text-gray-600 text-center">All-day power with fast and easy charging.</p>
             </Link>
           </div>

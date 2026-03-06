@@ -1,9 +1,9 @@
 import ClinicsList from "./ClinicsList";
 
 export const metadata = {
-  title: "Find Hearing Aid Clinics Near You | Insono Hearing Solutions",
+  title: "Find HVAC System Clinics Near You | Vently Air Hearing Solutions",
   description:
-    "Locate Insono Hearing Aid Clinics across Delhi, Noida, Bihar, Jharkhand, Punjab & more. Expert audiologists, free hearing tests, and advanced hearing aids. Open daily till 7 PM.",
+    "Locate Vently Air HVAC System Clinics across Delhi, Noida, Bihar, Jharkhand, Punjab & more. Expert audiologists, free hearing tests, and advanced HVACs. Open daily till 7 PM.",
 };
 
 export default function ClinicPage() {

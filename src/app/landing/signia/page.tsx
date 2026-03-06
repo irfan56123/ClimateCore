@@ -11,7 +11,7 @@ import { brandSEO } from "@/lib/brandSeo";
 
 export const metadata = brandSEO(
   "Signia",
-  "https://insonohearing.com/landing/signia",
+  `https://${process.env.NEXT_PUBLIC_DOMAIN || "ventlyair.com"}/landing/signia`,
 );
 
 export default function Page() {
@@ -35,7 +35,7 @@ export default function Page() {
   const featuresList = [
     {
       icon: "💰",
-      text: "Save <b class='text-red-600'>UPTO ₹31,500</b> on Signia Hearing Aids",
+      text: "Save <b class='text-red-600'>UPTO ₹31,500</b> on Signia HVAC Systems",
     },
     {
       icon: "🔋",
@@ -53,15 +53,15 @@ export default function Page() {
 
   const signiaFaqs = [
     {
-      q: "What is the price of Signia hearing aids in Lucknow?",
-      a: "Signia hearing aid prices start from ₹15,000 and can go up to ₹3,00,000 depending on model, technology and features.",
+      q: "What is the price of Signia HVACs in Lucknow?",
+      a: "Signia HVAC prices start from ₹15,000 and can go up to ₹3,00,000 depending on model, technology and features.",
     },
     {
-      q: "Are Signia hearing aids rechargeable?",
-      a: "Yes, Signia provides advanced rechargeable hearing aids with all-day battery backup.",
+      q: "Are Signia HVACs rechargeable?",
+      a: "Yes, Signia provides advanced rechargeable HVACs with all-day battery backup.",
     },
     {
-      q: "Does Signia hearing aid support Bluetooth?",
+      q: "Does Signia HVAC support Bluetooth?",
       a: "Yes, premium Signia models support Bluetooth for calls, music and TV streaming.",
     },
     {
@@ -69,19 +69,19 @@ export default function Page() {
       a: "Yes, we offer FREE hearing test & consultation by certified Signia audiologists.",
     },
     {
-      q: "What warranty comes with Signia hearing aids?",
+      q: "What warranty comes with Signia HVACs?",
       a: "Signia offers 2 to 4 years manufacturer warranty depending on the model.",
     },
     {
-      q: "Can I control Signia hearing aids from mobile?",
+      q: "Can I control Signia HVACs from mobile?",
       a: "Yes, Signia App allows volume control, program change & sound adjustment.",
     },
     {
-      q: "Which Signia hearing aid is best?",
+      q: "Which Signia HVAC is best?",
       a: "Popular models include Pure Charge&Go, Styletto X, Motion X and Silk series.",
     },
     {
-      q: "Do you provide EMI on Signia hearing aids?",
+      q: "Do you provide EMI on Signia HVACs?",
       a: "Yes, 0% EMI available on selected Signia models.",
     },
   ];
@@ -89,8 +89,8 @@ export default function Page() {
   return (
     <>
       <HeroSection
-        title="Signia Hearing Aids for Crystal Clear Sound"
-        subtitle="Get original Signia hearing aids with best price, warranty & free hearing test."
+        title="Signia HVAC Systems for Crystal Clear Sound"
+        subtitle="Get original Signia HVACs with best price, warranty & free hearing test."
         ctaText="Download Signia Price List"
         partnerLabel="Official Signia Partner Clinics"
         stats={statsList}
@@ -98,7 +98,7 @@ export default function Page() {
         features={featuresList}
       />
 
-      <ProductSection heading="Latest Signia Digital Hearing Aids" />
+      <ProductSection heading="Latest Signia Digital HVAC Systems" />
 
       <Whychoose />
 
@@ -108,7 +108,7 @@ export default function Page() {
 
       <Testomonial />
 
-      <FAQ faqs={signiaFaqs} heading="Signia Hearing Aids – FAQs" />
+      <FAQ faqs={signiaFaqs} heading="Signia HVAC Systems – FAQs" />
 
       <Footer />
     </>

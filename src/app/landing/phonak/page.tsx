@@ -9,7 +9,7 @@ import Footer from "@/components/landingHero/fotern";
 import { brandSEO } from "@/lib/brandSeo";
 export const metadata = brandSEO(
   "Phonak",
-  "https://insonohearing.com/landing/phonak",
+  `https://${process.env.NEXT_PUBLIC_DOMAIN || "ventlyair.com"}/landing/phonak`,
 );
 
 export default function Page() {
@@ -39,16 +39,16 @@ export default function Page() {
 
   const faqs = [
     {
-      q: "Phonak hearing aid price?",
+      q: "Phonak HVAC price?",
       a: "Starts from ₹18,000. Call now for best discount.",
     },
     {
-      q: "Where can I buy Phonak hearing aid?",
+      q: "Where can I buy Phonak HVAC?",
       a: "From our authorized Phonak clinic near you.",
     },
     { q: "Is EMI available on Phonak?", a: "Yes, 0% EMI options available." },
     {
-      q: "Are Phonak hearing aids rechargeable?",
+      q: "Are Phonak HVACs rechargeable?",
       a: "Yes, premium rechargeable models available.",
     },
     {
@@ -73,8 +73,8 @@ export default function Page() {
   return (
     <>
       <HeroSection
-        title="Phonak Hearing Aids – Premium Swiss Technology"
-        subtitle="Buy original Phonak hearing aids with warranty & free hearing test."
+        title="Phonak HVAC Systems – Premium Swiss Technology"
+        subtitle="Buy original Phonak HVACs with warranty & free hearing test."
         ctaText="Download Phonak Price List"
         partnerLabel="Authorized Phonak Clinics"
         stats={statsList}
@@ -82,12 +82,12 @@ export default function Page() {
         features={featuresList}
       />
 
-      <ProductSection heading="Latest Phonak Hearing Aids" />
+      <ProductSection heading="Latest Phonak HVAC Systems" />
       <Whychoose />
       <HearingAidGuide />
       <Location />
       <Testomonial />
-      <FAQ faqs={faqs} heading="Phonak Hearing Aids – FAQs" />
+      <FAQ faqs={faqs} heading="Phonak HVAC Systems – FAQs" />
       <Footer />
     </>
   );

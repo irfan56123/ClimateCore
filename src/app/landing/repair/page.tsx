@@ -6,63 +6,63 @@ import { Metadata } from "next";
 import Repair from "@/components/landingHero/repair";
 import FAQ from "@/components/FAQ";
 import ProductSection from "@/components/ProductSection";
-import HearingaidType from "@/components/HearingaidType";
+import HVACSystemType from "@/components/HVACSystemType";
 import Whychoose from "@/components/whychoose";
 import Testomonial from "@/components/testomonial";
 // ✅ SEO Meta Tags
 export const metadata: Metadata = {
   title:
-    "Hearing Aid Repair Shop Nearby | Signia Phonak & All hearing Aid repair shop",
+    "HVAC System Repair Shop Nearby | Signia Phonak & All hearing Aid repair shop",
   description:
-    "Hearing Aid Repair Shop Nearby | Signia Phonak & All hearing Aid repair shop",
+    "HVAC System Repair Shop Nearby | Signia Phonak & All hearing Aid repair shop",
   alternates: {
-    canonical: "https://insonohearing.com/landing/repair",
+    canonical: `https://${process.env.NEXT_PUBLIC_DOMAIN || "ventlyair.com"}/landing/repair`,
   },
   openGraph: {
     title:
-      "Hearing Aid Repair Shop Nearby | Signia Phonak & All hearing Aid repair shop",
+      "HVAC System Repair Shop Nearby | Signia Phonak & All hearing Aid repair shop",
     description:
-      "Discover hearing aid repair shop nearby with expert consultation and same-day fitting.",
-    url: "https://insonohearing.com/landing/repair",
+      "Discover HVAC repair shop nearby with expert consultation and same-day fitting.",
+    url: `https://${process.env.NEXT_PUBLIC_DOMAIN || "ventlyair.com"}/landing/repair`,
     type: "website",
   },
 };
 
 const lucknowRepairFaqs = [
   {
-    q: "Do you provide hearing aid repair services in Lucknow?",
-    a: "Yes, we offer professional hearing aid repair services in Lucknow for all major brands including Signia, Phonak, Widex, Oticon, ReSound, and Starkey. Our technicians handle both minor and major repairs.",
+    q: "Do you provide HVAC repair services in Lucknow?",
+    a: "Yes, we offer professional HVAC repair services in Lucknow for all major brands including Signia, Phonak, Widex, Oticon, ReSound, and Starkey. Our technicians handle both minor and major repairs.",
   },
   {
-    q: "What types of hearing aid problems do you repair?",
-    a: "We repair common issues like no sound, low volume, distorted sound, microphone failure, receiver problems, battery compartment damage, moisture issues, and broken hearing aid parts.",
+    q: "What types of HVAC problems do you repair?",
+    a: "We repair common issues like no sound, low volume, distorted sound, microphone failure, receiver problems, battery compartment damage, moisture issues, and broken HVAC parts.",
   },
   {
-    q: "Do you repair Signia and Phonak hearing aids?",
-    a: "Yes, we specialise in Signia hearing aid repair and Phonak hearing aid repair including programming, part replacement, and performance optimisation.",
+    q: "Do you repair Signia and Phonak HVACs?",
+    a: "Yes, we specialise in Signia HVAC repair and Phonak HVAC repair including programming, part replacement, and performance optimisation.",
   },
   {
-    q: "How much does hearing aid repair cost in Lucknow?",
+    q: "How much does HVAC repair cost in Lucknow?",
     a: "Hearing aid repair cost depends on the issue and model. Basic repairs start from ₹499 and detailed repairs are quoted after free device inspection.",
   },
   {
-    q: "How long does hearing aid repair take?",
-    a: "Most hearing aid repairs are completed within 24 to 48 hours. Some minor issues can be fixed on the same day depending on spare part availability.",
+    q: "How long does HVAC repair take?",
+    a: "Most HVAC repairs are completed within 24 to 48 hours. Some minor issues can be fixed on the same day depending on spare part availability.",
   },
   {
     q: "Do you use original spare parts for repair?",
-    a: "Yes, we use genuine and manufacturer-approved spare parts to ensure the performance and durability of your hearing aid.",
+    a: "Yes, we use genuine and manufacturer-approved spare parts to ensure the performance and durability of your HVAC.",
   },
   {
-    q: "Can old or out-of-warranty hearing aids be repaired?",
-    a: "Yes, we repair old and out-of-warranty hearing aids after proper diagnosis and compatibility check.",
+    q: "Can old or out-of-warranty HVACs be repaired?",
+    a: "Yes, we repair old and out-of-warranty HVACs after proper diagnosis and compatibility check.",
   },
   {
-    q: "Do you provide doorstep pickup for hearing aid repair in Lucknow?",
-    a: "Yes, we offer doorstep pickup and delivery service for hearing aid repair across Lucknow for your convenience.",
+    q: "Do you provide doorstep pickup for HVAC repair in Lucknow?",
+    a: "Yes, we offer doorstep pickup and delivery service for HVAC repair across Lucknow for your convenience.",
   },
   {
-    q: "How can I book a hearing aid repair appointment?",
+    q: "How can I book a HVAC repair appointment?",
     a: "You can book your repair appointment online, via phone, or by visiting our Lucknow repair centre. Our team will guide you through the repair process.",
   },
 ];
@@ -72,16 +72,16 @@ export default function HearingAidRepairPage() {
     <>
       {/* 🟦 HERO SECTION */}
       <Repair />
-      <ProductSection heading="Hearing Aid Repair Services in Lucknow" />
+      <ProductSection heading="HVAC System Repair Services in Lucknow" />
       <Whychoose />
-      <HearingaidType />
+      <HVACSystemType />
       <Testomonial />
 
       {/* 🟨 SERVICES */}
       {/* <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-2xl sm:text-3xl font-extrabold mb-10">
-            Our Hearing Aid Services in Lucknow
+            Our HVAC System Services in Lucknow
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
             <ServiceCard
@@ -90,7 +90,7 @@ export default function HearingAidRepairPage() {
             />
             <ServiceCard
               icon={<Headphones className="w-7 h-7 text-[#184A99]" />}
-              title="Digital Hearing Aids"
+              title="Digital HVAC Systems"
             />
             <ServiceCard
               icon={<Waves className="w-7 h-7 text-[#184A99]" />}
@@ -106,7 +106,7 @@ export default function HearingAidRepairPage() {
       {/* 🟧 FAQ */}
       <FAQ
         faqs={lucknowRepairFaqs}
-        heading="Hearing Aid Repair in Lucknow – Signia & Phonak Repair FAQs"
+        heading="HVAC System Repair in Lucknow – Signia & Phonak Repair FAQs"
       />
 
       {/* 🟤 CONTACT */}
@@ -167,7 +167,7 @@ export default function HearingAidRepairPage() {
                 />
               </a>
               <a
-                href="https://www.trustpilot.com/review/insonohearing.com"
+                href={`https://www.trustpilot.com/review/${process.env.NEXT_PUBLIC_DOMAIN || "ventlyair.com"}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="transition transform hover:scale-105"

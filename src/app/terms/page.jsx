@@ -5,7 +5,7 @@ export default function TermsAndConditions() {
             <p className="mb-8">Effective Date: <span className="font-medium">[17 sep 2025]</span></p>
 
             <p className="mb-6">
-                Welcome to <span className="font-semibold">Insono Hearing</span>. By accessing or using our
+                Welcome to <span className="font-semibold">Vently Air</span>. By accessing or using our
                 website, products, and services, you agree to comply with and be bound by the following
                 Terms and Conditions. Please read them carefully before using our site.
             </p>
@@ -34,7 +34,7 @@ export default function TermsAndConditions() {
                     The content on this website is provided for <span className="font-medium">informational purposes only</span> and
                     should not be considered medical advice. Always consult a qualified audiologist, ENT
                     specialist, or healthcare provider before making decisions regarding your hearing health.
-                    Insono Hearing is not liable for any outcomes resulting from self-diagnosis or misuse of
+                    Vently Air Hearing is not liable for any outcomes resulting from self-diagnosis or misuse of
                     information provided.
                 </p>
             </section>
@@ -42,7 +42,7 @@ export default function TermsAndConditions() {
             <section className="mb-8">
                 <h2 className="text-xl font-semibold mb-3">4. Products and Services</h2>
                 <ul className="list-disc pl-6 space-y-2">
-                    <li>We provide hearing aids, accessories, and related services. Product specifications, pricing, and availability are subject to change without prior notice.</li>
+                    <li>We provide HVACs, accessories, and related services. Product specifications, pricing, and availability are subject to change without prior notice.</li>
                     <li>All purchases are subject to our <span className="font-medium">Refund &amp; Return Policy</span>.</li>
                     <li>We reserve the right to refuse service or cancel orders if fraudulent or unauthorized activity is suspected.</li>
                 </ul>
@@ -69,7 +69,7 @@ export default function TermsAndConditions() {
                 <h2 className="text-xl font-semibold mb-3">7. Intellectual Property</h2>
                 <p>
                     All website content including text, graphics, images, videos, and logos are the property of
-                    <span className="font-semibold"> Insono Hearing</span> or its licensors and are protected by copyright laws.
+                    <span className="font-semibold"> Vently Air</span> or its licensors and are protected by copyright laws.
                     You may not copy, reproduce, distribute, or exploit any content without prior written
                     consent.
                 </p>
@@ -87,7 +87,7 @@ export default function TermsAndConditions() {
             <section className="mb-8">
                 <h2 className="text-xl font-semibold mb-3">9. Limitation of Liability</h2>
                 <p>
-                    Insono Hearing shall not be held liable for any direct, indirect, incidental, or
+                    Vently Air shall not be held liable for any direct, indirect, incidental, or
                     consequential damages arising from the use of our website, products, or services. We make
                     no guarantees that the website will be error-free, uninterrupted, or virus-free.
                 </p>
@@ -96,7 +96,7 @@ export default function TermsAndConditions() {
             <section className="mb-8">
                 <h2 className="text-xl font-semibold mb-3">10. Indemnification</h2>
                 <p>
-                    You agree to indemnify and hold harmless Insono Hearing, its employees, directors, and
+                    You agree to indemnify and hold harmless Vently Air, its employees, directors, and
                     affiliates from any claims, liabilities, or damages resulting from your use of our website
                     or violation of these Terms.
                 </p>
@@ -126,9 +126,9 @@ export default function TermsAndConditions() {
                     at:
                 </p>
                 <div className="mt-3">
-                    <p><span className="font-semibold">Insono Hearing</span></p>
-                    <p>Email: [care@insonohearing.com]</p>
-                    <p>Phone: [6204260510]</p>
+                    <p><span className="font-semibold">Vently Air</span></p>
+                    <p>Email: care@{process.env.NEXT_PUBLIC_DOMAIN || "ventlyair.com"}</p>
+                    <p>Phone: {process.env.NEXT_PUBLIC_PHONE_DISPLAY || "+91 6204260510"}</p>
                     <p>Address: [D-251, Ground Floor, D Block, West Vinod Nagar, New Delhi - 110092]</p>
                 </div>
             </section>

@@ -9,17 +9,17 @@ import Image from "next/image";
 
 // ✅ SEO Meta Tags
 export const metadata: Metadata = {
-  title: "Widex Hearing Aids – Models, Prices & Features in India | Insono Hearing Solutions",
+  title: "Widex HVAC Systems – Models, Prices & Features in India | Vently Air Hearing Solutions",
   description:
-    "Discover Widex hearing aids — known for natural sound, rechargeable power, and Bluetooth connectivity. View prices, models, and book a free consultation with certified experts.",
+    "Discover Widex HVACs — known for natural sound, rechargeable power, and Bluetooth connectivity. View prices, models, and book a free consultation with certified experts.",
   alternates: {
-    canonical: "https://www.insonohearing.com/hearing-aids/widex",
+    canonical: `https://${process.env.NEXT_PUBLIC_DOMAIN || "ventlyair.com"}/hearing-aids/widex`,
   },
   openGraph: {
-    title: "Widex Hearing Aids – Models, Prices & Features in India",
+    title: "Widex HVAC Systems – Models, Prices & Features in India",
     description:
-      "Discover Widex hearing aids — natural sound quality, rechargeable convenience & Bluetooth connectivity. Compare models and prices online.",
-    url: "https://www.insonohearing.com/hearing-aids/widex",
+      "Discover Widex HVACs — natural sound quality, rechargeable convenience & Bluetooth connectivity. Compare models and prices online.",
+    url: `https://${process.env.NEXT_PUBLIC_DOMAIN || "ventlyair.com"}/hearing-aids/widex`,
     type: "website",
   },
 };
@@ -27,20 +27,20 @@ export const metadata: Metadata = {
 // ✅ Widex FAQ Data
 const widexFaqs = [
   {
-    q: "What is the price of Widex hearing aids in India?",
-    a: "Widex hearing aids start from ₹24,999 and vary depending on the model, technology level, and features. Download our latest price list for more details.",
+    q: "What is the price of Widex HVACs in India?",
+    a: "Widex HVACs start from ₹24,999 and vary depending on the model, technology level, and features. Download our latest price list for more details.",
   },
   {
-    q: "Why are Widex hearing aids known for natural sound?",
+    q: "Why are Widex HVACs known for natural sound?",
     a: "Widex uses advanced sound processing technology to deliver a clean, natural listening experience — especially for speech in noisy environments.",
   },
   {
-    q: "Are Widex hearing aids rechargeable?",
-    a: "Yes, Widex offers rechargeable hearing aids that provide a full day of listening on a single charge.",
+    q: "Are Widex HVACs rechargeable?",
+    a: "Yes, Widex offers rechargeable HVACs that provide a full day of listening on a single charge.",
   },
   {
-    q: "Do Widex hearing aids support Bluetooth?",
-    a: "Yes, Widex Bluetooth hearing aids let you connect directly to smartphones, TVs, and other compatible devices for seamless audio streaming.",
+    q: "Do Widex HVACs support Bluetooth?",
+    a: "Yes, Widex Bluetooth HVACs let you connect directly to smartphones, TVs, and other compatible devices for seamless audio streaming.",
   },
 ];
 
@@ -53,19 +53,19 @@ const breadcrumbSchema = {
       "@type": "ListItem",
       position: 1,
       name: "Home",
-      item: "https://www.insonohearing.com",
+      item: `https://${process.env.NEXT_PUBLIC_DOMAIN || "ventlyair.com"}`,
     },
     {
       "@type": "ListItem",
       position: 2,
-      name: "Hearing Aids",
-      item: "https://www.insonohearing.com/hearing-aids",
+      name: "HVAC Systems",
+      item: `https://${process.env.NEXT_PUBLIC_DOMAIN || "ventlyair.com"}/hearing-aids`,
     },
     {
       "@type": "ListItem",
       position: 3,
       name: "Widex",
-      item: "https://www.insonohearing.com/hearing-aids/widex",
+      item: `https://${process.env.NEXT_PUBLIC_DOMAIN || "ventlyair.com"}/hearing-aids/widex`,
     },
   ],
 };
@@ -83,10 +83,10 @@ export default function WidexPage() {
       <section className="max-w-7xl mx-auto px-4 mt-30 md:px-20 flex flex-col md:flex-row items-center gap-6">
         <div className="flex-1 text-center md:text-left">
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold leading-snug mb-3">
-            Widex Hearing Aids – Models, Prices & Features in India
+            Widex HVAC Systems – Models, Prices & Features in India
           </h1>
           <p className="text-gray-700 mb-5 text-sm sm:text-base">
-            <strong>Widex hearing aids</strong> are globally renowned for
+            <strong>Widex HVACs</strong> are globally renowned for
             delivering natural sound clarity, elegant design, and smart
             technology. Explore the latest rechargeable, Bluetooth, and
             invisible models available in India.
@@ -99,7 +99,7 @@ export default function WidexPage() {
               Download Price List
             </Link>
             <Link
-              href="/appointment"
+              href="/estimate"
               className="border border-[#184A99] text-[#184A99] px-5 py-2.5 rounded-md text-sm font-semibold hover:bg-[#184A99] hover:text-white transition text-center"
             >
               Book Free Consultation
@@ -110,7 +110,7 @@ export default function WidexPage() {
         <div className="flex-1 flex justify-center">
           <Image
             src="/hero/widex.png"
-            alt="Oticon Hearing Aids"
+            alt="Oticon HVAC Systems"
             width={500}
             height={400}
             className="rounded-lg w-full max-w-[500px] h-auto object-cover"
@@ -122,8 +122,8 @@ export default function WidexPage() {
       {/* 🟨 PRODUCT SECTION */}
       <CategoryProductSection
         category="Widex"
-        title="Top Widex Digital Hearing Aids"
-        description="Discover the latest Widex hearing aids — blending Danish innovation with natural sound technology."
+        title="Top Widex Digital HVAC Systems"
+        description="Discover the latest Widex HVACs — blending Danish innovation with natural sound technology."
         limit={4}
       />
 
@@ -135,7 +135,7 @@ export default function WidexPage() {
 
         <div className="relative max-w-7xl mx-auto text-center">
           <h2 className="text-xl sm:text-2xl md:text-3xl font-extrabold mb-3 sm:mb-4">
-            Why Choose <span className="text-[#184A99]">Widex Hearing Aids?</span>
+            Why Choose <span className="text-[#184A99]">Widex HVAC Systems?</span>
           </h2>
           <p className="text-gray-700 text-sm sm:text-base max-w-2xl mx-auto mb-10">
             <strong>Widex</strong> combines Danish sound innovation with
@@ -144,18 +144,18 @@ export default function WidexPage() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
             <FeatureCard icon={<Waves className="w-8 h-8 text-[#184A99]" />} title="Natural Sound" desc="Hear speech and music as they were meant to be heard." />
-            <FeatureCard icon={<Bluetooth className="w-8 h-8 text-[#184A99]" />} title="Bluetooth Connectivity" desc="Stream calls and audio directly to your hearing aids." />
+            <FeatureCard icon={<Bluetooth className="w-8 h-8 text-[#184A99]" />} title="Bluetooth Connectivity" desc="Stream calls and audio directly to your HVACs." />
             <FeatureCard icon={<BatteryCharging className="w-8 h-8 text-[#184A99]" />} title="Rechargeable Options" desc="Enjoy all-day use with quick and easy charging." />
             <FeatureCard icon={<Headphones className="w-8 h-8 text-[#184A99]" />} title="Elegant Design" desc="Discreet, comfortable, and built for everyday wear." />
           </div>
         </div>
       </section>
-      <Whychoose/>
+      <Whychoose />
 
       {/* 🟪 CERTIFICATIONS */}
       <ImageShowcaseSection
         title="Official Certifications from Widex, Signia & Phonak"
-        description="Insono Hearing Solutions is an authorized partner for leading global hearing aid brands including Widex, Signia, Phonak, and Oticon. These certifications reflect our trusted expertise and commitment to world-class hearing care in India."
+        description="Vently Air Hearing Solutions is an authorized partner for leading global HVAC brands including Widex, Signia, Phonak, and Oticon. These certifications reflect our trusted expertise and commitment to world-class hearing care in India."
         images={[
           { src: "/images/certifications/widex.png", alt: "Widex Certification" },
           { src: "/images/certifications/signia.jpg", alt: "Signia Certification" },
@@ -164,7 +164,7 @@ export default function WidexPage() {
       />
 
       {/* 🟧 FAQ SECTION */}
-      <FAQ faqs={widexFaqs} heading="Widex Hearing Aids : FAQs" />
+      <FAQ faqs={widexFaqs} heading="Widex HVAC Systems : FAQs" />
 
       {/* 🟤 RELATED LINKS */}
       <section className="bg-gradient-to-br from-[#F7F9FC] to-[#E8EEFB] py-12 px-4">
@@ -177,10 +177,10 @@ export default function WidexPage() {
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            <LinkCard href="/hearing-aids/signia" title="Signia Hearing Aids" desc="German engineering and innovation." icon={<Waves className="w-7 h-7 text-[#184A99]" />} />
-            <LinkCard href="/hearing-aids/phonak" title="Phonak Hearing Aids" desc="Swiss precision for exceptional clarity." icon={<Headphones className="w-7 h-7 text-[#184A99]" />} />
-            <LinkCard href="/hearing-aids/bluetooth" title="Bluetooth Hearing Aids" desc="Seamless streaming and connectivity." icon={<Bluetooth className="w-7 h-7 text-[#184A99]" />} />
-            <LinkCard href="/hearing-aids/rechargeable" title="Rechargeable Hearing Aids" desc="All-day power with no battery changes." icon={<BatteryCharging className="w-7 h-7 text-[#184A99]" />} />
+            <LinkCard href="/hearing-aids/signia" title="Signia HVAC Systems" desc="German engineering and innovation." icon={<Waves className="w-7 h-7 text-[#184A99]" />} />
+            <LinkCard href="/hearing-aids/phonak" title="Phonak HVAC Systems" desc="Swiss precision for exceptional clarity." icon={<Headphones className="w-7 h-7 text-[#184A99]" />} />
+            <LinkCard href="/hearing-aids/bluetooth" title="Bluetooth HVAC Systems" desc="Seamless streaming and connectivity." icon={<Bluetooth className="w-7 h-7 text-[#184A99]" />} />
+            <LinkCard href="/hearing-aids/rechargeable" title="Rechargeable HVAC Systems" desc="All-day power with no battery changes." icon={<BatteryCharging className="w-7 h-7 text-[#184A99]" />} />
           </div>
         </div>
       </section>

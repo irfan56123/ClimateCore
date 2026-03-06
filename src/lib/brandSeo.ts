@@ -1,20 +1,20 @@
 import type { Metadata } from "next";
 
 export function brandSEO(
-  brand: string,
+  service: string,
   url: string
 ): Metadata {
   return {
-    title: `${brand} Hearing Aids Price in India | Authorized ${brand} Dealer`,
-    description: `Buy original ${brand} hearing aids at best price. Rechargeable, Bluetooth & digital models available. Book free hearing test today.`,
+    title: `${service} Services | Vently Air Authorized Contractor`,
+    description: `Expert ${service} for your home or business. Reliable installation, repair, and maintenance with Vently Air. Book a free estimate.`,
 
     alternates: {
       canonical: url,
     },
 
     openGraph: {
-      title: `${brand} Hearing Aids – Best Price & Free Hearing Test`,
-      description: `Explore latest ${brand} hearing aids with expert fitting and warranty. EMI options available.`,
+      title: `${service} – Expert HVAC Installation & Repair`,
+      description: `Explore professional ${service} services with expert technicians and quality guarantee.`,
       url: url,
       type: "website",
       locale: "en_IN",

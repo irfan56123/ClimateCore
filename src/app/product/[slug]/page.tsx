@@ -3,7 +3,7 @@ import Link from "next/link";
 import Script from "next/script";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-import HearingAidTypes from "@/components/HearingaidType";
+import HVACSystemType from "@/components/HVACSystemType";
 import ImageShowcaseSection from "@/components/ImageShowcaseSection";
 import ProductContent from "./ProductContent";
 
@@ -30,7 +30,7 @@ type Product = {
   images: string[];
 };
 
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://insonohearing.com";
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || `https://${process.env.NEXT_PUBLIC_DOMAIN || "ventlyair.com"}`;
 
 async function getProduct(slug: string): Promise<Product | null> {
   try {
@@ -66,8 +66,8 @@ function generateFAQs(product: Product): { question: string; answer: string }[] 
   const brandName = product.category.charAt(0).toUpperCase() + product.category.slice(1);
 
   faqs.push({
-    question: `What is a ${brandName} hearing aid?`,
-    answer: `${brandName} is a world-leading hearing aid brand known for its advanced technology, exceptional sound quality, and reliability. The ${product.title} is one of their premium models designed to help people with hearing loss experience clear, natural sound.`,
+    question: `What is a ${brandName} HVAC?`,
+    answer: `${brandName} is a world-leading HVAC brand known for its advanced technology, exceptional sound quality, and reliability. The ${product.title} is one of their premium models designed to help people with hearing loss experience clear, natural sound.`,
   });
 
   if (product.technology.length > 0) {
@@ -111,13 +111,13 @@ function generateFAQs(product: Product): { question: string; answer: string }[] 
   if (product.mrp) {
     faqs.push({
       question: `What is the price of the ${product.title}?`,
-      answer: `The ${product.title} is priced at ₹${product.mrp.toLocaleString()}. Insono Hearing offers flexible EMI options and financing. Contact us for the latest offers and to schedule a free trial.`,
+      answer: `The ${product.title} is priced at ₹${product.mrp.toLocaleString()}. Vently Air Hearing offers flexible EMI options and financing. Contact us for the latest offers and to schedule a free trial.`,
     });
   }
 
   faqs.push({
     question: `Where can I get a free trial of the ${product.title} in India?`,
-    answer: `Insono Hearing offers free trials for the ${product.title} at our clinics. Book an appointment online or call us to experience the device before making a decision.`,
+    answer: `Vently Air Hearing offers free trials for the ${product.title} at our clinics. Book an appointment online or call us to experience the device before making a decision.`,
   });
 
   return faqs;
@@ -133,7 +133,7 @@ export async function generateMetadata({
 
   if (!product) {
     return {
-      title: "Product Not Found | Insono Hearing",
+      title: "Product Not Found | Vently Air Hearing",
       description: "This product could not be found.",
     };
   }
@@ -141,19 +141,19 @@ export async function generateMetadata({
   const brandName = product.category.charAt(0).toUpperCase() + product.category.slice(1);
   const description =
     product.description?.replace(/<[^>]+>/g, "").slice(0, 155) ||
-    `Buy ${product.title} from ${brandName}. ${product.technology.slice(0, 2).join(", ")} hearing aid${product.mrp ? ` at ₹${product.mrp.toLocaleString()}` : ""}. Expert fitting at Insono Hearing.`;
+    `Buy ${product.title} from ${brandName}. ${product.technology.slice(0, 2).join(", ")} HVAC${product.mrp ? ` at ₹${product.mrp.toLocaleString()}` : ""}. Expert fitting at Vently Air Hearing.`;
 
   const image = product.images[0] || `${BASE_URL}/default-og.jpg`;
 
   return {
-    title: `${product.title} | ${brandName} Hearing Aid | Insono`,
+    title: `${product.title} | ${brandName} HVAC System | Vently Air`,
     description,
     openGraph: {
       title: product.title,
       description,
       url: `${BASE_URL}/product/${product.slug}`,
       type: "website",
-      siteName: "Insono Hearing",
+      siteName: "Vently Air Hearing",
       images: [{ url: image }],
     },
     twitter: {
@@ -195,7 +195,7 @@ export default async function ProductPage({
         price: product.mrp,
         priceCurrency: "INR",
         availability: "https://schema.org/InStock",
-        seller: { "@type": "Organization", name: "Insono Hearing" },
+        seller: { "@type": "Organization", name: "Vently Air Hearing" },
       },
     }),
   };
@@ -323,7 +323,7 @@ export default async function ProductPage({
               View Price
             </Link>
             <Link
-              href={`/appointment?utm_source=website&utm_medium=single_product&utm_campaign=${encodeURIComponent(product.title)}`}
+              href={`/estimate?utm_source=website&utm_medium=single_product&utm_campaign=${encodeURIComponent(product.title)}`}
               className="border border-[#023784] text-[#023784] px-6 py-3 rounded-md font-medium hover:bg-[#023784] hover:text-white transition text-center"
             >
               Get Free Trial
@@ -336,7 +336,7 @@ export default async function ProductPage({
       {related.length > 0 && (
         <section className="mt-14 mb-14">
           <h2 className="text-2xl font-bold text-[#023784] mb-6 text-center">
-            More {brandName} Hearing Aids
+            More {brandName} HVAC Systems
           </h2>
           <div className="hidden sm:grid grid-cols-3 lg:grid-cols-6 gap-4">
             {related.map((p) => (
@@ -405,7 +405,7 @@ export default async function ProductPage({
       {/* Brand Certifications */}
       <ImageShowcaseSection
         title="Official Certifications from Widex, Signia & Phonak"
-        description="Insono Hearing Solutions is an authorized partner for leading global hearing aid brands including Widex, Signia, Phonak, and Oticon. These certifications reflect our trusted expertise and commitment to world-class hearing care in India."
+        description="Vently Air Hearing Solutions is an authorized partner for leading global HVAC brands including Widex, Signia, Phonak, and Oticon. These certifications reflect our trusted expertise and commitment to world-class hearing care in India."
         images={[
           { src: "/images/certifications/widex.png", alt: "Widex Certification" },
           { src: "/images/certifications/signia.jpg", alt: "Signia Certification" },
@@ -413,7 +413,7 @@ export default async function ProductPage({
         ]}
       />
 
-      <HearingAidTypes />
+      <HVACSystemType />
     </main>
   );
 }

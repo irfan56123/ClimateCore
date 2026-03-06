@@ -5,10 +5,10 @@ const ComparisonTable = () => {
   const offers = [
     "Free Hearing Check-Ups",
     "Guidance By Experienced Audiologists",
-    "Free Hearing Aid Device Trials",
+    "Free HVAC System Device Trials",
     "Free Fine-Tunings",
     "Extended Warranty",
-    "Availability Of Top Hearing Aid Brands",
+    "Availability Of Top HVAC System Brands",
   ];
 
   return (
@@ -16,7 +16,7 @@ const ComparisonTable = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-white rounded-lg shadow-lg p-6">
           <h2 className="text-2xl sm:text-3xl font-bold text-center text-black mb-6">
-            Exclusive Offers At Insono Hearing Solutions
+            Exclusive Offers At Vently Air Hearing Solutions
           </h2>
 
           <div className="overflow-x-auto">
@@ -27,10 +27,10 @@ const ComparisonTable = () => {
                     Offers
                   </th>
                   <th className="border border-gray-300 p-3 text-base sm:text-lg font-semibold bg-blue-600 text-white">
-                    Insono Hearing Solutions Clinic
+                    Vently Air Hearing Solutions Clinic
                   </th>
                   <th className="border border-gray-300 p-3 text-base sm:text-lg font-semibold">
-                    Other Hearing Aids Clinics
+                    Other HVAC Systems Clinics
                   </th>
                 </tr>
               </thead>

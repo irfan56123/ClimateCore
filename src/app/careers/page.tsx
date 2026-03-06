@@ -4,22 +4,22 @@ import { Metadata } from "next";
 // ---------- SEO METADATA ----------
 export const metadata: Metadata = {
   title:
-    "Work with Insono Hearing | Jobs for Audiologist, SEO Executive & Telecaller Jobs in India",
+    "Work with Vently Air Hearing | Jobs for Audiologist, SEO Executive & Telecaller Jobs in India",
   description:
-    "Join Insono Hearing. India&apos;s trusted hearing care network. Explore Audiologist & Telecaller jobs. Work with purpose and grow your career.",
-  alternates: { canonical: "https://www.insonohearing.com/careers" },
+    "Join Vently Air Hearing. India&apos;s trusted hearing care network. Explore Audiologist & Telecaller jobs. Work with purpose and grow your career.",
+  alternates: { canonical: `https://${process.env.NEXT_PUBLIC_DOMAIN || "ventlyair.com"}/careers` },
   openGraph: {
-    title: "Careers at Insono Hearing",
+    title: "Careers at Vently Air Hearing",
     description:
-      "Build a meaningful career at Insono Hearing. Explore Audiologist, SEO Executive & Telecaller jobs today.",
-    url: "https://www.insonohearing.com/careers",
-    siteName: "Insono Hearing",
+      "Build a meaningful career at Vently Air Hearing. Explore Audiologist, SEO Executive & Telecaller jobs today.",
+    url: `https://${process.env.NEXT_PUBLIC_DOMAIN || "ventlyair.com"}/careers`,
+    siteName: "Vently Air Hearing",
     images: [
       {
-        url: "https://www.insonohearing.com/images/careers/og-careers.jpg",
+        url: `https://${process.env.NEXT_PUBLIC_DOMAIN || "ventlyair.com"}/images/careers/og-careers.jpg`,
         width: 1200,
         height: 630,
-        alt: "Insono Hearing Careers",
+        alt: "Vently Air Hearing Careers",
       },
     ],
     locale: "en_IN",
@@ -27,10 +27,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Careers at Insono Hearing",
+    title: "Careers at Vently Air Hearing",
     description:
-      "Explore Audiologist, SEO Executive & Telecaller roles at Insono Hearing.",
-    images: ["https://www.insonohearing.com/images/careers/og-careers.jpg"],
+      "Explore Audiologist, SEO Executive & Telecaller roles at Vently Air Hearing.",
+    images: [`https://${process.env.NEXT_PUBLIC_DOMAIN || "ventlyair.com"}/images/careers/og-careers.jpg`],
   },
 };
 
@@ -38,9 +38,9 @@ export const metadata: Metadata = {
 const orgJsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  name: "Insono Hearing",
-  url: "https://www.insonohearing.com",
-  logo: "https://www.insonohearing.com/logo.png",
+  name: "Vently Air Hearing",
+  url: `https://${process.env.NEXT_PUBLIC_DOMAIN || "ventlyair.com"}`,
+  logo: `https://${process.env.NEXT_PUBLIC_DOMAIN || "ventlyair.com"}/logo.png`,
 };
 
 const faqJsonLd = {
@@ -49,7 +49,7 @@ const faqJsonLd = {
   mainEntity: [
     {
       "@type": "Question",
-      name: "How can I apply for a role at Insono Hearing?",
+      name: "How can I apply for a role at Vently Air Hearing?",
       acceptedAnswer: {
         "@type": "Answer",
         text:
@@ -94,7 +94,7 @@ const roles = [
     exp: "2+ Years",
     location: "India (Multiple Locations)",
     mailto:
-      "mailto:insonohearing@gmail.com?subject=Application%20for%20Audiologist%20%E2%80%93%20Insono%20Hearing&body=Hi%20Insono%20Team%2C%0D%0AI%20am%20interested%20in%20the%20Audiologist%20role.%20Please%20find%20my%20resume%20attached.%0D%0AName%3A%0D%0AExperience%3A%0D%0ALocation%3A%0D%0AContact%3A%0D%0A",
+      "mailto:insonohearing@gmail.com?subject=Application%20for%20Audiologist%20%E2%80%93%20Vently Air%20Hearing&body=Hi%20Vently Air%20Team%2C%0D%0AI%20am%20interested%20in%20the%20Audiologist%20role.%20Please%20find%20my%20resume%20attached.%0D%0AName%3A%0D%0AExperience%3A%0D%0ALocation%3A%0D%0AContact%3A%0D%0A",
     image: "/audiologist.jpg",
     bullets: [
       "Conduct hearing evaluations & fittings",
@@ -108,7 +108,7 @@ const roles = [
     exp: "1–3 Years",
     location: "Noida / Remote",
     mailto:
-      "mailto:insonohearing@gmail.com?subject=Application%20for%20SEO%20Executive%20%E2%80%93%20Insono%20Hearing&body=Hi%20Insono%20Team%2C%0D%0AI%20am%20interested%20in%20the%20SEO%20Executive%20role.%20Please%20find%20my%20resume%20attached.%0D%0AName%3A%0D%0AExperience%3A%0D%0ASkills%3A%0D%0AContact%3A%0D%0A",
+      "mailto:insonohearing@gmail.com?subject=Application%20for%20SEO%20Executive%20%E2%80%93%20Vently Air%20Hearing&body=Hi%20Vently Air%20Team%2C%0D%0AI%20am%20interested%20in%20the%20SEO%20Executive%20role.%20Please%20find%20my%20resume%20attached.%0D%0AName%3A%0D%0AExperience%3A%0D%0ASkills%3A%0D%0AContact%3A%0D%0A",
     image: "/seo.jpg",
     bullets: [
       "Execute on-page & off-page SEO strategies",
@@ -122,7 +122,7 @@ const roles = [
     exp: "1+ Years",
     location: "Remote / On-site",
     mailto:
-      "mailto:insonohearing@gmail.com?subject=Application%20for%20Telecaller%20%E2%80%93%20Insono%20Hearing&body=Hi%20Insono%20Team%2C%0D%0AI%20am%20interested%20in%20the%20Telecaller%20role.%20Please%20find%20my%20resume%20attached.%0D%0AName%3A%0D%0AExperience%3A%0D%0ALocation%3A%0D%0AContact%3A%0D%0A",
+      "mailto:insonohearing@gmail.com?subject=Application%20for%20Telecaller%20%E2%80%93%20Vently Air%20Hearing&body=Hi%20Vently Air%20Team%2C%0D%0AI%20am%20interested%20in%20the%20Telecaller%20role.%20Please%20find%20my%20resume%20attached.%0D%0AName%3A%0D%0AExperience%3A%0D%0ALocation%3A%0D%0AContact%3A%0D%0A",
     image: "/calling.jpg",
     bullets: [
       "Handle inbound & outbound patient calls",
@@ -160,7 +160,7 @@ export default function CareersPage() {
           <div className="relative max-w-6xl mx-auto px-4 pt-24 pb-16 grid md:grid-cols-2 gap-10 items-center">
             <div>
               <h1 className="text-3xl md:text-5xl font-bold leading-tight">
-                Join Insono Hearing.{" "}
+                Join Vently Air Hearing.{" "}
                 <span className="text-[#023784]">Work with Purpose</span>
               </h1>
               <p className="mt-4 text-gray-600 md:text-lg">
@@ -176,7 +176,7 @@ export default function CareersPage() {
                   View Open Roles
                 </a>
                 <a
-                  href="mailto:insonohearing@gmail.com?subject=General%20Application%20%E2%80%93%20Insono%20Hearing"
+                  href="mailto:insonohearing@gmail.com?subject=General%20Application%20%E2%80%93%20Vently Air%20Hearing"
                   className="border border-gray-300 px-5 py-3 rounded-lg font-semibold hover:bg-gray-50 transition"
                 >
                   Send Your Resume
@@ -186,7 +186,7 @@ export default function CareersPage() {
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
               <Image
                 src="/joininsono.jpg"
-                alt="Insono Hearing clinic and team"
+                alt="Vently Air Hearing clinic and team"
                 fill
                 className="object-cover"
                 priority
@@ -198,7 +198,7 @@ export default function CareersPage() {
         {/* WHY INSONO */}
         <section className="max-w-6xl mx-auto px-4 py-14">
           <h2 className="text-2xl md:text-3xl font-bold text-center mb-6">
-            Why <span className="text-[#023784]">Insono Hearing</span>?
+            Why <span className="text-[#023784]">Vently Air Hearing</span>?
           </h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
@@ -272,7 +272,7 @@ export default function CareersPage() {
           <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
             <Image
               src="/certificate.jpg"
-              alt="Training & Certifications at Insono"
+              alt="Training & Certifications at Vently Air"
               fill
               className="object-cover"
             />
@@ -305,10 +305,10 @@ export default function CareersPage() {
         <section className="bg-gray-50">
           <div className="max-w-6xl mx-auto px-4 py-14">
             <h2 className="text-2xl md:text-3xl font-bold text-center">
-              Life at <span className="text-[#023784]">Insono</span>
+              Life at <span className="text-[#023784]">Vently Air</span>
             </h2>
             <p className="text-center text-gray-600 max-w-3xl mx-auto mt-3">
-              At Insono Hearing, we believe work should feel meaningful,
+              At Vently Air Hearing, we believe work should feel meaningful,
               collaborative, and inspiring. Every day, our team comes together
               to improve lives through better hearing — whether it&apos;s
               helping a patient rediscover sound, building new digital
@@ -317,7 +317,7 @@ export default function CareersPage() {
               where learning and empathy are just as important as performance.
             </p>
             <div className="mt-10 grid md:grid-cols-3 gap-6">
-              {["award_insono.jpg", "lifeInsono.jpg", "insono_awarded.jpg"].map(
+              {["award_insono.jpg", "lifeVently Air.jpg", "insono_awarded.jpg"].map(
                 (img) => (
                   <div
                     key={img}
@@ -325,7 +325,7 @@ export default function CareersPage() {
                   >
                     <Image
                       src={`/${img}`}
-                      alt="Insono team and clinic moments"
+                      alt="Vently Air team and clinic moments"
                       fill
                       className="object-cover"
                     />

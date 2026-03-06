@@ -60,7 +60,7 @@ export default function ProductsPage() {
 
   return (
     <main className="max-w-7xl mx-auto px-6 py-16 mt-10">
-      <h1 className="text-3xl sm:text-4xl font-bold text-center text-[#023784] mb-4">Our Hearing Aids</h1>
+      <h1 className="text-3xl sm:text-4xl font-bold text-center text-[#023784] mb-4">Our HVAC Systems</h1>
       <p className="text-center text-gray-500 mb-8 max-w-2xl mx-auto text-sm">
         Explore our full range of premium hearing solutions from world-leading brands.
       </p>

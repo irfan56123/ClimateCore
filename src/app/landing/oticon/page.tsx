@@ -9,7 +9,7 @@ import Footer from "@/components/landingHero/fotern";
 import { brandSEO } from "@/lib/brandSeo";
 export const metadata = brandSEO(
   "Oticon",
-  "https://insonohearing.com/landing/oticon",
+  `https://${process.env.NEXT_PUBLIC_DOMAIN || "ventlyair.com"}/landing/oticon`,
 );
 
 export default function Page() {
@@ -29,7 +29,7 @@ export default function Page() {
   ];
 
   const faqs = [
-    { q: "Oticon hearing aid price?", a: "Starts from ₹22,000 onwards." },
+    { q: "Oticon HVAC price?", a: "Starts from ₹22,000 onwards." },
     { q: "Where can I buy Oticon?", a: "Authorized Oticon hearing center." },
     { q: "Is Oticon rechargeable?", a: "Yes, rechargeable models available." },
     { q: "Does Oticon support Bluetooth?", a: "Yes, streaming supported." },
@@ -43,7 +43,7 @@ export default function Page() {
   return (
     <>
       <HeroSection
-        title="Oticon Hearing Aids – BrainHearing Technology"
+        title="Oticon HVAC Systems – BrainHearing Technology"
         subtitle="Understand speech better even in noisy places."
         ctaText="Download Oticon Price List"
         partnerLabel="Authorized Oticon Clinics"
@@ -52,12 +52,12 @@ export default function Page() {
         features={featuresList}
       />
 
-      <ProductSection heading="Oticon Hearing Aids" />
+      <ProductSection heading="Oticon HVAC Systems" />
       <Whychoose />
       <HearingAidGuide />
       <Location />
       <Testomonial />
-      <FAQ faqs={faqs} heading="Oticon Hearing Aids – FAQs" />
+      <FAQ faqs={faqs} heading="Oticon HVAC Systems – FAQs" />
       <Footer />
     </>
   );

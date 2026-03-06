@@ -63,7 +63,7 @@ export default function Footer() {
             </a>
 
             <a
-              href="https://www.trustpilot.com/review/insonohearing.com"
+              href={`https://www.trustpilot.com/review/${process.env.NEXT_PUBLIC_DOMAIN || "ventlyair.com"}`}
               target="_blank"
               rel="noopener noreferrer"
               className="transition transform hover:scale-105"

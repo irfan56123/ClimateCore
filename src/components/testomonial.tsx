@@ -22,15 +22,15 @@ export default function Testimonials() {
         <div className="text-center mb-12">
           <h2 className="text-xl sm:text-2xl md:text-3xl font-extrabold leading-snug">
             <span className="bg-gradient-to-r from-[#184A99] via-[#0f3a7e] to-[#7C7C7C] bg-clip-text text-transparent">
-              Trusted by Over 2 Lakh Indians — Real Hearing Aid Experiences
+              Trusted by Over 2 Lakh Indians — Real HVAC System Experiences
             </span>
           </h2>
 
           <p className="mt-3 text-sm sm:text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
             We’ve proudly helped thousands of people across India choose the
-            right <strong>digital hearing aids</strong> to improve their lives.{" "}
+            right <strong>digital HVACs</strong> to improve their lives.{" "}
             Here are their <strong>reviews and testimonials</strong> about
-            clarity, comfort, and better hearing with Insono.
+            clarity, comfort, and better hearing with Vently Air.
           </p>
         </div>
 

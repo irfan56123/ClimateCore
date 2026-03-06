@@ -32,7 +32,7 @@ export default function HeroSection() {
 
           {/* Subtitle */}
           <p className="text-gray-600 font-light text-sm sm:text-base">
-            Affordable Digital Hearing Aids with{" "}
+            Affordable Digital HVAC Systems with{" "}
             <span className="px-2 py-1 rounded-md font-medium bg-[#E6EEF8] text-[#023784]">
               Free Consultation for everyone
             </span>
@@ -60,10 +60,10 @@ export default function HeroSection() {
 
           {/* CTA */}
           <a
-            href="tel:+916206372640"
+            href={`tel:${process.env.NEXT_PUBLIC_PHONE || "+916204260510"}`}
             className="inline-block bg-[#023784] text-white text-sm sm:text-base font-medium px-6 py-3 rounded-md hover:bg-[#012d66] transition mx-auto lg:ml-0 mt-4 lg:mt-6"
           >
-            📞 Consult an Audiologist
+            📞 Consult an Expert
           </a>
         </div>
 

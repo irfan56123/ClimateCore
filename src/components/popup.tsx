@@ -28,7 +28,7 @@ export default function Popup({ isOpen, onClose, title }: PopupProps) {
             See the Price Before You Decide
           </h2>
           <p className="text-sm text-gray-600 mb-4">
-            Get a detailed price list of our digital hearing aids — models,
+            Get a detailed price list of our digital HVACs — models,
             features & transparent pricing. Delivered instantly on{" "}
             <strong>WhatsApp</strong>.
           </p>
@@ -45,7 +45,7 @@ export default function Popup({ isOpen, onClose, title }: PopupProps) {
             <input
               type="hidden"
               name="zf_redirect_url"
-              value="https://prices.insonohearing.com/landing/pd-thank-you"
+              value={`https://prices.${process.env.NEXT_PUBLIC_DOMAIN || "ventlyair.com"}/landing/pd-thank-you`}
             />
             <input type="hidden" id="zc_gad" name="zc_gad" value="" />
             <input type="hidden" name="utm_source" value="" />
@@ -89,7 +89,7 @@ export default function Popup({ isOpen, onClose, title }: PopupProps) {
           <div className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-full aspect-[1] relative">
             <Image
               src="/image/dha-price.png"
-              alt="Digital Hearing Aid Price List Preview"
+              alt="Digital HVAC System Price List Preview"
               fill
               className="object-contain rounded-xl shadow-lg"
               sizes="(max-width: 640px) 80vw, (max-width: 768px) 60vw, 400px"

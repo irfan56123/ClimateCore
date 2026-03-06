@@ -14,7 +14,7 @@ export default function ContactUsPage() {
           {/* 🗺️ Google Map */}
           <div className="rounded-lg overflow-hidden h-56 sm:h-64 w-full shadow-md">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d112114.55685638389!2d77.18166749726561!3d28.5823751!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce50004e4f401%3A0x544410b53779ef00!2sInsono%20Hearing%20Solutions%20Pvt.%20Ltd!5e0!3m2!1sen!2sin!4v1758191010592!5m2!1sen!2sin"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d112114.55685638389!2d77.18166749726561!3d28.5823751!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce50004e4f401%3A0x544410b53779ef00!2sVently Air%20Hearing%20Solutions%20Pvt.%20Ltd!5e0!3m2!1sen!2sin!4v1758191010592!5m2!1sen!2sin"
               width="100%"
               height="100%"
               style={{ border: 0 }}
@@ -37,10 +37,10 @@ export default function ContactUsPage() {
                   D-251, Ground Floor, D Block, West Vinod Nagar, New Delhi - 110092
                 </p>
                 <p className="flex items-center gap-2">
-                  <Phone size={16} className="text-[#184A99]" /> +91 6204260510
+                  <Phone size={16} className="text-[#184A99]" /> {process.env.NEXT_PUBLIC_PHONE_DISPLAY || "+91 6204260510"}
                 </p>
                 <p className="flex items-center gap-2">
-                  <Mail size={16} className="text-[#184A99]" /> contact@insonohearing.com
+                  <Mail size={16} className="text-[#184A99]" /> contact@{process.env.NEXT_PUBLIC_DOMAIN || "ventlyair.com"}
                 </p>
               </div>
             </div>
@@ -57,10 +57,10 @@ export default function ContactUsPage() {
                   Sector 20, Noida, Uttar Pradesh 201301
                 </p>
                 <p className="flex items-center gap-2">
-                  <Phone size={16} className="text-[#184A99]" /> +91 6204260510
+                  <Phone size={16} className="text-[#184A99]" /> {process.env.NEXT_PUBLIC_PHONE_DISPLAY || "+91 6204260510"}
                 </p>
                 <p className="flex items-center gap-2">
-                  <Mail size={16} className="text-[#184A99]" /> contact@insonohearing.com
+                  <Mail size={16} className="text-[#184A99]" /> contact@{process.env.NEXT_PUBLIC_DOMAIN || "ventlyair.com"}
                 </p>
               </div>
             </div>
@@ -90,7 +90,7 @@ export default function ContactUsPage() {
           >
             {/* Hidden Fields */}
             <input type="hidden" name="zf_referrer_name" value="" />
-            <input type="hidden" name="zf_redirect_url" value="https://prices.insonohearing.com/landing/apt-thank-you" />
+            <input type="hidden" name="zf_redirect_url" value={`https://prices.${process.env.NEXT_PUBLIC_DOMAIN || "ventlyair.com"}/landing/apt-thank-you`} />
             <input type="hidden" name="zc_gad" value="" />
             <input type="hidden" name="utm_source" value="Google Organic" />
             <input type="hidden" name="utm_medium" value="" />
@@ -125,15 +125,15 @@ export default function ContactUsPage() {
               className="w-full border border-gray-300 rounded-md p-3 text-sm min-h-[100px] focus:ring-2 focus:ring-[#184A99] focus:outline-none"
             ></textarea>
 
-            
 
-             <button
-  type="submit"
-  className="w-full flex items-center justify-center gap-2 bg-[#184a99] text-white text-base font-semibold py-3 rounded-md shadow hover:bg-[#13366e] hover:scale-[1.02] transition"
->
- 
-  Submit
-</button>
+
+            <button
+              type="submit"
+              className="w-full flex items-center justify-center gap-2 bg-[#184a99] text-white text-base font-semibold py-3 rounded-md shadow hover:bg-[#13366e] hover:scale-[1.02] transition"
+            >
+
+              Submit
+            </button>
           </form>
         </div>
       </div>

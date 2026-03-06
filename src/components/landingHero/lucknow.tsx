@@ -35,7 +35,7 @@ export default function HeroSection() {
           <div className="w-full lg:w-[45%] space-y-6 text-center lg:text-left order-2 lg:order-1">
             <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold leading-snug ">
               <span className="bg-gradient-to-r from-[#E83D6D] via-[#0D2240] to-[#7C7C7C] bg-clip-text text-transparent">
-                Best Hearing Aid in Lucknow – Now In Your City
+                Best HVAC System in Lucknow – Now In Your City
               </span>
             </h1>
 
@@ -116,7 +116,7 @@ export default function HeroSection() {
                   >
                     <Image
                       src={img}
-                      alt="Hearing Aid"
+                      alt="HVAC System"
                       fill
                       priority={i === 0}
                       className="object-contain drop-shadow-2xl px-4"
@@ -156,7 +156,7 @@ export default function HeroSection() {
                 <input
                   type="hidden"
                   name="zf_redirect_url"
-                  value="https://prices.insonohearing.com/landing/apt-thank-you"
+                  value={`https://prices.${process.env.NEXT_PUBLIC_DOMAIN || "ventlyair.com"}/landing/apt-thank-you`}
                 />
                 <input
                   type="text"

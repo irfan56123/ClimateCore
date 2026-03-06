@@ -23,7 +23,7 @@ export default function ContactFormPage() {
             <input
               type="hidden"
               name="zf_redirect_url"
-              value="https://prices.insonohearing.com/landing/apt-thank-you"
+              value={`https://prices.${process.env.NEXT_PUBLIC_DOMAIN || "ventlyair.com"}/landing/apt-thank-you`}
             />
             <input type="hidden" name="zc_gad" value="" />
             <input type="hidden" name="utm_source" value="" />
