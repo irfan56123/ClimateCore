@@ -36,7 +36,7 @@ export default function LeadForm() {
 
     const services = [
         { name: "Furnace", icon: Flame },
-        { name: "AC Repair", icon: Snowflake },
+        { name: "Air-Conditioner", icon: Snowflake },
         { name: "Mini Split", icon: Wind },
     ];
 

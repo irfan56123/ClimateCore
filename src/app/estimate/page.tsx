@@ -10,9 +10,6 @@ export default function EstimatePage() {
 
                 {/* HERO HEADER */}
                 <div className="text-center max-w-3xl mx-auto mb-12 space-y-4">
-                    <div className="inline-flex items-center gap-2 bg-blue-50 text-[#184A99] px-4 py-1.5 rounded-full text-sm font-bold border border-blue-100">
-                        < Award className="w-4 h-4" /> Mass Save Approved Contractor
-                    </div>
                     <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-gray-900 leading-tight">
                         Professional HVAC <span className="text-[#184A99]">Estimate</span> in Minutes
                     </h1>
@@ -60,7 +57,7 @@ export default function EstimatePage() {
                                             <Award className="w-6 h-6 text-blue-300" />
                                         </div>
                                         <div>
-                                            <p className="font-bold">10-Year Warranty</p>
+                                            <p className="font-bold">10-Year Warranty*</p>
                                             <p className="text-sm text-blue-100/70">On all new HVAC system installations.</p>
                                         </div>
                                     </div>
@@ -81,7 +78,7 @@ export default function EstimatePage() {
                             </div>
                             <p className="text-gray-600 italic mb-4">
                                 "Vently Air gave me the most transparent quote. Their team was professional,
-                                fast, and saved me nearly $2,000 via Mass Save rebates."
+                                fast, and helped me find the best system for my home."
                             </p>
                             <div className="flex items-center gap-3">
                                 <div className="w-10 h-10 bg-gray-200 rounded-full overflow-hidden relative">

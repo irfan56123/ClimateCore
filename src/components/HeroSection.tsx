@@ -10,17 +10,10 @@ export default function HeroSection() {
         {/* TEXT CONTENT */}
         <div className="space-y-6 text-center lg:text-left">
 
-          {/* Badge */}
-          <div className="pt-2">
-            <span className="inline-block bg-green-50 text-green-700 text-xs font-semibold px-4 py-2 rounded-full border border-green-200">
-              Mass Save Approved Contractor
-            </span>
-          </div>
-
           {/* Headline */}
           <h1 className="text-3xl sm:text-4xl lg:text-[42px] font-extrabold leading-tight">
             <span className="bg-gradient-to-r from-[#0D2240] via-[#184A99] to-[#7C7C7C] bg-clip-text text-transparent">
-              Is Your Heating or AC System Running Efficiently?
+              Is Your Heating or Air-Conditioner Running Efficiently?
             </span>
           </h1>
 
@@ -29,12 +22,6 @@ export default function HeroSection() {
             Expert installation and repair for furnaces, heat pumps,
             air conditioners, and mini-split systems. Serving residential
             and commercial properties.
-          </p>
-
-          {/* Rebate message */}
-          <p className="text-sm text-green-700 font-medium">
-            Save thousands with Mass Save rebates on new heating and cooling
-            system upgrades.
           </p>
 
           {/* Stats */}

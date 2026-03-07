@@ -1,6 +1,7 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Suspense } from "react";
+import { useSearchParams } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import {
     Flame,
@@ -31,16 +32,17 @@ interface FormState {
 }
 
 const servicesMap: Record<ServiceCategory, string[]> = {
-    "Heating": ["Furnace Installation", "Furnace Repair", "Heat Pump", "Boiler Service"],
-    "Cooling": ["AC Installation", "AC Repair", "Mini-Split System", "Condenser Unit"],
-    "Air Quality": ["Duct Cleaning", "Dryer Vent", "Air Purification", "Humidification"]
+    "Heating": ["Furnace Installation", "Furnace Repair", "Heat Pump"], // Removed Boiler Service
+    "Cooling": ["AC Installation", "Air-Conditioner", "Mini-Split System", "Condenser Unit"], // Updated AC Repair to Air-Conditioner
+    "Air Quality": ["Duct/Chimney/Dryer Vent Cleaning", "UV Light", "Sanitation", "Air Purification", "Humidification"]
 };
 
 const sizeOptions = ["Under 1,000 sq ft", "1,000 - 2,500 sq ft", "2,500 - 4,000 sq ft", "4,000+ sq ft"];
 
-export default function HVACStepForm() {
+function HVACStepFormContent() {
+    const searchParams = useSearchParams();
     const [step, setStep] = useState(1);
-    const [direction, setDirection] = useState(1); // 1 for next, -1 for back
+    const [direction, setDirection] = useState(1);
     const [form, setForm] = useState<FormState>({
         category: "",
         service: "",
@@ -51,6 +53,25 @@ export default function HVACStepForm() {
         email: ""
     });
     const [loading, setLoading] = useState(false);
+
+    // Auto-fill from URL params
+    useEffect(() => {
+        const cat = searchParams.get("category") as ServiceCategory;
+        const svc = searchParams.get("service");
+
+        if (cat && servicesMap[cat]) {
+            setForm(prev => ({ ...prev, category: cat }));
+            setStep(2); // Skip Step 1
+            if (svc) {
+                // Check if svc exists in our updated map (handling potential legacy or renamed values)
+                const exists = servicesMap[cat].includes(svc);
+                if (exists) {
+                    setForm(prev => ({ ...prev, service: svc }));
+                    setStep(3); // Skip Step 2 as well
+                }
+            }
+        }
+    }, [searchParams]);
 
     const update = (field: keyof FormState, value: string) => {
         setForm(prev => ({ ...prev, [field]: value }));
@@ -70,22 +91,18 @@ export default function HVACStepForm() {
         e.preventDefault();
         setLoading(true);
 
-        // Capture marketing params from URL
-        const params = new URLSearchParams(window.location.search);
-
-        // Simulate API call
         try {
             const response = await fetch("/api/leads", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({
                     ...form,
-                    utmSource: params.get("utm_source") || "",
-                    utmMedium: params.get("utm_medium") || "",
-                    utmCampaign: params.get("utm_campaign") || "",
-                    utmTerm: params.get("utm_term") || "",
-                    utmContent: params.get("utm_content") || "",
-                    gclid: params.get("gclid") || "",
+                    utmSource: searchParams.get("utm_source") || "",
+                    utmMedium: searchParams.get("utm_medium") || "",
+                    utmCampaign: searchParams.get("utm_campaign") || "",
+                    utmTerm: searchParams.get("utm_term") || "",
+                    utmContent: searchParams.get("utm_content") || "",
+                    gclid: searchParams.get("gclid") || "",
                     pageUrl: window.location.href,
                     referrer: document.referrer || "",
                     source: "Estimate Page Multi-Step"
@@ -367,9 +384,9 @@ export default function HVACStepForm() {
                                     </button>
                                 </div>
 
-                                <p className="text-center text-xs text-gray-400">
-                                    By clicking "Get My Free Estimate", you agree to our terms of service and privacy policy.
-                                    We'll contact you shortly to confirm details.
+                                <p className="text-center text-xs text-gray-400 px-4">
+                                    By clicking "Get My Free Estimate", you agree to our <a href="/terms-of-use" className="text-blue-600 hover:underline">Terms of Service</a> and <a href="/privacy-policy" className="text-blue-600 hover:underline">Privacy Policy</a>.
+                                    We will contact you shortly to confirm details.
                                 </p>
                             </form>
                         )}
@@ -395,7 +412,7 @@ export default function HVACStepForm() {
                                         </li>
                                         <li className="flex gap-2">
                                             <div className="w-5 h-5 flex-shrink-0 bg-[#184A99] text-white rounded-full flex items-center justify-center text-[10px] font-bold">2</div>
-                                            We'll call you at <span className="text-gray-800 font-semibold">{form.phone}</span> within 15 minutes.
+                                            We will call you at <span className="text-gray-800 font-semibold">{form.phone}</span> within 15 minutes.
                                         </li>
                                         <li className="flex gap-2">
                                             <div className="w-5 h-5 flex-shrink-0 bg-[#184A99] text-white rounded-full flex items-center justify-center text-[10px] font-bold">3</div>
@@ -415,5 +432,13 @@ export default function HVACStepForm() {
                 </AnimatePresence>
             </div>
         </div>
+    );
+}
+
+export default function HVACStepForm() {
+    return (
+        <Suspense fallback={<div className="text-center py-20 font-bold text-gray-400">Loading form...</div>}>
+            <HVACStepFormContent />
+        </Suspense>
     );
 }

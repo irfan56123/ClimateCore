@@ -2,10 +2,9 @@
 import Image from "next/image";
 
 const items = [
-  { id: 1, name: "Furnace Installation", image: "/services/Furnance.jpg", desc: "High-efficiency heating systems for consistent warmth and lower energy bills." },
-  { id: 2, name: "Duct Cleaning", image: "/services/duct.jpg", desc: "Professional duct cleaning to improve air quality and HVAC efficiency." },
-  { id: 3, name: "Chimney Services", image: "/services/Chimney.jpg", desc: "Expert chimney cleaning and repair for safety and optimal performance." },
-  { id: 4, name: "Dryer Vent Service", image: "/services/Dryer Vent Service.jpg", desc: "Reduce fire hazards and improve dryer efficiency with professional cleanings." },
+  { id: 1, name: "Furnace Installation & Repair", category: "Heating", service: "Furnace Installation", image: "/services/Furnance.jpg", desc: "High-efficiency heating systems and expert repairs for consistent warmth." },
+  { id: 5, name: "Air-Conditioner Installation & Repair", category: "Cooling", service: "AC Installation", image: "/services/ac-install.jpg", desc: "Precision installation and repair for peak cooling performance and efficiency." },
+  { id: 2, name: "Duct/Chimney/Dryer Vent Cleaning", category: "Air Quality", service: "Duct/Chimney/Dryer Vent Cleaning", image: "/services/duct.jpg", desc: "Complete cleaning services to improve air quality, safety, and system efficiency." },
 ];
 
 export default function HVACSystemType() {
@@ -59,7 +58,7 @@ export default function HVACSystemType() {
                   {item.desc}
                 </p>
                 <div className="mt-auto w-full pt-4 border-t border-gray-100 flex items-center justify-between">
-                  <a href="/estimate" className="text-xs font-bold text-[#184A99] flex items-center gap-1 group-hover:gap-2 transition-all">
+                  <a href={`/estimate?category=${item.category}&service=${item.service}`} className="text-xs font-bold text-[#184A99] flex items-center gap-1 group-hover:gap-2 transition-all">
                     GET ESTIMATE <span className="text-lg">→</span>
                   </a>
                   <span className="text-[10px] text-gray-400 font-medium">Licensed & Insured</span>

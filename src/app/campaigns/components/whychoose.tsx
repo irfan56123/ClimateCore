@@ -9,23 +9,27 @@ interface Feature {
 const features: Feature[] = [
   {
     title: "Transparent Pricing",
-    description: "Explore HVAC price list",
+    description: "Upfront quotes with no hidden fees",
   },
   {
-    title: "1000+ certified clinics in 450+ cities",
+    title: "Licensed & Insured",
+    description: "Expert technicians you can trust into your home",
   },
   {
-    title: "Protection+ Plan",
-    description: "Against theft, loss or damage",
+    title: "10-year Warranty*",
+    description: "On all new HVAC system installations",
   },
   {
-    title: "Lifetime hearing care support",
+    title: "24/7 Support",
+    description: "Emergency service when you need it most",
   },
   {
-    title: "Interest free easy EMI plans",
+    title: "Expert Installation",
+    description: "Certified pros for heating and cooling",
   },
   {
-    title: "40+ Lacs consultations in India",
+    title: "Duct Cleaning",
+    description: "Improve your indoor air quality today",
   },
 ];
 
