@@ -15,9 +15,13 @@ export default function Navigation({ minimal = false }: NavigationProps) {
     return (
       <header className="fixed top-0 left-0 z-50 w-full bg-white/90 backdrop-blur shadow-sm">
         <div className="w-full flex items-center justify-between px-6 py-3">
-          <Link href="/" className="flex items-center">
-            <img src="/ventlylogo.png" alt="Vently Air" className="h-8 md:h-10" />
-          </Link>
+          <div className="flex items-center gap-4">
+            <Link href="/" className="flex items-center">
+              <img src="/ventlylogo.png" alt="Vently Air" className="h-8 md:h-10" />
+            </Link>
+            <div className="h-6 w-px bg-gray-200 hidden md:block" />
+            <img src="/MassSave.png" alt="Mass Save" className="h-10 md:h-12 object-contain" />
+          </div>
 
           <a
             href={`tel:${process.env.NEXT_PUBLIC_PHONE || "+916204260510"}`}
@@ -34,15 +38,27 @@ export default function Navigation({ minimal = false }: NavigationProps) {
     <header className="fixed top-0 left-0 z-50 w-full bg-white/90 backdrop-blur supports-[backdrop-filter]:bg-white/70 shadow-sm">
       <div className="w-full flex items-center justify-between px-3 sm:px-6 lg:px-20 py-3">
         {/* =================== LOGO =================== */}
-        <Link href="/" className="flex items-center">
+        <div className="flex items-center gap-2 md:gap-4">
+          <Link href="/" className="flex items-center">
+            <Image
+              src="/ventlylogo.png"
+              alt="Vently Air"
+              width={130}
+              height={45}
+              priority
+              className="w-auto h-8 md:h-10"
+            />
+          </Link>
+          <div className="h-8 w-px bg-gray-200" />
           <Image
-            src="/ventlylogo.png"
-            alt="Vently Air"
-            width={130}
-            height={45}
+            src="/MassSave.png"
+            alt="Mass Save"
+            width={140}
+            height={48}
             priority
+            className="w-auto h-10 md:h-12 object-contain"
           />
-        </Link>
+        </div>
 
         {/* =================== DESKTOP NAV =================== */}
         <nav className="hidden md:flex items-center justify-end flex-1 gap-6 ml-8 text-gray-800 font-medium text-[15px] relative">

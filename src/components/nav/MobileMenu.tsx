@@ -72,7 +72,11 @@ export default function MobileMenu({
             >
               {/* Header */}
               <div className="flex items-center justify-between px-4 py-3 border-b">
-                <img src={logoSrc} alt="Logo" className="h-8 w-auto" />
+                <div className="flex items-center gap-3">
+                  <img src={logoSrc} alt="Logo" className="h-8 w-auto" />
+                  <div className="h-6 w-px bg-gray-200" />
+                  <img src="/MassSave.png" alt="Mass Save" className="h-10 w-auto object-contain" />
+                </div>
                 <div className="flex items-center gap-3">
                   <a
                     href={`tel:${phone.replace(/\s+/g, "")}`}

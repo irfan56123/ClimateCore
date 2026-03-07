@@ -61,14 +61,10 @@ function HVACStepFormContent() {
 
         if (cat && servicesMap[cat]) {
             setForm(prev => ({ ...prev, category: cat }));
-            setStep(2); // Skip Step 1
+            setStep(2); // Skip Step 1 (Category selection)
             if (svc) {
-                // Check if svc exists in our updated map (handling potential legacy or renamed values)
-                const exists = servicesMap[cat].includes(svc);
-                if (exists) {
-                    setForm(prev => ({ ...prev, service: svc }));
-                    setStep(3); // Skip Step 2 as well
-                }
+                setForm(prev => ({ ...prev, service: svc }));
+                // Removed setStep(3) to ensure Step 2 is not skipped
             }
         }
     }, [searchParams]);
