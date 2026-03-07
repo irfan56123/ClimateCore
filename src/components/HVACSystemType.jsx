@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const items = [
   { id: 1, name: "Furnace Installation & Repair", category: "Heating", service: "Furnace Installation", image: "/services/Furnance.jpg", desc: "High-efficiency heating systems and expert repairs for consistent warmth." },
-  { id: 5, name: "Air-Conditioner Installation & Repair", category: "Cooling", service: "AC Installation", image: "/services/ac-install.jpg", desc: "Precision installation and repair for peak cooling performance and efficiency." },
+  { id: 5, name: "Air-Conditioner Installation & Repair", category: "Cooling", service: "AC Installation", image: "/services/sanitation.jpg", desc: "Precision installation and repair for peak cooling performance and efficiency." },
   { id: 2, name: "Duct/Chimney/Dryer Vent Cleaning", category: "Air Quality", service: "Duct/Chimney/Dryer Vent Cleaning", image: "/services/duct.jpg", desc: "Complete cleaning services to improve air quality, safety, and system efficiency." },
 ];
 
@@ -24,7 +24,7 @@ export default function HVACSystemType() {
         </div>
 
         {/* Mobile: Horizontal Scroll | Desktop: Grid */}
-        <div className="flex overflow-x-auto snap-x snap-mandatory gap-6 no-scrollbar pb-8 -mx-4 px-4 md:grid md:grid-cols-2 lg:grid-cols-4 md:overflow-visible md:snap-none md:mx-0 md:px-0">
+        <div className="flex overflow-x-auto snap-x snap-mandatory gap-6 no-scrollbar pb-8 -mx-4 px-4 md:grid md:grid-cols-2 lg:grid-cols-3 md:overflow-visible md:snap-none md:mx-0 md:px-0">
           {items.map((item) => (
             <div
               key={item.id}
@@ -36,7 +36,7 @@ export default function HVACSystemType() {
                   src={item.image}
                   alt={item.name}
                   fill
-                  className="object-cover transform transition-transform duration-700 group-hover:scale-110"
+                  className={`object-cover transform transition-transform duration-700 group-hover:scale-110 ${item.id === 5 ? 'object-top' : ''}`}
                   loading="lazy"
                 />
 
