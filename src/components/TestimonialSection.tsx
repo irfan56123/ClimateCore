@@ -1,8 +1,8 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
-import { Star } from "lucide-react";
+import { Star, X } from "lucide-react";
 import LazyVideo from "./LazyVideo";
 const testimonials = [
     {
@@ -78,6 +78,8 @@ const ScrollingColumn = ({ items, reverse = false }: { items: typeof testimonial
 );
 
 export default function TestimonialSection() {
+    const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
+
     return (
         <section className="bg-gradient-to-b from-white to-[#eaf5ff] py-20 overflow-hidden">
             <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-12 gap-12 items-center">
@@ -113,14 +115,17 @@ export default function TestimonialSection() {
                     </div>
 
                     {/* FEATURED VIDEO / IMAGE */}
-                    <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-video bg-gray-900 group">
+                    <div
+                        className="relative rounded-3xl overflow-hidden shadow-2xl aspect-video bg-gray-900 group cursor-pointer"
+                        onClick={() => setIsVideoModalOpen(true)}
+                    >
                         <LazyVideo />
-                        <div className="absolute inset-0 flex items-center justify-center">
-                            <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform cursor-pointer">
+                        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                            <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
                                 <div className="w-0 h-0 border-t-[8px] border-t-transparent border-l-[14px] border-l-[#184A99] border-b-[8px] border-b-transparent ml-1" />
                             </div>
                         </div>
-                        <div className="absolute bottom-4 left-6 text-white">
+                        <div className="absolute bottom-4 left-6 text-white pointer-events-none">
                             <p className="font-bold">Watch our story</p>
                             <p className="text-xs text-white/80">Experience quality firsthand</p>
                         </div>
@@ -139,6 +144,35 @@ export default function TestimonialSection() {
                     <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-[#eaf5ff] to-transparent pointer-events-none z-10" />
                 </div>
             </div>
+
+            {/* FULLSCREEN VIDEO MODAL */}
+            {isVideoModalOpen && (
+                <div
+                    className="fixed inset-0 z-50 flex items-center justify-center bg-black/95 backdrop-blur-sm"
+                    onClick={() => setIsVideoModalOpen(false)}
+                >
+                    <button
+                        onClick={() => setIsVideoModalOpen(false)}
+                        className="absolute top-6 right-6 text-white/70 hover:text-white transition-colors z-[51] bg-black/50 p-2 rounded-full"
+                    >
+                        <X size={32} />
+                    </button>
+
+                    <div
+                        className="w-full max-w-6xl aspect-video px-4 md:px-12 flex items-center justify-center"
+                        onClick={(e) => e.stopPropagation()}
+                    >
+                        <video
+                            className="w-full max-h-[85vh] object-contain rounded-xl shadow-2xl"
+                            controls
+                            autoPlay
+                            playsInline
+                        >
+                            <source src="/hero.mp4" type="video/mp4" />
+                        </video>
+                    </div>
+                </div>
+            )}
         </section>
     );
 }

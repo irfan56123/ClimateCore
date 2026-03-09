@@ -149,7 +149,7 @@ export const services: Service[] = [
     slug: "chimney-cleaning",
     title: "Chimney Cleaning",
     tagline: "Proper Chimney Cleaning",
-    image: "/services/Chimney.jpg",
+    image: "/chimney.jpeg",
     shortDesc:
       "Expert chimney cleaning and repair for safety and optimal performance.",
     description: [
@@ -207,7 +207,7 @@ export const services: Service[] = [
     slug: "uv-light-installation",
     title: "UV Light Installation",
     tagline: "UV Light Installation",
-    image: "/services/uv-light.jpg",
+    image: "/uvlight.jpeg",
     shortDesc:
       "UV light systems that eliminate allergens, bacteria, and mold from your HVAC system.",
     description: [

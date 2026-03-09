@@ -13,7 +13,7 @@ export default function ContactPage() {
             <div className="bg-[#184A99] py-16 text-center text-white px-4">
                 <h1 className="text-4xl md:text-5xl font-extrabold mb-4">How Can We Help?</h1>
                 <p className="text-lg text-blue-100 max-w-2xl mx-auto">
-                    Whether you need an emergency repair, a new installation, or regular maintenance,
+                    Whether you need a new installation, regular maintenance, or an emergency repair,
                     our team is ready to assist you.
                 </p>
             </div>

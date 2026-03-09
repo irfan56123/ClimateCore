@@ -37,7 +37,7 @@ export default function LeadForm() {
     const services = [
         { name: "Furnace", icon: Flame },
         { name: "Air-Conditioner", icon: Snowflake },
-        { name: "Mini Split", icon: Wind },
+        { name: "Duct/Chimney/Dryer vents", icon: Wind },
     ];
 
     return (
@@ -72,14 +72,14 @@ export default function LeadForm() {
                                     type="button"
                                     key={item.name}
                                     onClick={() => setService(item.name)}
-                                    className={`flex flex-col items-center justify-center gap-1 text-xs sm:text-sm p-3 rounded-lg border transition
+                                    className={`flex flex-col items-center justify-center gap-1 text-[10px] sm:text-[11px] md:text-xs px-1 py-3 h-full w-full rounded-lg border transition
                   ${service === item.name
                                             ? "bg-[#184A99] text-white border-[#184A99]"
                                             : "bg-gray-50 hover:bg-gray-100 border-gray-200"
                                         }`}
                                 >
-                                    <Icon size={16} />
-                                    {item.name}
+                                    <Icon size={16} className="shrink-0" />
+                                    <span className="text-center leading-tight break-words whitespace-normal">{item.name}</span>
                                 </button>
                             );
                         })}

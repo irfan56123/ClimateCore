@@ -170,35 +170,41 @@ export default function Footer() {
             </a>
           </div>
 
-          {/* ✅ Google & Trustpilot Reviews Badges */}
-          <div className="flex items-center gap-4">
+          {/* ✅ Google & Birdeye Reviews Badges */}
+          <div className="flex items-end gap-6 pt-2">
             <a
               href="https://maps.app.goo.gl/wmVXRuxddw7Bu9yx8"
               target="_blank"
               rel="noopener noreferrer"
-              className="transition transform hover:scale-105"
+              className="transition transform hover:scale-105 flex flex-col items-center justify-end gap-1.5"
             >
-              <Image
-                src="/badge/google.webp" // place your PNG/SVG in /public/badges/
-                alt="Google Reviews"
-                width={120}
-                height={40}
-                className="object-contain"
-              />
+              <div className="h-8 flex items-center justify-center">
+                <Image
+                  src="/google.png"
+                  alt="Google Reviews"
+                  width={120}
+                  height={40}
+                  className="object-contain h-8 w-auto"
+                />
+              </div>
+              <span className="text-[11px] text-gray-400 font-medium tracking-wide">Rated 4.5 on Google</span>
             </a>
             <a
-              href={`https://www.trustpilot.com/review/${process.env.NEXT_PUBLIC_DOMAIN || "ventlyair.com"}`}
+              href="https://reviews.birdeye.com/vently-air-165407172400034"
               target="_blank"
               rel="noopener noreferrer"
-              className="transition transform hover:scale-105"
+              className="transition transform hover:scale-105 flex flex-col items-center justify-end gap-1.5 text-white"
             >
-              <Image
-                src="/badge/trustpilot.webp" // place your PNG/SVG in /public/badges/
-                alt="Trustpilot Reviews"
-                width={120}
-                height={40}
-                className="object-contain"
-              />
+              <div className="h-8 flex items-center justify-center">
+                <Image
+                  src="/beye.svg"
+                  alt="Birdeye Reviews"
+                  width={102}
+                  height={35}
+                  className="object-contain h-[26px] w-auto"
+                />
+              </div>
+              <span className="text-[11px] font-medium tracking-wide">Rated 4.7 on Birdeye</span>
             </a>
           </div>
 
