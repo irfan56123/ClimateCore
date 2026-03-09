@@ -76,8 +76,8 @@ export default function FAQ({ faqs = defaultFaqs, heading }: FAQProps) {
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.05 }}
                 className={`group rounded-2xl transition-all duration-300 ${isOpen
-                    ? "bg-white/10 border-white/20 shadow-[0_20px_50px_rgba(0,0,0,0.3)]"
-                    : "bg-white/5 border-white/10 hover:bg-white/[0.08]"
+                  ? "bg-white/10 border-white/20 shadow-[0_20px_50px_rgba(0,0,0,0.3)]"
+                  : "bg-white/5 border-white/10 hover:bg-white/[0.08]"
                   } border backdrop-blur-sm overflow-hidden`}
               >
                 <button
@@ -127,7 +127,7 @@ export default function FAQ({ faqs = defaultFaqs, heading }: FAQProps) {
           className="mt-16 text-center"
         >
           <p className="text-white/40 text-sm italic">
-            Still have questions? <a href="/contact" className="text-blue-400 hover:underline font-bold not-italic">Get in touch with us →</a>
+            Want to learn more? <a href="/faq" className="text-blue-400 hover:underline font-bold not-italic"> View all frequently asked questions →</a>
           </p>
         </motion.div>
       </div>
