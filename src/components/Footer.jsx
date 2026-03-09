@@ -122,11 +122,7 @@ export default function Footer() {
                   Contact Us
                 </a>
               </li>
-              <li>
-                <a href="/warranty" className="hover:text-white">
-                  Warranty Information
-                </a>
-              </li>
+
               <li>
                 <a href="/faq" className="hover:text-white">
                   Financing Options

@@ -38,24 +38,24 @@ export default function ContactPage() {
                         <ContactCard
                             icon={<Phone className="w-6 h-6" />}
                             title="Call Us Directly"
-                            content={process.env.NEXT_PUBLIC_PHONE_DISPLAY || "+91 6204260510"}
+                            content="781-819-0399"
                             sub="Available 24/7 for Emergency Repairs"
-                            link={`tel:${process.env.NEXT_PUBLIC_PHONE || "+916204260510"}`}
+                            link="tel:781-819-0399"
                         />
 
                         <ContactCard
                             icon={<Mail className="w-6 h-6" />}
                             title="Email Support"
-                            content={`info@${process.env.NEXT_PUBLIC_DOMAIN || "ventlyair.com"}`}
+                            content="support@ventlyair.com"
                             sub="General inquiries and scheduling"
-                            link={`mailto:info@${process.env.NEXT_PUBLIC_DOMAIN || "ventlyair.com"}`}
+                            link="mailto:support@ventlyair.com"
                         />
 
                         <ContactCard
                             icon={<Clock className="w-6 h-6" />}
                             title="Business Hours"
-                            content="Mon - Sun: 24/7"
-                            sub="Always open for your comfort needs"
+                            content="Mon - Fri 8AM - 5PM"
+                            sub="Please contact us directly for overnight and weekend emergencies"
                         />
 
                         <ContactCard
@@ -63,7 +63,6 @@ export default function ContactPage() {
                             title="Service Areas"
                             content="Multiple Local Branches"
                             sub="Serving your neighborhood with local experts"
-                            link="/service-areas"
                         />
 
                     </div>

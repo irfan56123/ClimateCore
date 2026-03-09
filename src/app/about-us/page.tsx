@@ -32,7 +32,7 @@ export default function AboutPage() {
           <div>
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Who We Are</h2>
             <p className="text-gray-600 mb-4 leading-relaxed">
-              At Vently Air, we believe that everyone deserves to breathe clean air and live in a perfectly tempered environment. What started as a small family-owned business has grown into one of the most trusted HVAC service providers in the region.
+              At Vently Air, we believe that everyone deserves to breathe clean air and live in a perfectly tempered environment. What started as a small family-owned business 10+ years ago has grown into one of the most trusted HVAC service providers in the region.
             </p>
             <p className="text-gray-600 mb-6 leading-relaxed">
               Our team of certified technicians is dedicated to delivering excellence in every repair, installation, and maintenance check. We use cutting-edge technology and time-tested methods to ensure your home or office stays comfortable year-round.

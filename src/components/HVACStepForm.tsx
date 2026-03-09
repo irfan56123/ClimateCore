@@ -33,7 +33,7 @@ interface FormState {
 
 const servicesMap: Record<ServiceCategory, string[]> = {
     "Heating": ["Furnace Installation", "Furnace Repair", "Heat Pump"], // Removed Boiler Service
-    "Cooling": ["AC Installation", "Air-Conditioner", "Mini-Split System", "Condenser Unit"], // Updated AC Repair to Air-Conditioner
+    "Cooling": ["Heat Pump Installation", "Air-Conditioner Repair", "Mini-Split System", "Condenser Unit"],
     "Air Quality": ["Duct/Chimney/Dryer Vent Cleaning", "UV Light", "Sanitation", "Air Purification", "Humidification"]
 };
 
