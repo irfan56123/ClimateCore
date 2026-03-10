@@ -6,15 +6,21 @@ import { AdminAuthGuard } from "@/components/admin/AdminSidebar";
 
 export default function SettingsPage() {
     const [webhookUrl, setWebhookUrl] = useState("");
+    const [headScripts, setHeadScripts] = useState("");
+    const [bodyScripts, setBodyScripts] = useState("");
     const [loading, setLoading] = useState(true);
     const [saving, setSaving] = useState(false);
     const [message, setMessage] = useState({ type: "", text: "" });
 
     useEffect(() => {
-        fetch("/api/admin/settings/webhook")
-            .then(res => res.json())
-            .then(data => {
-                setWebhookUrl(data.url || "");
+        Promise.all([
+            fetch("/api/admin/settings/webhook").then(res => res.json()),
+            fetch("/api/admin/settings/scripts").then(res => res.json())
+        ])
+            .then(([webhookData, scriptsData]) => {
+                setWebhookUrl(webhookData.url || "");
+                setHeadScripts(scriptsData.headScripts || "");
+                setBodyScripts(scriptsData.bodyScripts || "");
                 setLoading(false);
             })
             .catch(() => setLoading(false));
@@ -26,17 +32,25 @@ export default function SettingsPage() {
         setMessage({ type: "", text: "" });
 
         try {
-            const res = await fetch("/api/admin/settings/webhook", {
+            const webhookRes = await fetch("/api/admin/settings/webhook", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ url: webhookUrl }),
             });
 
-            if (res.ok) {
+            const scriptsRes = await fetch("/api/admin/settings/scripts", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ headScripts, bodyScripts }),
+            });
+
+            if (webhookRes.ok && scriptsRes.ok) {
                 setMessage({ type: "success", text: "Settings saved successfully!" });
             } else {
-                const data = await res.json();
-                throw new Error(data.error || "Failed to save settings");
+                let errorMsg = "Failed to save settings";
+                if (!webhookRes.ok) errorMsg = (await webhookRes.json()).error || errorMsg;
+                if (!scriptsRes.ok) errorMsg = (await scriptsRes.json()).error || errorMsg;
+                throw new Error(errorMsg);
             }
         } catch (error: any) {
             setMessage({ type: "error", text: error.message });
@@ -87,7 +101,7 @@ export default function SettingsPage() {
                                         value={webhookUrl}
                                         onChange={(e) => setWebhookUrl(e.target.value)}
                                         className="w-full px-5 py-4 bg-gray-50 border border-transparent focus:border-[#023784] focus:bg-white rounded-2xl outline-none transition-all text-sm group-hover:bg-gray-100/50"
-                                        required
+
                                     />
                                 </div>
                                 <div className="mt-4 p-4 bg-blue-50/50 rounded-2xl flex gap-3">
@@ -95,6 +109,40 @@ export default function SettingsPage() {
                                     <p className="text-[13px] text-blue-800 leading-relaxed">
                                         When a new lead is submitted, we will send a <strong>POST</strong> request to this URL with a JSON payload containing lead details, marketing UTM data, and timestamps.
                                     </p>
+                                </div>
+                            </div>
+
+                            <div className="pt-6 border-t border-gray-100">
+                                <h3 className="text-lg font-bold text-gray-900 mb-4">Custom Scripts</h3>
+
+                                <div className="space-y-6">
+                                    <div>
+                                        <label className="block text-sm font-bold text-gray-700 mb-2 uppercase tracking-wider text-[10px]">
+                                            Head Scripts ({"<head>"})
+                                        </label>
+                                        <textarea
+                                            placeholder="Paste GTM, Google Analytics, or other head scripts here..."
+                                            value={headScripts}
+                                            onChange={(e) => setHeadScripts(e.target.value)}
+                                            rows={5}
+                                            className="w-full px-5 py-4 bg-gray-50 border border-transparent focus:border-[#023784] focus:bg-white rounded-2xl outline-none transition-all text-sm font-mono group-hover:bg-gray-100/50 resize-y"
+                                        />
+                                        <p className="text-xs text-gray-500 mt-2">These scripts will be injected precisely inside the `&lt;head&gt;` tag on every page.</p>
+                                    </div>
+
+                                    <div>
+                                        <label className="block text-sm font-bold text-gray-700 mb-2 uppercase tracking-wider text-[10px]">
+                                            Body Scripts ({"<body>"})
+                                        </label>
+                                        <textarea
+                                            placeholder="Paste CallRail, fallback GTM, or other body scripts here..."
+                                            value={bodyScripts}
+                                            onChange={(e) => setBodyScripts(e.target.value)}
+                                            rows={5}
+                                            className="w-full px-5 py-4 bg-gray-50 border border-transparent focus:border-[#023784] focus:bg-white rounded-2xl outline-none transition-all text-sm font-mono group-hover:bg-gray-100/50 resize-y"
+                                        />
+                                        <p className="text-xs text-gray-500 mt-2">These scripts will be injected immediately after the opening `&lt;body&gt;` tag on every page.</p>
+                                    </div>
                                 </div>
                             </div>
 

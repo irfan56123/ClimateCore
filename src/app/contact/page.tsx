@@ -54,7 +54,7 @@ export default function ContactPage() {
                         <ContactCard
                             icon={<Clock className="w-6 h-6" />}
                             title="Business Hours"
-                            content="Mon - Fri 8AM - 5PM"
+                            content="Mon - Fri 8AM - 6PM"
                             sub="Please contact us directly for overnight and weekend emergencies"
                         />
 

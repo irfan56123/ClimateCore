@@ -63,7 +63,7 @@ export default function TermsOfUse() {
                     <div className="bg-gray-50 p-6 rounded-xl border border-gray-100 mt-4">
                         <p className="font-bold text-gray-900">Vently Air HVAC Solutions</p>
                         <p>Phone: {process.env.NEXT_PUBLIC_PHONE_DISPLAY || "+91 6204260510"}</p>
-                        <p>Email: info@{process.env.NEXT_PUBLIC_DOMAIN || "ventlyair.com"}</p>
+                        <p>Email: support@ventlyair.com</p>
                     </div>
                 </section>
 

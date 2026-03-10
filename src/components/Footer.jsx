@@ -48,11 +48,6 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="/certifications" className="hover:text-white">
-                  Our Certifications
-                </a>
-              </li>
-              <li>
                 <a href="/reviews" className="hover:text-white">
                   Customer Reviews
                 </a>
@@ -113,11 +108,6 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="/service-areas" className="hover:text-white">
-                  Service Areas
-                </a>
-              </li>
-              <li>
                 <a href="/contact" className="hover:text-white">
                   Contact Us
                 </a>
@@ -125,7 +115,7 @@ export default function Footer() {
 
               <li>
                 <a href="/faq" className="hover:text-white">
-                  Financing Options
+                  Frequently Asked Questions
                 </a>
               </li>
             </ul>

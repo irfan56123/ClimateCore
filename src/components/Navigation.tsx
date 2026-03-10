@@ -2,7 +2,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Phone, ChevronDown } from "lucide-react";
-import MobileMenu from "./nav/MobileMenu";
+import dynamic from "next/dynamic";
+const MobileMenu = dynamic(() => import("./nav/MobileMenu"), { ssr: false });
 import { headerMenu } from "./nav/menuData";
 import SearchBox from "./nav/SearchBox";
 

@@ -58,7 +58,7 @@ export default function PrivacyPolicy() {
                 <section>
                     <h2 className="text-2xl font-bold text-gray-800 mb-3">6. Your Rights</h2>
                     <p>
-                        You have the right to access, correct, or request the deletion of your personal data held by Vently Air. To exercise these rights, please contact us at <a href={`mailto:info@${process.env.NEXT_PUBLIC_DOMAIN || "ventlyair.com"}`} className="text-blue-600 hover:underline text-sm uppercase">info@{process.env.NEXT_PUBLIC_DOMAIN || "ventlyair.com"}</a>.
+                        You have the right to access, correct, or request the deletion of your personal data held by Vently Air. To exercise these rights, please contact us at <a href="mailto:support@ventlyair.com" className="text-blue-600 hover:underline text-sm uppercase">support@ventlyair.com</a>.
                     </p>
                 </section>
 

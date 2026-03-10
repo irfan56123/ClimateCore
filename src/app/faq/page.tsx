@@ -110,6 +110,10 @@ const faqs = [
   {
     q: "What warranty options are available?",
     a: "HVAC systems come with manufacturer warranties, typically covering defects and repairs. We can provide detailed warranty information for each model."
+  },
+  {
+    q: "Do you provide financing options?",
+    a: "Yes, we provide a monthly payment plan through a third-party financial solutions provider and Mass Save solutions for approved customers."
   }
 ];
 
