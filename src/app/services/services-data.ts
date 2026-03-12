@@ -317,7 +317,7 @@ export const services: Service[] = [
     slug: "ac-installation",
     title: "Air Conditioning Installation",
     tagline: "Professional AC Installation",
-    image: "/placeholder.jpg",
+    image: "/heroworker.png",
     shortDesc: "Reliable, efficient air conditioning solutions you can count on for years to come.",
     description: [
       "Stay cool and comfortable all summer with professional AC installation from Vently Air Air. Even in Massachusetts, hot and humid summers make reliable air conditioning essential for your home or workplace.",
@@ -342,7 +342,7 @@ export const services: Service[] = [
     slug: "ac-maintenance",
     title: "Air Conditioning Maintenance",
     tagline: "Expert AC Maintenance",
-    image: "/placeholder.jpg",
+    image: "/heroworker.png",
     shortDesc: "Keep your AC running efficiently and save money with regular maintenance.",
     description: [
       "Keep your AC running efficiently and save money with regular air conditioning maintenance from Vently Air Air. Just like changing the oil in your car, annual AC service helps extend the life of your system and prevents costly breakdowns—especially during the hottest days of summer.",
@@ -366,7 +366,7 @@ export const services: Service[] = [
     slug: "ac-service",
     title: "Air Conditioning Service & Repair",
     tagline: "Emergency AC Repair Service",
-    image: "/placeholder.jpg",
+    image: "/heroworker.png",
     shortDesc: "Fast and reliable air conditioning repair services when you need them most.",
     description: [
       "AC System Breakdown? Call Our Emergency Line: 781-819-0399",
@@ -390,7 +390,7 @@ export const services: Service[] = [
     slug: "air-purification",
     title: "Air Purification System",
     tagline: "Professional Air Purification",
-    image: "/placeholder.jpg",
+    image: "/heroworker.png",
     shortDesc: "Improve the air quality in your home with professional air purification solutions.",
     description: [
       "Improve the air quality in your home with professional air purification solutions from Vently Air. We offer a range of options designed to keep your indoor air cleaner, healthier, and more comfortable for your family.",
@@ -414,7 +414,7 @@ export const services: Service[] = [
     slug: "ductless-split-systems",
     title: "Ductless Split Systems",
     tagline: "Efficient Ductless Heating & Cooling",
-    image: "/placeholder.jpg",
+    image: "/heroworker.png",
     shortDesc: "Energy-efficient ductless mini-split systems for heating and cooling your home or business.",
     description: [
       "Heating and cooling are essential for keeping your home comfortable year-round. In many New England homes, adding ductwork to new spaces—such as home additions or finished attics—isn’t always practical. That’s where ductless mini-split systems provide the perfect solution.",
@@ -444,7 +444,7 @@ export const services: Service[] = [
     slug: "emergency-heating-service",
     title: "Emergency Heating Service",
     tagline: "24/7 Emergency Heating Service",
-    image: "/placeholder.jpg",
+    image: "/heroworker.png",
     shortDesc: "Fast and reliable emergency heating repair services to restore your heat quickly.",
     description: [
       "If your heating system stops working unexpectedly, don’t wait in the cold. Call Vently Air anytime for 24/7 emergency heating service. Our team responds quickly and will get to your home or business as soon as possible to restore your heat.",
@@ -468,7 +468,7 @@ export const services: Service[] = [
     slug: "heating-system-installation",
     title: "Heating System Installation",
     tagline: "High-Efficiency Heating Installation",
-    image: "/placeholder.jpg",
+    image: "/heroworker.png",
     shortDesc: "Upgrade to a new, high-efficiency heating system for reliable warmth and lower energy bills.",
     description: [
       "In Massachusetts, the heating season can last up to six months each year. During that time, a dependable heating system isn’t just about comfort—it’s essential for the safety of your home and family. With winter temperatures often dropping well below freezing in eastern Massachusetts, a high-efficiency gas or propane furnace can keep your home warm and reliable all season long.",
@@ -493,7 +493,7 @@ export const services: Service[] = [
     slug: "heating-system-maintenance",
     title: "Heating System Maintenance",
     tagline: "Professional Heating Maintenance",
-    image: "/placeholder.jpg",
+    image: "/heroworker.png",
     shortDesc: "Keep your heating system running efficiently and reliably all winter long.",
     description: [
       "In Massachusetts, an inefficient heating furnace can cost you big—almost like burning money. Vently Air provides professional furnace service that cleans and tunes your burners for maximum performance, delivering cleaner, more efficient heat while lowering your energy costs.",
@@ -517,7 +517,7 @@ export const services: Service[] = [
     slug: "smart-thermostats",
     title: "Home Automation & Smart Thermostats",
     tagline: "Smart Thermostat Installation",
-    image: "/placeholder.jpg",
+    image: "/heroworker.png",
     shortDesc: "Upgrade to a smart thermostat for modern convenience, enhanced comfort, and energy savings.",
     description: [
       "Ever leave home in a rush and forget to turn down the heat—only to realize you’re wasting money on a cold winter day in Massachusetts? It’s time to upgrade to the modern convenience of a smart thermostat. Vently Air can install a smart thermostat in your home to give you comfort, control, and energy savings.",
@@ -562,7 +562,7 @@ export const services: Service[] = [
     slug: "hydro-air-systems",
     title: "Hydro Air Systems",
     tagline: "Efficient Hydro-Air Heating & Cooling",
-    image: "/placeholder.jpg",
+    image: "/heroworker.png",
     shortDesc: "Combine an air handler and ductwork with a water heater and AC coils for efficient temperature control.",
     description: [
       "Hydro-air systems combine an air handler and ductwork with a water heater and AC coils—delivering both heating and cooling through a single system. Hot water heats the air in winter, while AC coils keep your home cool in summer.",
@@ -605,7 +605,7 @@ export const services: Service[] = [
     slug: "whole-house-humidification",
     title: "Whole House Humidification",
     tagline: "Whole-House Humidifier Installation",
-    image: "/placeholder.jpg",
+    image: "/heroworker.png",
     shortDesc: "Improve comfort and health during dry winters with a whole-house humidifier.",
     description: [
       "During Massachusetts’ long winters, dry indoor air can cause dry skin, chapped lips, sore throats, snoring, and even damage wood floors and furnishings. Portable humidifiers are often inconvenient and require constant refilling—but a whole-house humidifier solves these problems with ease and efficiency.",
