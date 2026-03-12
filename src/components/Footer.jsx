@@ -102,11 +102,11 @@ export default function Footer() {
           <div>
             <h4 className="text-white font-semibold mb-3">Help & Support</h4>
             <ul className="space-y-2 text-sm">
-              <li>
+              {/* <li>
                 <a href="/contact" className="hover:text-white">
                   Schedule Service
                 </a>
-              </li>
+              </li> */}
               <li>
                 <a href="/contact" className="hover:text-white">
                   Contact Us
@@ -127,7 +127,7 @@ export default function Footer() {
           {/* Social Icons */}
           <div className="flex space-x-4">
             <a
-              href="https://youtube.com/@ventlyair"
+              href="https://www.youtube.com/@ventlyairsupport794"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-white"
@@ -151,7 +151,7 @@ export default function Footer() {
               <FaFacebook size={18} />
             </a>
             <a
-              href="https://www.linkedin.com/company/ventlyair"
+              href="https://www.linkedin.com/company/vently-air/"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-white"

@@ -1,5 +1,6 @@
 // app/layout.tsx
 import NavigationWrapper from "@/components/NavigationWrapper";
+import AnnouncementBar from "@/components/AnnouncementBar";
 import ChatWidgetLoader from "@/components/ChatWidgetLoader";
 import "./globals.css";
 import type { Metadata } from "next";
@@ -68,6 +69,7 @@ export default function RootLayout({
       </head>
 
       <body className="font-museo bg-white text-gray-900 antialiased bg-gradient-to-b from-[#eaf5ff] to-white">
+        <AnnouncementBar />
         <NavigationWrapper>{children}</NavigationWrapper>
 
         {/* ✅ Global chat widget – loads once, after hydration */}

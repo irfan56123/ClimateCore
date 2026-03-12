@@ -20,11 +20,11 @@ const COMMON_FAQS = [
   },
   {
     q: "What Forms Of Payment Do You Accept?",
-    a: "We accept all forms of payment including cash, check and credit cards.",
+    a: "We accept all forms of payment including cash, check and credit cards. We also provide monthly payment options via a third-party service.",
   },
   {
     q: "Where Do You Operate?",
-    a: "We currently have providers in Massachusetts, Connecticut, New Hampshire, North Carolina & Washington DC.",
+    a: "We currently have providers in Massachusetts, Connecticut, New Hampshire & Rhode Island",
   },
 ];
 
@@ -302,8 +302,8 @@ export const services: Service[] = [
     faqs: [
       ...COMMON_FAQS,
       {
-        q: "What Does An Air Quality Test Cost?",
-        a: "We offer starting prices from $175 and up, with final quotes dependent on square feet, location and units. Schedule a consultation for a finalized quote.",
+        q: "What Does an Air Quality Test Cost?",
+        a: "Prices start at $250 and up, with final quotes dependent on square feet, location and units. Schedule a consultation for a finalized quote.",
       },
     ],
     relatedSlugs: [

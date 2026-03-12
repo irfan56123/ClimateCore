@@ -14,7 +14,7 @@ type NavigationProps = {
 export default function Navigation({ minimal = false }: NavigationProps) {
   if (minimal) {
     return (
-      <header className="fixed top-0 left-0 z-50 w-full bg-white/90 backdrop-blur shadow-sm">
+      <header className="fixed top-9 left-0 z-50 w-full bg-white/90 backdrop-blur shadow-sm">
         <div className="w-full flex items-center justify-between px-6 py-3">
           <div className="flex items-center gap-4">
             <Link href="/" className="flex items-center">
@@ -36,7 +36,7 @@ export default function Navigation({ minimal = false }: NavigationProps) {
   }
 
   return (
-    <header className="fixed top-0 left-0 z-50 w-full bg-white/90 backdrop-blur supports-[backdrop-filter]:bg-white/70 shadow-sm">
+    <header className="fixed top-9 left-0 z-50 w-full bg-white/90 backdrop-blur supports-[backdrop-filter]:bg-white/70 shadow-sm">
       <div className="w-full flex items-center justify-between px-3 sm:px-6 lg:px-20 py-3">
         {/* =================== LOGO =================== */}
         <div className="flex items-center gap-2 md:gap-4">
