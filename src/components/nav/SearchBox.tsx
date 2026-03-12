@@ -19,6 +19,12 @@ import {
   CalendarCheck,
   Home,
   ChevronRight,
+  Droplets,
+  Snowflake,
+  Wrench,
+  Zap,
+  Waves,
+  Cpu,
 } from "lucide-react";
 
 type SearchItem = {
@@ -38,6 +44,17 @@ const ALL_PAGES: SearchItem[] = [
   { label: "UV Light Installation", url: "/services/uv-light-installation", category: "Services", icon: Sun, description: "Kill bacteria & mold with UV light" },
   { label: "Air Quality Test", url: "/services/air-quality-test", category: "Services", icon: FlaskConical, description: "Indoor air quality testing & report" },
   { label: "Sanitation", url: "/services/sanitation", category: "Services", icon: Sparkles, description: "Full HVAC system sanitization" },
+  { label: "Air Purification System", url: "/services/air-purification", category: "Services", icon: Wind, description: "Whole-home air purification systems" },
+  { label: "Whole House Humidification", url: "/services/whole-house-humidification", category: "Services", icon: Droplets, description: "Whole-house humidity control" },
+  { label: "Heating System Installation", url: "/services/heating-system-installation", category: "Services", icon: Thermometer, description: "New heating system installation" },
+  { label: "Heating System Maintenance", url: "/services/heating-system-maintenance", category: "Services", icon: Wrench, description: "Annual heating maintenance & tune-up" },
+  { label: "Emergency Heating Service", url: "/services/emergency-heating-service", category: "Services", icon: Zap, description: "24/7 emergency heating repair" },
+  { label: "Hydro Air Systems", url: "/services/hydro-air-systems", category: "Services", icon: Waves, description: "Hydro air heating & cooling systems" },
+  { label: "Air Conditioning Installation", url: "/services/ac-installation", category: "Services", icon: Snowflake, description: "New AC system installation" },
+  { label: "Air Conditioning Maintenance", url: "/services/ac-maintenance", category: "Services", icon: Wrench, description: "Annual AC tune-up & maintenance" },
+  { label: "Air Conditioning Service & Repair", url: "/services/ac-service", category: "Services", icon: Snowflake, description: "AC repair & service" },
+  { label: "Ductless Split Systems", url: "/services/ductless-split-systems", category: "Services", icon: Snowflake, description: "Mini-split & ductless AC systems" },
+  { label: "Home Automation & Smart Thermostats", url: "/services/smart-thermostats", category: "Services", icon: Cpu, description: "Smart home climate control" },
   { label: "All Services", url: "/services", category: "Services", icon: ShieldCheck, description: "Browse all our HVAC services" },
   // Pages
   { label: "Home", url: "/", category: "Pages", icon: Home, description: "Vently Air homepage" },
