@@ -38,7 +38,7 @@ const servicesFaqs = [
   },
   {
     q: "What areas do you serve?",
-    a: "We currently have providers in Massachusetts, Connecticut, New Hampshire, North Carolina & Washington DC.",
+    a: "We currently have providers in Massachusetts, Connecticut, New Hampshire & Rhode Island.",
   },
 ];
 

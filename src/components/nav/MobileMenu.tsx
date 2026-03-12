@@ -128,15 +128,36 @@ export default function MobileMenu({
                               className="overflow-hidden bg-white"
                             >
                               {item.children.map((subItem) => (
-                                <li key={subItem.url} className="border-t border-gray-50">
-                                  <Link
-                                    href={subItem.url}
-                                    onClick={() => setOpen(false)}
-                                    className="block px-6 py-3 text-gray-600 hover:bg-gray-50 text-[15px]"
-                                  >
-                                    {subItem.label}
-                                  </Link>
-                                </li>
+                                <div key={subItem.label} className="border-t border-gray-50">
+                                  {subItem.children ? (
+                                    <div className="py-2">
+                                      <div className="px-6 py-1 text-sm font-bold text-gray-800">
+                                        {subItem.label}
+                                      </div>
+                                      <ul className="mt-1">
+                                        {subItem.children.map((child) => (
+                                          <li key={child.label}>
+                                            <Link
+                                              href={child.url!}
+                                              onClick={() => setOpen(false)}
+                                              className="block px-8 py-2 text-gray-600 hover:bg-gray-50 text-[14px]"
+                                            >
+                                              {child.label}
+                                            </Link>
+                                          </li>
+                                        ))}
+                                      </ul>
+                                    </div>
+                                  ) : (
+                                    <Link
+                                      href={subItem.url!}
+                                      onClick={() => setOpen(false)}
+                                      className="block px-6 py-3 text-gray-600 hover:bg-gray-50 text-[15px]"
+                                    >
+                                      {subItem.label}
+                                    </Link>
+                                  )}
+                                </div>
                               ))}
                             </motion.ul>
                           )}
@@ -148,7 +169,7 @@ export default function MobileMenu({
                   return (
                     <Link
                       key={item.label}
-                      href={item.url}
+                      href={item.url!}
                       onClick={() => setOpen(false)}
                       className="block text-[16px] font-semibold py-3 px-4 rounded-xl hover:bg-gray-50 transition-colors text-gray-800"
                     >

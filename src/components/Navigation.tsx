@@ -1,7 +1,7 @@
 // app/components/Navigation.tsx
 import Link from "next/link";
 import Image from "next/image";
-import { Phone, ChevronDown } from "lucide-react";
+import { Phone, ChevronDown, ChevronRight } from "lucide-react";
 import dynamic from "next/dynamic";
 const MobileMenu = dynamic(() => import("./nav/MobileMenu"), { ssr: false });
 import { headerMenu } from "./nav/menuData";
@@ -74,19 +74,40 @@ export default function Navigation({ minimal = false }: NavigationProps) {
                   {/* Dropdown Menu */}
                   <div className="absolute left-0 top-full hidden group-hover:block bg-white border border-gray-100 shadow-xl py-2 min-w-[240px] rounded-lg z-50 animate-in fade-in slide-in-from-top-1">
                     {item.children.map((subItem) => (
-                      <Link
-                        key={subItem.label}
-                        href={subItem.url}
-                        className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-[#023784]/5 hover:text-[#023784] transition-colors"
-                      >
-                        {subItem.label}
-                      </Link>
+                      <div key={subItem.label} className="relative group/sub">
+                        {subItem.children ? (
+                          <>
+                            <div className="flex justify-between items-center px-4 py-2.5 text-sm text-gray-700 hover:bg-[#023784]/5 hover:text-[#023784] transition-colors cursor-pointer">
+                              {subItem.label}
+                              <ChevronRight size={14} className="text-gray-400 group-hover/sub:translate-x-0.5 transition-transform" />
+                            </div>
+                            <div className="absolute left-full top-0 hidden group-hover/sub:block bg-white border border-gray-100 shadow-xl py-2 min-w-[240px] rounded-lg z-50 animate-in fade-in slide-in-from-left-1 -ml-1">
+                              {subItem.children.map((child) => (
+                                <Link
+                                  key={child.label}
+                                  href={child.url!}
+                                  className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-[#023784]/5 hover:text-[#023784] transition-colors"
+                                >
+                                  {child.label}
+                                </Link>
+                              ))}
+                            </div>
+                          </>
+                        ) : (
+                          <Link
+                            href={subItem.url!}
+                            className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-[#023784]/5 hover:text-[#023784] transition-colors"
+                          >
+                            {subItem.label}
+                          </Link>
+                        )}
+                      </div>
                     ))}
                   </div>
                 </>
               ) : (
                 <Link
-                  href={item.url}
+                  href={item.url!}
                   className="hover:text-[#023784] transition py-2 text-sm lg:text-base whitespace-nowrap"
                 >
                   {item.label}

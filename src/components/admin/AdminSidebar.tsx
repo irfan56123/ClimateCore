@@ -14,12 +14,14 @@ import {
     ChevronRight,
     FileText,
     Rss,
+    LayoutList,
 } from "lucide-react";
 
 const navLinks = [
     { href: "/admin", label: "Dashboard", icon: LayoutDashboard, exact: true },
     { href: "/admin/leads", label: "Leads", icon: FileText },
     { href: "/admin/logs", label: "Payload Logs", icon: FileText },
+    { href: "/admin/services", label: "Services", icon: LayoutList },
     { href: "/admin/settings", label: "Settings", icon: Settings },
 ];
 

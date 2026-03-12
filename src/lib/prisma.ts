@@ -1,11 +1,5 @@
 import { PrismaClient } from "@prisma/client";
-import { PrismaNeon } from "@prisma/adapter-neon";
-import { Pool, neonConfig } from "@neondatabase/serverless";
-
-// Use native WebSocket in Node.js to prevent Neon hanging
-if (typeof WebSocket !== 'undefined' && !neonConfig.webSocketConstructor) {
-    neonConfig.webSocketConstructor = WebSocket;
-}
+import { PrismaNeonHttp } from "@prisma/adapter-neon";
 
 const globalForPrisma = globalThis as unknown as {
     prisma: PrismaClient | undefined;
@@ -13,11 +7,11 @@ const globalForPrisma = globalThis as unknown as {
 
 function createPrismaClient() {
     const connectionString = process.env.DATABASE_URL;
-    if (!connectionString) throw new Error("DATABASE_URL is not set");
+    if (!connectionString) {
+        throw new Error("DATABASE_URL environment variable is not set");
+    }
 
-    const pool = new Pool({ connectionString });
-    // @ts-expect-error PrismaNeon type mismatch with Pool
-    const adapter = new PrismaNeon(pool);
+    const adapter = new PrismaNeonHttp(connectionString, {});
 
     return new PrismaClient({
         adapter,

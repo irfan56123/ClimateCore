@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Metadata } from "next";
 import { Video, Monitor, ShieldCheck, CheckCircle2 } from "lucide-react";
+import { prisma } from "@/lib/prisma";
 import { services, getService, ADVANTAGES } from "../services-data";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import FAQ from "@/components/FAQ";
@@ -24,6 +25,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const service = getService(slug);
   if (!service) return {};
 
+  const customImageSetting = await prisma.setting.findUnique({
+    where: { key: `service_image_${slug}` }
+  });
+  const displayImage = customImageSetting?.value || service.image;
+
   return {
     title: `${service.title} | Vently Air`,
     description: service.description[0],
@@ -37,7 +43,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       siteName: "Vently Air",
       images: [
         {
-          url: `https://${process.env.NEXT_PUBLIC_DOMAIN || "ventlyair.com"}${service.image}`,
+          url: displayImage.startsWith("data:image") ? displayImage : `https://${process.env.NEXT_PUBLIC_DOMAIN || "ventlyair.com"}${displayImage}`,
           width: 1200,
           height: 630,
           alt: service.title,
@@ -53,6 +59,11 @@ export default async function ServicePage({ params }: PageProps) {
   const { slug } = await params;
   const service = getService(slug);
   if (!service) notFound();
+
+  const customImageSetting = await prisma.setting.findUnique({
+    where: { key: `service_image_${slug}` }
+  });
+  const displayImage = customImageSetting?.value || service.image;
 
   const related = services.filter((s) =>
     service.relatedSlugs.includes(s.slug)
@@ -102,7 +113,7 @@ export default async function ServicePage({ params }: PageProps) {
           {/* Image */}
           <div className="lg:w-1/2 w-full relative aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
             <Image
-              src={service.image}
+              src={displayImage}
               alt={service.title}
               fill
               className="object-cover"
