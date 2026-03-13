@@ -15,8 +15,8 @@ export const ADVANTAGES = [
 
 const COMMON_FAQS = [
   {
-    q: "How Long Does A Cleaning Take?",
-    a: "A typical job will take about 1-2 hours with same day service available after our consultation.",
+    q: "What are your standard operating hours?",
+    a: "Our team works Monday through Friday from 8AM to 6PM, and on weekends as needed for projects.",
   },
   {
     q: "What Forms Of Payment Do You Accept?",
@@ -66,7 +66,7 @@ export const services: Service[] = [
       ...COMMON_FAQS,
       {
         q: "What Does Air Duct Cleaning Cost?",
-        a: "We offer starting prices from $175 and up, however final quotes will be dependent on square feet, location and units in building. Schedule a consultation to get a finalized quote.",
+        a: "We offer starting prices from $275 and up, however final quotes will be dependent on square feet, location and units in building. Schedule a consultation to get a finalized quote.",
       },
     ],
     relatedSlugs: [
@@ -93,8 +93,8 @@ export const services: Service[] = [
     extras: [],
     faqs: [
       {
-        q: "How Long Does A Cleaning Take?",
-        a: "A typical job will take about 1 hour with same day service available after our consultation.",
+        q: "What are your standard operating hours?",
+        a: "Our team works Monday through Friday from 8AM to 6PM, and on weekends as needed for projects.",
       },
       {
         q: "What Forms Of Payment Do You Accept?",
@@ -102,7 +102,7 @@ export const services: Service[] = [
       },
       {
         q: "What Does Dryer Vent Service Cost?",
-        a: "Our dryer vent service usually starts at $100.",
+        a: "Our dryer vent service usually starts at $75.",
       },
       {
         q: "Where Do You Operate?",
@@ -135,7 +135,7 @@ export const services: Service[] = [
       ...COMMON_FAQS,
       {
         q: "What Does Furnace Cleaning Cost?",
-        a: "We offer starting prices from $175 and up, however final quotes will be dependent on square feet, location and units in building. Schedule a consultation to get a finalized quote.",
+        a: "We offer starting prices from $275 and up, however final quotes will be dependent on square feet, location and units in building. Schedule a consultation to get a finalized quote.",
       },
     ],
     relatedSlugs: [
@@ -240,7 +240,7 @@ export const services: Service[] = [
       ...COMMON_FAQS,
       {
         q: "What Does UV Light Installation Cost?",
-        a: "We offer starting prices from $175 and up, with final quotes dependent on square feet, location and units. Schedule a consultation for a finalized quote.",
+        a: "We offer starting prices from $500 and up, with final quotes dependent on square feet, location and units. Schedule a consultation for a finalized quote.",
       },
     ],
     relatedSlugs: [
@@ -631,7 +631,7 @@ export const services: Service[] = [
       },
     ],
     faqs: [
-      ...COMMON_FAQS,
+      ...COMMON_FAQS.slice(1),
       {
         q: "Why do I need a whole-house humidifier?",
         a: "It prevents dry skin, sore throats, and damage to wood furnishings by automatically maintaining comfortable humidity levels during long, dry winters.",

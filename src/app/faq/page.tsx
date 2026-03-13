@@ -124,7 +124,7 @@ export default function FAQ() {
     <section className="min-h-screen flex flex-col items-center justify-center bg-white py-16 px-4 pt-24">
       <div className="max-w-4xl w-full text-black">
         <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12">
-          Frequency And Questions We Can Provide
+          Frequently Asked Questions
         </h2>
         <div className="space-y-6">
           {faqs.map((faq, idx) => (
