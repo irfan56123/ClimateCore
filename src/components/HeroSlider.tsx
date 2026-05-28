@@ -4,7 +4,7 @@ import Slider from "react-slick";
 import Image from "next/image";
 
 const images = [
-    "/heroworker.PNG",
+    "/heroworker.png",
 
 ];
 

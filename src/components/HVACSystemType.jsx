@@ -3,8 +3,8 @@ import Image from "next/image";
 
 const items = [
   { id: 1, name: "Furnace Installation & Repair", category: "Heating", service: "Furnace Installation", image: "/services/Furnance.jpg", desc: "High-efficiency heating systems and expert repairs for consistent warmth." },
-  { id: 5, name: "Air-Conditioner Installation & Repair", category: "Cooling", service: "AC Installation", image: "/heroworker.PNG", desc: "Precision installation and repair for peak cooling performance and efficiency." },
-  { id: 2, name: "Duct/Chimney/Dryer Vent Cleaning", category: "Air Quality", service: "Duct/Chimney/Dryer Vent Cleaning", image: "/heroworker.PNG", desc: "Complete cleaning services to improve air quality, safety, and system efficiency." },
+  { id: 5, name: "Air-Conditioner Installation & Repair", category: "Cooling", service: "AC Installation", image: "/heroworker.png", desc: "Precision installation and repair for peak cooling performance and efficiency." },
+  { id: 2, name: "Duct/Chimney/Dryer Vent Cleaning", category: "Air Quality", service: "Duct/Chimney/Dryer Vent Cleaning", image: "/heroworker.png", desc: "Complete cleaning services to improve air quality, safety, and system efficiency." },
 ];
 
 export default function HVACSystemType() {
