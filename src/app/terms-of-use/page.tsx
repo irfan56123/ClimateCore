@@ -1,6 +1,6 @@
 export const metadata = {
-    title: "Terms of Use | Vently Air",
-    description: "Please read the terms of use for using the Vently Air website and our professional HVAC services.",
+    title: "Terms of Use | ClimateCore Air",
+    description: "Please read the terms of use for using the ClimateCore Air website and our professional HVAC services.",
 };
 
 export default function TermsOfUse() {
@@ -10,20 +10,20 @@ export default function TermsOfUse() {
 
             <div className="prose prose-blue max-w-none text-gray-600 space-y-6">
                 <p>
-                    Welcome to Vently Air. By accessing our website or using our HVAC services, you agree to comply with and be bound by the following terms and conditions.
+                    Welcome to ClimateCore Air. By accessing our website or using our HVAC services, you agree to comply with and be bound by the following terms and conditions.
                 </p>
 
                 <section>
                     <h2 className="text-2xl font-bold text-gray-800 mb-3">1. Acceptance of Terms</h2>
                     <p>
-                        Your use of this website and Vently Air's services serves as your legal acceptance of these terms. If you do not agree, please refrain from using our services.
+                        Your use of this website and ClimateCore Air's services serves as your legal acceptance of these terms. If you do not agree, please refrain from using our services.
                     </p>
                 </section>
 
                 <section>
                     <h2 className="text-2xl font-bold text-gray-800 mb-3">2. Service Estimates</h2>
                     <p>
-                        All estimates provided through our website or via phone are preliminary. Final pricing is subject to on-site inspection by a certified Vently Air technician. Estimates are valid for 30 days unless otherwise specified.
+                        All estimates provided through our website or via phone are preliminary. Final pricing is subject to on-site inspection by a certified ClimateCore Air technician. Estimates are valid for 30 days unless otherwise specified.
                     </p>
                 </section>
 
@@ -37,21 +37,21 @@ export default function TermsOfUse() {
                 <section>
                     <h2 className="text-2xl font-bold text-gray-800 mb-3">4. Warranty and Guarantee</h2>
                     <p>
-                        Vently Air provides a standard warranty on workmanship. Parts and equipment are covered by the respective manufacturer's warranty. We guarantee satisfaction on all repair and installation services.
+                        ClimateCore Air provides a standard warranty on workmanship. Parts and equipment are covered by the respective manufacturer's warranty. We guarantee satisfaction on all repair and installation services.
                     </p>
                 </section>
 
                 <section>
                     <h2 className="text-2xl font-bold text-gray-800 mb-3">5. Intellectual Property</h2>
                     <p>
-                        All content on this website, including text, graphics, logos, and images, is the property of Vently Air and protected by copyright laws. Unauthorized use of any materials is strictly prohibited.
+                        All content on this website, including text, graphics, logos, and images, is the property of ClimateCore Air and protected by copyright laws. Unauthorized use of any materials is strictly prohibited.
                     </p>
                 </section>
 
                 <section>
                     <h2 className="text-2xl font-bold text-gray-800 mb-3">6. Limitation of Liability</h2>
                     <p>
-                        Vently Air shall not be held liable for indirect, incidental, or consequential damages resulting from the use of our website or services, except as mandated by law.
+                        ClimateCore Air shall not be held liable for indirect, incidental, or consequential damages resulting from the use of our website or services, except as mandated by law.
                     </p>
                 </section>
 
@@ -61,9 +61,9 @@ export default function TermsOfUse() {
                         If you have any questions regarding these terms, please reach out to us at:
                     </p>
                     <div className="bg-gray-50 p-6 rounded-xl border border-gray-100 mt-4">
-                        <p className="font-bold text-gray-900">Vently Air HVAC Solutions</p>
-                        <p>Phone: {process.env.NEXT_PUBLIC_PHONE_DISPLAY || "+91 6204260510"}</p>
-                        <p>Email: support@ventlyair.com</p>
+                        <p className="font-bold text-gray-900">ClimateCore Air HVAC Solutions</p>
+                        <p>Phone: {process.env.NEXT_PUBLIC_PHONE_DISPLAY || "+91 9334026147"}</p>
+                        <p>Email: support@ClimateCoreair.com</p>
                     </div>
                 </section>
 

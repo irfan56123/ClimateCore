@@ -4,7 +4,7 @@ import { Plus, Minus } from "lucide-react";
 
 const faqs = [
   {
-    q: "What type of HVAC services does Vently Air offer?",
+    q: "What type of HVAC services does ClimateCore Air offer?",
     a: "We offer a wide range of HVAC solutions, including residential and commercial, for heating, air-conditioning and indoor air-quality improvement."
   },
   {

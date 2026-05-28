@@ -4,11 +4,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { PhoneCall, MessageCircle, Download } from "lucide-react";
 
-const PDF_URL = "/Vently Air.pdf"; // 👉 place PDF in /public
+const PDF_URL = "/ClimateCore Air.pdf"; // 👉 place PDF in /public
 
 export default function ThankYouPage() {
   return (
-    <section className="min-h-screen bg-gray-50 flex flex-col items-center px-4 py-10">
+    <section className="min-h-screen bg-gray-50 flex flex-col items-center px-4 py-20">
       {/* HEADER */}
       <div className="text-center max-w-xl mt-16">
         <h1 className="text-3xl sm:text-4xl font-bold text-blue-600">
@@ -48,7 +48,7 @@ export default function ThankYouPage() {
         <div className="flex gap-4 justify-center">
           {/* CALL */}
           <a
-            href={`tel:${process.env.NEXT_PUBLIC_PHONE || "+916204260510"}`}
+            href={`tel:${process.env.NEXT_PUBLIC_PHONE || "+919334026147"}`}
             className="flex items-center gap-2 px-5 py-3 rounded-full bg-green-600 text-white shadow hover:bg-green-700 transition"
           >
             <PhoneCall size={18} />
@@ -57,7 +57,7 @@ export default function ThankYouPage() {
 
           {/* WHATSAPP */}
           <a
-            href={`https://wa.me/${(process.env.NEXT_PUBLIC_PHONE || "916204260510").replace(/\+/g, "")}`}
+            href={`https://wa.me/${(process.env.NEXT_PUBLIC_PHONE || "919334026147").replace(/\+/g, "")}`}
             target="_blank"
             className="flex items-center gap-2 px-5 py-3 rounded-full bg-emerald-500 text-white shadow hover:bg-emerald-600 transition"
           >

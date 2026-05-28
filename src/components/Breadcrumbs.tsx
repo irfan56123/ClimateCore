@@ -29,13 +29,13 @@ export default function Breadcrumbs() {
         "@type": "ListItem",
         position: 1,
         name: "Home",
-        item: `${process.env.NEXT_PUBLIC_SITE_URL || `${process.env.NEXT_PUBLIC_DOMAIN || "ventlyair.com"}`}`,
+        item: `${process.env.NEXT_PUBLIC_SITE_URL || `${process.env.NEXT_PUBLIC_DOMAIN || "ClimateCoreair.com"}`}`,
       },
       ...items.map((item, index) => ({
         "@type": "ListItem",
         position: index + 2,
         name: item.label,
-        item: `${process.env.NEXT_PUBLIC_SITE_URL || `${process.env.NEXT_PUBLIC_DOMAIN || "ventlyair.com"}`}${item.href}`,
+        item: `${process.env.NEXT_PUBLIC_SITE_URL || `${process.env.NEXT_PUBLIC_DOMAIN || "ClimateCoreair.com"}`}${item.href}`,
       })),
     ],
   };

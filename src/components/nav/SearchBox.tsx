@@ -57,7 +57,7 @@ const ALL_PAGES: SearchItem[] = [
   { label: "Home Automation & Smart Thermostats", url: "/services/smart-thermostats", category: "Services", icon: Cpu, description: "Smart home climate control" },
   { label: "All Services", url: "/services", category: "Services", icon: ShieldCheck, description: "Browse all our HVAC services" },
   // Pages
-  { label: "Home", url: "/", category: "Pages", icon: Home, description: "Vently Air homepage" },
+  { label: "Home", url: "/", category: "Pages", icon: Home, description: "ClimateCore Air homepage" },
   { label: "About Us", url: "/about-us", category: "Pages", icon: Info, description: "Our story & team" },
   { label: "Contact", url: "/contact", category: "Pages", icon: Phone, description: "Get in touch with us" },
   { label: "FAQ", url: "/faq", category: "Pages", icon: FileQuestionMark, description: "Frequently asked questions" },

@@ -5,8 +5,8 @@ export function brandSEO(
   url: string
 ): Metadata {
   return {
-    title: `${service} Services | Vently Air Authorized Contractor`,
-    description: `Expert ${service} for your home or business. Reliable installation, repair, and maintenance with Vently Air. Book a free estimate.`,
+    title: `${service} Services | ClimateCore Air Authorized Contractor`,
+    description: `Expert ${service} for your home or business. Reliable installation, repair, and maintenance with ClimateCore Air. Book a free estimate.`,
 
     alternates: {
       canonical: url,

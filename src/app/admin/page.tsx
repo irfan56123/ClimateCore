@@ -30,7 +30,7 @@ export default function AdminDashboard() {
         <div className="p-6 lg:p-8">
             <div className="mb-8">
                 <h1 className="text-2xl font-bold text-gray-800">Admin Dashboard</h1>
-                <p className="text-gray-500 text-sm mt-1">Welcome back to Vently Air Lead Management</p>
+                <p className="text-gray-500 text-sm mt-1">Welcome back to ClimateCore Air Lead Management</p>
             </div>
 
             {/* Stats */}

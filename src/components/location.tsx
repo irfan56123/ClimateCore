@@ -59,16 +59,16 @@ export default function CityListSection() {
         {/* Bottom Contact Section */}
         <div className="mt-16 text-center border-t pt-10">
           <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
-            With 15+ locations across India, Vently Air clinics are always close to
+            With 15+ locations across India, ClimateCore Air clinics are always close to
             you.
           </p>
 
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <a
-              href={`tel:${process.env.NEXT_PUBLIC_PHONE || "+916204260510"}`}
+              href={`tel:${process.env.NEXT_PUBLIC_PHONE || "+919334026147"}`}
               className="bg-black text-white px-8 py-4 rounded-xl font-bold flex items-center justify-center gap-2"
             >
-              Call {process.env.NEXT_PUBLIC_PHONE_DISPLAY || "+91 6204260510"}
+              Call {process.env.NEXT_PUBLIC_PHONE_DISPLAY || "+91 9334026147"}
             </a>
             <Link
               href="/estimate"

@@ -42,7 +42,7 @@ export default function LazyVideo() {
                     playsInline
                     preload="none"
                 >
-                    <source src="/hero.mp4" type="video/mp4" />
+                    <source src="" type="video/mp4" />
                 </video>
             )}
         </div>

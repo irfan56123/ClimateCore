@@ -14,18 +14,18 @@ type NavigationProps = {
 export default function Navigation({ minimal = false }: NavigationProps) {
   if (minimal) {
     return (
-      <header className="fixed top-9 left-0 z-50 w-full bg-white/90 backdrop-blur shadow-sm">
+      <header className="fixed top-0 left-0 z-50 w-full bg-white/90 backdrop-blur shadow-sm">
         <div className="w-full flex items-center justify-between px-6 py-3">
           <div className="flex items-center gap-4">
             <Link href="/" className="flex items-center">
-              <img src="/ventlylogo.png" alt="Vently Air" className="h-8 md:h-10" />
+              <img src="/ClimateCorelogo.png" alt="ClimateCore Air" className="h-8 md:h-10" />
             </Link>
             <div className="h-6 w-px bg-gray-200 hidden md:block" />
             <img src="/MassSave.png" alt="Mass Save" className="h-10 md:h-12 object-contain" />
           </div>
 
           <a
-            href={`tel:${process.env.NEXT_PUBLIC_PHONE || "+916204260510"}`}
+            href={`tel:${process.env.NEXT_PUBLIC_PHONE || "+919334026147"}`}
             className="bg-[#023784] text-white px-4 py-2 rounded-md font-semibold"
           >
             Call Now
@@ -36,14 +36,14 @@ export default function Navigation({ minimal = false }: NavigationProps) {
   }
 
   return (
-    <header className="fixed top-9 left-0 z-50 w-full bg-white/90 backdrop-blur supports-[backdrop-filter]:bg-white/70 shadow-sm">
+  <header className="fixed top-0 left-0 z-50 w-full bg-white/90 backdrop-blur supports-[backdrop-filter]:bg-white/70 shadow-sm">
       <div className="w-full flex items-center justify-between px-3 sm:px-6 lg:px-20 py-3">
         {/* =================== LOGO =================== */}
         <div className="flex items-center gap-2 md:gap-4">
           <Link href="/" className="flex items-center">
             <Image
-              src="/ventlylogo.png"
-              alt="Vently Air"
+              src="/ClimateCorelogo.png"
+              alt="ClimateCore Air"
               width={130}
               height={45}
               priority
@@ -121,11 +121,11 @@ export default function Navigation({ minimal = false }: NavigationProps) {
         <div className="hidden md:flex items-center gap-4 ml-6">
           <SearchBox />
           <a
-            href={`tel:${process.env.NEXT_PUBLIC_PHONE || "+916204260510"}`}
+            href={`tel:${process.env.NEXT_PUBLIC_PHONE || "+919334026147"}`}
             className="flex items-center gap-2 bg-[#f59e0b] text-black font-medium px-4 py-2 rounded-md hover:bg-yellow-500 transition relative"
           >
             <span className="absolute inline-flex h-8 w-8 rounded-full bg-white/40 animate-ping -left-2" />
-            <Phone size={16} className="relative z-10" /> {process.env.NEXT_PUBLIC_PHONE_DISPLAY || "+91 6204260510"}
+            <Phone size={16} className="relative z-10" /> {process.env.NEXT_PUBLIC_PHONE_DISPLAY || "+91 9334026147"}
           </a>
           <Link
             href="/estimate"
@@ -137,7 +137,7 @@ export default function Navigation({ minimal = false }: NavigationProps) {
 
         {/* =================== MOBILE NAV =================== */}
         <div className="flex md:hidden items-center gap-4 text-sm text-gray-700">
-          <a href={`tel:${process.env.NEXT_PUBLIC_PHONE || "+916204260510"}`} aria-label="Call">
+          <a href={`tel:${process.env.NEXT_PUBLIC_PHONE || "+919334026147"}`} aria-label="Call">
             <div className="relative flex items-center justify-center">
               <span className="absolute inline-flex h-8 w-8 rounded-full bg-[#023784]/30 animate-ping" />
               <Phone size={22} className="text-[#023784] relative z-10" />

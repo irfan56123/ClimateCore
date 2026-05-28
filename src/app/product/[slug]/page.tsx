@@ -30,7 +30,7 @@ type Product = {
   images: string[];
 };
 
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || `https://${process.env.NEXT_PUBLIC_DOMAIN || "ventlyair.com"}`;
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || `https://${process.env.NEXT_PUBLIC_DOMAIN || "ClimateCoreair.com"}`;
 
 async function getProduct(slug: string): Promise<Product | null> {
   try {
@@ -67,7 +67,7 @@ function generateFAQs(product: Product): { question: string; answer: string }[] 
 
   faqs.push({
     question: `What is this ${brandName} system?`,
-    answer: `Vently Air provides world-leading ${brandName} solutions known for advanced technology, exceptional efficiency, and reliability. The ${product.title} is one of our premium models designed to help homeowners experience balanced comfort and clean air.`,
+    answer: `ClimateCore Air provides world-leading ${brandName} solutions known for advanced technology, exceptional efficiency, and reliability. The ${product.title} is one of our premium models designed to help homeowners experience balanced comfort and clean air.`,
   });
 
   if (product.technology.length > 0) {
@@ -111,13 +111,13 @@ function generateFAQs(product: Product): { question: string; answer: string }[] 
   if (product.mrp) {
     faqs.push({
       question: `What is the price of the ${product.title}?`,
-      answer: `The ${product.title} is priced at ₹${product.mrp.toLocaleString()}. Vently Air offers flexible financing options. Contact us for the latest offers and to schedule a free inspection.`,
+      answer: `The ${product.title} is priced at ₹${product.mrp.toLocaleString()}. ClimateCore Air offers flexible financing options. Contact us for the latest offers and to schedule a free inspection.`,
     });
   }
 
   faqs.push({
     question: `Where can I get a free estimate for the ${product.title}?`,
-    answer: `Vently Air offers free on-site estimates for the ${product.title}. Book an appointment online or call us to have our technicians evaluate your space.`,
+    answer: `ClimateCore Air offers free on-site estimates for the ${product.title}. Book an appointment online or call us to have our technicians evaluate your space.`,
   });
 
   return faqs;
@@ -133,7 +133,7 @@ export async function generateMetadata({
 
   if (!product) {
     return {
-      title: "Product Not Found | Vently Air",
+      title: "Product Not Found | ClimateCore Air",
       description: "This product could not be found.",
     };
   }
@@ -141,19 +141,19 @@ export async function generateMetadata({
   const brandName = product.category.charAt(0).toUpperCase() + product.category.slice(1);
   const description =
     product.description?.replace(/<[^>]+>/g, "").slice(0, 155) ||
-    `Buy ${product.title} from Vently Air. ${product.technology.slice(0, 2).join(", ")} system${product.mrp ? ` at ₹${product.mrp.toLocaleString()}` : ""}. Expert installation at Vently Air.`;
+    `Buy ${product.title} from ClimateCore Air. ${product.technology.slice(0, 2).join(", ")} system${product.mrp ? ` at ₹${product.mrp.toLocaleString()}` : ""}. Expert installation at ClimateCore Air.`;
 
   const image = product.images[0] || `${BASE_URL}/default-og.jpg`;
 
   return {
-    title: `${product.title} | ${brandName} HVAC System | Vently Air`,
+    title: `${product.title} | ${brandName} HVAC System | ClimateCore Air`,
     description,
     openGraph: {
       title: product.title,
       description,
       url: `${BASE_URL}/product/${product.slug}`,
       type: "website",
-      siteName: "Vently Air",
+      siteName: "ClimateCore Air",
       images: [{ url: image }],
     },
     twitter: {
@@ -195,7 +195,7 @@ export default async function ProductPage({
         price: product.mrp,
         priceCurrency: "INR",
         availability: "https://schema.org/InStock",
-        seller: { "@type": "Organization", name: "Vently Air" },
+        seller: { "@type": "Organization", name: "ClimateCore Air" },
       },
     }),
   };
@@ -404,7 +404,7 @@ export default async function ProductPage({
 
       <ImageShowcaseSection
         title="High Performance HVAC Systems"
-        description="Vently Air Solutions is an authorized partner for leading global HVAC brands. Our systems reflect our trusted expertise and commitment to world-class indoor air comfort."
+        description="ClimateCore Air Solutions is an authorized partner for leading global HVAC brands. Our systems reflect our trusted expertise and commitment to world-class indoor air comfort."
         images={[
           { src: "/images/certifications/widex.png", alt: "Widex Certification" },
           { src: "/images/certifications/signia.jpg", alt: "Signia Certification" },

@@ -2,8 +2,8 @@ import Image from "next/image";
 import { CheckCircle, Award, Users, ShieldCheck } from "lucide-react";
 
 export const metadata = {
-  title: "About Us | Vently Air — Your Comfort, Our Mission",
-  description: "Learn more about Vently Air, your trusted local HVAC experts. From 24/7 emergency repairs to energy-efficient installations, we've got you covered.",
+  title: "About Us | ClimateCore Air — Your Comfort, Our Mission",
+  description: "Learn more about ClimateCore Air, your trusted local HVAC experts. From 24/7 emergency repairs to energy-efficient installations, we've got you covered.",
 };
 
 export default function AboutPage() {
@@ -21,7 +21,7 @@ export default function AboutPage() {
         <div className="relative z-10 text-center px-4">
           <h1 className="text-4xl md:text-6xl font-extrabold mb-4">Our Commitment to Comfort</h1>
           <p className="text-lg md:text-xl max-w-2xl mx-auto text-blue-50">
-            Vently Air has been providing top-tier heating, cooling, and ventilation services for over a decade.
+            ClimateCore Air has been providing top-tier heating, cooling, and ventilation services for over a decade.
           </p>
         </div>
       </section>
@@ -32,7 +32,7 @@ export default function AboutPage() {
           <div>
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Who We Are</h2>
             <p className="text-gray-600 mb-4 leading-relaxed">
-              At Vently Air, we believe that everyone deserves to breathe clean air and live in a perfectly tempered environment. What started as a small family-owned business 10+ years ago has grown into one of the most trusted HVAC service providers in the region.
+              At ClimateCore Air, we believe that everyone deserves to breathe clean air and live in a perfectly tempered environment. What started as a small family-owned business 10+ years ago has grown into one of the most trusted HVAC service providers in the region.
             </p>
             <p className="text-gray-600 mb-6 leading-relaxed">
               Our team of certified technicians is dedicated to delivering excellence in every repair, installation, and maintenance check. We use cutting-edge technology and time-tested methods to ensure your home or office stays comfortable year-round.
@@ -53,7 +53,7 @@ export default function AboutPage() {
           <div className="relative h-[350px] rounded-2xl overflow-hidden shadow-2xl">
             <Image
               src="/heroworker.png"
-              alt="About Vently Air"
+              alt="About ClimateCore Air"
               fill
               className="object-cover"
             />

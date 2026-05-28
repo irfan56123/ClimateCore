@@ -37,7 +37,7 @@ export function AdminSidebar() {
             {/* Mobile top bar */}
             <div className="lg:hidden flex items-center justify-between px-4 py-3 bg-white border-b border-gray-200 shadow-sm">
                 <div className="flex items-center gap-2">
-                    <span className="font-semibold text-gray-800">Vently Air Admin</span>
+                    <span className="font-semibold text-gray-800">ClimateCore Air Admin</span>
                 </div>
                 <button onClick={() => setOpen(!open)} className="p-2 rounded-md hover:bg-gray-100">
                     {open ? <X size={20} /> : <Menu size={20} />}
@@ -53,7 +53,7 @@ export function AdminSidebar() {
                 <div className="p-6 border-b border-white/10">
                     <div className="flex items-center gap-3">
                         <div>
-                            <p className="font-bold text-white text-sm">Vently Air</p>
+                            <p className="font-bold text-white text-sm">ClimateCore Air</p>
                             <p className="text-xs text-blue-300">Admin Panel</p>
                         </div>
                     </div>

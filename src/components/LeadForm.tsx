@@ -2,11 +2,13 @@
 
 import { useState } from "react";
 import { User, Phone, Mail, MessageSquare, Flame, Snowflake, Wind } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 export default function LeadForm() {
 
     const [loading, setLoading] = useState(false);
     const [service, setService] = useState("Furnace");
+    const router = useRouter();
 
     async function handleSubmit(e: any) {
         e.preventDefault();
@@ -32,6 +34,7 @@ export default function LeadForm() {
         });
 
         setLoading(false);
+        router.push("/thankyou");
     }
 
     const services = [

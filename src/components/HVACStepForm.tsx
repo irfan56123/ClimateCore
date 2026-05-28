@@ -29,6 +29,7 @@ interface FormState {
     name: string;
     phone: string;
     email: string;
+     address: string;
 }
 
 const servicesMap: Record<ServiceCategory, string[]> = {
@@ -50,7 +51,8 @@ function HVACStepFormContent() {
         size: "",
         name: "",
         phone: "",
-        email: ""
+        email: "",
+        address: ""
     });
     const [loading, setLoading] = useState(false);
 
@@ -356,6 +358,21 @@ function HVACStepFormContent() {
                                             className="w-full pl-12 pr-4 py-4 rounded-xl border-2 border-gray-100 focus:border-[#184A99] focus:outline-none transition-colors"
                                         />
                                     </div>
+
+<div className="relative">
+    <Home className="absolute left-4 top-4 w-5 h-5 text-gray-400" />
+
+    <textarea
+        placeholder="Full Address"
+        required
+        value={form.address}
+        onChange={(e) => update("address", e.target.value)}
+        className="w-full pl-12 pr-4 py-4 rounded-xl border-2 border-gray-100 focus:border-[#184A99] focus:outline-none transition-colors"
+        rows={3}
+    />
+</div>
+
+
                                 </div>
 
                                 <div className="flex flex-col gap-4">

@@ -13,7 +13,7 @@ export default function ChatWidgetLoader() {
       const script = document.createElement("script");
       script.id = "xbot-chat";
       script.src =
-        "https://chat-xbot.webspecia.in/js/widget/omf5pwsilxzzkba1/float.js";
+        "https://chat-xbot.Irfan.in/js/widget/omf5pwsilxzzkba1/float.js";
       script.async = true;
       script.defer = true;
 

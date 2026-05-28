@@ -16,14 +16,14 @@ export default function Footer() {
           {/* Left Column - Logo + Contact */}
           <div>
             <Image
-              src="/ventlylogo.png" // replace with Vently logo
-              alt="Vently Air"
+              src="/ClimateCorelogo.png" // replace with ClimateCore logo
+              alt="ClimateCore Air"
               width={150}
               height={40}
               className="mb-4"
             />
             <p className="mt-4 text-sm leading-relaxed">
-              Vently Air is your trusted partner for high-quality heating, cooling, and ventilation solutions. We are dedicated to providing expert service and reliable HVAC systems for your home and business.
+              ClimateCore Air is your trusted partner for high-quality heating, cooling, and ventilation solutions. We are dedicated to providing expert service and reliable HVAC systems for your home and business.
             </p>
             <a
               href="/contact"
@@ -127,7 +127,7 @@ export default function Footer() {
           {/* Social Icons */}
           <div className="flex space-x-4">
             <a
-              href="https://www.youtube.com/@ventlyairsupport794"
+              href="https://www.youtube.com/@ClimateCoreairsupport794"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-white"
@@ -135,7 +135,7 @@ export default function Footer() {
               <FaYoutube size={18} />
             </a>
             <a
-              href="https://www.instagram.com/ventlyair"
+              href="https://www.instagram.com/ClimateCoreair"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-white"
@@ -143,7 +143,7 @@ export default function Footer() {
               <FaInstagram size={18} />
             </a>
             <a
-              href="https://www.facebook.com/ventlyair"
+              href="https://www.facebook.com/ClimateCoreair"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-white"
@@ -151,7 +151,7 @@ export default function Footer() {
               <FaFacebook size={18} />
             </a>
             <a
-              href="https://www.linkedin.com/company/vently-air/"
+              href="https://www.linkedin.com/company/ClimateCore-air/"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-white"
@@ -180,7 +180,7 @@ export default function Footer() {
               <span className="text-[11px] text-gray-400 font-medium tracking-wide">Rated 4.5 on Google</span>
             </a>
             <a
-              href="https://reviews.birdeye.com/vently-air-165407172400034"
+              href="https://reviews.birdeye.com/ClimateCore-air-165407172400034"
               target="_blank"
               rel="noopener noreferrer"
               className="transition transform hover:scale-105 flex flex-col items-center justify-end gap-1.5 text-white"
@@ -215,17 +215,17 @@ export default function Footer() {
         {/* ⚖️ Copyright */}
         <div className="mt-4 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-500">
           <p className="mt-2 text-sm text-gray-400">
-            &copy; {new Date().getFullYear()} Vently Air. All rights reserved.
+            &copy; {new Date().getFullYear()} ClimateCore Air. All rights reserved.
           </p>
           <p className="text-center sm:text-right">
             Built with <FaBrain className="inline mx-1 text-[#E7F3FF]" /> by{" "}
             <a
-              href="https://webspecia.in"
+              href="https://Irfan.in"
               target="_blank"
               rel="noopener noreferrer"
               className="text-[#E7F3FF] hover:underline font-medium"
             >
-              Webspecia
+              Irfan
             </a>
           </p>
         </div>

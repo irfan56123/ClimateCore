@@ -60,10 +60,10 @@ export default function HeroSection() {
             </a>
 
             <a
-              href={`tel:${process.env.NEXT_PUBLIC_PHONE || "+916204260510"}`}
+              href={`tel:${process.env.NEXT_PUBLIC_PHONE || "+919334026147"}`}
               className="border border-gray-300 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition text-center"
             >
-              Call {process.env.NEXT_PUBLIC_PHONE_DISPLAY || "+91 6204260510"}
+              Call {process.env.NEXT_PUBLIC_PHONE_DISPLAY || "+91 9334026147"}
             </a>
           </div>
         </div>

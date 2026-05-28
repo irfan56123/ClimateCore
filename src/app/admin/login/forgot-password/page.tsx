@@ -56,7 +56,7 @@ export default function ForgotPasswordPage() {
                                             required
                                             value={email}
                                             onChange={(e) => setEmail(e.target.value)}
-                                            placeholder={`admin@${process.env.NEXT_PUBLIC_DOMAIN || "ventlyair.com"}`}
+                                            placeholder={`admin@${process.env.NEXT_PUBLIC_DOMAIN || "ClimateCoreair.com"}`}
                                             className="w-full pl-10 pr-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-blue-300/50 focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
                                         />
                                     </div>

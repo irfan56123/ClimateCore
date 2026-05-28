@@ -7,25 +7,25 @@ import TestimonialSection from "@/components/TestimonialSection";
 import FAQ from "@/components/FAQ";
 
 export const metadata: Metadata = {
-  title: "Our Services | Vently Air",
+  title: "Our Services | ClimateCore Air",
   description:
-    "Explore Vently Air's full range of indoor air quality services — duct cleaning, dryer vent, furnace cleaning, chimney cleaning, sanitation, UV light installation, and air quality testing.",
+    "Explore ClimateCore Air's full range of indoor air quality services — duct cleaning, dryer vent, furnace cleaning, chimney cleaning, sanitation, UV light installation, and air quality testing.",
   alternates: {
-    canonical: `https://${process.env.NEXT_PUBLIC_DOMAIN || "ventlyair.com"}/services`,
+    canonical: `https://${process.env.NEXT_PUBLIC_DOMAIN || "ClimateCoreair.com"}/services`,
   },
   openGraph: {
-    title: "Our Services | Vently Air",
+    title: "Our Services | ClimateCore Air",
     description:
-      "Professional HVAC and indoor air quality services by Vently Air. Licensed & insured technicians serving MA, CT, NH, NC & DC.",
-    url: `https://${process.env.NEXT_PUBLIC_DOMAIN || "ventlyair.com"}/services`,
-    siteName: "Vently Air",
+      "Professional HVAC and indoor air quality services by ClimateCore Air. Licensed & insured technicians serving MA, CT, NH, NC & DC.",
+    url: `https://${process.env.NEXT_PUBLIC_DOMAIN || "ClimateCoreair.com"}/services`,
+    siteName: "ClimateCore Air",
     type: "website",
   },
 };
 
 const servicesFaqs = [
   {
-    q: "What services does Vently Air offer?",
+    q: "What services does ClimateCore Air offer?",
     a: "We offer air duct cleaning, dryer vent service, furnace/coil/blower fan cleaning, chimney cleaning, sanitation, UV light installation, and professional air quality testing.",
   },
   {
@@ -34,7 +34,7 @@ const servicesFaqs = [
   },
   {
     q: "Are you licensed and insured?",
-    a: "Yes. All Vently Air technicians are fully licensed and insured, so you can trust the quality and safety of every job we perform.",
+    a: "Yes. All ClimateCore Air technicians are fully licensed and insured, so you can trust the quality and safety of every job we perform.",
   },
   {
     q: "What areas do you serve?",
@@ -69,10 +69,10 @@ export default function ServicesPage() {
               Get Free Estimate
             </a>
             <a
-              href={`tel:${process.env.NEXT_PUBLIC_PHONE || "+916204260510"}`}
+              href={`tel:${process.env.NEXT_PUBLIC_PHONE || "+919334026147"}`}
               className="border border-gray-300 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition text-center"
             >
-              Call {process.env.NEXT_PUBLIC_PHONE_DISPLAY || "+91 6204260510"}
+              Call {process.env.NEXT_PUBLIC_PHONE_DISPLAY || "+91 9334026147"}
             </a>
           </div>
         </div>

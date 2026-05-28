@@ -18,10 +18,12 @@
   left: -150%;
   height: 100%;
   width: 150%;
-  background: linear-gradient(90deg,
-      transparent,
-      rgba(255, 255, 255, 0.4),
-      transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
   animation: shimmer 1.5s infinite;
 }
 
@@ -51,7 +53,11 @@
   --tw-prose-hr: #e0e0e0;
   --tw-prose-bg: #fafafa;
 
-  font-family: "Source Sans 3", system-ui, -apple-system, sans-serif;
+  font-family:
+    "Source Sans 3",
+    system-ui,
+    -apple-system,
+    sans-serif;
   color: var(--tw-prose-body);
   line-height: 1.8;
   font-size: 1.08rem;
@@ -133,11 +139,13 @@
 }
 
 .mask-v {
-  mask-image: linear-gradient(to bottom,
-      transparent,
-      black 15%,
-      black 85%,
-      transparent);
+  mask-image: linear-gradient(
+    to bottom,
+    transparent,
+    black 15%,
+    black 85%,
+    transparent
+  );
 }
 
 .prose em {
@@ -178,7 +186,9 @@
   text-decoration: underline;
   text-underline-offset: 3px;
   font-weight: 600;
-  transition: color 0.2s ease-in-out, text-decoration-color 0.2s;
+  transition:
+    color 0.2s ease-in-out,
+    text-decoration-color 0.2s;
 }
 
 .prose a:hover,
@@ -270,10 +280,12 @@
 
 #nprogress .bar {
   background: #023784 !important;
-  /* Vently Air blue */
+  /* ClimateCore Air blue */
   height: 3px !important;
   border-radius: 0 2px 2px 0;
-  box-shadow: 0 0 10px #023784, 0 0 5px #023784;
+  box-shadow:
+    0 0 10px #023784,
+    0 0 5px #023784;
 }
 
 #nprogress .peg {
@@ -282,7 +294,9 @@
   right: 0px;
   width: 100px;
   height: 100%;
-  box-shadow: 0 0 10px #023784, 0 0 5px #023784;
+  box-shadow:
+    0 0 10px #023784,
+    0 0 5px #023784;
   opacity: 1;
   transform: rotate(3deg) translate(0px, -4px);
 }
@@ -293,10 +307,9 @@
   /* ⏱ 3s total, pulse happens in first 1.5s, then gap */
 }
 
-
 @font-face {
   font-family: "Museo Sans";
-  src: url("/fonts/Webspecia-Regular.woff2") format("woff2");
+  src: url("/fonts/Irfan-Regular.woff2") format("woff2");
   /* src: url("/fonts/museo-sans/museo-sans-500.woff2") format("woff2"); */
   font-weight: 500;
   font-style: normal;

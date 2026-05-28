@@ -30,7 +30,7 @@ export default function Testimonials() {
             We’ve proudly helped thousands of people across India choose the
             right <strong>digital HVACs</strong> to improve their lives.{" "}
             Here are their <strong>reviews and testimonials</strong> about
-            clarity, comfort, and better hearing with Vently Air.
+            clarity, comfort, and better hearing with ClimateCore Air.
           </p>
         </div>
 

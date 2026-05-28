@@ -2,8 +2,8 @@ import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import LeadForm from "@/components/LeadForm";
 
 export const metadata = {
-    title: "Contact Us | Vently Air — 24/7 HVAC Support",
-    description: "Need HVAC repair or installation? Contact Vently Air today for expert heating and cooling services. We are available 24/7 for emergency support.",
+    title: "Contact Us | ClimateCore Air — 24/7 HVAC Support",
+    description: "Need HVAC repair or installation? Contact ClimateCore Air today for expert heating and cooling services. We are available 24/7 for emergency support.",
 };
 
 export default function ContactPage() {
@@ -46,9 +46,9 @@ export default function ContactPage() {
                         <ContactCard
                             icon={<Mail className="w-6 h-6" />}
                             title="Email Support"
-                            content="support@ventlyair.com"
+                            content="support@ClimateCoreair.com"
                             sub="General inquiries and scheduling"
-                            link="mailto:support@ventlyair.com"
+                            link="mailto:support@ClimateCoreair.com"
                         />
 
                         <ContactCard
@@ -73,14 +73,14 @@ export default function ContactPage() {
             <section className="mt-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
                 <div className="overflow-hidden rounded-3xl shadow-lg border border-gray-100 h-[450px] w-full bg-gray-50">
                     <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d755477.3003732845!2d-71.20020299999999!3d42.298089999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e379fe8cc221cd%3A0x8fa1c7c775747a4!2sVently%20Air!5e0!3m2!1sen!2sin!4v1772825876918!5m2!1sen!2sin"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d755477.3003732845!2d-71.20020299999999!3d42.298089999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e379fe8cc221cd%3A0x8fa1c7c775747a4!2sClimateCore%20Air!5e0!3m2!1sen!2sin!4v1772825876918!5m2!1sen!2sin"
                         width="100%"
                         height="100%"
                         style={{ border: 0 }}
                         allowFullScreen={true}
                         loading="lazy"
                         referrerPolicy="no-referrer-when-downgrade"
-                        title="Vently Air Location"
+                        title="ClimateCore Air Location"
                     ></iframe>
                 </div>
             </section>

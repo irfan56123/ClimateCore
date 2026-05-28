@@ -32,7 +32,7 @@ export default function EstimatePage() {
                         {/* Trust Card */}
                         <div className="bg-gradient-to-br from-[#184A99] to-[#0D2240] rounded-3xl p-8 text-white shadow-xl relative overflow-hidden">
                             <div className="relative z-10 space-y-6">
-                                <h3 className="text-2xl font-bold">Why Vently Air?</h3>
+                                <h3 className="text-2xl font-bold">Why ClimateCore Air?</h3>
                                 <div className="space-y-5">
                                     <div className="flex gap-4">
                                         <div className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -77,7 +77,7 @@ export default function EstimatePage() {
                                 <span className="text-xs font-bold text-gray-400 ml-1">5.0 RATING</span>
                             </div>
                             <p className="text-gray-600 italic mb-4">
-                                "Vently Air gave me the most transparent quote. Their team was professional,
+                                "ClimateCore Air gave me the most transparent quote. Their team was professional,
                                 fast, and helped me find the best system for my home."
                             </p>
                             <div className="flex items-center gap-3">

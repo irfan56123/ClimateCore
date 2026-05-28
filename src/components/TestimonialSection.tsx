@@ -17,7 +17,7 @@ const testimonials = [
     },
     {
         name: "Amy Herzog",
-        text: "Great experience with Vently Air. Scheduling was easy, the technician arrived on time, and explained everything clearly. Very professional and efficient service.",
+        text: "Great experience with ClimateCore Air. Scheduling was easy, the technician arrived on time, and explained everything clearly. Very professional and efficient service.",
         role: "Customer",
     },
     {
@@ -91,7 +91,7 @@ export default function TestimonialSection() {
                     </div>
 
                     <h2 className="text-4xl md:text-5xl font-extrabold text-[#0D2240] leading-tight">
-                        What People Think About <span className="text-[#184A99]">Vently Air</span>
+                        What People Think About <span className="text-[#184A99]">ClimateCore Air</span>
                     </h2>
 
                     <p className="text-lg text-gray-600 leading-relaxed max-w-lg">
@@ -115,21 +115,7 @@ export default function TestimonialSection() {
                     </div>
 
                     {/* FEATURED VIDEO / IMAGE */}
-                    <div
-                        className="relative rounded-3xl overflow-hidden shadow-2xl aspect-video bg-gray-900 group cursor-pointer"
-                        onClick={() => setIsVideoModalOpen(true)}
-                    >
-                        <LazyVideo />
-                        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                            <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
-                                <div className="w-0 h-0 border-t-[8px] border-t-transparent border-l-[14px] border-l-[#184A99] border-b-[8px] border-b-transparent ml-1" />
-                            </div>
-                        </div>
-                        <div className="absolute bottom-4 left-6 text-white pointer-events-none">
-                            <p className="font-bold">Watch our story</p>
-                            <p className="text-xs text-white/80">Experience quality firsthand</p>
-                        </div>
-                    </div>
+                  
                 </div>
 
                 {/* RIGHT COLUMN - SCROLLING REVIEWS */}

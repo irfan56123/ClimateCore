@@ -4,24 +4,24 @@ import Whychoose from "@/components/whychoose";
 
 // ✅ 1. SEO Metadata
 export const metadata: Metadata = {
-  title: "Awards & Recognitions | Vently Air Hearing Solutions",
+  title: "Awards & Recognitions | ClimateCore Air Hearing Solutions",
   description:
-    "Explore the prestigious awards and certifications earned by Vently Air Hearing Solutions, including recognitions from Jagran, Signia, Phonak, Oticon, and Widex. Discover why we're a trusted name in hearing care.",
+    "Explore the prestigious awards and certifications earned by ClimateCore Air Hearing Solutions, including recognitions from Jagran, Signia, Phonak, Oticon, and Widex. Discover why we're a trusted name in hearing care.",
   alternates: {
-    canonical: `https://${process.env.NEXT_PUBLIC_DOMAIN || "ventlyair.com"}/awards`,
+    canonical: `https://${process.env.NEXT_PUBLIC_DOMAIN || "ClimateCoreair.com"}/awards`,
   },
   openGraph: {
-    title: "Awards & Recognitions | Vently Air Hearing Solutions",
+    title: "Awards & Recognitions | ClimateCore Air Hearing Solutions",
     description:
       "Recognized and certified by leading brands like Signia, Phonak, Oticon, Widex, and Jagran. See our awards and achievements.",
-    url: `https://${process.env.NEXT_PUBLIC_DOMAIN || "ventlyair.com"}/awards`,
-    siteName: "Vently Air Hearing Solutions",
+    url: `https://${process.env.NEXT_PUBLIC_DOMAIN || "ClimateCoreair.com"}/awards`,
+    siteName: "ClimateCore Air Hearing Solutions",
     images: [
       {
-        url: `https://${process.env.NEXT_PUBLIC_DOMAIN || "ventlyair.com"}/images/certifications/award.jpeg`, // ⚡ Replace with actual OG image URL
+        url: `https://${process.env.NEXT_PUBLIC_DOMAIN || "ClimateCoreair.com"}/images/certifications/award.jpeg`, // ⚡ Replace with actual OG image URL
         width: 1200,
         height: 630,
-        alt: "Awards and Certifications - Vently Air Hearing Solutions",
+        alt: "Awards and Certifications - ClimateCore Air Hearing Solutions",
       },
     ],
     locale: "en_IN",
@@ -29,10 +29,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Awards & Recognitions | Vently Air Hearing Solutions",
+    title: "Awards & Recognitions | ClimateCore Air Hearing Solutions",
     description:
       "See our awards and certifications from Signia, Phonak, Oticon, Widex, and more.",
-    images: [`https://${process.env.NEXT_PUBLIC_DOMAIN || "ventlyair.com"}/images/certifications/award.jpeg`],
+    images: [`https://${process.env.NEXT_PUBLIC_DOMAIN || "ClimateCoreair.com"}/images/certifications/award.jpeg`],
   },
 };
 
@@ -67,9 +67,9 @@ const certifications = [
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  name: "Vently Air Hearing Solutions",
-  url: `https://${process.env.NEXT_PUBLIC_DOMAIN || "ventlyair.com"}`,
-  logo: `https://${process.env.NEXT_PUBLIC_DOMAIN || "ventlyair.com"}/logo.png`,
+  name: "ClimateCore Air Hearing Solutions",
+  url: `https://${process.env.NEXT_PUBLIC_DOMAIN || "ClimateCoreair.com"}`,
+  logo: `https://${process.env.NEXT_PUBLIC_DOMAIN || "ClimateCoreair.com"}/logo.png`,
   award: awards.map((a) => a.title),
   hasCredential: certifications.map((c) => ({
     "@type": "EducationalOccupationalCredential",
@@ -98,7 +98,7 @@ export default function Awards() {
             <span className="text-[#023784]">Awards & Recognitions</span>
           </h1>
           <p className="text-center text-black/70 mb-10 max-w-2xl mx-auto">
-            Vently Air Hearing Solutions has received multiple prestigious awards
+            ClimateCore Air Hearing Solutions has received multiple prestigious awards
             and holds certifications from top global HVAC brands,
             reflecting our commitment to excellence in hearing care.
           </p>
@@ -111,7 +111,7 @@ export default function Awards() {
               >
                 <Image
                   src={award.img}
-                  alt={`${award.title} - Vently Air Hearing Solutions`}
+                  alt={`${award.title} - ClimateCore Air Hearing Solutions`}
                   width={400}
                   height={300}
                   className="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-500"

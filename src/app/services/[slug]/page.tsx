@@ -31,19 +31,19 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const displayImage = customImageSetting?.value || service.image;
 
   return {
-    title: `${service.title} | Vently Air`,
+    title: `${service.title} | ClimateCore Air`,
     description: service.description[0],
     alternates: {
-      canonical: `https://${process.env.NEXT_PUBLIC_DOMAIN || "ventlyair.com"}/services/${service.slug}`,
+      canonical: `https://${process.env.NEXT_PUBLIC_DOMAIN || "ClimateCoreair.com"}/services/${service.slug}`,
     },
     openGraph: {
-      title: `${service.title} | Vently Air`,
+      title: `${service.title} | ClimateCore Air`,
       description: service.description[0],
-      url: `https://${process.env.NEXT_PUBLIC_DOMAIN || "ventlyair.com"}/services/${service.slug}`,
-      siteName: "Vently Air",
+      url: `https://${process.env.NEXT_PUBLIC_DOMAIN || "ClimateCoreair.com"}/services/${service.slug}`,
+      siteName: "ClimateCore Air",
       images: [
         {
-          url: displayImage.startsWith("data:image") ? displayImage : `https://${process.env.NEXT_PUBLIC_DOMAIN || "ventlyair.com"}${displayImage}`,
+          url: displayImage.startsWith("data:image") ? displayImage : `https://${process.env.NEXT_PUBLIC_DOMAIN || "ClimateCoreair.com"}${displayImage}`,
           width: 1200,
           height: 630,
           alt: service.title,
@@ -102,10 +102,10 @@ export default async function ServicePage({ params }: PageProps) {
                 Get Free Estimate
               </a>
               <a
-                href={`tel:${process.env.NEXT_PUBLIC_PHONE || "+916204260510"}`}
+                href={`tel:${process.env.NEXT_PUBLIC_PHONE || "+919334026147"}`}
                 className="border border-gray-300 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition text-center"
               >
-                Call {process.env.NEXT_PUBLIC_PHONE_DISPLAY || "+91 6204260510"}
+                Call {process.env.NEXT_PUBLIC_PHONE_DISPLAY || "+91 9334026147"}
               </a>
             </div>
           </div>
@@ -123,12 +123,12 @@ export default async function ServicePage({ params }: PageProps) {
         </div>
       </section>
 
-      {/* ── Vently Air Advantage ── */}
+      {/* ── ClimateCore Air Advantage ── */}
       <section className="py-14 bg-gray-50 rounded-2xl px-6 md:px-10 my-10">
         <h2 className="text-2xl md:text-3xl font-extrabold text-center text-gray-900 mb-3">
           The{" "}
           <span className="bg-gradient-to-r from-[#184A99] to-[#0D2240] bg-clip-text text-transparent">
-            Vently Air
+            ClimateCore Air
           </span>{" "}
           Advantage
         </h2>

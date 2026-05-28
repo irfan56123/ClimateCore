@@ -1,6 +1,6 @@
 export const metadata = {
-    title: "Privacy Policy | Vently Air",
-    description: "Read our privacy policy to understand how we collect, use, and protect your personal information at Vently Air.",
+    title: "Privacy Policy | ClimateCore Air",
+    description: "Read our privacy policy to understand how we collect, use, and protect your personal information at ClimateCore Air.",
 };
 
 export default function PrivacyPolicy() {
@@ -10,7 +10,7 @@ export default function PrivacyPolicy() {
 
             <div className="prose prose-blue max-w-none text-gray-600 space-y-6">
                 <p>
-                    At Vently Air, we are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy outlines how we collect, use, and safeguard your data when you visit our website or use our HVAC services.
+                    At ClimateCore Air, we are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy outlines how we collect, use, and safeguard your data when you visit our website or use our HVAC services.
                 </p>
 
                 <section>
@@ -44,7 +44,7 @@ export default function PrivacyPolicy() {
                 <section>
                     <h2 className="text-2xl font-bold text-gray-800 mb-3">4. Cookies and Tracking</h2>
                     <p>
-                        Vently Air uses cookies to enhance your browsing experience. You can choose to disable cookies through your browser settings, though this may impact some features of our site.
+                        ClimateCore Air uses cookies to enhance your browsing experience. You can choose to disable cookies through your browser settings, though this may impact some features of our site.
                     </p>
                 </section>
 
@@ -58,7 +58,7 @@ export default function PrivacyPolicy() {
                 <section>
                     <h2 className="text-2xl font-bold text-gray-800 mb-3">6. Your Rights</h2>
                     <p>
-                        You have the right to access, correct, or request the deletion of your personal data held by Vently Air. To exercise these rights, please contact us at <a href="mailto:support@ventlyair.com" className="text-blue-600 hover:underline text-sm uppercase">support@ventlyair.com</a>.
+                        You have the right to access, correct, or request the deletion of your personal data held by ClimateCore Air. To exercise these rights, please contact us at <a href="mailto:support@ClimateCoreair.com" className="text-blue-600 hover:underline text-sm uppercase">support@ClimateCoreair.com</a>.
                     </p>
                 </section>
 

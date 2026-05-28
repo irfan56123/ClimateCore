@@ -7,11 +7,11 @@ import Whychoose from "@/components/whychoose";
 import TestimonialSection from "@/components/TestimonialSection";
 // ✅ Dynamic Metadata works now
 export async function generateMetadata() {
-  const siteName = "Vently Air | Expert HVAC & Ventilation";
+  const siteName = "ClimateCore Air | Expert HVAC & Ventilation";
   const heroKeyword = "Heating, Cooling & Air Quality Solutions";
 
   return {
-    title: `Expert HVAC Services in Your Area | Vently Air Authorized Contractor`,
+    title: `Expert HVAC Services in Your Area | ClimateCore Air Authorized Contractor`,
     description: `Get professional ${heroKeyword}. Reliable furnace, AC, and mini-split services with ${siteName}. Book a free estimate.`,
     keywords: [
       "HVAC repair",
@@ -23,7 +23,7 @@ export async function generateMetadata() {
     openGraph: {
       title: `Best HVAC Systems | Trusted Heating & Cooling Partner`,
       description: `Compare and buy ${heroKeyword} at ${siteName}. Premium Furnaces, ACs, and Ventilation Systems`,
-      url: `https://${process.env.NEXT_PUBLIC_DOMAIN || "ventlyair.com"}`,
+      url: `https://${process.env.NEXT_PUBLIC_DOMAIN || "ClimateCoreair.com"}`,
       siteName,
       type: "website",
     },

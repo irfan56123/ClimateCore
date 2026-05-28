@@ -12,7 +12,7 @@ const adapter = new PrismaNeon({ connectionString });
 const prisma = new PrismaClient({ adapter });
 
 async function main() {
-  const email = process.env.ADMIN_EMAIL || "admin@ventlyair.com";
+  const email = process.env.ADMIN_EMAIL || "admin@ClimateCoreair.com";
   const password = process.env.ADMIN_PASSWORD || "changeme123";
   const hashedPassword = await bcrypt.hash(password, 12);
 

@@ -13,7 +13,7 @@ const testi = [
         name: "Michael Henderson",
         location: "Residential Customer",
         description:
-            "Vently Air saved us during the peak of winter. Our furnace failed at 2 AM, and their emergency technician was at our door within 45 minutes. Professional, fast, and fair pricing.",
+            "ClimateCore Air saved us during the peak of winter. Our furnace failed at 2 AM, and their emergency technician was at our door within 45 minutes. Professional, fast, and fair pricing.",
     },
     {
         name: "Sarah Jenkins",
@@ -25,7 +25,7 @@ const testi = [
         name: "Robert Miller",
         location: "Commercial Property Manager",
         description:
-            "Managing multiple properties requires reliable partners. Vently Air handles all our annual maintenance and duct cleaning. They are the most thorough HVAC team I've ever worked with.",
+            "Managing multiple properties requires reliable partners. ClimateCore Air handles all our annual maintenance and duct cleaning. They are the most thorough HVAC team I've ever worked with.",
     },
     {
         name: "Amanda Chen",
@@ -69,7 +69,7 @@ export default function ReviewsPage() {
                     </div>
                     <h1 className="text-4xl md:text-6xl font-black mb-6">Real Stories of Comfort</h1>
                     <p className="text-xl text-blue-100 max-w-2xl mx-auto leading-relaxed">
-                        Discover why Vently Air is the most trusted name in heating, cooling, and air quality across the region.
+                        Discover why ClimateCore Air is the most trusted name in heating, cooling, and air quality across the region.
                     </p>
                 </div>
             </section>
@@ -120,7 +120,7 @@ export default function ReviewsPage() {
                 <div className="max-w-5xl mx-auto px-4">
                     <div className="bg-[#184A99] rounded-[40px] p-10 md:p-16 text-center text-white relative overflow-hidden shadow-2xl">
                         <div className="absolute top-0 left-0 w-full h-full bg-[url('/pattern.png')] opacity-10"></div>
-                        <h2 className="text-3xl md:text-5xl font-black mb-6 relative z-10">Experience the Vently Air Difference</h2>
+                        <h2 className="text-3xl md:text-5xl font-black mb-6 relative z-10">Experience the ClimateCore Air Difference</h2>
                         <p className="text-xl text-blue-100 mb-10 max-w-2xl mx-auto relative z-10">
                             Join thousands of satisfied customers who trust us with their home's comfort and health.
                         </p>
@@ -132,7 +132,7 @@ export default function ReviewsPage() {
                                 Get a Free Estimate
                             </Link>
                             <Link
-                                href={`tel:${process.env.NEXT_PUBLIC_PHONE || "+916204260510"}`}
+                                href={`tel:${process.env.NEXT_PUBLIC_PHONE || "+919334026147"}`}
                                 className="bg-transparent border-2 border-white/30 text-white px-8 py-4 rounded-2xl font-black hover:bg-white/10 transition transform hover:-translate-y-1"
                             >
                                 Talk to an Expert

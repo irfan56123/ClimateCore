@@ -1,6 +1,6 @@
 import { Map, Settings, Users, Briefcase } from "lucide-react";
 
-export default function WhyVentlySection() {
+export default function WhyClimateCoreSection() {
   const stats = [
     {
       icon: Map,
@@ -36,7 +36,7 @@ export default function WhyVentlySection() {
         </h2>
 
         <p className="mt-4 text-gray-600 max-w-2xl mx-auto text-sm md:text-base">
-          Vently Air delivers reliable <strong>heating, air conditioning, and indoor air quality solutions</strong>.
+          ClimateCore Air delivers reliable <strong>heating, air conditioning, and indoor air quality solutions</strong>.
           Our experienced technicians have successfully completed thousands of HVAC installations and repairs.
         </p>
 

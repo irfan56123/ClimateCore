@@ -1,13 +1,12 @@
 // app/layout.tsx
 import NavigationWrapper from "@/components/NavigationWrapper";
-import AnnouncementBar from "@/components/AnnouncementBar";
 import ChatWidgetLoader from "@/components/ChatWidgetLoader";
 import "./globals.css";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(`https://${process.env.NEXT_PUBLIC_DOMAIN || "ventlyair.com"}`),
-  title: "Vently Air — Expert HVAC Services & Solutions",
+  metadataBase: new URL(`https://${process.env.NEXT_PUBLIC_DOMAIN || "ClimateCoreair.com"}`),
+  title: "ClimateCore Air — Expert HVAC Services & Solutions",
   description:
     "Reliable heating, cooling, and ventilation services. Expert furnace installation, AC repair, and air quality solutions for home and business.",
   keywords: [
@@ -15,25 +14,25 @@ export const metadata: Metadata = {
     "Heating Repair",
     "Air Conditioning",
     "Ventilation",
-    "Vently Air",
+    "ClimateCore Air",
     "Furnace Installation",
   ],
-  authors: [{ name: "Vently Air" }],
-  creator: "Vently Air",
+  authors: [{ name: "ClimateCore Air" }],
+  creator: "ClimateCore Air",
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "Vently Air HVAC Solutions",
+    title: "ClimateCore Air HVAC Solutions",
     description: "Expert heating, cooling, and ventilation services with local support.",
-    url: `https://${process.env.NEXT_PUBLIC_DOMAIN || "ventlyair.com"}`,
-    siteName: "Vently Air",
+    url: `https://${process.env.NEXT_PUBLIC_DOMAIN || "ClimateCoreair.com"}`,
+    siteName: "ClimateCore Air",
     images: [
       {
-        url: `https://${process.env.NEXT_PUBLIC_DOMAIN || "ventlyair.com"}/ventlylogo.png`,
+        url: `https://${process.env.NEXT_PUBLIC_DOMAIN || "ClimateCoreair.com"}/ClimateCorelogo.png`,
         width: 1200,
         height: 630,
-        alt: "Vently Air",
+        alt: "ClimateCore Air",
       },
     ],
     locale: "en_US",
@@ -41,10 +40,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Vently Air",
+    title: "ClimateCore Air",
     description: "Affordable, reliable HVACs with local support.",
-    images: [`https://${process.env.NEXT_PUBLIC_DOMAIN || "ventlyair.com"}/ventlylogo.png`],
-    creator: "@ventlyair",
+    images: [`https://${process.env.NEXT_PUBLIC_DOMAIN || "ClimateCoreair.com"}/ClimateCorelogo.png`],
+    creator: "@ClimateCoreair",
   },
   icons: {
     icon: "/favicon.ico",
@@ -69,7 +68,7 @@ export default function RootLayout({
       </head>
 
       <body className="font-museo bg-white text-gray-900 antialiased bg-gradient-to-b from-[#eaf5ff] to-white">
-        <AnnouncementBar />
+        {/* <AnnouncementBar /> */}
         <NavigationWrapper>{children}</NavigationWrapper>
 
         {/* ✅ Global chat widget – loads once, after hydration */}

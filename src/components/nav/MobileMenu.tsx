@@ -14,8 +14,8 @@ type Props = {
 
 export default function MobileMenu({
   menu,
-  phone = process.env.NEXT_PUBLIC_PHONE || "+916204260510",
-  logoSrc = "/ventlylogo.png",
+  phone = process.env.NEXT_PUBLIC_PHONE || "+919334026147",
+  logoSrc = "/ClimateCorelogo.png",
 }: Props) {
   const [open, setOpen] = useState(false);
   const [expanded, setExpanded] = useState<string | null>(null);
@@ -182,7 +182,7 @@ export default function MobileMenu({
               {/* Bottom Bar */}
               <div className="px-5 py-6 border-t bg-gray-50/50 text-center">
                 <p className="text-xs text-gray-500 font-medium">
-                  © {new Date().getFullYear()} Vently Air
+                  © {new Date().getFullYear()} ClimateCore Air
                 </p>
               </div>
             </motion.div>
