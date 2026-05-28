@@ -369,7 +369,7 @@ export const services: Service[] = [
     image: "/heroworker.png",
     shortDesc: "Fast and reliable air conditioning repair services when you need them most.",
     description: [
-      "AC System Breakdown? Call Our Emergency Line: 781-819-0399",
+      "AC System Breakdown? Call Our Emergency Line: 9334026147",
       "Air conditioning systems can fail for many reasons, including poor maintenance, clogged filters, refrigerant leaks, electrical issues, or worn components. When your AC stops working—especially during the heat of summer—it can quickly make your home or workplace uncomfortable.",
       "At ClimateCore Air, we respond to emergency AC repair calls as quickly as possible. Our service vehicles are fully stocked with a wide range of testing tools, allowing our technicians to diagnose and repair many systems on the spot so you can get your cool air back fast.",
       "The best way to prevent unexpected breakdowns is with regular maintenance. Annual AC service helps keep your system running efficiently and can often prevent costly emergency repairs. However, if a breakdown does occur, you can count on us for prompt service and fair, reasonable pricing—because we believe in treating our customers the way we’d want to be treated."
@@ -381,7 +381,7 @@ export const services: Service[] = [
       ...COMMON_FAQS,
       {
         q: "Do you offer emergency AC repair?",
-        a: "Yes! Call our emergency line at 781-819-0399 for fast assistance.",
+        a: "Yes! Call our emergency line at 9334026147 for fast assistance.",
       },
     ],
     relatedSlugs: ["ac-maintenance", "ac-installation", "duct-cleaning"],

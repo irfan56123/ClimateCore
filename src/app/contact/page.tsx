@@ -38,9 +38,9 @@ export default function ContactPage() {
                         <ContactCard
                             icon={<Phone className="w-6 h-6" />}
                             title="Call Us Directly"
-                            content="781-819-0399"
+                            content="9334026147"
                             sub="Available 24/7 for Emergency Repairs"
-                            link="tel:781-819-0399"
+                            link="tel:9334026147"
                         />
 
                         <ContactCard
