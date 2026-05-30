@@ -12,7 +12,7 @@ export default function AboutPage() {
       {/* 🟦 Hero Section */}
       <section className="relative h-[400px] flex items-center justify-center text-white overflow-hidden">
         <Image
-          src="/heroworker.jpg"
+          src="/heroworker.png"
           alt="HVAC Excellence"
           fill
           className="object-cover brightness-50"
